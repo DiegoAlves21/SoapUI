@@ -1,0 +1,783 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="b7fa5cba-5e20-44c2-987b-fd47d1dd7e93" activeEnvironment="Default" name="UnimedSJC - Homologação" resourceRoot="" soapui-version="5.5.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="6ea68345-71d6-42dc-bb77-c1eb33b39802" wsaVersion="NONE" name="LoginServiceServiceSoapBinding" type="wsdl" bindingName="{http://login.service.servicounimedsjc.mobilesaude.com.br/}LoginServiceServiceSoapBinding" soapVersion="1_1" anonymous="optional" definition="http://www.santosdumonthospital.com.br:10080/servicounimedsjc/LoginService?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://www.santosdumonthospital.com.br:10080/servicounimedsjc/LoginService?wsdl"><con:part><con:url>http://www.santosdumonthospital.com.br:10080/servicounimedsjc/LoginService?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="LoginServiceService" targetNamespace="http://login.service.servicounimedsjc.mobilesaude.com.br/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://login.service.servicounimedsjc.mobilesaude.com.br/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http">
+  <wsdl:types>
+    <xs:schema elementFormDefault="unqualified" targetNamespace="http://login.service.servicounimedsjc.mobilesaude.com.br/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="WS_BENEFICIARIO_CRIAR_ACESSO" type="tns:WS_BENEFICIARIO_CRIAR_ACESSO"/>
+      <xs:element name="WS_BENEFICIARIO_CRIAR_ACESSOResponse" type="tns:WS_BENEFICIARIO_CRIAR_ACESSOResponse"/>
+      <xs:element name="WS_BENEFICIARIO_LOGIN" type="tns:WS_BENEFICIARIO_LOGIN"/>
+      <xs:element name="WS_BENEFICIARIO_LOGINResponse" type="tns:WS_BENEFICIARIO_LOGINResponse"/>
+      <xs:element name="WS_BENEFICIARIO_REDEFINIR_SENHA" type="tns:WS_BENEFICIARIO_REDEFINIR_SENHA"/>
+      <xs:element name="WS_BENEFICIARIO_REDEFINIR_SENHAResponse" type="tns:WS_BENEFICIARIO_REDEFINIR_SENHAResponse"/>
+      <xs:element name="WS_BENEFICIARIO_REINICIA_SENHA" type="tns:WS_BENEFICIARIO_REINICIA_SENHA"/>
+      <xs:element name="WS_BENEFICIARIO_REINICIA_SENHAResponse" type="tns:WS_BENEFICIARIO_REINICIA_SENHAResponse"/>
+      <xs:element name="WS_BENEFICIARIO_TROCA_SENHA" type="tns:WS_BENEFICIARIO_TROCA_SENHA"/>
+      <xs:element name="WS_BENEFICIARIO_TROCA_SENHAResponse" type="tns:WS_BENEFICIARIO_TROCA_SENHAResponse"/>
+      <xs:element name="WS_BENEFICIARIO_VALIDAR_TOKEN" type="tns:WS_BENEFICIARIO_VALIDAR_TOKEN"/>
+      <xs:element name="WS_BENEFICIARIO_VALIDAR_TOKENResponse" type="tns:WS_BENEFICIARIO_VALIDAR_TOKENResponse"/>
+      <xs:complexType name="WS_BENEFICIARIO_REINICIA_SENHA">
+        <xs:sequence>
+          <xs:element name="TOKEN" type="xs:string"/>
+          <xs:element name="SENHA" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="WS_BENEFICIARIO_REINICIA_SENHAResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="WS_BENEFICIARIO_REINICIA_SENHARESULT" type="tns:esqueciSenhaResult"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="esqueciSenhaResult">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="RETORNO_DADOS">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element maxOccurs="unbounded" minOccurs="0" name="REDEFINE_SENHA" type="tns:esqueciSenha"/>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element minOccurs="0" name="RETORNO_CRITICAS">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element maxOccurs="unbounded" minOccurs="0" name="CRITICA" type="tns:critica"/>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="RETORNO_STATUS" type="xs:boolean"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="esqueciSenha">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BENEFICIARIO_NOME" type="xs:string"/>
+          <xs:element minOccurs="0" name="BENEFICIARIO_EMAIL" type="xs:string"/>
+          <xs:element minOccurs="0" name="TOKEN" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="critica">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CRITICA_DESCRICAO_PROBLEMA" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="WS_BENEFICIARIO_LOGIN">
+        <xs:sequence>
+          <xs:element name="USER_MOBILE_LOGIN" type="xs:string"/>
+          <xs:element name="USER_MOBILE_SENHA" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="WS_BENEFICIARIO_LOGINResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="WS_BENEFICIARIO_LOGINRESULT" type="tns:loginResult"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="loginResult">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="RETORNO_ACESSOS" type="tns:acessos"/>
+          <xs:element minOccurs="0" name="RETORNO_DADOS">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element maxOccurs="unbounded" minOccurs="0" name="BENEFICIARIO" type="tns:beneficiario"/>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element minOccurs="0" name="RETORNO_CRITICAS">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element maxOccurs="unbounded" minOccurs="0" name="CRITICA" type="tns:critica"/>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="RETORNO_STATUS" type="xs:boolean"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="acessos">
+        <xs:sequence>
+          <xs:element name="ACESSA_AGENDAMENTO" type="xs:boolean"/>
+          <xs:element name="ACESSA_CARTAO" type="xs:boolean"/>
+          <xs:element name="ACESSA_CONSULTA_CARENCIA" type="xs:boolean"/>
+          <xs:element name="ACESSA_COPARTICIPACAO" type="xs:boolean"/>
+          <xs:element name="ACESSA_EDITA_CADASTRO" type="xs:boolean"/>
+          <xs:element name="ACESSA_MEDICAMENTO" type="xs:boolean"/>
+          <xs:element name="ACESSA_REEMBOLSO" type="xs:boolean"/>
+          <xs:element name="ACESSA_TROCA_SENHA" type="xs:boolean"/>
+          <xs:element name="ACESSA_UTILIZACAO" type="xs:boolean"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="beneficiario">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="TITULAR" type="xs:string"/>
+          <xs:element minOccurs="0" name="TITULAR_MATRICULA" type="xs:string"/>
+          <xs:element minOccurs="0" name="ABRANGENCIA" type="xs:string"/>
+          <xs:element minOccurs="0" name="AREA_ATUACAO" type="xs:string"/>
+          <xs:element minOccurs="0" name="ATENDIMENTO" type="xs:string"/>
+          <xs:element minOccurs="0" name="BLOQUEADO" type="xs:string"/>
+          <xs:element minOccurs="0" name="CARTAO_VALIDADE" type="xs:dateTime"/>
+          <xs:element minOccurs="0" name="COBERTURA_PARCIAL" type="xs:string"/>
+          <xs:element minOccurs="0" name="CODIGO_FUNCIONARIO" type="xs:string"/>
+          <xs:element minOccurs="0" name="CODIGO_PRODUTO_ANS" type="xs:string"/>
+          <xs:element minOccurs="0" name="CONTRATANTE" type="xs:string"/>
+          <xs:element minOccurs="0" name="CONTRATANTE_COMPLETO" type="xs:string"/>
+          <xs:element minOccurs="0" name="CONVENIO_ACOMODACAO" type="xs:string"/>
+          <xs:element minOccurs="0" name="CONVENIO_DESCRICAO" type="xs:string"/>
+          <xs:element minOccurs="0" name="CONVENIO_DESCRICAO_ANS" type="xs:string"/>
+          <xs:element minOccurs="0" name="CPF" type="xs:string"/>
+          <xs:element minOccurs="0" name="FORMA_PAGAMENTO" type="xs:string"/>
+          <xs:element minOccurs="0" name="INCLUSAO" type="xs:dateTime"/>
+          <xs:element minOccurs="0" name="LOGIN" type="xs:string"/>
+          <xs:element minOccurs="0" name="NASCIMENTO" type="xs:dateTime"/>
+          <xs:element minOccurs="0" name="NOME" type="xs:string"/>
+          <xs:element minOccurs="0" name="NUMERO_CNS" type="xs:string"/>
+          <xs:element minOccurs="0" name="NUMERO_CONTRATO" type="xs:string"/>
+          <xs:element minOccurs="0" name="MATRICULA" type="xs:string"/>
+          <xs:element minOccurs="0" name="PARENTESCO" type="xs:string"/>
+          <xs:element minOccurs="0" name="REDE_ATENDIMENTO" type="xs:string"/>
+          <xs:element minOccurs="0" name="REGISTRO_ANS" type="xs:string"/>
+          <xs:element minOccurs="0" name="REGULAMENTACAO" type="xs:string"/>
+          <xs:element minOccurs="0" name="SEGMENTACAO_ASSISTENCIAL" type="xs:string"/>
+          <xs:element minOccurs="0" name="TIPO_BENEFICIARIO_DESCRICAO" type="xs:string"/>
+          <xs:element minOccurs="0" name="TIPO_CONTRATACAO" type="xs:string"/>
+          <xs:element minOccurs="0" name="TIPO_PESSOA_CONTRATANTE" type="xs:string"/>
+          <xs:element minOccurs="0" name="VIA" type="xs:string"/>
+          <xs:element minOccurs="0" name="DAT_INC_CONTRATO" type="xs:dateTime"/>
+          <xs:element minOccurs="0" name="RETORNO_CARENCIAS">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element maxOccurs="unbounded" minOccurs="0" name="CARENCIA" type="tns:carencia"/>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element minOccurs="0" name="RETORNO_OUTRAS_CARENCIAS">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element maxOccurs="unbounded" minOccurs="0" name="CARENCIA" type="tns:carencia"/>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="PERMISSOES" type="tns:permissao"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="carencia">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CARENCIA_NOME" type="xs:string"/>
+          <xs:element minOccurs="0" name="CARENCIA_DATA" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="permissao">
+        <xs:sequence>
+          <xs:element name="SEGUNDA_VIA" type="xs:boolean"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="WS_BENEFICIARIO_VALIDAR_TOKEN">
+        <xs:sequence>
+          <xs:element name="TOKEN" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="WS_BENEFICIARIO_VALIDAR_TOKENResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="WS_BENEFICIARIO_VALIDAR_TOKENRESULT" type="tns:esqueciSenhaResult"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="WS_BENEFICIARIO_CRIAR_ACESSO">
+        <xs:sequence>
+          <xs:element name="BENEFICIARIO_MATRICULA" type="xs:string"/>
+          <xs:element name="USER_MOBILE_SENHA" type="xs:string"/>
+          <xs:element name="BENEFICIARIO_EMAIL" type="xs:string"/>
+          <xs:element name="BENEFICIARIO_CPF" type="xs:string"/>
+          <xs:element name="BENEFICIARIO_DATA_NASCIMENTO" type="xs:dateTime"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="WS_BENEFICIARIO_CRIAR_ACESSOResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="WS_BENEFICIARIO_CRIAR_ACESSORESULT" type="tns:loginResult"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="WS_BENEFICIARIO_TROCA_SENHA">
+        <xs:sequence>
+          <xs:element name="BENEFICIARIO_MATRICULA" type="xs:string"/>
+          <xs:element name="NOVA_SENHA" type="xs:string"/>
+          <xs:element name="SENHA" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="WS_BENEFICIARIO_TROCA_SENHAResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="WS_BENEFICIARIO_TROCA_SENHARESULT" type="tns:loginResult"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="WS_BENEFICIARIO_REDEFINIR_SENHA">
+        <xs:sequence>
+          <xs:element name="BENEFICIARIO_MATRICULA" type="xs:string"/>
+          <xs:element name="BENEFICIARIO_CPF" type="xs:string"/>
+          <xs:element name="BENEFICIARIO_DATA_NASCIMENTO" type="xs:dateTime"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="WS_BENEFICIARIO_REDEFINIR_SENHAResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="WS_BENEFICIARIO_REDEFINIR_SENHARESULT" type="tns:esqueciSenhaResult"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="WS_BENEFICIARIO_REINICIA_SENHA">
+    <wsdl:part element="tns:WS_BENEFICIARIO_REINICIA_SENHA" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS_BENEFICIARIO_LOGIN">
+    <wsdl:part element="tns:WS_BENEFICIARIO_LOGIN" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS_BENEFICIARIO_CRIAR_ACESSOResponse">
+    <wsdl:part element="tns:WS_BENEFICIARIO_CRIAR_ACESSOResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS_BENEFICIARIO_VALIDAR_TOKENResponse">
+    <wsdl:part element="tns:WS_BENEFICIARIO_VALIDAR_TOKENResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS_BENEFICIARIO_REINICIA_SENHAResponse">
+    <wsdl:part element="tns:WS_BENEFICIARIO_REINICIA_SENHAResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS_BENEFICIARIO_VALIDAR_TOKEN">
+    <wsdl:part element="tns:WS_BENEFICIARIO_VALIDAR_TOKEN" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS_BENEFICIARIO_CRIAR_ACESSO">
+    <wsdl:part element="tns:WS_BENEFICIARIO_CRIAR_ACESSO" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS_BENEFICIARIO_TROCA_SENHAResponse">
+    <wsdl:part element="tns:WS_BENEFICIARIO_TROCA_SENHAResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS_BENEFICIARIO_LOGINResponse">
+    <wsdl:part element="tns:WS_BENEFICIARIO_LOGINResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS_BENEFICIARIO_TROCA_SENHA">
+    <wsdl:part element="tns:WS_BENEFICIARIO_TROCA_SENHA" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS_BENEFICIARIO_REDEFINIR_SENHA">
+    <wsdl:part element="tns:WS_BENEFICIARIO_REDEFINIR_SENHA" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WS_BENEFICIARIO_REDEFINIR_SENHAResponse">
+    <wsdl:part element="tns:WS_BENEFICIARIO_REDEFINIR_SENHAResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="LoginService">
+    <wsdl:operation name="WS_BENEFICIARIO_REINICIA_SENHA">
+      <wsdl:input message="tns:WS_BENEFICIARIO_REINICIA_SENHA" name="WS_BENEFICIARIO_REINICIA_SENHA"></wsdl:input>
+      <wsdl:output message="tns:WS_BENEFICIARIO_REINICIA_SENHAResponse" name="WS_BENEFICIARIO_REINICIA_SENHAResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_BENEFICIARIO_LOGIN">
+      <wsdl:input message="tns:WS_BENEFICIARIO_LOGIN" name="WS_BENEFICIARIO_LOGIN"></wsdl:input>
+      <wsdl:output message="tns:WS_BENEFICIARIO_LOGINResponse" name="WS_BENEFICIARIO_LOGINResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_BENEFICIARIO_VALIDAR_TOKEN">
+      <wsdl:input message="tns:WS_BENEFICIARIO_VALIDAR_TOKEN" name="WS_BENEFICIARIO_VALIDAR_TOKEN"></wsdl:input>
+      <wsdl:output message="tns:WS_BENEFICIARIO_VALIDAR_TOKENResponse" name="WS_BENEFICIARIO_VALIDAR_TOKENResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_BENEFICIARIO_CRIAR_ACESSO">
+      <wsdl:input message="tns:WS_BENEFICIARIO_CRIAR_ACESSO" name="WS_BENEFICIARIO_CRIAR_ACESSO"></wsdl:input>
+      <wsdl:output message="tns:WS_BENEFICIARIO_CRIAR_ACESSOResponse" name="WS_BENEFICIARIO_CRIAR_ACESSOResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_BENEFICIARIO_TROCA_SENHA">
+      <wsdl:input message="tns:WS_BENEFICIARIO_TROCA_SENHA" name="WS_BENEFICIARIO_TROCA_SENHA"></wsdl:input>
+      <wsdl:output message="tns:WS_BENEFICIARIO_TROCA_SENHAResponse" name="WS_BENEFICIARIO_TROCA_SENHAResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_BENEFICIARIO_REDEFINIR_SENHA">
+      <wsdl:input message="tns:WS_BENEFICIARIO_REDEFINIR_SENHA" name="WS_BENEFICIARIO_REDEFINIR_SENHA"></wsdl:input>
+      <wsdl:output message="tns:WS_BENEFICIARIO_REDEFINIR_SENHAResponse" name="WS_BENEFICIARIO_REDEFINIR_SENHAResponse"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="LoginServiceServiceSoapBinding" type="tns:LoginService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="WS_BENEFICIARIO_REINICIA_SENHA">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS_BENEFICIARIO_REINICIA_SENHA">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS_BENEFICIARIO_REINICIA_SENHAResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_BENEFICIARIO_LOGIN">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS_BENEFICIARIO_LOGIN">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS_BENEFICIARIO_LOGINResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_BENEFICIARIO_VALIDAR_TOKEN">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS_BENEFICIARIO_VALIDAR_TOKEN">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS_BENEFICIARIO_VALIDAR_TOKENResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_BENEFICIARIO_CRIAR_ACESSO">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS_BENEFICIARIO_CRIAR_ACESSO">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS_BENEFICIARIO_CRIAR_ACESSOResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_BENEFICIARIO_TROCA_SENHA">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS_BENEFICIARIO_TROCA_SENHA">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS_BENEFICIARIO_TROCA_SENHAResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_BENEFICIARIO_REDEFINIR_SENHA">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WS_BENEFICIARIO_REDEFINIR_SENHA">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WS_BENEFICIARIO_REDEFINIR_SENHAResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="LoginServiceService">
+    <wsdl:port binding="tns:LoginServiceServiceSoapBinding" name="LoginServicePort">
+      <soap:address location="http://www.santosdumonthospital.com.br:10080/servicounimedsjc/LoginService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://www.santosdumonthospital.com.br:10080/servicounimedsjc/LoginService</con:endpoint></con:endpoints><con:operation id="7dacaeec-e1ff-4037-b9f7-5c4cf765c16f" isOneWay="false" action="" name="WS_BENEFICIARIO_CRIAR_ACESSO" bindingOperationName="WS_BENEFICIARIO_CRIAR_ACESSO" type="Request-Response" outputName="WS_BENEFICIARIO_CRIAR_ACESSOResponse" inputName="WS_BENEFICIARIO_CRIAR_ACESSO" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="e3e70f8c-7df2-484e-9aa6-4f9d2912e055" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.santosdumonthospital.com.br:10080/servicounimedsjc/LoginService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:log="http://login.service.servicounimedsjc.mobilesaude.com.br/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <log:WS_BENEFICIARIO_CRIAR_ACESSO>
+         <BENEFICIARIO_MATRICULA>?</BENEFICIARIO_MATRICULA>
+         <USER_MOBILE_SENHA>?</USER_MOBILE_SENHA>
+         <BENEFICIARIO_EMAIL>?</BENEFICIARIO_EMAIL>
+         <BENEFICIARIO_CPF>?</BENEFICIARIO_CPF>
+         <BENEFICIARIO_DATA_NASCIMENTO>?</BENEFICIARIO_DATA_NASCIMENTO>
+      </log:WS_BENEFICIARIO_CRIAR_ACESSO>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://login.service.servicounimedsjc.mobilesaude.com.br/LoginService/WS_BENEFICIARIO_CRIAR_ACESSO"/></con:call></con:operation><con:operation id="3f639ce5-5e79-42fb-81c6-ad0ed895a3fb" isOneWay="false" action="" name="WS_BENEFICIARIO_LOGIN" bindingOperationName="WS_BENEFICIARIO_LOGIN" type="Request-Response" outputName="WS_BENEFICIARIO_LOGINResponse" inputName="WS_BENEFICIARIO_LOGIN" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="9f93732d-9bea-48d6-b41e-dc5f598512f7" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.santosdumonthospital.com.br:10080/servicounimedsjc/LoginService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:log="http://login.service.servicounimedsjc.mobilesaude.com.br/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <log:WS_BENEFICIARIO_LOGIN>
+         <USER_MOBILE_LOGIN>00044502649032975</USER_MOBILE_LOGIN>
+         <USER_MOBILE_SENHA>123456</USER_MOBILE_SENHA>
+      </log:WS_BENEFICIARIO_LOGIN>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://login.service.servicounimedsjc.mobilesaude.com.br/LoginService/WS_BENEFICIARIO_LOGIN"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="630b0a63-b96c-4631-ad32-a23a0a10a29c" isOneWay="false" action="" name="WS_BENEFICIARIO_REDEFINIR_SENHA" bindingOperationName="WS_BENEFICIARIO_REDEFINIR_SENHA" type="Request-Response" outputName="WS_BENEFICIARIO_REDEFINIR_SENHAResponse" inputName="WS_BENEFICIARIO_REDEFINIR_SENHA" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="1bc727ab-4b3b-4da7-9417-6cd192ce46b9" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.santosdumonthospital.com.br:10080/servicounimedsjc/LoginService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:log="http://login.service.servicounimedsjc.mobilesaude.com.br/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <log:WS_BENEFICIARIO_REDEFINIR_SENHA>
+         <BENEFICIARIO_MATRICULA>?</BENEFICIARIO_MATRICULA>
+         <BENEFICIARIO_CPF>?</BENEFICIARIO_CPF>
+         <BENEFICIARIO_DATA_NASCIMENTO>?</BENEFICIARIO_DATA_NASCIMENTO>
+      </log:WS_BENEFICIARIO_REDEFINIR_SENHA>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://login.service.servicounimedsjc.mobilesaude.com.br/LoginService/WS_BENEFICIARIO_REDEFINIR_SENHA"/></con:call></con:operation><con:operation id="2439ec32-7128-4cc6-8d5d-3a7f5d4259b6" isOneWay="false" action="" name="WS_BENEFICIARIO_REINICIA_SENHA" bindingOperationName="WS_BENEFICIARIO_REINICIA_SENHA" type="Request-Response" outputName="WS_BENEFICIARIO_REINICIA_SENHAResponse" inputName="WS_BENEFICIARIO_REINICIA_SENHA" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="1e7531d6-2b1e-43a0-bafc-be2d1e9aa69f" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.santosdumonthospital.com.br:10080/servicounimedsjc/LoginService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:log="http://login.service.servicounimedsjc.mobilesaude.com.br/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <log:WS_BENEFICIARIO_REINICIA_SENHA>
+         <TOKEN>?</TOKEN>
+         <SENHA>?</SENHA>
+      </log:WS_BENEFICIARIO_REINICIA_SENHA>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://login.service.servicounimedsjc.mobilesaude.com.br/LoginService/WS_BENEFICIARIO_REINICIA_SENHA"/></con:call></con:operation><con:operation id="5ef3abd4-b59f-4862-b99e-56a0dca2ad52" isOneWay="false" action="" name="WS_BENEFICIARIO_TROCA_SENHA" bindingOperationName="WS_BENEFICIARIO_TROCA_SENHA" type="Request-Response" outputName="WS_BENEFICIARIO_TROCA_SENHAResponse" inputName="WS_BENEFICIARIO_TROCA_SENHA" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="dde65a1e-98b9-4b3d-97c3-a27bbf5f5a93" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.santosdumonthospital.com.br:10080/servicounimedsjc/LoginService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:log="http://login.service.servicounimedsjc.mobilesaude.com.br/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <log:WS_BENEFICIARIO_TROCA_SENHA>
+         <BENEFICIARIO_MATRICULA>?</BENEFICIARIO_MATRICULA>
+         <NOVA_SENHA>?</NOVA_SENHA>
+         <SENHA>?</SENHA>
+      </log:WS_BENEFICIARIO_TROCA_SENHA>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://login.service.servicounimedsjc.mobilesaude.com.br/LoginService/WS_BENEFICIARIO_TROCA_SENHA"/></con:call></con:operation><con:operation id="67dd2b7e-245c-477d-9b60-b4e5c02ae2b4" isOneWay="false" action="" name="WS_BENEFICIARIO_VALIDAR_TOKEN" bindingOperationName="WS_BENEFICIARIO_VALIDAR_TOKEN" type="Request-Response" outputName="WS_BENEFICIARIO_VALIDAR_TOKENResponse" inputName="WS_BENEFICIARIO_VALIDAR_TOKEN" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="bcb07036-e49a-4c5f-803b-2973a01df676" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.santosdumonthospital.com.br:10080/servicounimedsjc/LoginService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:log="http://login.service.servicounimedsjc.mobilesaude.com.br/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <log:WS_BENEFICIARIO_VALIDAR_TOKEN>
+         <TOKEN>?</TOKEN>
+      </log:WS_BENEFICIARIO_VALIDAR_TOKEN>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://login.service.servicounimedsjc.mobilesaude.com.br/LoginService/WS_BENEFICIARIO_VALIDAR_TOKEN"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="7870967b-0ed5-45f5-bd3c-cb9059037dd0" wsaVersion="NONE" name="BoletoServiceServiceSoapBinding" type="wsdl" bindingName="{http://boleto.service.servicounimedsjc.mobilesaude.com.br/}BoletoServiceServiceSoapBinding" soapVersion="1_1" anonymous="optional" definition="http://www.santosdumonthospital.com.br:10080/servicounimedsjc/BoletoService?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://www.santosdumonthospital.com.br:10080/servicounimedsjc/BoletoService?wsdl"><con:part><con:url>http://www.santosdumonthospital.com.br:10080/servicounimedsjc/BoletoService?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="BoletoServiceService" targetNamespace="http://boleto.service.servicounimedsjc.mobilesaude.com.br/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://boleto.service.servicounimedsjc.mobilesaude.com.br/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http">
+  <wsdl:types>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://boleto.service.servicounimedsjc.mobilesaude.com.br/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="getBoletoDetalhe" type="tns:getBoletoDetalhe"/>
+      <xs:element name="getBoletoDetalheResponse" type="tns:getBoletoDetalheResponse"/>
+      <xs:element name="getContratante" type="tns:getContratante"/>
+      <xs:element name="getContratanteResponse" type="tns:getContratanteResponse"/>
+      <xs:element name="getCriticaListBoleto" type="tns:getCriticaListBoleto"/>
+      <xs:element name="getCriticaListBoletoResponse" type="tns:getCriticaListBoletoResponse"/>
+      <xs:element name="getListBoleto" type="tns:getListBoleto"/>
+      <xs:element name="getListBoletoByCpfNasc" type="tns:getListBoletoByCpfNasc"/>
+      <xs:element name="getListBoletoByCpfNascResponse" type="tns:getListBoletoByCpfNascResponse"/>
+      <xs:element name="getListBoletoResponse" type="tns:getListBoletoResponse"/>
+      <xs:element name="getPrintBoleto" type="tns:getPrintBoleto"/>
+      <xs:element name="getPrintBoletoResponse" type="tns:getPrintBoletoResponse"/>
+      <xs:element name="getPrintComprovante" type="tns:getPrintComprovante"/>
+      <xs:element name="getPrintComprovanteResponse" type="tns:getPrintComprovanteResponse"/>
+      <xs:element name="getPrintExtrato" type="tns:getPrintExtrato"/>
+      <xs:element name="getPrintExtratoResponse" type="tns:getPrintExtratoResponse"/>
+      <xs:complexType name="getListBoleto">
+        <xs:sequence>
+          <xs:element name="matricula" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getListBoletoResponse">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:listBoleto"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="listBoleto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="dtVencimento" type="xs:dateTime"/>
+          <xs:element minOccurs="0" name="idBoleto" type="xs:string"/>
+          <xs:element minOccurs="0" name="status" type="xs:int"/>
+          <xs:element minOccurs="0" name="vlBoleto" type="xs:float"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getListBoletoByCpfNasc">
+        <xs:sequence>
+          <xs:element name="cpf" type="xs:string"/>
+          <xs:element name="nascimento" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getListBoletoByCpfNascResponse">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:listBoleto"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getPrintBoleto">
+        <xs:sequence>
+          <xs:element name="id_boleto" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getPrintBoletoResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:base64Binary"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getContratante">
+        <xs:sequence>
+          <xs:element name="cpf" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getContratanteResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:contranteTO"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="contranteTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="bairro" type="xs:string"/>
+          <xs:element minOccurs="0" name="cdCidade" type="xs:string"/>
+          <xs:element minOccurs="0" name="cdContratante" type="xs:string"/>
+          <xs:element minOccurs="0" name="cep" type="xs:string"/>
+          <xs:element minOccurs="0" name="dsCidade" type="xs:string"/>
+          <xs:element minOccurs="0" name="logradouro" type="xs:string"/>
+          <xs:element minOccurs="0" name="nmContratante" type="xs:string"/>
+          <xs:element minOccurs="0" name="nmContratanteCartao" type="xs:string"/>
+          <xs:element minOccurs="0" name="nrCpfCnpj" type="xs:string"/>
+          <xs:element minOccurs="0" name="tpPessoa" type="xs:string"/>
+          <xs:element minOccurs="0" name="uf" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getPrintComprovante">
+        <xs:sequence>
+          <xs:element name="id_boleto" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getPrintComprovanteResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:base64Binary"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getPrintExtrato">
+        <xs:sequence>
+          <xs:element name="id_boleto" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getPrintExtratoResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:base64Binary"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getBoletoDetalhe">
+        <xs:sequence>
+          <xs:element name="id_boleto" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getBoletoDetalheResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:detalheBoletoTO"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="detalheBoletoTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="cdAgencia" type="xs:string"/>
+          <xs:element minOccurs="0" name="cdCarteira" type="xs:string"/>
+          <xs:element minOccurs="0" name="cdConta" type="xs:string"/>
+          <xs:element minOccurs="0" name="cdEspecie" type="xs:string"/>
+          <xs:element minOccurs="0" name="cdPortador" type="xs:string"/>
+          <xs:element minOccurs="0" name="cdcliente" type="xs:string"/>
+          <xs:element minOccurs="0" name="contratante" type="tns:contranteTO"/>
+          <xs:element minOccurs="0" name="ctCedente" type="xs:string"/>
+          <xs:element minOccurs="0" name="dtEmissao" type="xs:dateTime"/>
+          <xs:element minOccurs="0" name="dtVencimento" type="xs:dateTime"/>
+          <xs:element minOccurs="0" name="dvAgencia" type="xs:string"/>
+          <xs:element minOccurs="0" name="dvCedente" type="xs:string"/>
+          <xs:element minOccurs="0" name="dvConta" type="xs:string"/>
+          <xs:element minOccurs="0" name="idBoleto" type="xs:string"/>
+          <xs:element name="imprime2via" type="xs:int"/>
+          <xs:element minOccurs="0" name="linhaDigitavel" type="xs:string"/>
+          <xs:element minOccurs="0" name="nmCedente" type="xs:string"/>
+          <xs:element minOccurs="0" name="nmSacado" type="xs:string"/>
+          <xs:element minOccurs="0" name="nrDocumento" type="xs:string"/>
+          <xs:element minOccurs="0" name="nrNossoNumero" type="xs:string"/>
+          <xs:element name="status" type="xs:int"/>
+          <xs:element minOccurs="0" name="vlBoleto" type="xs:float"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getCriticaListBoleto">
+        <xs:sequence>
+          <xs:element name="cpf" type="xs:string"/>
+          <xs:element name="nascimento" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getCriticaListBoletoResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:retornoCriticaBoleto"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="retornoCriticaBoleto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="critical" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="Exception" type="tns:Exception"/>
+      <xs:complexType name="Exception">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="message" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="getListBoletoByCpfNascResponse">
+    <wsdl:part element="tns:getListBoletoByCpfNascResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getPrintExtratoResponse">
+    <wsdl:part element="tns:getPrintExtratoResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getPrintBoleto">
+    <wsdl:part element="tns:getPrintBoleto" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getContratante">
+    <wsdl:part element="tns:getContratante" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getPrintComprovanteResponse">
+    <wsdl:part element="tns:getPrintComprovanteResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getPrintBoletoResponse">
+    <wsdl:part element="tns:getPrintBoletoResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getBoletoDetalhe">
+    <wsdl:part element="tns:getBoletoDetalhe" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getBoletoDetalheResponse">
+    <wsdl:part element="tns:getBoletoDetalheResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getListBoleto">
+    <wsdl:part element="tns:getListBoleto" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getListBoletoResponse">
+    <wsdl:part element="tns:getListBoletoResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getCriticaListBoletoResponse">
+    <wsdl:part element="tns:getCriticaListBoletoResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getListBoletoByCpfNasc">
+    <wsdl:part element="tns:getListBoletoByCpfNasc" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getContratanteResponse">
+    <wsdl:part element="tns:getContratanteResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getPrintComprovante">
+    <wsdl:part element="tns:getPrintComprovante" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getPrintExtrato">
+    <wsdl:part element="tns:getPrintExtrato" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Exception">
+    <wsdl:part element="tns:Exception" name="Exception"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getCriticaListBoleto">
+    <wsdl:part element="tns:getCriticaListBoleto" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="BoletoService">
+    <wsdl:operation name="getListBoleto">
+      <wsdl:input message="tns:getListBoleto" name="getListBoleto"></wsdl:input>
+      <wsdl:output message="tns:getListBoletoResponse" name="getListBoletoResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListBoletoByCpfNasc">
+      <wsdl:input message="tns:getListBoletoByCpfNasc" name="getListBoletoByCpfNasc"></wsdl:input>
+      <wsdl:output message="tns:getListBoletoByCpfNascResponse" name="getListBoletoByCpfNascResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPrintBoleto">
+      <wsdl:input message="tns:getPrintBoleto" name="getPrintBoleto"></wsdl:input>
+      <wsdl:output message="tns:getPrintBoletoResponse" name="getPrintBoletoResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getContratante">
+      <wsdl:input message="tns:getContratante" name="getContratante"></wsdl:input>
+      <wsdl:output message="tns:getContratanteResponse" name="getContratanteResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPrintComprovante">
+      <wsdl:input message="tns:getPrintComprovante" name="getPrintComprovante"></wsdl:input>
+      <wsdl:output message="tns:getPrintComprovanteResponse" name="getPrintComprovanteResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPrintExtrato">
+      <wsdl:input message="tns:getPrintExtrato" name="getPrintExtrato"></wsdl:input>
+      <wsdl:output message="tns:getPrintExtratoResponse" name="getPrintExtratoResponse"></wsdl:output>
+      <wsdl:fault message="tns:Exception" name="Exception"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getBoletoDetalhe">
+      <wsdl:input message="tns:getBoletoDetalhe" name="getBoletoDetalhe"></wsdl:input>
+      <wsdl:output message="tns:getBoletoDetalheResponse" name="getBoletoDetalheResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCriticaListBoleto">
+      <wsdl:input message="tns:getCriticaListBoleto" name="getCriticaListBoleto"></wsdl:input>
+      <wsdl:output message="tns:getCriticaListBoletoResponse" name="getCriticaListBoletoResponse"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BoletoServiceServiceSoapBinding" type="tns:BoletoService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="getListBoleto">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getListBoleto">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getListBoletoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListBoletoByCpfNasc">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getListBoletoByCpfNasc">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getListBoletoByCpfNascResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPrintBoleto">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getPrintBoleto">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getPrintBoletoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getContratante">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getContratante">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getContratanteResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPrintComprovante">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getPrintComprovante">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getPrintComprovanteResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPrintExtrato">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getPrintExtrato">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getPrintExtratoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault name="Exception" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getBoletoDetalhe">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getBoletoDetalhe">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getBoletoDetalheResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCriticaListBoleto">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getCriticaListBoleto">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getCriticaListBoletoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="BoletoServiceService">
+    <wsdl:port binding="tns:BoletoServiceServiceSoapBinding" name="BoletoServicePort">
+      <soap:address location="http://www.santosdumonthospital.com.br:10080/servicounimedsjc/BoletoService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://www.santosdumonthospital.com.br:10080/servicounimedsjc/BoletoService</con:endpoint></con:endpoints><con:operation id="dd06250e-8a92-4f25-8c63-d47795581b6d" isOneWay="false" action="" name="getBoletoDetalhe" bindingOperationName="getBoletoDetalhe" type="Request-Response" outputName="getBoletoDetalheResponse" inputName="getBoletoDetalhe" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="ba02ae48-558d-4c8a-a190-e87f6b8bf3ad" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.santosdumonthospital.com.br:10080/servicounimedsjc/BoletoService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bol="http://boleto.service.servicounimedsjc.mobilesaude.com.br/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <bol:getBoletoDetalhe>
+         <id_boleto>?</id_boleto>
+      </bol:getBoletoDetalhe>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://boleto.service.servicounimedsjc.mobilesaude.com.br/BoletoService/getBoletoDetalhe"/></con:call></con:operation><con:operation id="6f2f63b3-6f52-45ce-9b23-9c8a5f0b7a79" isOneWay="false" action="" name="getContratante" bindingOperationName="getContratante" type="Request-Response" outputName="getContratanteResponse" inputName="getContratante" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="28602c02-9ca9-4d2d-93d3-c5ce32aa21a1" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.santosdumonthospital.com.br:10080/servicounimedsjc/BoletoService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bol="http://boleto.service.servicounimedsjc.mobilesaude.com.br/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <bol:getContratante>
+         <cpf>?</cpf>
+      </bol:getContratante>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://boleto.service.servicounimedsjc.mobilesaude.com.br/BoletoService/getContratante"/></con:call></con:operation><con:operation id="459a5ed8-20fc-4448-9f20-9aff2c2cfaad" isOneWay="false" action="" name="getCriticaListBoleto" bindingOperationName="getCriticaListBoleto" type="Request-Response" outputName="getCriticaListBoletoResponse" inputName="getCriticaListBoleto" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="962fba46-5e3f-411d-9b8d-10b96e35279c" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.santosdumonthospital.com.br:10080/servicounimedsjc/BoletoService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bol="http://boleto.service.servicounimedsjc.mobilesaude.com.br/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <bol:getCriticaListBoleto>
+         <cpf>?</cpf>
+         <nascimento>?</nascimento>
+      </bol:getCriticaListBoleto>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://boleto.service.servicounimedsjc.mobilesaude.com.br/BoletoService/getCriticaListBoleto"/></con:call></con:operation><con:operation id="56a50656-b788-4f0c-a832-aca52f341ff3" isOneWay="false" action="" name="getListBoleto" bindingOperationName="getListBoleto" type="Request-Response" outputName="getListBoletoResponse" inputName="getListBoleto" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="d600f3a1-20ce-44f4-ad41-383c81aba743" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.santosdumonthospital.com.br:10080/servicounimedsjc/BoletoService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bol="http://boleto.service.servicounimedsjc.mobilesaude.com.br/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <bol:getListBoleto>
+         <matricula>?</matricula>
+      </bol:getListBoleto>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://boleto.service.servicounimedsjc.mobilesaude.com.br/BoletoService/getListBoleto"/></con:call></con:operation><con:operation id="5b4ccfc3-e34b-4187-8518-d7c3f0361893" isOneWay="false" action="" name="getListBoletoByCpfNasc" bindingOperationName="getListBoletoByCpfNasc" type="Request-Response" outputName="getListBoletoByCpfNascResponse" inputName="getListBoletoByCpfNasc" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="c2391cf7-f1f5-4c7c-8d7a-bc1389c18e5b" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.santosdumonthospital.com.br:10080/servicounimedsjc/BoletoService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bol="http://boleto.service.servicounimedsjc.mobilesaude.com.br/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <bol:getListBoletoByCpfNasc>
+         <cpf>?</cpf>
+         <nascimento>?</nascimento>
+      </bol:getListBoletoByCpfNasc>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://boleto.service.servicounimedsjc.mobilesaude.com.br/BoletoService/getListBoletoByCpfNasc"/></con:call></con:operation><con:operation id="0c574a12-76d6-49d0-9384-f06a349d34bc" isOneWay="false" action="" name="getPrintBoleto" bindingOperationName="getPrintBoleto" type="Request-Response" outputName="getPrintBoletoResponse" inputName="getPrintBoleto" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="eda17e24-1cdb-40f7-a61d-2debdd3e4e33" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.santosdumonthospital.com.br:10080/servicounimedsjc/BoletoService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bol="http://boleto.service.servicounimedsjc.mobilesaude.com.br/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <bol:getPrintBoleto>
+         <id_boleto>?</id_boleto>
+      </bol:getPrintBoleto>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://boleto.service.servicounimedsjc.mobilesaude.com.br/BoletoService/getPrintBoleto"/></con:call></con:operation><con:operation id="0cc6b827-784d-4c5b-8893-ce0903f8dc2e" isOneWay="false" action="" name="getPrintComprovante" bindingOperationName="getPrintComprovante" type="Request-Response" outputName="getPrintComprovanteResponse" inputName="getPrintComprovante" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="90c7d7ee-4e55-4ffe-b638-d90e9d990d6b" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.santosdumonthospital.com.br:10080/servicounimedsjc/BoletoService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bol="http://boleto.service.servicounimedsjc.mobilesaude.com.br/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <bol:getPrintComprovante>
+         <id_boleto>?</id_boleto>
+      </bol:getPrintComprovante>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://boleto.service.servicounimedsjc.mobilesaude.com.br/BoletoService/getPrintComprovante"/></con:call></con:operation><con:operation id="f91f0151-4de0-4a70-b672-7050d1d6228e" isOneWay="false" action="" name="getPrintExtrato" bindingOperationName="getPrintExtrato" type="Request-Response" outputName="getPrintExtratoResponse" inputName="getPrintExtrato" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="e1f0e7bd-4c89-4e77-b5c8-469ab3f9871a" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.santosdumonthospital.com.br:10080/servicounimedsjc/BoletoService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bol="http://boleto.service.servicounimedsjc.mobilesaude.com.br/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <bol:getPrintExtrato>
+         <id_boleto>?</id_boleto>
+      </bol:getPrintExtrato>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://boleto.service.servicounimedsjc.mobilesaude.com.br/BoletoService/getPrintExtrato"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>

@@ -1,0 +1,1691 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="d9188866-da8f-4837-95d1-a0e1c85453d8" activeEnvironment="Default" name="PROASA-PRD" soapui-version="5.5.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="7e4fbedb-7525-4789-9962-999c0cd4d650" wsaVersion="NONE" name="ServiceSoap" type="wsdl" bindingName="{http://mv.proasa.org.br/webServiceProasa/}ServiceSoap" soapVersion="1_1" anonymous="optional" definition="http://mv.proasa.org.br/webserviceproasa/service.asmx?WSDL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>http://mv.proasa.org.br/webserviceproasa/service.asmx</con:endpoint></con:endpoints><con:operation id="2afd7cfc-607d-4c48-9e9d-58c4662c9abb" isOneWay="false" action="http://mv.proasa.org.br/webServiceProasa/ConciliacaoProasa" name="ConciliacaoProasa" bindingOperationName="ConciliacaoProasa" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="1af4c3b2-33f9-42da-967c-b318147f155b" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://mv.proasa.org.br/webserviceproasa/service.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://mv.proasa.org.br/webServiceProasa/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:ConciliacaoProasa>
+         <!--Optional:-->
+         <web:param1>?</web:param1>
+         <!--Optional:-->
+         <web:param2>?</web:param2>
+         <!--Optional:-->
+         <web:param3>?</web:param3>
+      </web:ConciliacaoProasa>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://mv.proasa.org.br/webServiceProasa/ConciliacaoProasa"/></con:call></con:operation><con:operation id="deca09df-f9de-4180-9a9e-02904a209667" isOneWay="false" action="http://mv.proasa.org.br/webServiceProasa/detalhe_autorizacao" name="detalhe_autorizacao" bindingOperationName="detalhe_autorizacao" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="790644f3-6581-4ab8-975c-825b09d14f76" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://mv.proasa.org.br/webserviceproasa/service.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://mv.proasa.org.br/webServiceProasa/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:detalhe_autorizacao>
+         <!--Optional:-->
+         <web:nrAutorizacao>?</web:nrAutorizacao>
+      </web:detalhe_autorizacao>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://mv.proasa.org.br/webServiceProasa/detalhe_autorizacao"/></con:call></con:operation><con:operation id="7ca37b6a-8c2e-4dd8-ba5b-5bbf7d454784" isOneWay="false" action="http://mv.proasa.org.br/webServiceProasa/detalhe_reembolso" name="detalhe_reembolso" bindingOperationName="detalhe_reembolso" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="de660fc5-aae6-4f3a-a460-660731a497f2" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://mv.proasa.org.br/webserviceproasa/service.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://mv.proasa.org.br/webServiceProasa/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:detalhe_reembolso>
+         <!--Optional:-->
+         <web:cdReembolso>?</web:cdReembolso>
+      </web:detalhe_reembolso>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://mv.proasa.org.br/webServiceProasa/detalhe_reembolso"/></con:call></con:operation><con:operation id="884231f3-3164-4003-b5e5-701337b84c98" isOneWay="false" action="http://mv.proasa.org.br/webServiceProasa/extrato_autorizacao" name="extrato_autorizacao" bindingOperationName="extrato_autorizacao" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="686c0b84-4495-4e4d-a16a-72476e279da7" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://mv.proasa.org.br/webserviceproasa/service.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://mv.proasa.org.br/webServiceProasa/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:extrato_autorizacao>
+         <!--Optional:-->
+         <web:cdMatricula>?</web:cdMatricula>
+         <!--Optional:-->
+         <web:dtInicio>?</web:dtInicio>
+         <!--Optional:-->
+         <web:dtFim>?</web:dtFim>
+      </web:extrato_autorizacao>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://mv.proasa.org.br/webServiceProasa/extrato_autorizacao"/></con:call></con:operation><con:operation id="19eaad88-38b6-49e9-a56f-d5722362abb3" isOneWay="false" action="http://mv.proasa.org.br/webServiceProasa/extrato_reembolso" name="extrato_reembolso" bindingOperationName="extrato_reembolso" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="58f08b3e-de59-4d50-a25a-0dadb53da9c6" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://mv.proasa.org.br/webserviceproasa/service.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://mv.proasa.org.br/webServiceProasa/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:extrato_reembolso>
+         <!--Optional:-->
+         <web:cdMatricula>?</web:cdMatricula>
+         <!--Optional:-->
+         <web:dtInicio>?</web:dtInicio>
+         <!--Optional:-->
+         <web:dtFim>?</web:dtFim>
+      </web:extrato_reembolso>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://mv.proasa.org.br/webServiceProasa/extrato_reembolso"/></con:call></con:operation><con:operation id="ce8dcb07-b50f-4a02-bdec-027aef3ecda4" isOneWay="false" action="http://mv.proasa.org.br/webServiceProasa/GetBeneficiario" name="GetBeneficiario" bindingOperationName="GetBeneficiario" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="70beb996-b705-4f61-98a1-28d37f20a710" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://mv.proasa.org.br/webserviceproasa/service.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://mv.proasa.org.br/webServiceProasa/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:GetBeneficiario>
+         <!--Optional:-->
+         <web:search>?</web:search>
+      </web:GetBeneficiario>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://mv.proasa.org.br/webServiceProasa/GetBeneficiario"/></con:call></con:operation><con:operation id="60080adb-d92f-4baa-b4a8-c320f35cbcd2" isOneWay="false" action="http://mv.proasa.org.br/webServiceProasa/GetExtratoCCXml" name="GetExtratoCCXml" bindingOperationName="GetExtratoCCXml" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="fdc73065-0ab0-4eae-84b6-268bd13f62ec" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://mv.proasa.org.br/webserviceproasa/service.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://mv.proasa.org.br/webServiceProasa/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:GetExtratoCCXml>
+         <!--Optional:-->
+         <web:param1>?</web:param1>
+         <!--Optional:-->
+         <web:param2>?</web:param2>
+      </web:GetExtratoCCXml>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://mv.proasa.org.br/webServiceProasa/GetExtratoCCXml"/></con:call></con:operation><con:operation id="bd73ec70-6770-4437-9993-c4d5a90b042e" isOneWay="false" action="http://mv.proasa.org.br/webServiceProasa/GetExtratoRelXml" name="GetExtratoRelXml" bindingOperationName="GetExtratoRelXml" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="44313865-411e-45df-992e-c2364fe261a1" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://mv.proasa.org.br/webserviceproasa/service.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://mv.proasa.org.br/webServiceProasa/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:GetExtratoRelXml>
+         <!--Optional:-->
+         <web:param1>?</web:param1>
+         <!--Optional:-->
+         <web:param2>?</web:param2>
+      </web:GetExtratoRelXml>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://mv.proasa.org.br/webServiceProasa/GetExtratoRelXml"/></con:call></con:operation><con:operation id="a2a78892-ba4a-4500-b7b9-c44149f9c201" isOneWay="false" action="http://mv.proasa.org.br/webServiceProasa/GetFaturaXml" name="GetFaturaXml" bindingOperationName="GetFaturaXml" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="f3ebb5fa-910b-47ae-9b1b-a15c57e79532" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://mv.proasa.org.br/webserviceproasa/service.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://mv.proasa.org.br/webServiceProasa/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:GetFaturaXml>
+         <!--Optional:-->
+         <web:param1>?</web:param1>
+         <!--Optional:-->
+         <web:param2>?</web:param2>
+         <!--Optional:-->
+         <web:param3>?</web:param3>
+      </web:GetFaturaXml>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://mv.proasa.org.br/webServiceProasa/GetFaturaXml"/></con:call></con:operation><con:operation id="b5aef1c4-92ad-4bc3-b7d0-bc121f9997e2" isOneWay="false" action="http://mv.proasa.org.br/webServiceProasa/GetRps" name="GetRps" bindingOperationName="GetRps" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="bc32d4b8-f5df-4dcc-b5cc-70a9db702eed" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://mv.proasa.org.br/webserviceproasa/service.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://mv.proasa.org.br/webServiceProasa/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:GetRps>
+         <!--Optional:-->
+         <web:param1>?</web:param1>
+         <!--Optional:-->
+         <web:param2>?</web:param2>
+      </web:GetRps>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://mv.proasa.org.br/webServiceProasa/GetRps"/></con:call></con:operation><con:operation id="c2364a96-8d1b-4dd7-935b-61d264057fff" isOneWay="false" action="http://mv.proasa.org.br/webServiceProasa/GetSaldoCCXml" name="GetSaldoCCXml" bindingOperationName="GetSaldoCCXml" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="e9085e08-181f-4fe4-a53a-7151a68a34a7" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://mv.proasa.org.br/webserviceproasa/service.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://mv.proasa.org.br/webServiceProasa/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:GetSaldoCCXml>
+         <!--Optional:-->
+         <web:param1>?</web:param1>
+         <!--Optional:-->
+         <web:param2>?</web:param2>
+      </web:GetSaldoCCXml>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://mv.proasa.org.br/webServiceProasa/GetSaldoCCXml"/></con:call></con:operation><con:operation id="a5d75d98-7ed2-4b96-9d01-74469d0c6aa2" isOneWay="false" action="http://mv.proasa.org.br/webServiceProasa/historico_reembolso" name="historico_reembolso" bindingOperationName="historico_reembolso" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="9874f91e-0da2-4348-a189-e918b02e0699" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://mv.proasa.org.br/webserviceproasa/service.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://mv.proasa.org.br/webServiceProasa/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:historico_reembolso>
+         <!--Optional:-->
+         <web:cdReembolso>?</web:cdReembolso>
+      </web:historico_reembolso>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://mv.proasa.org.br/webServiceProasa/historico_reembolso"/></con:call></con:operation><con:operation id="7ba5dfbf-e6c7-4d7a-b149-0af04780e141" isOneWay="false" action="http://mv.proasa.org.br/webServiceProasa/SB_LOGIN_BENEFICIARIO" name="SB_LOGIN_BENEFICIARIO" bindingOperationName="SB_LOGIN_BENEFICIARIO" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="c60d993a-7702-4a2b-8cf9-814bf6031996" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://mv.proasa.org.br/webserviceproasa/service.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://mv.proasa.org.br/webServiceProasa/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:SB_LOGIN_BENEFICIARIO>
+         <web:User_login_type>?</web:User_login_type>
+         <!--Optional:-->
+         <web:User_login>48270075</web:User_login>
+         <!--Optional:-->
+         <web:User_psw>48270075</web:User_psw>
+      </web:SB_LOGIN_BENEFICIARIO>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://mv.proasa.org.br/webServiceProasa/SB_LOGIN_BENEFICIARIO"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="721b7514-d61b-432f-9e20-13299ecfee1e" isOneWay="false" action="http://mv.proasa.org.br/webServiceProasa/SB_RECUPERA_SENHA" name="SB_RECUPERA_SENHA" bindingOperationName="SB_RECUPERA_SENHA" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="55f5dfa4-0f87-4116-9380-150757d4c201" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://mv.proasa.org.br/webserviceproasa/service.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://mv.proasa.org.br/webServiceProasa/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:SB_RECUPERA_SENHA>
+         <!--Optional:-->
+         <web:User_login>?</web:User_login>
+         <!--Optional:-->
+         <web:User_sign>?</web:User_sign>
+         <!--Optional:-->
+         <web:User_countersign>?</web:User_countersign>
+         <!--Optional:-->
+         <web:User_email>?</web:User_email>
+      </web:SB_RECUPERA_SENHA>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://mv.proasa.org.br/webServiceProasa/SB_RECUPERA_SENHA"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="b3a68631-7e8b-4ff6-96b1-5ae9ace59be7" isOneWay="false" action="http://mv.proasa.org.br/webServiceProasa/status_autorizacao" name="status_autorizacao" bindingOperationName="status_autorizacao" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="0c7d8c6c-77d1-4887-9bc4-a8db98973e3e" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://mv.proasa.org.br/webserviceproasa/service.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://mv.proasa.org.br/webServiceProasa/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:status_autorizacao/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://mv.proasa.org.br/webServiceProasa/status_autorizacao"/></con:call></con:operation><con:operation id="dd2d94cb-04a8-4563-ae0f-ec7a32e98879" isOneWay="false" action="http://mv.proasa.org.br/webServiceProasa/status_reembolso" name="status_reembolso" bindingOperationName="status_reembolso" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="3edb8cbd-0fe1-4ad7-ae58-abe289620497" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://mv.proasa.org.br/webserviceproasa/service.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://mv.proasa.org.br/webServiceProasa/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:status_reembolso/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://mv.proasa.org.br/webServiceProasa/status_reembolso"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="e8aa8664-e984-4e3d-b8c6-f209d42d216c" wsaVersion="NONE" name="ServiceSoap12" type="wsdl" bindingName="{http://mv.proasa.org.br/webServiceProasa/}ServiceSoap12" soapVersion="1_2" anonymous="optional" definition="http://mv.proasa.org.br/webserviceproasa/service.asmx?WSDL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://mv.proasa.org.br/webserviceproasa/service.asmx?WSDL"><con:part><con:url>http://mv.proasa.org.br/webserviceproasa/service.asmx?WSDL</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://mv.proasa.org.br/webServiceProasa/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://mv.proasa.org.br/webServiceProasa/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://mv.proasa.org.br/webServiceProasa/">
+      <s:element name="GetFaturaXml">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="param1" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="param2" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="param3" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFaturaXmlResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFaturaXmlResult" type="tns:ArrayOfFatura"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfFatura">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Fatura" nillable="true" type="tns:Fatura"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Fatura">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="cd_empresa" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="matricula" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="cpf" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="nome" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="cd_plano" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="matricula_titular" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="cd_lcto_mensalidade" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="ds_lcto_mensalidade" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="tipo" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="valor" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="dt_nascimento" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetExtratoCCXml">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="param1" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="param2" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetExtratoCCXmlResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetExtratoCCXmlResult" type="tns:ArrayOfExtratoCC"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfExtratoCC">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ExtratoCC" nillable="true" type="tns:ExtratoCC"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ExtratoCC">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ano" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="mes" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="dia" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="lancamento" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="lote" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="lancto" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="contaContabil" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="contaCorrente" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="valor" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="historico" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetSaldoCCXml">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="param1" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="param2" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSaldoCCXmlResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSaldoCCXmlResult" type="tns:ArrayOfSaldoCC"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfSaldoCC">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SaldoCC" nillable="true" type="tns:SaldoCC"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SaldoCC">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="conta" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="contaCorrente" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="valor" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetExtratoRelXml">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="param1" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="param2" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetExtratoRelXmlResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetExtratoRelXmlResult" type="tns:ArrayOfExtratoCC"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRps">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="param1" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="param2" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRpsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRpsResult" type="tns:ArrayOfRPS"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfRPS">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="RPS" nillable="true" type="tns:RPS"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="RPS">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="cd_fornecedor" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="nm_fornecedor" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="nr_cpf" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="codigo" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="vl_servico" type="s:decimal"/>
+          <s:element minOccurs="1" maxOccurs="1" name="vl_imposto" type="s:decimal"/>
+          <s:element minOccurs="1" maxOccurs="1" name="vl_porcent" type="s:decimal"/>
+          <s:element minOccurs="1" maxOccurs="1" name="dt_vencimento" type="s:dateTime"/>
+          <s:element minOccurs="0" maxOccurs="1" name="verba" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SB_LOGIN_BENEFICIARIO">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="User_login_type" type="s:long"/>
+            <s:element minOccurs="0" maxOccurs="1" name="User_login" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="User_psw" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SB_LOGIN_BENEFICIARIOResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SB_LOGIN_BENEFICIARIOResult" type="tns:ArrayOfLoginBeneficiario"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfLoginBeneficiario">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="LoginBeneficiario" nillable="true" type="tns:LoginBeneficiario"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="LoginBeneficiario">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="login" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="nome" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="sexo" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="data_nascimento" type="s:dateTime"/>
+          <s:element minOccurs="0" maxOccurs="1" name="cpf" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="telefone" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="endereco" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="bairro" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="cep" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="cidade" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="estado" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="empresa" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="matricula_beneficiario" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="matricula_funcionario" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="dependencia_id" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="data_inclusao" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="bloqueado" type="s:boolean"/>
+          <s:element minOccurs="0" maxOccurs="1" name="motivo_bloqueio_descricao" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="titular" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="tipo_beneficiario_descricao" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="grau_parentesco_descricao" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="convenio_id" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="convenio_descricao" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="convenio_versao" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="convenio_abrangencia_descricao" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="convenio_acomodacao_descricao" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="convenio_segmentacao_descricao" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="convenio_padrao_conf_descricao" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="convenio_modal_cobr_descricao" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="convenio_tp_contrato_descricao" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="cartao_validade" type="s:dateTime"/>
+          <s:element minOccurs="0" maxOccurs="1" name="cartao_via" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="cartao_imagem" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="exibe_valor_pagamento" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="cd_entidade" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="nr_endereco" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="ds_complemento" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="nr_celular" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="nr_cns" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="cd_ans" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="un_matricula_beneficiario" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="un_rede_atend" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="un_cartao_validade" type="s:dateTime"/>
+          <s:element minOccurs="0" maxOccurs="1" name="un_tipo_contratacao" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="un_acomodacao" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="un_cod_prod_ans" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="un_acomodacao_verso" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SB_RECUPERA_SENHA">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="User_login" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="User_sign" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="User_countersign" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="User_email" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SB_RECUPERA_SENHAResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SB_RECUPERA_SENHAResult" type="tns:ArrayOfRecuperaSenha"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfRecuperaSenha">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="RecuperaSenha" nillable="true" type="tns:RecuperaSenha"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="RecuperaSenha">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="usuario_email" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="usuario_login" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="usuario_nome" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="usuario_senha" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ConciliacaoProasa">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="param1" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="param2" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="param3" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConciliacaoProasaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConciliacaoProasaResult" type="tns:ArrayOfConciliaProasa"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfConciliaProasa">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ConciliaProasa" nillable="true" type="tns:ConciliaProasa"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ConciliaProasa">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="nm_contrato" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="cd_empresa" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="matricula" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="cpf" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="nome" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="cd_plano" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="matricula_titular" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="cd_lcto_mensalidade" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="ds_lcto_mensalidade" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="tipo" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="valor" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:element name="status_reembolso">
+        <s:complexType/>
+      </s:element>
+      <s:element name="status_reembolsoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="status_reembolsoResult" type="tns:statusReembolso"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="statusReembolso">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="status" type="s:boolean"/>
+          <s:element minOccurs="0" maxOccurs="1" name="motivo_critica" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="itens" type="tns:ArrayOfItStatusReembolso"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfItStatusReembolso">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="itStatusReembolso" nillable="true" type="tns:itStatusReembolso"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="itStatusReembolso">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="chave_status" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="descricao" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:element name="historico_reembolso">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cdReembolso" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="historico_reembolsoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="historico_reembolsoResult" type="tns:historicoReembolso"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="historicoReembolso">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="status" type="s:boolean"/>
+          <s:element minOccurs="0" maxOccurs="1" name="motivo_critica" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="itens" type="tns:ArrayOfItHistoricoReembolso"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfItHistoricoReembolso">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="itHistoricoReembolso" nillable="true" type="tns:itHistoricoReembolso"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="itHistoricoReembolso">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="dh_movimentacao" type="s:dateTime"/>
+          <s:element minOccurs="0" maxOccurs="1" name="chave_status" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:element name="extrato_reembolso">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cdMatricula" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="dtInicio" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="dtFim" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="extrato_reembolsoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="extrato_reembolsoResult" type="tns:extratoReembolso"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="extratoReembolso">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="status" type="s:boolean"/>
+          <s:element minOccurs="0" maxOccurs="1" name="motivo_critica" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="itens" type="tns:ArrayOfItExtratoReembolso"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfItExtratoReembolso">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="itExtratoReembolso" nillable="true" type="tns:itExtratoReembolso"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="itExtratoReembolso">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="cdReembolso" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="cdMatricula" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="nomeBeneficiario" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="cdStatus" type="s:int"/>
+          <s:element minOccurs="0" maxOccurs="1" name="cidade" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="estado" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="dtInclusao" type="s:dateTime"/>
+          <s:element minOccurs="1" maxOccurs="1" name="dtPrevPagamento" type="s:dateTime"/>
+          <s:element minOccurs="0" maxOccurs="1" name="cdPrestador" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="nomePrestador" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="cnpjPrestador" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="idPrestador" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="cdTipoAtendimento" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="dsTipoAtendimento" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="valorApresentado" type="s:double"/>
+          <s:element minOccurs="1" maxOccurs="1" name="valorReembolso" type="s:double"/>
+          <s:element minOccurs="0" maxOccurs="1" name="observacao" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:element name="detalhe_reembolso">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cdReembolso" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="detalhe_reembolsoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="detalhe_reembolsoResult" type="tns:detalheReembolso"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="detalheReembolso">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="status" type="s:boolean"/>
+          <s:element minOccurs="0" maxOccurs="1" name="motivo_critica" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="itens" type="tns:ArrayOfItDetalheReembolso"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfItDetalheReembolso">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="itDetalheReembolso" nillable="true" type="tns:itDetalheReembolso"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="itDetalheReembolso">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="cdReembolso" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="cdProcedimento" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="dsProcedimento" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="cdStatus" type="s:int"/>
+          <s:element minOccurs="0" maxOccurs="1" name="cidade" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="estado" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="dtExecucao" type="s:dateTime"/>
+          <s:element minOccurs="0" maxOccurs="1" name="tipoDoc" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="descricaoDoc" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="qtExecutada" type="s:double"/>
+          <s:element minOccurs="1" maxOccurs="1" name="valorApresentado" type="s:double"/>
+          <s:element minOccurs="1" maxOccurs="1" name="valorReembolso" type="s:double"/>
+          <s:element minOccurs="0" maxOccurs="1" name="observacao" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetBeneficiario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="search" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBeneficiarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBeneficiarioResult" type="tns:Beneficiario"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Beneficiario">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="cdMatricula" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="nome" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="sexo" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="nrCpf" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="dtNascimento" type="s:dateTime"/>
+          <s:element minOccurs="0" maxOccurs="1" name="nrTelefone" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="nrCelular" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="dsEmail" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:element name="status_autorizacao">
+        <s:complexType/>
+      </s:element>
+      <s:element name="status_autorizacaoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="status_autorizacaoResult" type="tns:statusAutorizacao"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="statusAutorizacao">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="status" type="s:boolean"/>
+          <s:element minOccurs="0" maxOccurs="1" name="motivo_critica" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="itens" type="tns:ArrayOfItStatusAutorizacao"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfItStatusAutorizacao">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="itStatusAutorizacao" nillable="true" type="tns:itStatusAutorizacao"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="itStatusAutorizacao">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="chave_status" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="descricao" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:element name="extrato_autorizacao">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cdMatricula" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="dtInicio" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="dtFim" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="extrato_autorizacaoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="extrato_autorizacaoResult" type="tns:extratoAutorizacao"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="extratoAutorizacao">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="status" type="s:boolean"/>
+          <s:element minOccurs="0" maxOccurs="1" name="motivo_critica" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="itens" type="tns:ArrayOfItExtratoAutorizacao"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfItExtratoAutorizacao">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="itExtratoAutorizacao" nillable="true" type="tns:itExtratoAutorizacao"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="itExtratoAutorizacao">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="nrAutorizacao" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="cdMatricula" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="nomeBeneficiario" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="cdStatus" type="s:int"/>
+          <s:element minOccurs="1" maxOccurs="1" name="dtSolicitacao" type="s:dateTime"/>
+          <s:element minOccurs="1" maxOccurs="1" name="dtAutorizacao" type="s:dateTime"/>
+          <s:element minOccurs="0" maxOccurs="1" name="nomePrestador" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="dsEspecialidade" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="tipoTratamento" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="nrPedido" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="nrSenha" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:element name="detalhe_autorizacao">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nrAutorizacao" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="detalhe_autorizacaoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="detalhe_autorizacaoResult" type="tns:detalheAutorizacao"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="detalheAutorizacao">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="status" type="s:boolean"/>
+          <s:element minOccurs="0" maxOccurs="1" name="motivo_critica" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="itens" type="tns:ArrayOfItDetalheAutorizacao"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfItDetalheAutorizacao">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="itDetalheAutorizacao" nillable="true" type="tns:itDetalheAutorizacao"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="itDetalheAutorizacao">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="nrAutorizacao" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="cdProcedimento" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="dsProcedimento" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="cdStatus" type="s:int"/>
+          <s:element minOccurs="1" maxOccurs="1" name="qtSolicitado" type="s:double"/>
+          <s:element minOccurs="1" maxOccurs="1" name="qtAutorizado" type="s:double"/>
+          <s:element minOccurs="1" maxOccurs="1" name="dtAutorizacao" type="s:dateTime"/>
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ArrayOfFatura" nillable="true" type="tns:ArrayOfFatura"/>
+      <s:element name="ArrayOfExtratoCC" nillable="true" type="tns:ArrayOfExtratoCC"/>
+      <s:element name="ArrayOfSaldoCC" nillable="true" type="tns:ArrayOfSaldoCC"/>
+      <s:element name="ArrayOfRPS" nillable="true" type="tns:ArrayOfRPS"/>
+      <s:element name="ArrayOfLoginBeneficiario" nillable="true" type="tns:ArrayOfLoginBeneficiario"/>
+      <s:element name="ArrayOfRecuperaSenha" nillable="true" type="tns:ArrayOfRecuperaSenha"/>
+      <s:element name="ArrayOfConciliaProasa" nillable="true" type="tns:ArrayOfConciliaProasa"/>
+      <s:element name="statusReembolso" nillable="true" type="tns:statusReembolso"/>
+      <s:element name="historicoReembolso" nillable="true" type="tns:historicoReembolso"/>
+      <s:element name="extratoReembolso" nillable="true" type="tns:extratoReembolso"/>
+      <s:element name="detalheReembolso" nillable="true" type="tns:detalheReembolso"/>
+      <s:element name="Beneficiario" nillable="true" type="tns:Beneficiario"/>
+      <s:element name="statusAutorizacao" nillable="true" type="tns:statusAutorizacao"/>
+      <s:element name="extratoAutorizacao" nillable="true" type="tns:extratoAutorizacao"/>
+      <s:element name="detalheAutorizacao" nillable="true" type="tns:detalheAutorizacao"/>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetFaturaXmlSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFaturaXml"/>
+  </wsdl:message>
+  <wsdl:message name="GetFaturaXmlSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFaturaXmlResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetExtratoCCXmlSoapIn">
+    <wsdl:part name="parameters" element="tns:GetExtratoCCXml"/>
+  </wsdl:message>
+  <wsdl:message name="GetExtratoCCXmlSoapOut">
+    <wsdl:part name="parameters" element="tns:GetExtratoCCXmlResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetSaldoCCXmlSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSaldoCCXml"/>
+  </wsdl:message>
+  <wsdl:message name="GetSaldoCCXmlSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSaldoCCXmlResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetExtratoRelXmlSoapIn">
+    <wsdl:part name="parameters" element="tns:GetExtratoRelXml"/>
+  </wsdl:message>
+  <wsdl:message name="GetExtratoRelXmlSoapOut">
+    <wsdl:part name="parameters" element="tns:GetExtratoRelXmlResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetRpsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetRps"/>
+  </wsdl:message>
+  <wsdl:message name="GetRpsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetRpsResponse"/>
+  </wsdl:message>
+  <wsdl:message name="SB_LOGIN_BENEFICIARIOSoapIn">
+    <wsdl:part name="parameters" element="tns:SB_LOGIN_BENEFICIARIO"/>
+  </wsdl:message>
+  <wsdl:message name="SB_LOGIN_BENEFICIARIOSoapOut">
+    <wsdl:part name="parameters" element="tns:SB_LOGIN_BENEFICIARIOResponse"/>
+  </wsdl:message>
+  <wsdl:message name="SB_RECUPERA_SENHASoapIn">
+    <wsdl:part name="parameters" element="tns:SB_RECUPERA_SENHA"/>
+  </wsdl:message>
+  <wsdl:message name="SB_RECUPERA_SENHASoapOut">
+    <wsdl:part name="parameters" element="tns:SB_RECUPERA_SENHAResponse"/>
+  </wsdl:message>
+  <wsdl:message name="ConciliacaoProasaSoapIn">
+    <wsdl:part name="parameters" element="tns:ConciliacaoProasa"/>
+  </wsdl:message>
+  <wsdl:message name="ConciliacaoProasaSoapOut">
+    <wsdl:part name="parameters" element="tns:ConciliacaoProasaResponse"/>
+  </wsdl:message>
+  <wsdl:message name="status_reembolsoSoapIn">
+    <wsdl:part name="parameters" element="tns:status_reembolso"/>
+  </wsdl:message>
+  <wsdl:message name="status_reembolsoSoapOut">
+    <wsdl:part name="parameters" element="tns:status_reembolsoResponse"/>
+  </wsdl:message>
+  <wsdl:message name="historico_reembolsoSoapIn">
+    <wsdl:part name="parameters" element="tns:historico_reembolso"/>
+  </wsdl:message>
+  <wsdl:message name="historico_reembolsoSoapOut">
+    <wsdl:part name="parameters" element="tns:historico_reembolsoResponse"/>
+  </wsdl:message>
+  <wsdl:message name="extrato_reembolsoSoapIn">
+    <wsdl:part name="parameters" element="tns:extrato_reembolso"/>
+  </wsdl:message>
+  <wsdl:message name="extrato_reembolsoSoapOut">
+    <wsdl:part name="parameters" element="tns:extrato_reembolsoResponse"/>
+  </wsdl:message>
+  <wsdl:message name="detalhe_reembolsoSoapIn">
+    <wsdl:part name="parameters" element="tns:detalhe_reembolso"/>
+  </wsdl:message>
+  <wsdl:message name="detalhe_reembolsoSoapOut">
+    <wsdl:part name="parameters" element="tns:detalhe_reembolsoResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetBeneficiarioSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBeneficiario"/>
+  </wsdl:message>
+  <wsdl:message name="GetBeneficiarioSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBeneficiarioResponse"/>
+  </wsdl:message>
+  <wsdl:message name="status_autorizacaoSoapIn">
+    <wsdl:part name="parameters" element="tns:status_autorizacao"/>
+  </wsdl:message>
+  <wsdl:message name="status_autorizacaoSoapOut">
+    <wsdl:part name="parameters" element="tns:status_autorizacaoResponse"/>
+  </wsdl:message>
+  <wsdl:message name="extrato_autorizacaoSoapIn">
+    <wsdl:part name="parameters" element="tns:extrato_autorizacao"/>
+  </wsdl:message>
+  <wsdl:message name="extrato_autorizacaoSoapOut">
+    <wsdl:part name="parameters" element="tns:extrato_autorizacaoResponse"/>
+  </wsdl:message>
+  <wsdl:message name="detalhe_autorizacaoSoapIn">
+    <wsdl:part name="parameters" element="tns:detalhe_autorizacao"/>
+  </wsdl:message>
+  <wsdl:message name="detalhe_autorizacaoSoapOut">
+    <wsdl:part name="parameters" element="tns:detalhe_autorizacaoResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetFaturaXmlHttpPostIn">
+    <wsdl:part name="param1" type="s:string"/>
+    <wsdl:part name="param2" type="s:string"/>
+    <wsdl:part name="param3" type="s:string"/>
+  </wsdl:message>
+  <wsdl:message name="GetFaturaXmlHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfFatura"/>
+  </wsdl:message>
+  <wsdl:message name="GetExtratoCCXmlHttpPostIn">
+    <wsdl:part name="param1" type="s:string"/>
+    <wsdl:part name="param2" type="s:string"/>
+  </wsdl:message>
+  <wsdl:message name="GetExtratoCCXmlHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfExtratoCC"/>
+  </wsdl:message>
+  <wsdl:message name="GetSaldoCCXmlHttpPostIn">
+    <wsdl:part name="param1" type="s:string"/>
+    <wsdl:part name="param2" type="s:string"/>
+  </wsdl:message>
+  <wsdl:message name="GetSaldoCCXmlHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfSaldoCC"/>
+  </wsdl:message>
+  <wsdl:message name="GetExtratoRelXmlHttpPostIn">
+    <wsdl:part name="param1" type="s:string"/>
+    <wsdl:part name="param2" type="s:string"/>
+  </wsdl:message>
+  <wsdl:message name="GetExtratoRelXmlHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfExtratoCC"/>
+  </wsdl:message>
+  <wsdl:message name="GetRpsHttpPostIn">
+    <wsdl:part name="param1" type="s:string"/>
+    <wsdl:part name="param2" type="s:string"/>
+  </wsdl:message>
+  <wsdl:message name="GetRpsHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfRPS"/>
+  </wsdl:message>
+  <wsdl:message name="SB_LOGIN_BENEFICIARIOHttpPostIn">
+    <wsdl:part name="User_login_type" type="s:string"/>
+    <wsdl:part name="User_login" type="s:string"/>
+    <wsdl:part name="User_psw" type="s:string"/>
+  </wsdl:message>
+  <wsdl:message name="SB_LOGIN_BENEFICIARIOHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLoginBeneficiario"/>
+  </wsdl:message>
+  <wsdl:message name="SB_RECUPERA_SENHAHttpPostIn">
+    <wsdl:part name="User_login" type="s:string"/>
+    <wsdl:part name="User_sign" type="s:string"/>
+    <wsdl:part name="User_countersign" type="s:string"/>
+    <wsdl:part name="User_email" type="s:string"/>
+  </wsdl:message>
+  <wsdl:message name="SB_RECUPERA_SENHAHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfRecuperaSenha"/>
+  </wsdl:message>
+  <wsdl:message name="ConciliacaoProasaHttpPostIn">
+    <wsdl:part name="param1" type="s:string"/>
+    <wsdl:part name="param2" type="s:string"/>
+    <wsdl:part name="param3" type="s:string"/>
+  </wsdl:message>
+  <wsdl:message name="ConciliacaoProasaHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfConciliaProasa"/>
+  </wsdl:message>
+  <wsdl:message name="status_reembolsoHttpPostIn"/>
+  <wsdl:message name="status_reembolsoHttpPostOut">
+    <wsdl:part name="Body" element="tns:statusReembolso"/>
+  </wsdl:message>
+  <wsdl:message name="historico_reembolsoHttpPostIn">
+    <wsdl:part name="cdReembolso" type="s:string"/>
+  </wsdl:message>
+  <wsdl:message name="historico_reembolsoHttpPostOut">
+    <wsdl:part name="Body" element="tns:historicoReembolso"/>
+  </wsdl:message>
+  <wsdl:message name="extrato_reembolsoHttpPostIn">
+    <wsdl:part name="cdMatricula" type="s:string"/>
+    <wsdl:part name="dtInicio" type="s:string"/>
+    <wsdl:part name="dtFim" type="s:string"/>
+  </wsdl:message>
+  <wsdl:message name="extrato_reembolsoHttpPostOut">
+    <wsdl:part name="Body" element="tns:extratoReembolso"/>
+  </wsdl:message>
+  <wsdl:message name="detalhe_reembolsoHttpPostIn">
+    <wsdl:part name="cdReembolso" type="s:string"/>
+  </wsdl:message>
+  <wsdl:message name="detalhe_reembolsoHttpPostOut">
+    <wsdl:part name="Body" element="tns:detalheReembolso"/>
+  </wsdl:message>
+  <wsdl:message name="GetBeneficiarioHttpPostIn">
+    <wsdl:part name="search" type="s:string"/>
+  </wsdl:message>
+  <wsdl:message name="GetBeneficiarioHttpPostOut">
+    <wsdl:part name="Body" element="tns:Beneficiario"/>
+  </wsdl:message>
+  <wsdl:message name="status_autorizacaoHttpPostIn"/>
+  <wsdl:message name="status_autorizacaoHttpPostOut">
+    <wsdl:part name="Body" element="tns:statusAutorizacao"/>
+  </wsdl:message>
+  <wsdl:message name="extrato_autorizacaoHttpPostIn">
+    <wsdl:part name="cdMatricula" type="s:string"/>
+    <wsdl:part name="dtInicio" type="s:string"/>
+    <wsdl:part name="dtFim" type="s:string"/>
+  </wsdl:message>
+  <wsdl:message name="extrato_autorizacaoHttpPostOut">
+    <wsdl:part name="Body" element="tns:extratoAutorizacao"/>
+  </wsdl:message>
+  <wsdl:message name="detalhe_autorizacaoHttpPostIn">
+    <wsdl:part name="nrAutorizacao" type="s:string"/>
+  </wsdl:message>
+  <wsdl:message name="detalhe_autorizacaoHttpPostOut">
+    <wsdl:part name="Body" element="tns:detalheAutorizacao"/>
+  </wsdl:message>
+  <wsdl:portType name="ServiceSoap">
+    <wsdl:operation name="GetFaturaXml">
+      <wsdl:input message="tns:GetFaturaXmlSoapIn"/>
+      <wsdl:output message="tns:GetFaturaXmlSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetExtratoCCXml">
+      <wsdl:input message="tns:GetExtratoCCXmlSoapIn"/>
+      <wsdl:output message="tns:GetExtratoCCXmlSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetSaldoCCXml">
+      <wsdl:input message="tns:GetSaldoCCXmlSoapIn"/>
+      <wsdl:output message="tns:GetSaldoCCXmlSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetExtratoRelXml">
+      <wsdl:input message="tns:GetExtratoRelXmlSoapIn"/>
+      <wsdl:output message="tns:GetExtratoRelXmlSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetRps">
+      <wsdl:input message="tns:GetRpsSoapIn"/>
+      <wsdl:output message="tns:GetRpsSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="SB_LOGIN_BENEFICIARIO">
+      <wsdl:input message="tns:SB_LOGIN_BENEFICIARIOSoapIn"/>
+      <wsdl:output message="tns:SB_LOGIN_BENEFICIARIOSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="SB_RECUPERA_SENHA">
+      <wsdl:input message="tns:SB_RECUPERA_SENHASoapIn"/>
+      <wsdl:output message="tns:SB_RECUPERA_SENHASoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="ConciliacaoProasa">
+      <wsdl:input message="tns:ConciliacaoProasaSoapIn"/>
+      <wsdl:output message="tns:ConciliacaoProasaSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="status_reembolso">
+      <wsdl:input message="tns:status_reembolsoSoapIn"/>
+      <wsdl:output message="tns:status_reembolsoSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="historico_reembolso">
+      <wsdl:input message="tns:historico_reembolsoSoapIn"/>
+      <wsdl:output message="tns:historico_reembolsoSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="extrato_reembolso">
+      <wsdl:input message="tns:extrato_reembolsoSoapIn"/>
+      <wsdl:output message="tns:extrato_reembolsoSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="detalhe_reembolso">
+      <wsdl:input message="tns:detalhe_reembolsoSoapIn"/>
+      <wsdl:output message="tns:detalhe_reembolsoSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetBeneficiario">
+      <wsdl:input message="tns:GetBeneficiarioSoapIn"/>
+      <wsdl:output message="tns:GetBeneficiarioSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="status_autorizacao">
+      <wsdl:input message="tns:status_autorizacaoSoapIn"/>
+      <wsdl:output message="tns:status_autorizacaoSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="extrato_autorizacao">
+      <wsdl:input message="tns:extrato_autorizacaoSoapIn"/>
+      <wsdl:output message="tns:extrato_autorizacaoSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="detalhe_autorizacao">
+      <wsdl:input message="tns:detalhe_autorizacaoSoapIn"/>
+      <wsdl:output message="tns:detalhe_autorizacaoSoapOut"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ServiceHttpPost">
+    <wsdl:operation name="GetFaturaXml">
+      <wsdl:input message="tns:GetFaturaXmlHttpPostIn"/>
+      <wsdl:output message="tns:GetFaturaXmlHttpPostOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetExtratoCCXml">
+      <wsdl:input message="tns:GetExtratoCCXmlHttpPostIn"/>
+      <wsdl:output message="tns:GetExtratoCCXmlHttpPostOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetSaldoCCXml">
+      <wsdl:input message="tns:GetSaldoCCXmlHttpPostIn"/>
+      <wsdl:output message="tns:GetSaldoCCXmlHttpPostOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetExtratoRelXml">
+      <wsdl:input message="tns:GetExtratoRelXmlHttpPostIn"/>
+      <wsdl:output message="tns:GetExtratoRelXmlHttpPostOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetRps">
+      <wsdl:input message="tns:GetRpsHttpPostIn"/>
+      <wsdl:output message="tns:GetRpsHttpPostOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="SB_LOGIN_BENEFICIARIO">
+      <wsdl:input message="tns:SB_LOGIN_BENEFICIARIOHttpPostIn"/>
+      <wsdl:output message="tns:SB_LOGIN_BENEFICIARIOHttpPostOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="SB_RECUPERA_SENHA">
+      <wsdl:input message="tns:SB_RECUPERA_SENHAHttpPostIn"/>
+      <wsdl:output message="tns:SB_RECUPERA_SENHAHttpPostOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="ConciliacaoProasa">
+      <wsdl:input message="tns:ConciliacaoProasaHttpPostIn"/>
+      <wsdl:output message="tns:ConciliacaoProasaHttpPostOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="status_reembolso">
+      <wsdl:input message="tns:status_reembolsoHttpPostIn"/>
+      <wsdl:output message="tns:status_reembolsoHttpPostOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="historico_reembolso">
+      <wsdl:input message="tns:historico_reembolsoHttpPostIn"/>
+      <wsdl:output message="tns:historico_reembolsoHttpPostOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="extrato_reembolso">
+      <wsdl:input message="tns:extrato_reembolsoHttpPostIn"/>
+      <wsdl:output message="tns:extrato_reembolsoHttpPostOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="detalhe_reembolso">
+      <wsdl:input message="tns:detalhe_reembolsoHttpPostIn"/>
+      <wsdl:output message="tns:detalhe_reembolsoHttpPostOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetBeneficiario">
+      <wsdl:input message="tns:GetBeneficiarioHttpPostIn"/>
+      <wsdl:output message="tns:GetBeneficiarioHttpPostOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="status_autorizacao">
+      <wsdl:input message="tns:status_autorizacaoHttpPostIn"/>
+      <wsdl:output message="tns:status_autorizacaoHttpPostOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="extrato_autorizacao">
+      <wsdl:input message="tns:extrato_autorizacaoHttpPostIn"/>
+      <wsdl:output message="tns:extrato_autorizacaoHttpPostOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="detalhe_autorizacao">
+      <wsdl:input message="tns:detalhe_autorizacaoHttpPostIn"/>
+      <wsdl:output message="tns:detalhe_autorizacaoHttpPostOut"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServiceSoap" type="tns:ServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="GetFaturaXml">
+      <soap:operation soapAction="http://mv.proasa.org.br/webServiceProasa/GetFaturaXml" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExtratoCCXml">
+      <soap:operation soapAction="http://mv.proasa.org.br/webServiceProasa/GetExtratoCCXml" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSaldoCCXml">
+      <soap:operation soapAction="http://mv.proasa.org.br/webServiceProasa/GetSaldoCCXml" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExtratoRelXml">
+      <soap:operation soapAction="http://mv.proasa.org.br/webServiceProasa/GetExtratoRelXml" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRps">
+      <soap:operation soapAction="http://mv.proasa.org.br/webServiceProasa/GetRps" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SB_LOGIN_BENEFICIARIO">
+      <soap:operation soapAction="http://mv.proasa.org.br/webServiceProasa/SB_LOGIN_BENEFICIARIO" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SB_RECUPERA_SENHA">
+      <soap:operation soapAction="http://mv.proasa.org.br/webServiceProasa/SB_RECUPERA_SENHA" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConciliacaoProasa">
+      <soap:operation soapAction="http://mv.proasa.org.br/webServiceProasa/ConciliacaoProasa" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="status_reembolso">
+      <soap:operation soapAction="http://mv.proasa.org.br/webServiceProasa/status_reembolso" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="historico_reembolso">
+      <soap:operation soapAction="http://mv.proasa.org.br/webServiceProasa/historico_reembolso" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="extrato_reembolso">
+      <soap:operation soapAction="http://mv.proasa.org.br/webServiceProasa/extrato_reembolso" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="detalhe_reembolso">
+      <soap:operation soapAction="http://mv.proasa.org.br/webServiceProasa/detalhe_reembolso" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBeneficiario">
+      <soap:operation soapAction="http://mv.proasa.org.br/webServiceProasa/GetBeneficiario" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="status_autorizacao">
+      <soap:operation soapAction="http://mv.proasa.org.br/webServiceProasa/status_autorizacao" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="extrato_autorizacao">
+      <soap:operation soapAction="http://mv.proasa.org.br/webServiceProasa/extrato_autorizacao" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="detalhe_autorizacao">
+      <soap:operation soapAction="http://mv.proasa.org.br/webServiceProasa/detalhe_autorizacao" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceSoap12" type="tns:ServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="GetFaturaXml">
+      <soap12:operation soapAction="http://mv.proasa.org.br/webServiceProasa/GetFaturaXml" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExtratoCCXml">
+      <soap12:operation soapAction="http://mv.proasa.org.br/webServiceProasa/GetExtratoCCXml" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSaldoCCXml">
+      <soap12:operation soapAction="http://mv.proasa.org.br/webServiceProasa/GetSaldoCCXml" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExtratoRelXml">
+      <soap12:operation soapAction="http://mv.proasa.org.br/webServiceProasa/GetExtratoRelXml" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRps">
+      <soap12:operation soapAction="http://mv.proasa.org.br/webServiceProasa/GetRps" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SB_LOGIN_BENEFICIARIO">
+      <soap12:operation soapAction="http://mv.proasa.org.br/webServiceProasa/SB_LOGIN_BENEFICIARIO" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SB_RECUPERA_SENHA">
+      <soap12:operation soapAction="http://mv.proasa.org.br/webServiceProasa/SB_RECUPERA_SENHA" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConciliacaoProasa">
+      <soap12:operation soapAction="http://mv.proasa.org.br/webServiceProasa/ConciliacaoProasa" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="status_reembolso">
+      <soap12:operation soapAction="http://mv.proasa.org.br/webServiceProasa/status_reembolso" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="historico_reembolso">
+      <soap12:operation soapAction="http://mv.proasa.org.br/webServiceProasa/historico_reembolso" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="extrato_reembolso">
+      <soap12:operation soapAction="http://mv.proasa.org.br/webServiceProasa/extrato_reembolso" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="detalhe_reembolso">
+      <soap12:operation soapAction="http://mv.proasa.org.br/webServiceProasa/detalhe_reembolso" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBeneficiario">
+      <soap12:operation soapAction="http://mv.proasa.org.br/webServiceProasa/GetBeneficiario" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="status_autorizacao">
+      <soap12:operation soapAction="http://mv.proasa.org.br/webServiceProasa/status_autorizacao" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="extrato_autorizacao">
+      <soap12:operation soapAction="http://mv.proasa.org.br/webServiceProasa/extrato_autorizacao" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="detalhe_autorizacao">
+      <soap12:operation soapAction="http://mv.proasa.org.br/webServiceProasa/detalhe_autorizacao" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceHttpPost" type="tns:ServiceHttpPost">
+    <http:binding verb="POST"/>
+    <wsdl:operation name="GetFaturaXml">
+      <http:operation location="/GetFaturaXml"/>
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExtratoCCXml">
+      <http:operation location="/GetExtratoCCXml"/>
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSaldoCCXml">
+      <http:operation location="/GetSaldoCCXml"/>
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExtratoRelXml">
+      <http:operation location="/GetExtratoRelXml"/>
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRps">
+      <http:operation location="/GetRps"/>
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SB_LOGIN_BENEFICIARIO">
+      <http:operation location="/SB_LOGIN_BENEFICIARIO"/>
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SB_RECUPERA_SENHA">
+      <http:operation location="/SB_RECUPERA_SENHA"/>
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConciliacaoProasa">
+      <http:operation location="/ConciliacaoProasa"/>
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="status_reembolso">
+      <http:operation location="/status_reembolso"/>
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="historico_reembolso">
+      <http:operation location="/historico_reembolso"/>
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="extrato_reembolso">
+      <http:operation location="/extrato_reembolso"/>
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="detalhe_reembolso">
+      <http:operation location="/detalhe_reembolso"/>
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBeneficiario">
+      <http:operation location="/GetBeneficiario"/>
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="status_autorizacao">
+      <http:operation location="/status_autorizacao"/>
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="extrato_autorizacao">
+      <http:operation location="/extrato_autorizacao"/>
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="detalhe_autorizacao">
+      <http:operation location="/detalhe_autorizacao"/>
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service">
+    <wsdl:port name="ServiceSoap" binding="tns:ServiceSoap">
+      <soap:address location="http://mv.proasa.org.br/webserviceproasa/service.asmx"/>
+    </wsdl:port>
+    <wsdl:port name="ServiceSoap12" binding="tns:ServiceSoap12">
+      <soap12:address location="http://mv.proasa.org.br/webserviceproasa/service.asmx"/>
+    </wsdl:port>
+    <wsdl:port name="ServiceHttpPost" binding="tns:ServiceHttpPost">
+      <http:address location="http://mv.proasa.org.br/webserviceproasa/service.asmx"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://mv.proasa.org.br/webserviceproasa/service.asmx</con:endpoint></con:endpoints><con:operation id="d9a9e97e-8e9e-4fbd-b5ab-8f80dc9d23a6" isOneWay="false" action="http://mv.proasa.org.br/webServiceProasa/ConciliacaoProasa" name="ConciliacaoProasa" bindingOperationName="ConciliacaoProasa" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="4bb43203-1936-406c-9d0c-964ee6d53a7c" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://mv.proasa.org.br/webserviceproasa/service.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:web="http://mv.proasa.org.br/webServiceProasa/">
+   <soap:Header/>
+   <soap:Body>
+      <web:ConciliacaoProasa>
+         <!--Optional:-->
+         <web:param1>?</web:param1>
+         <!--Optional:-->
+         <web:param2>?</web:param2>
+         <!--Optional:-->
+         <web:param3>?</web:param3>
+      </web:ConciliacaoProasa>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://mv.proasa.org.br/webServiceProasa/ServiceSoap/ConciliacaoProasaRequest"/></con:call></con:operation><con:operation id="6e1939d4-28f8-4cef-b62a-3ce7a3c36f57" isOneWay="false" action="http://mv.proasa.org.br/webServiceProasa/detalhe_autorizacao" name="detalhe_autorizacao" bindingOperationName="detalhe_autorizacao" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="39d61f11-c32b-42f9-8af1-c0c34c22182c" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://mv.proasa.org.br/webserviceproasa/service.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:web="http://mv.proasa.org.br/webServiceProasa/">
+   <soap:Header/>
+   <soap:Body>
+      <web:detalhe_autorizacao>
+         <!--Optional:-->
+         <web:nrAutorizacao>?</web:nrAutorizacao>
+      </web:detalhe_autorizacao>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://mv.proasa.org.br/webServiceProasa/ServiceSoap/detalhe_autorizacaoRequest"/></con:call></con:operation><con:operation id="a46cb508-791e-4f56-b27e-7086576a2501" isOneWay="false" action="http://mv.proasa.org.br/webServiceProasa/detalhe_reembolso" name="detalhe_reembolso" bindingOperationName="detalhe_reembolso" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="01825cc0-9001-4b1b-9e1c-df40b07ef5a9" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://mv.proasa.org.br/webserviceproasa/service.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:web="http://mv.proasa.org.br/webServiceProasa/">
+   <soap:Header/>
+   <soap:Body>
+      <web:detalhe_reembolso>
+         <!--Optional:-->
+         <web:cdReembolso>?</web:cdReembolso>
+      </web:detalhe_reembolso>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://mv.proasa.org.br/webServiceProasa/ServiceSoap/detalhe_reembolsoRequest"/></con:call></con:operation><con:operation id="ea63acae-a776-44e7-ac04-47e3d307c784" isOneWay="false" action="http://mv.proasa.org.br/webServiceProasa/extrato_autorizacao" name="extrato_autorizacao" bindingOperationName="extrato_autorizacao" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="bb6c9e38-d5b9-42e5-9abd-3b2b0d8c7635" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://mv.proasa.org.br/webserviceproasa/service.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:web="http://mv.proasa.org.br/webServiceProasa/">
+   <soap:Header/>
+   <soap:Body>
+      <web:extrato_autorizacao>
+         <!--Optional:-->
+         <web:cdMatricula>?</web:cdMatricula>
+         <!--Optional:-->
+         <web:dtInicio>?</web:dtInicio>
+         <!--Optional:-->
+         <web:dtFim>?</web:dtFim>
+      </web:extrato_autorizacao>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://mv.proasa.org.br/webServiceProasa/ServiceSoap/extrato_autorizacaoRequest"/></con:call></con:operation><con:operation id="5f4b1ff0-9c2b-45da-a0ea-85a60fa3316c" isOneWay="false" action="http://mv.proasa.org.br/webServiceProasa/extrato_reembolso" name="extrato_reembolso" bindingOperationName="extrato_reembolso" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="3ccbac0a-6432-464b-8512-c19103f7c005" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://mv.proasa.org.br/webserviceproasa/service.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:web="http://mv.proasa.org.br/webServiceProasa/">
+   <soap:Header/>
+   <soap:Body>
+      <web:extrato_reembolso>
+         <!--Optional:-->
+         <web:cdMatricula>?</web:cdMatricula>
+         <!--Optional:-->
+         <web:dtInicio>?</web:dtInicio>
+         <!--Optional:-->
+         <web:dtFim>?</web:dtFim>
+      </web:extrato_reembolso>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://mv.proasa.org.br/webServiceProasa/ServiceSoap/extrato_reembolsoRequest"/></con:call></con:operation><con:operation id="dae48252-5eb7-474f-aac3-ddd5afc75f86" isOneWay="false" action="http://mv.proasa.org.br/webServiceProasa/GetBeneficiario" name="GetBeneficiario" bindingOperationName="GetBeneficiario" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="80f4fcd6-1835-4c0c-a4ea-325e1576df7e" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://mv.proasa.org.br/webserviceproasa/service.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:web="http://mv.proasa.org.br/webServiceProasa/">
+   <soap:Header/>
+   <soap:Body>
+      <web:GetBeneficiario>
+         <!--Optional:-->
+         <web:search>?</web:search>
+      </web:GetBeneficiario>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://mv.proasa.org.br/webServiceProasa/ServiceSoap/GetBeneficiarioRequest"/></con:call></con:operation><con:operation id="e835face-19f4-460b-9a6c-70f6dd08957f" isOneWay="false" action="http://mv.proasa.org.br/webServiceProasa/GetExtratoCCXml" name="GetExtratoCCXml" bindingOperationName="GetExtratoCCXml" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="1d345307-3743-4e62-ba22-c3869c3d02c4" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://mv.proasa.org.br/webserviceproasa/service.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:web="http://mv.proasa.org.br/webServiceProasa/">
+   <soap:Header/>
+   <soap:Body>
+      <web:GetExtratoCCXml>
+         <!--Optional:-->
+         <web:param1>?</web:param1>
+         <!--Optional:-->
+         <web:param2>?</web:param2>
+      </web:GetExtratoCCXml>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://mv.proasa.org.br/webServiceProasa/ServiceSoap/GetExtratoCCXmlRequest"/></con:call></con:operation><con:operation id="34517542-23b8-44b0-9fb4-46dce509d6af" isOneWay="false" action="http://mv.proasa.org.br/webServiceProasa/GetExtratoRelXml" name="GetExtratoRelXml" bindingOperationName="GetExtratoRelXml" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="38d73b67-861a-4e58-b514-0234633f0714" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://mv.proasa.org.br/webserviceproasa/service.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:web="http://mv.proasa.org.br/webServiceProasa/">
+   <soap:Header/>
+   <soap:Body>
+      <web:GetExtratoRelXml>
+         <!--Optional:-->
+         <web:param1>?</web:param1>
+         <!--Optional:-->
+         <web:param2>?</web:param2>
+      </web:GetExtratoRelXml>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://mv.proasa.org.br/webServiceProasa/ServiceSoap/GetExtratoRelXmlRequest"/></con:call></con:operation><con:operation id="00700647-9932-4f9c-b3b0-5993fe51deaf" isOneWay="false" action="http://mv.proasa.org.br/webServiceProasa/GetFaturaXml" name="GetFaturaXml" bindingOperationName="GetFaturaXml" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="223dd843-0ec2-4af0-9105-8b7fa50c8037" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://mv.proasa.org.br/webserviceproasa/service.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:web="http://mv.proasa.org.br/webServiceProasa/">
+   <soap:Header/>
+   <soap:Body>
+      <web:GetFaturaXml>
+         <!--Optional:-->
+         <web:param1>?</web:param1>
+         <!--Optional:-->
+         <web:param2>?</web:param2>
+         <!--Optional:-->
+         <web:param3>?</web:param3>
+      </web:GetFaturaXml>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://mv.proasa.org.br/webServiceProasa/ServiceSoap/GetFaturaXmlRequest"/></con:call></con:operation><con:operation id="338730e2-b537-4104-b942-469c6ed3eda7" isOneWay="false" action="http://mv.proasa.org.br/webServiceProasa/GetRps" name="GetRps" bindingOperationName="GetRps" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="5e5dd75c-2e47-46e1-ba7d-1e9d5f21ec3f" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://mv.proasa.org.br/webserviceproasa/service.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:web="http://mv.proasa.org.br/webServiceProasa/">
+   <soap:Header/>
+   <soap:Body>
+      <web:GetRps>
+         <!--Optional:-->
+         <web:param1>?</web:param1>
+         <!--Optional:-->
+         <web:param2>?</web:param2>
+      </web:GetRps>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://mv.proasa.org.br/webServiceProasa/ServiceSoap/GetRpsRequest"/></con:call></con:operation><con:operation id="bfbce164-7661-4d58-a8ce-dd31a398eb88" isOneWay="false" action="http://mv.proasa.org.br/webServiceProasa/GetSaldoCCXml" name="GetSaldoCCXml" bindingOperationName="GetSaldoCCXml" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="3d3afc44-1c0a-4a5a-93f6-947aab5d8768" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://mv.proasa.org.br/webserviceproasa/service.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:web="http://mv.proasa.org.br/webServiceProasa/">
+   <soap:Header/>
+   <soap:Body>
+      <web:GetSaldoCCXml>
+         <!--Optional:-->
+         <web:param1>?</web:param1>
+         <!--Optional:-->
+         <web:param2>?</web:param2>
+      </web:GetSaldoCCXml>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://mv.proasa.org.br/webServiceProasa/ServiceSoap/GetSaldoCCXmlRequest"/></con:call></con:operation><con:operation id="75b20780-c72b-441a-8151-55e8a43673e8" isOneWay="false" action="http://mv.proasa.org.br/webServiceProasa/historico_reembolso" name="historico_reembolso" bindingOperationName="historico_reembolso" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="3f011a5b-4d5e-44c5-b0c2-6c5993dd6982" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://mv.proasa.org.br/webserviceproasa/service.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:web="http://mv.proasa.org.br/webServiceProasa/">
+   <soap:Header/>
+   <soap:Body>
+      <web:historico_reembolso>
+         <!--Optional:-->
+         <web:cdReembolso>?</web:cdReembolso>
+      </web:historico_reembolso>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://mv.proasa.org.br/webServiceProasa/ServiceSoap/historico_reembolsoRequest"/></con:call></con:operation><con:operation id="c0464944-76d2-458c-abbd-277a3c5f7484" isOneWay="false" action="http://mv.proasa.org.br/webServiceProasa/SB_LOGIN_BENEFICIARIO" name="SB_LOGIN_BENEFICIARIO" bindingOperationName="SB_LOGIN_BENEFICIARIO" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="e42513de-5594-4678-8ab2-bc2d536c926c" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://mv.proasa.org.br/webserviceproasa/service.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:web="http://mv.proasa.org.br/webServiceProasa/">
+   <soap:Header/>
+   <soap:Body>
+      <web:SB_LOGIN_BENEFICIARIO>
+         <web:User_login_type>1</web:User_login_type>
+         <!--Optional:-->
+         <web:User_login>48270075</web:User_login>
+         <!--Optional:-->
+         <web:User_psw>48270075</web:User_psw>
+      </web:SB_LOGIN_BENEFICIARIO>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://mv.proasa.org.br/webServiceProasa/ServiceSoap/SB_LOGIN_BENEFICIARIORequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="a054605d-0f7e-4f31-bc46-eb31c373ba69" isOneWay="false" action="http://mv.proasa.org.br/webServiceProasa/SB_RECUPERA_SENHA" name="SB_RECUPERA_SENHA" bindingOperationName="SB_RECUPERA_SENHA" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="bb8b7411-99c0-4a37-8aa6-8315dce4f052" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://mv.proasa.org.br/webserviceproasa/service.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:web="http://mv.proasa.org.br/webServiceProasa/">
+   <soap:Header/>
+   <soap:Body>
+      <web:SB_RECUPERA_SENHA>
+         <!--Optional:-->
+         <web:User_login>75070031</web:User_login>
+         <!--Optional:-->
+         <web:User_sign>1983-05-13</web:User_sign>
+         <!--Optional:-->
+         <web:User_countersign>780605</web:User_countersign>
+         <!--Optional:-->
+         <web:User_email></web:User_email>
+      </web:SB_RECUPERA_SENHA>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://mv.proasa.org.br/webServiceProasa/ServiceSoap/SB_RECUPERA_SENHARequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="de8f8c90-21db-4edc-8340-550ae7f635b0" isOneWay="false" action="http://mv.proasa.org.br/webServiceProasa/status_autorizacao" name="status_autorizacao" bindingOperationName="status_autorizacao" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="aac44747-5466-479b-b2d2-861e6b55c44a" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://mv.proasa.org.br/webserviceproasa/service.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:web="http://mv.proasa.org.br/webServiceProasa/">
+   <soap:Header/>
+   <soap:Body>
+      <web:status_autorizacao/>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://mv.proasa.org.br/webServiceProasa/ServiceSoap/status_autorizacaoRequest"/></con:call></con:operation><con:operation id="bf3e7f4d-dfda-4433-8191-7a9a945076db" isOneWay="false" action="http://mv.proasa.org.br/webServiceProasa/status_reembolso" name="status_reembolso" bindingOperationName="status_reembolso" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="a653e3d5-b107-4a25-ba77-a0e57c950b88" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://mv.proasa.org.br/webserviceproasa/service.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:web="http://mv.proasa.org.br/webServiceProasa/">
+   <soap:Header/>
+   <soap:Body>
+      <web:status_reembolso/>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://mv.proasa.org.br/webServiceProasa/ServiceSoap/status_reembolsoRequest"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>

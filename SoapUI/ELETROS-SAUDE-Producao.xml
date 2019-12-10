@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="956439bc-2819-4cc7-92b6-390b3347750b" activeEnvironment="Default" name="Eletros Saúde - PRD - REST" soapui-version="5.5.0" abortOnError="false" runType="SEQUENTIAL" resourceRoot="" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:RestService" id="cdfa12d9-bc94-48a7-bb05-92d0eb723f0b" wadlVersion="http://wadl.dev.java.net/2009/02" name="https://hrp.eletrossaude.com.br" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>https://hrp.eletrossaude.com.br</con:endpoint></con:endpoints><con:resource name="Mobile.ijs" path="/services/mobile.ijs" id="df8ef5b1-2aed-49a5-acd4-36efc336cf8d"><con:settings/><con:parameters/><con:method name="Mobile.ijs 1" id="9d09b6fb-8933-48c4-bb8c-3386a883d109" method="POST"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json; charset=iso-8859-1</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:mob="https://hrp.eletrossaude.com.br/services/mobile.ijs">mob:Response</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:request name="Request 1" id="a6840a6e-f208-426e-91fc-b2606d849f7d" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://hrp.eletrossaude.com.br</con:endpoint><con:request>{
+    "service": "ws_login_service",
+    "method": "login",
+    "params": {
+        "usuario_login" : "0040071",
+        "usuario_psw" : "88637457"
+    }
+}</con:request><con:originalUri>https://hrp.eletrossaude.com.br/services/mobile.ijs</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="Declaracao IR" id="a6840a6e-f208-426e-91fc-b2606d849f7d" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://hrp.eletrossaude.com.br</con:endpoint><con:request>{
+    "service": "ws_declaracao_ir",
+    "method": "extato_PDF",
+    "session": "01*vKF2EiSlQgcvgrMiNVvSPc4UoHZGcH0ZaE8uPo9GaYtHatDX9riB5LivZwh4xof",
+    "params": {
+        "chave_beneficiario": 243358,
+        "ano_exercicio" : 2017
+    }
+}</con:request><con:originalUri>https://hrp.eletrossaude.com.br/services/mobile.ijs</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="Trocar Senha" id="a6840a6e-f208-426e-91fc-b2606d849f7d" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://hrp.eletrossaude.com.br</con:endpoint><con:request>{
+    "service" : "ws_login_service",
+    "method"    : "trocar_senha",
+    "session"   : "01EazVP0T8rkUP_96SRMdFvlv7djloJ1nIbGtr9bj5Ll8mBV6sO0vRUEsrDm2vWC0I",
+    "params"    : {
+        "nova_senha": "81140015"
+    }
+}
+</con:request><con:originalUri>https://hrp.eletrossaude.com.br/services/mobile.ijs</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="Request 2" id="a6840a6e-f208-426e-91fc-b2606d849f7d" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://hrp.eletrossaude.com.br</con:endpoint><con:request>{
+    "service": "ws_login_service",
+    "method": "login",
+    "params": {
+        "usuario_login" : "81127904",
+        "usuario_psw" : "eletrossaudeluna08"
+    }
+}</con:request><con:originalUri>https://hrp.eletrossaude.com.br/services/mobile.ijs</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource></con:interface><con:interface xsi:type="con:RestService" id="df940656-ab96-4e1f-ae28-bfbc7de45ac3" wadlVersion="http://wadl.dev.java.net/2009/02" name="Eletros Saúde - PRD - REST" type="rest" definitionUrl="telefone" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints/></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>

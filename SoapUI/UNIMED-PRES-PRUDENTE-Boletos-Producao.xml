@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="9d7754c9-3945-46c8-822c-6e8db2342fd1" activeEnvironment="Default" name="UD. Pres. Prudente - boletos" resourceRoot="" soapui-version="5.5.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="ae583e85-73dd-4f3f-ba41-c0b86656fbb8" wsaVersion="NONE" name="ws_boletoSoap" type="wsdl" bindingName="{http://tempuri.org/}ws_boletoSoap" soapVersion="1_1" anonymous="optional" definition="http://wsmobile.unimedprudente.com.br/ws_boleto.asmx?WSDL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>http://wsmobile.unimedprudente.com.br/ws_boleto.asmx</con:endpoint></con:endpoints><con:operation id="543a1790-3e03-44c0-9646-444d36563c2d" isOneWay="false" action="http://tempuri.org/detalhe_boleto" name="detalhe_boleto" bindingOperationName="detalhe_boleto" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="f5508558-9a58-43a1-87b3-fb16fdb59e94" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://wsmobile.unimedprudente.com.br/ws_boleto.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:detalhe_boleto>
+         <!--Optional:-->
+         <tem:titulo_codigo>972041</tem:titulo_codigo>
+         <tem:titulo_id>972041</tem:titulo_id>
+         <tem:contrato_id>?</tem:contrato_id>
+      </tem:detalhe_boleto>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/detalhe_boleto"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="2870f699-234d-469f-9388-6b8f7771e86b" isOneWay="false" action="http://tempuri.org/detalhe_boleto_pdf_base64" name="detalhe_boleto_pdf_base64" bindingOperationName="detalhe_boleto_pdf_base64" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="502bcb21-9e3d-4b3a-8588-9fb4dac48ae1" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://wsmobile.unimedprudente.com.br/ws_boleto.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:detalhe_boleto_pdf_base64>
+         <!--Optional:-->
+         <tem:titulo_codigo>972041</tem:titulo_codigo>
+         <tem:titulo_id>?</tem:titulo_id>
+         <tem:contrato_id>?</tem:contrato_id>
+      </tem:detalhe_boleto_pdf_base64>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/detalhe_boleto_pdf_base64"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="9c82b98b-75f3-405e-9f4c-8818caa68d4f" isOneWay="false" action="http://tempuri.org/EnviaBoletoPorEmail" name="EnviaBoletoPorEmail" bindingOperationName="EnviaBoletoPorEmail" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="1cd39d22-1bca-4e3c-98be-4441c90bb367" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://wsmobile.unimedprudente.com.br/ws_boleto.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:EnviaBoletoPorEmail>
+         <!--Optional:-->
+         <tem:email>?</tem:email>
+         <!--Optional:-->
+         <tem:nomeBeneficiario>?</tem:nomeBeneficiario>
+         <!--Optional:-->
+         <tem:titulo_codigo>?</tem:titulo_codigo>
+         <tem:titulo_id>?</tem:titulo_id>
+         <tem:contrato_id>?</tem:contrato_id>
+      </tem:EnviaBoletoPorEmail>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/EnviaBoletoPorEmail"/></con:call></con:operation><con:operation id="1b1b62f4-b1f0-4b24-8355-57f4f8cb3b52" isOneWay="false" action="http://tempuri.org/extrato_fatura" name="extrato_fatura" bindingOperationName="extrato_fatura" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="617c07b7-0d24-43a2-947a-509fe44ce1e2" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://wsmobile.unimedprudente.com.br/ws_boleto.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:extrato_fatura>
+         <!--Optional:-->
+         <tem:titulo_codigo>?</tem:titulo_codigo>
+         <tem:titulo_id>?</tem:titulo_id>
+         <tem:contrato_id>?</tem:contrato_id>
+      </tem:extrato_fatura>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/extrato_fatura"/></con:call></con:operation><con:operation id="9551bd26-d5a8-4149-aada-27bfa2f9d098" isOneWay="false" action="http://tempuri.org/extrato_fatura_pdf_base64" name="extrato_fatura_pdf_base64" bindingOperationName="extrato_fatura_pdf_base64" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="6d55b9b6-5b64-42a1-b385-eab7f168a710" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://wsmobile.unimedprudente.com.br/ws_boleto.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:extrato_fatura_pdf_base64>
+         <!--Optional:-->
+         <tem:titulo_codigo>1234567890</tem:titulo_codigo>
+         <tem:titulo_id>?</tem:titulo_id>
+         <tem:contrato_id>?</tem:contrato_id>
+      </tem:extrato_fatura_pdf_base64>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/extrato_fatura_pdf_base64"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="8788a8f0-9cf5-4180-86f8-3840b12bec8b" isOneWay="false" action="http://tempuri.org/lista_boletos" name="lista_boletos" bindingOperationName="lista_boletos" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="a42f0c8a-e18a-4986-b7b4-8765dc1372e0" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://wsmobile.unimedprudente.com.br/ws_boleto.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:lista_boletos>
+         <!--Optional:-->
+         <tem:chave_beneficiario>004231000429501</tem:chave_beneficiario>
+      </tem:lista_boletos>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/lista_boletos"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="ae82c7c1-0d85-4f2e-982d-57d3a85816bf" wsaVersion="NONE" name="ws_boletoSoap12" type="wsdl" bindingName="{http://tempuri.org/}ws_boletoSoap12" soapVersion="1_2" anonymous="optional" definition="http://wsmobile.unimedprudente.com.br/ws_boleto.asmx?WSDL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://wsmobile.unimedprudente.com.br/ws_boleto.asmx?WSDL"><con:part><con:url>http://wsmobile.unimedprudente.com.br/ws_boleto.asmx?WSDL</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://tempuri.org/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="lista_boletos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="chave_beneficiario" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="lista_boletosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="lista_boletosResult" type="tns:Lista_boletos"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Lista_boletos">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="chave_beneficiario" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="status" type="s:boolean"/>
+          <s:element minOccurs="0" maxOccurs="1" name="motivo_critica" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="boletos" type="tns:ArrayOfBoleto"/>
+          <s:element minOccurs="0" maxOccurs="1" name="alerta" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfBoleto">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Boleto" nillable="true" type="tns:Boleto"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Boleto">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="titulo_codigo" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="titulo_id" type="s:int"/>
+          <s:element minOccurs="1" maxOccurs="1" name="contrato_id" type="s:int"/>
+          <s:element minOccurs="0" maxOccurs="1" name="codigo_barras_linha_digitavel" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="data_emissao" type="s:dateTime"/>
+          <s:element minOccurs="1" maxOccurs="1" name="data_vencimento" type="s:dateTime"/>
+          <s:element minOccurs="0" maxOccurs="1" name="situacao" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="tipo_cobranca" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="valor" type="s:decimal"/>
+        </s:sequence>
+      </s:complexType>
+      <s:element name="detalhe_boleto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="titulo_codigo" type="s:string"/>
+            <s:element minOccurs="1" maxOccurs="1" name="titulo_id" type="s:int"/>
+            <s:element minOccurs="1" maxOccurs="1" name="contrato_id" type="s:int"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="detalhe_boletoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="detalhe_boletoResult" type="tns:Detalhe_boleto"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Detalhe_boleto">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="titulo_codigo" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="titulo_id" type="s:int"/>
+          <s:element minOccurs="1" maxOccurs="1" name="contrato_id" type="s:int"/>
+          <s:element minOccurs="1" maxOccurs="1" name="status" type="s:boolean"/>
+          <s:element minOccurs="0" maxOccurs="1" name="motivo_critica" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="detalhes" type="tns:ArrayOfDetalhe"/>
+          <s:element minOccurs="0" maxOccurs="1" name="alerta" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfDetalhe">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Detalhe" nillable="true" type="tns:Detalhe"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Detalhe">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="cedente_cnpj" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="cedente_codigo" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="cedente_nome" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="cedente_endereco" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="cedente_complemento" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="titular_contrato" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="titular_cpf" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="titular_codigo" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="titular_nome" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="codigo_carteira" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="local_pagamento" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="linha_digitavel" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="data_vencimento" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="data_pagamento" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="valor" type="s:double"/>
+          <s:element minOccurs="1" maxOccurs="1" name="multa" type="s:double"/>
+          <s:element minOccurs="1" maxOccurs="1" name="juro_dia" type="s:double"/>
+          <s:element minOccurs="0" maxOccurs="1" name="imprime_boleto" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="numero_nf" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="situacao" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="tipo_cobranca" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="instrucoes" type="tns:ArrayOfInstrucao"/>
+          <s:element minOccurs="0" maxOccurs="1" name="nosso_numero" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfInstrucao">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Instrucao" nillable="true" type="tns:Instrucao"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Instrucao">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="instrucao" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:element name="detalhe_boleto_pdf_base64">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="titulo_codigo" type="s:string"/>
+            <s:element minOccurs="1" maxOccurs="1" name="titulo_id" type="s:int"/>
+            <s:element minOccurs="1" maxOccurs="1" name="contrato_id" type="s:int"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="detalhe_boleto_pdf_base64Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="detalhe_boleto_pdf_base64Result" type="tns:DetalheExtrato_BoletoPDF"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="DetalheExtrato_BoletoPDF">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="status" type="s:boolean"/>
+          <s:element minOccurs="0" maxOccurs="1" name="motivo_critica" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="pdf" type="s:base64Binary"/>
+        </s:sequence>
+      </s:complexType>
+      <s:element name="extrato_fatura">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="titulo_codigo" type="s:string"/>
+            <s:element minOccurs="1" maxOccurs="1" name="titulo_id" type="s:int"/>
+            <s:element minOccurs="1" maxOccurs="1" name="contrato_id" type="s:int"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="extrato_faturaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="extrato_faturaResult" type="tns:Extrato_fatura"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Extrato_fatura">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="titulo_codigo" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="titulo_id" type="s:int"/>
+          <s:element minOccurs="1" maxOccurs="1" name="contrato_id" type="s:int"/>
+          <s:element minOccurs="1" maxOccurs="1" name="status" type="s:boolean"/>
+          <s:element minOccurs="0" maxOccurs="1" name="motivo_critica" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="detalhes" type="tns:ArrayOfDetalhe"/>
+          <s:element minOccurs="0" maxOccurs="1" name="alerta" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:element name="extrato_fatura_pdf_base64">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="titulo_codigo" type="s:string"/>
+            <s:element minOccurs="1" maxOccurs="1" name="titulo_id" type="s:int"/>
+            <s:element minOccurs="1" maxOccurs="1" name="contrato_id" type="s:int"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="extrato_fatura_pdf_base64Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="extrato_fatura_pdf_base64Result" type="tns:DetalheExtrato_BoletoPDF"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviaBoletoPorEmail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="nomeBeneficiario" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="titulo_codigo" type="s:string"/>
+            <s:element minOccurs="1" maxOccurs="1" name="titulo_id" type="s:int"/>
+            <s:element minOccurs="1" maxOccurs="1" name="contrato_id" type="s:int"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviaBoletoPorEmailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EnviaBoletoPorEmailResult" type="s:boolean"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="lista_boletosSoapIn">
+    <wsdl:part name="parameters" element="tns:lista_boletos"/>
+  </wsdl:message>
+  <wsdl:message name="lista_boletosSoapOut">
+    <wsdl:part name="parameters" element="tns:lista_boletosResponse"/>
+  </wsdl:message>
+  <wsdl:message name="detalhe_boletoSoapIn">
+    <wsdl:part name="parameters" element="tns:detalhe_boleto"/>
+  </wsdl:message>
+  <wsdl:message name="detalhe_boletoSoapOut">
+    <wsdl:part name="parameters" element="tns:detalhe_boletoResponse"/>
+  </wsdl:message>
+  <wsdl:message name="detalhe_boleto_pdf_base64SoapIn">
+    <wsdl:part name="parameters" element="tns:detalhe_boleto_pdf_base64"/>
+  </wsdl:message>
+  <wsdl:message name="detalhe_boleto_pdf_base64SoapOut">
+    <wsdl:part name="parameters" element="tns:detalhe_boleto_pdf_base64Response"/>
+  </wsdl:message>
+  <wsdl:message name="extrato_faturaSoapIn">
+    <wsdl:part name="parameters" element="tns:extrato_fatura"/>
+  </wsdl:message>
+  <wsdl:message name="extrato_faturaSoapOut">
+    <wsdl:part name="parameters" element="tns:extrato_faturaResponse"/>
+  </wsdl:message>
+  <wsdl:message name="extrato_fatura_pdf_base64SoapIn">
+    <wsdl:part name="parameters" element="tns:extrato_fatura_pdf_base64"/>
+  </wsdl:message>
+  <wsdl:message name="extrato_fatura_pdf_base64SoapOut">
+    <wsdl:part name="parameters" element="tns:extrato_fatura_pdf_base64Response"/>
+  </wsdl:message>
+  <wsdl:message name="EnviaBoletoPorEmailSoapIn">
+    <wsdl:part name="parameters" element="tns:EnviaBoletoPorEmail"/>
+  </wsdl:message>
+  <wsdl:message name="EnviaBoletoPorEmailSoapOut">
+    <wsdl:part name="parameters" element="tns:EnviaBoletoPorEmailResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="ws_boletoSoap">
+    <wsdl:operation name="lista_boletos">
+      <wsdl:input message="tns:lista_boletosSoapIn"/>
+      <wsdl:output message="tns:lista_boletosSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="detalhe_boleto">
+      <wsdl:input message="tns:detalhe_boletoSoapIn"/>
+      <wsdl:output message="tns:detalhe_boletoSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="detalhe_boleto_pdf_base64">
+      <wsdl:input message="tns:detalhe_boleto_pdf_base64SoapIn"/>
+      <wsdl:output message="tns:detalhe_boleto_pdf_base64SoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="extrato_fatura">
+      <wsdl:input message="tns:extrato_faturaSoapIn"/>
+      <wsdl:output message="tns:extrato_faturaSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="extrato_fatura_pdf_base64">
+      <wsdl:input message="tns:extrato_fatura_pdf_base64SoapIn"/>
+      <wsdl:output message="tns:extrato_fatura_pdf_base64SoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="EnviaBoletoPorEmail">
+      <wsdl:input message="tns:EnviaBoletoPorEmailSoapIn"/>
+      <wsdl:output message="tns:EnviaBoletoPorEmailSoapOut"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ws_boletoSoap" type="tns:ws_boletoSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="lista_boletos">
+      <soap:operation soapAction="http://tempuri.org/lista_boletos" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="detalhe_boleto">
+      <soap:operation soapAction="http://tempuri.org/detalhe_boleto" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="detalhe_boleto_pdf_base64">
+      <soap:operation soapAction="http://tempuri.org/detalhe_boleto_pdf_base64" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="extrato_fatura">
+      <soap:operation soapAction="http://tempuri.org/extrato_fatura" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="extrato_fatura_pdf_base64">
+      <soap:operation soapAction="http://tempuri.org/extrato_fatura_pdf_base64" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviaBoletoPorEmail">
+      <soap:operation soapAction="http://tempuri.org/EnviaBoletoPorEmail" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ws_boletoSoap12" type="tns:ws_boletoSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="lista_boletos">
+      <soap12:operation soapAction="http://tempuri.org/lista_boletos" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="detalhe_boleto">
+      <soap12:operation soapAction="http://tempuri.org/detalhe_boleto" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="detalhe_boleto_pdf_base64">
+      <soap12:operation soapAction="http://tempuri.org/detalhe_boleto_pdf_base64" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="extrato_fatura">
+      <soap12:operation soapAction="http://tempuri.org/extrato_fatura" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="extrato_fatura_pdf_base64">
+      <soap12:operation soapAction="http://tempuri.org/extrato_fatura_pdf_base64" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviaBoletoPorEmail">
+      <soap12:operation soapAction="http://tempuri.org/EnviaBoletoPorEmail" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ws_boleto">
+    <wsdl:port name="ws_boletoSoap" binding="tns:ws_boletoSoap">
+      <soap:address location="http://wsmobile.unimedprudente.com.br/ws_boleto.asmx"/>
+    </wsdl:port>
+    <wsdl:port name="ws_boletoSoap12" binding="tns:ws_boletoSoap12">
+      <soap12:address location="http://wsmobile.unimedprudente.com.br/ws_boleto.asmx"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://wsmobile.unimedprudente.com.br/ws_boleto.asmx</con:endpoint></con:endpoints><con:operation id="03a47766-c4c8-4a62-ba59-160fc6d66b22" isOneWay="false" action="http://tempuri.org/detalhe_boleto" name="detalhe_boleto" bindingOperationName="detalhe_boleto" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="6b184f10-6205-434b-b4ba-29a43f2c7a7d" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://wsmobile.unimedprudente.com.br/ws_boleto.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tem="http://tempuri.org/">
+   <soap:Header/>
+   <soap:Body>
+      <tem:detalhe_boleto>
+         <!--Optional:-->
+         <tem:titulo_codigo>978217</tem:titulo_codigo>
+         <tem:titulo_id>?</tem:titulo_id>
+         <tem:contrato_id>?</tem:contrato_id>
+      </tem:detalhe_boleto>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ws_boletoSoap/detalhe_boletoRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="281922c5-ebc3-4538-874c-7a6054372ee2" isOneWay="false" action="http://tempuri.org/detalhe_boleto_pdf_base64" name="detalhe_boleto_pdf_base64" bindingOperationName="detalhe_boleto_pdf_base64" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="170dac6c-7e81-417a-9d08-72b3fb5767a8" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://wsmobile.unimedprudente.com.br/ws_boleto.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tem="http://tempuri.org/">
+   <soap:Header/>
+   <soap:Body>
+      <tem:detalhe_boleto_pdf_base64>
+         <!--Optional:-->
+         <tem:titulo_codigo>978217</tem:titulo_codigo>
+         <tem:titulo_id>?</tem:titulo_id>
+         <tem:contrato_id>?</tem:contrato_id>
+      </tem:detalhe_boleto_pdf_base64>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ws_boletoSoap/detalhe_boleto_pdf_base64Request"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="afaf6a6e-d392-408b-90f5-03ae40de4822" isOneWay="false" action="http://tempuri.org/EnviaBoletoPorEmail" name="EnviaBoletoPorEmail" bindingOperationName="EnviaBoletoPorEmail" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="e977db23-28ec-47b5-b263-89c8276542db" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://wsmobile.unimedprudente.com.br/ws_boleto.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tem="http://tempuri.org/">
+   <soap:Header/>
+   <soap:Body>
+      <tem:EnviaBoletoPorEmail>
+         <!--Optional:-->
+         <tem:email>?</tem:email>
+         <!--Optional:-->
+         <tem:nomeBeneficiario>?</tem:nomeBeneficiario>
+         <!--Optional:-->
+         <tem:titulo_codigo>?</tem:titulo_codigo>
+         <tem:titulo_id>?</tem:titulo_id>
+         <tem:contrato_id>?</tem:contrato_id>
+      </tem:EnviaBoletoPorEmail>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ws_boletoSoap/EnviaBoletoPorEmailRequest"/></con:call></con:operation><con:operation id="ba6a91ce-869d-431b-b510-100409130d6a" isOneWay="false" action="http://tempuri.org/extrato_fatura" name="extrato_fatura" bindingOperationName="extrato_fatura" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="1e05e46d-6f59-475d-ac9d-1ebaca690da5" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://wsmobile.unimedprudente.com.br/ws_boleto.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tem="http://tempuri.org/">
+   <soap:Header/>
+   <soap:Body>
+      <tem:extrato_fatura>
+         <!--Optional:-->
+         <tem:titulo_codigo>?</tem:titulo_codigo>
+         <tem:titulo_id>?</tem:titulo_id>
+         <tem:contrato_id>?</tem:contrato_id>
+      </tem:extrato_fatura>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ws_boletoSoap/extrato_faturaRequest"/></con:call></con:operation><con:operation id="1229bd14-e2ea-4bf3-8825-b27f60b8fe87" isOneWay="false" action="http://tempuri.org/extrato_fatura_pdf_base64" name="extrato_fatura_pdf_base64" bindingOperationName="extrato_fatura_pdf_base64" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="a0dcf476-66b0-4bc7-b05e-97c1b92ae9a7" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://wsmobile.unimedprudente.com.br/ws_boleto.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tem="http://tempuri.org/">
+   <soap:Header/>
+   <soap:Body>
+      <tem:extrato_fatura_pdf_base64>
+         <!--Optional:-->
+         <tem:titulo_codigo>?</tem:titulo_codigo>
+         <tem:titulo_id>?</tem:titulo_id>
+         <tem:contrato_id>?</tem:contrato_id>
+      </tem:extrato_fatura_pdf_base64>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ws_boletoSoap/extrato_fatura_pdf_base64Request"/></con:call></con:operation><con:operation id="ba28715c-a3f5-4613-9450-68a79e24a77c" isOneWay="false" action="http://tempuri.org/lista_boletos" name="lista_boletos" bindingOperationName="lista_boletos" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="03df630f-a975-4edf-94cd-4717429b6c00" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://wsmobile.unimedprudente.com.br/ws_boleto.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tem="http://tempuri.org/">
+   <soap:Header/>
+   <soap:Body>
+      <tem:lista_boletos>
+         <!--Optional:-->
+         <tem:chave_beneficiario>004423103300429501</tem:chave_beneficiario>
+      </tem:lista_boletos>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ws_boletoSoap/lista_boletosRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>

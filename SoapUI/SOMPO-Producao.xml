@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="40dca96a-4027-449f-859d-9c215e17fa7d" activeEnvironment="Default" name="SOMPO-PRD-LOGIN" resourceRoot="" soapui-version="5.5.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="a892bab0-3f35-4b49-8fc0-8228c8e53329" wsaVersion="NONE" name="WSLoginServicePortBinding" type="wsdl" bindingName="{http://sompo.com.br/}WSLoginServicePortBinding" soapVersion="1_1" anonymous="optional" definition="http://msaude.sompo.com.br/ws_login_service?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://msaude.sompo.com.br/ws_login_service?wsdl"><con:part><con:url>http://msaude.sompo.com.br/ws_login_service?wsdl</con:url><con:content><![CDATA[<!--File IntegracaoSaudeWSLoginService.wsdl, application IntegracaoSaude-->
+<definitions name="WSLoginServiceService" targetNamespace="http://sompo.com.br/" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://sompo.com.br/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <documentation>
+    <appinfo source="WMQI_APPINFO">
+      <MRWSDLAppInfo imported="true">
+        <binding hasEncoding="false" imported="true" name="WSLoginServicePortBinding" originalBindingStyle="document"/>
+      </MRWSDLAppInfo>
+    </appinfo>
+  </documentation>
+  <types>
+    <xsd:schema>
+      <xsd:import namespace="http://sompo.com.br/" schemaLocation="http://msaude.sompo.com.br/ws_login_service?xsd=xsd0"/>
+    </xsd:schema>
+  </types>
+  <message name="lembrar_senha">
+    <part element="tns:lembrar_senha" name="parameters"/>
+  </message>
+  <message name="lembrar_senhaResponse">
+    <part element="tns:lembrar_senhaResponse" name="parameters"/>
+  </message>
+  <message name="trocar_senha">
+    <part element="tns:trocar_senha" name="parameters"/>
+  </message>
+  <message name="trocar_senhaResponse">
+    <part element="tns:trocar_senhaResponse" name="parameters"/>
+  </message>
+  <message name="login">
+    <part element="tns:login" name="parameters"/>
+  </message>
+  <message name="loginResponse">
+    <part element="tns:loginResponse" name="parameters"/>
+  </message>
+  <portType name="WSLoginService">
+    <operation name="lembrar_senha">
+      <input message="tns:lembrar_senha" wsam:Action="http://sompo.com.br/WSLoginService/lembrar_senhaRequest"/>
+      <output message="tns:lembrar_senhaResponse" wsam:Action="http://sompo.com.br/WSLoginService/lembrar_senhaResponse"/>
+    </operation>
+    <operation name="trocar_senha">
+      <input message="tns:trocar_senha" wsam:Action="http://sompo.com.br/WSLoginService/trocar_senhaRequest"/>
+      <output message="tns:trocar_senhaResponse" wsam:Action="http://sompo.com.br/WSLoginService/trocar_senhaResponse"/>
+    </operation>
+    <operation name="login">
+      <input message="tns:login" wsam:Action="http://sompo.com.br/WSLoginService/loginRequest"/>
+      <output message="tns:loginResponse" wsam:Action="http://sompo.com.br/WSLoginService/loginResponse"/>
+    </operation>
+  </portType>
+  <binding name="WSLoginServicePortBinding" type="tns:WSLoginService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="lembrar_senha">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="trocar_senha">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="login">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="WSLoginServiceService">
+    <port binding="tns:WSLoginServicePortBinding" name="WSLoginServicePort">
+      <soap:address location="http://msaude.sompo.com.br/ws_login_service"/>
+    </port>
+  </service>
+</definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://msaude.sompo.com.br/ws_login_service?xsd=xsd0</con:url><con:content><![CDATA[<!--File integracaoSaude.xsd, application IntegracaoSaude-->
+<xsd:schema targetNamespace="http://sompo.com.br/" version="1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions" xmlns:tns="http://sompo.com.br/">
+  <xsd:element name="DadosLembrarSenhaRequest" type="tns:dadosLembrarSenhaRequest"/>
+  <xsd:element name="DadosLembrarSenhaResponse" type="tns:dadosLembrarSenhaResponse"/>
+  <xsd:element name="DadosLoginRequest" type="tns:dadosLoginRequest"/>
+  <xsd:element name="DadosLoginResponse" type="tns:dadosLoginResponse"/>
+  <xsd:element name="DadosTrocarSenhaRequest" type="tns:dadosTrocarSenhaRequest"/>
+  <xsd:element name="DadosTrocarSenhaResponse" type="tns:dadosTrocarSenhaResponse"/>
+  <xsd:element name="carencia" type="tns:carencia"/>
+  <xsd:element name="contratos" type="tns:contratos"/>
+  <xsd:element ibmSchExtn:docRoot="true" name="lembrar_senha" type="tns:lembrar_senha"/>
+  <xsd:element ibmSchExtn:docRoot="true" name="lembrar_senhaResponse" type="tns:lembrar_senhaResponse"/>
+  <xsd:element ibmSchExtn:docRoot="true" name="login" type="tns:login"/>
+  <xsd:element ibmSchExtn:docRoot="true" name="loginResponse" type="tns:loginResponse"/>
+  <xsd:element name="permissoes" type="tns:permissoes"/>
+  <xsd:element ibmSchExtn:docRoot="true" name="trocar_senha" type="tns:trocar_senha"/>
+  <xsd:element ibmSchExtn:docRoot="true" name="trocar_senhaResponse" type="tns:trocar_senhaResponse"/>
+  <xsd:element name="usuario" type="tns:usuario"/>
+  <xsd:complexType name="lembrar_senha">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="entrada" type="tns:dadosLembrarSenhaRequest"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="dadosLembrarSenhaRequest">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="usuario_login" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="nascimento" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="email" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="confirmacao_email" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="acomodacao" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="lembrar_senhaResponse">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="retorno" type="tns:dadosLembrarSenhaResponse"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="dadosLembrarSenhaResponse">
+    <xsd:sequence>
+      <xsd:element name="status" type="xsd:boolean"/>
+      <xsd:element minOccurs="0" name="motivo_critica" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="login" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="telefone" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="enviado" type="xsd:boolean"/>
+      <xsd:element minOccurs="0" name="alerta" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="login">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="entrada" type="tns:dadosLoginRequest"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="dadosLoginRequest">
+    <xsd:sequence>
+      <xsd:element name="usuario_login" type="xsd:string"/>
+      <xsd:element name="usuario_psw" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="loginResponse">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="retorno" type="tns:dadosLoginResponse"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="dadosLoginResponse">
+    <xsd:sequence>
+      <xsd:element name="status" type="xsd:boolean"/>
+      <xsd:element minOccurs="0" name="motivo_critica" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="usuario_logado" type="tns:usuario"/>
+      <xsd:element minOccurs="0" name="familias">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="familia" type="tns:usuario"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="contratos">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="contrato" type="tns:contratos"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element minOccurs="0" ref="tns:permissoes"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="usuario">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="chave_beneficiario" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="numero_rede_gama" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="rede_gama" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="matricula" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="nome" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="nome_titular" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="sexo" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="nascimento" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="cpf" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="celular" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="email" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="endereco" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="bairro" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="cep" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="cidade" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="estado" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="inclusao" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="tipo_usuario" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="matricula_titular" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="grau_parentesco_id" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="grau_parentesco_descricao" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="data_inicio_cobertura" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="convenio_id" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="convenio_descricao" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="convenio_abrangencia" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="convenio_acomodacao" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="convenio_padrao_conforto" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="convenio_participativo" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="convenio_segmentacao" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="convenio_tipo_pessoa" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="convenio_tipo_contrato" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="convenio_regulamentacao" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="cartao_imagem" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="cartao_imagem_verso" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="cartao_validade" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="chave_empresa" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="empresa_nome" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="contrato_empresa" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="numero_cns" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="convenio_ans" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="data_final_cpt" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="carencias">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" ref="tns:carencia"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="codigo_contrato" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="carencia">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="tipo_servico" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="carencia" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="contratos">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="nome" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="codigo_contrato" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="permissoes">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="reembolso" type="xsd:boolean"/>
+      <xsd:element minOccurs="0" name="agendamento" type="xsd:boolean"/>
+      <xsd:element minOccurs="0" name="coparticipacao_utilizacao" type="xsd:boolean"/>
+      <xsd:element minOccurs="0" name="atualiza_cadastro" type="xsd:boolean"/>
+      <xsd:element minOccurs="0" name="busca_medicamento" type="xsd:boolean"/>
+      <xsd:element minOccurs="0" name="boletos" type="xsd:boolean"/>
+      <xsd:element minOccurs="0" name="Informe_ir" type="xsd:boolean"/>
+      <xsd:element minOccurs="0" name="cartao_virtual" type="xsd:boolean"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="trocar_senha">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="entrada" type="tns:dadosTrocarSenhaRequest"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="dadosTrocarSenhaRequest">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="usuario_login" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="senha_atual" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="nova_senha" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="trocar_senhaResponse">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="retorno" type="tns:dadosTrocarSenhaResponse"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="dadosTrocarSenhaResponse">
+    <xsd:sequence>
+      <xsd:element name="status" type="xsd:boolean"/>
+      <xsd:element minOccurs="0" name="motivo_critica" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="alerta" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://msaude.sompo.com.br/ws_login_service</con:endpoint></con:endpoints><con:operation id="d1ed7f88-2c26-4c82-92dc-59d229c4c54a" isOneWay="false" action="" name="lembrar_senha" bindingOperationName="lembrar_senha" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="d2bba048-a7d5-48fd-bfdf-ecab14dfa9ce" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://msaude.sompo.com.br/ws_login_service</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:som="http://sompo.com.br/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <som:lembrar_senha>
+         <!--Optional:-->
+         <entrada>
+            <!--Optional:-->
+            <usuario_login>?</usuario_login>
+            <!--Optional:-->
+            <nascimento>?</nascimento>
+            <!--Optional:-->
+            <email>?</email>
+            <!--Optional:-->
+            <confirmacao_email>?</confirmacao_email>
+            <!--Optional:-->
+            <acomodacao>?</acomodacao>
+         </entrada>
+      </som:lembrar_senha>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://sompo.com.br/WSLoginService/lembrar_senhaRequest"/></con:call></con:operation><con:operation id="94b4303b-bf45-4037-9ccf-db57c61087c5" isOneWay="false" action="" name="login" bindingOperationName="login" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="92393056-e86f-4586-be1a-69808b7c3141" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://msaude.sompo.com.br/ws_login_service</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:som="http://sompo.com.br/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <som:login>
+         <!--Optional:-->
+         <entrada>
+            <usuario_login>000200010007418005</usuario_login>
+            <usuario_psw>Sompo0519</usuario_psw>
+         </entrada>
+      </som:login>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://sompo.com.br/WSLoginService/loginRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="c22e42d2-d964-4d94-bc60-aaaeda7bc9c8" isOneWay="false" action="" name="trocar_senha" bindingOperationName="trocar_senha" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="a9281667-57b2-4b10-a53a-c61d26d6f3f5" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://msaude.sompo.com.br/ws_login_service</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:som="http://sompo.com.br/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <som:trocar_senha>
+         <!--Optional:-->
+         <entrada>
+            <!--Optional:-->
+            <usuario_login>?</usuario_login>
+            <!--Optional:-->
+            <senha_atual>?</senha_atual>
+            <!--Optional:-->
+            <nova_senha>?</nova_senha>
+         </entrada>
+      </som:trocar_senha>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://sompo.com.br/WSLoginService/trocar_senhaRequest"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="f2d60a95-d7d8-42de-84b6-2c765883889d" wsaVersion="NONE" name="WSDeclaracaoIRSoapBinding" type="wsdl" bindingName="{http://controller.mobilews.sompo.com}WSDeclaracaoIRSoapBinding" soapVersion="1_1" anonymous="optional" definition="https://portalvidasvc.yasudamaritima.com.br/MobileWS/services/WSDeclaracaoIR?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="https://portalvidasvc.yasudamaritima.com.br/MobileWS/services/WSDeclaracaoIR?wsdl"><con:part><con:url>https://portalvidasvc.yasudamaritima.com.br/MobileWS/services/WSDeclaracaoIR?wsdl</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://controller.mobilews.sompo.com" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://controller.mobilews.sompo.com" xmlns:intf="http://controller.mobilews.sompo.com" xmlns:tns1="http://declaracaoir.bean.mobilews.sompo.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+  <wsdl:types>
+    <schema elementFormDefault="qualified" targetNamespace="http://controller.mobilews.sompo.com" xmlns="http://www.w3.org/2001/XMLSchema">
+      <import namespace="http://declaracaoir.bean.mobilews.sompo.com"/>
+      <element name="IRextrato">
+        <complexType>
+          <sequence>
+            <element name="IR_extrato" type="tns1:ExtratoIRInputBean"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="IRextratoResponse">
+        <complexType>
+          <sequence>
+            <element name="IRextratoReturn" type="tns1:ExtratoIROutputBean"/>
+          </sequence>
+        </complexType>
+      </element>
+      <complexType name="ArrayOf_xsd_anyType">
+        <sequence>
+          <element maxOccurs="unbounded" minOccurs="0" name="item" type="xsd:anyType"/>
+        </sequence>
+      </complexType>
+      <element name="extratoIRPDF">
+        <complexType>
+          <sequence>
+            <element name="extratoIR_PDF" type="tns1:ExtratoIRInputBean"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="extratoIRPDFResponse">
+        <complexType>
+          <sequence>
+            <element name="extratoIRPDFReturn" type="tns1:ExtratoIRPDFOutputBean"/>
+          </sequence>
+        </complexType>
+      </element>
+    </schema>
+    <schema elementFormDefault="qualified" targetNamespace="http://declaracaoir.bean.mobilews.sompo.com" xmlns="http://www.w3.org/2001/XMLSchema">
+      <import namespace="http://controller.mobilews.sompo.com"/>
+      <complexType name="ExtratoIRInputBean">
+        <sequence>
+          <element name="ano_exercicio" nillable="true" type="xsd:string"/>
+          <element name="chave_beneficiario" nillable="true" type="xsd:string"/>
+        </sequence>
+      </complexType>
+      <complexType name="Informacoes">
+        <sequence>
+          <element name="cnpj_operadora" nillable="true" type="xsd:string"/>
+          <element name="cpf_titular" nillable="true" type="xsd:string"/>
+          <element name="nome_titular" nillable="true" type="xsd:string"/>
+          <element name="razao_social_operadora" nillable="true" type="xsd:string"/>
+          <element name="registro_ans_operadora" nillable="true" type="xsd:string"/>
+        </sequence>
+      </complexType>
+      <complexType name="ExtratoIROutputBean">
+        <sequence>
+          <element name="extrato" nillable="true" type="impl:ArrayOf_xsd_anyType"/>
+          <element name="informacoes" nillable="true" type="tns1:Informacoes"/>
+          <element name="motivo_critica" nillable="true" type="xsd:string"/>
+          <element name="status" type="xsd:boolean"/>
+        </sequence>
+      </complexType>
+      <complexType name="ExtratoIRPDFOutputBean">
+        <sequence>
+          <element name="extrato" nillable="true" type="xsd:base64Binary"/>
+          <element name="motivo_critica" nillable="true" type="xsd:string"/>
+          <element name="status" type="xsd:boolean"/>
+        </sequence>
+      </complexType>
+    </schema>
+  </wsdl:types>
+  <wsdl:message name="extratoIRPDFResponse">
+    <wsdl:part element="impl:extratoIRPDFResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="IRextratoRequest">
+    <wsdl:part element="impl:IRextrato" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="extratoIRPDFRequest">
+    <wsdl:part element="impl:extratoIRPDF" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="IRextratoResponse">
+    <wsdl:part element="impl:IRextratoResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="WSDeclaracaoIR">
+    <wsdl:operation name="IRextrato">
+      <wsdl:input message="impl:IRextratoRequest" name="IRextratoRequest"></wsdl:input>
+      <wsdl:output message="impl:IRextratoResponse" name="IRextratoResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="extratoIRPDF">
+      <wsdl:input message="impl:extratoIRPDFRequest" name="extratoIRPDFRequest"></wsdl:input>
+      <wsdl:output message="impl:extratoIRPDFResponse" name="extratoIRPDFResponse"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSDeclaracaoIRSoapBinding" type="impl:WSDeclaracaoIR">
+    <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="IRextrato">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="IRextratoRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="IRextratoResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="extratoIRPDF">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="extratoIRPDFRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="extratoIRPDFResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WSDeclaracaoIRService">
+    <wsdl:port binding="impl:WSDeclaracaoIRSoapBinding" name="WSDeclaracaoIR">
+      <wsdlsoap:address location="http://portalvidasvc.yasudamaritima.com.br/MobileWS/services/WSDeclaracaoIR"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://portalvidasvc.yasudamaritima.com.br/MobileWS/services/WSDeclaracaoIR</con:endpoint></con:endpoints><con:operation id="700d1d58-3863-4bcf-a758-b0d547aa8f59" isOneWay="false" action="" name="extratoIRPDF" bindingOperationName="extratoIRPDF" type="Request-Response" outputName="extratoIRPDFResponse" inputName="extratoIRPDFRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="8bd694b7-b3fb-471b-97f1-7cc883072431" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://portalvidasvc.yasudamaritima.com.br/MobileWS/services/WSDeclaracaoIR</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:con="http://controller.mobilews.sompo.com" xmlns:dec="http://declaracaoir.bean.mobilews.sompo.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <con:extratoIRPDF>
+         <con:extratoIR_PDF>
+            <dec:ano_exercicio>2018</dec:ano_exercicio>
+            <dec:chave_beneficiario>000200010007418005</dec:chave_beneficiario>
+         </con:extratoIR_PDF>
+      </con:extratoIRPDF>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://controller.mobilews.sompo.com/WSDeclaracaoIR/extratoIRPDFRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="38eca744-77d4-4514-bf81-4df9195480fe" isOneWay="false" action="" name="IRextrato" bindingOperationName="IRextrato" type="Request-Response" outputName="IRextratoResponse" inputName="IRextratoRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="adb84c75-72c4-4a55-b148-448e40bc2e03" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://portalvidasvc.yasudamaritima.com.br/MobileWS/services/WSDeclaracaoIR</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:con="http://controller.mobilews.sompo.com" xmlns:dec="http://declaracaoir.bean.mobilews.sompo.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <con:IRextrato>
+         <con:IR_extrato>
+            <dec:ano_exercicio>?</dec:ano_exercicio>
+            <dec:chave_beneficiario>?</dec:chave_beneficiario>
+         </con:IR_extrato>
+      </con:IRextrato>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://controller.mobilews.sompo.com/WSDeclaracaoIR/IRextratoRequest"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="6ffda6f5-5675-4f02-8656-8aea2de4b00b" activeEnvironment="Default" name="ELETROS - 2viaboleto" soapui-version="5.5.0" abortOnError="false" runType="SEQUENTIAL" resourceRoot="" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:RestService" id="ac3d613c-50e6-4985-8e49-8f047632c01d" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://187.0.208.52:8084" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>http://187.0.208.52:8084</con:endpoint></con:endpoints><con:resource name="Mobile.ijs" path="/services/mobile.ijs" id="bb42edf6-73e1-4768-b3b2-8f9c9ec07d21"><con:settings/><con:parameters/><con:method name="Mobile.ijs 1" id="d267593b-d54a-4383-9041-c3e58317a0b0" method="POST"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json; charset=iso-8859-1</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:mob="http://187.0.208.52/services/mobile.ijs">mob:Response</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:request name="lista_boletos" id="e66ae918-a101-46c2-bacb-64c63e196bed" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://187.0.208.52:8084</con:endpoint><con:request>{
+   "service": "ws_boleto",
+   "method": "lista_boletos",
+   "session": "01CdcEFtd3cdscbGnoy8KwdNhyDlidWUbV1QbZhbY6xJV_axd8rGTxeihlBTwm2SVI",
+   "params": {
+       "chave_beneficiario": "55849331"
+   }
+}</con:request><con:originalUri>http://187.0.208.52/services/mobile.ijs</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="detalhe_boleto" id="e66ae918-a101-46c2-bacb-64c63e196bed" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://187.0.208.52:8084</con:endpoint><con:request>{
+   "service": "ws_boleto",
+   "method": "detalhe_boleto",
+   "session": "01CdcEFtd3cdscbGnoy8KwdNhyDlidWUbV1QbZhbY6xJV_axd8rGTxeihlBTwm2SVI",
+   "params": {
+       "titulo_codigo": "83196385-1/1",
+       "titulo_id": 83196406,
+       "contrato_id": 39229
+   }
+}</con:request><con:originalUri>http://187.0.208.52/services/mobile.ijs</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="extrato_boleto" id="e66ae918-a101-46c2-bacb-64c63e196bed" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://187.0.208.52:8084</con:endpoint><con:request>{
+   "service": "ws_boleto",
+   "method": "extrato_fatura",
+   "session": "01CdcEFtd3cdscbGnoy8KwdNhyDlidWUbV1QbZhbY6xJV_axd8rGTxeihlBTwm2SVI",
+   "params": {
+       "titulo_codigo": "82700297-1/1",
+       "titulo_id": 82910163,
+       "contrato_id": 39229
+   }
+}</con:request><con:originalUri>http://187.0.208.52/services/mobile.ijs</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>

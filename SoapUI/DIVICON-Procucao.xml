@@ -1,0 +1,546 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="6a6953e9-0014-4ca0-9309-db1b76e63e4c" activeEnvironment="Default" name="DIVICON - PRD" resourceRoot="" soapui-version="5.5.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="60c56661-99e6-4335-8e94-e1ba335bbe87" wsaVersion="NONE" name="DV_AUTENTICACAOSOAP" type="wsdl" bindingName="{http://187.94.62.86:8080/}DV_AUTENTICACAOSOAP" soapVersion="1_1" anonymous="optional" definition="http://divicomseguros.totvs.com.br:8080/ws/DV_AUTENTICACAO.apw?WSDL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://divicomseguros.totvs.com.br:8080/ws/DV_AUTENTICACAO.apw?WSDL"><con:part><con:url>http://divicomseguros.totvs.com.br:8080/ws/DV_AUTENTICACAO.apw?WSDL</con:url><con:content><![CDATA[<!--Generated 20190318 11:38:00 by ADVPL WSDL Server 1.110216 / Protheus 7.00.131227A-20171123 NG-->
+<definitions targetNamespace="http://187.94.62.86:8080/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://187.94.62.86:8080/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://187.94.62.86:8080/">
+      <s:element name="DV_LEMBRAR">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CLMBUSULOGIN" type="s:string"/>
+            <s:element minOccurs="1" maxOccurs="1" name="CLMBUSUCPF" type="s:string"/>
+            <s:element minOccurs="1" maxOccurs="1" name="DLMBUSUDATNAS" type="s:date"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DV_LEMBRARRESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DV_LEMBRARRESULT" type="s0:OLMBRETORNO"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DV_LOGIN">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CLOGUSULOGIN" type="s:string"/>
+            <s:element minOccurs="1" maxOccurs="1" name="CLOGUSUPWS" type="s:string"/>
+            <s:element minOccurs="1" maxOccurs="1" name="CLOGSEGMENTO" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DV_LOGINRESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DV_LOGINRESULT" type="s0:OLOGRETORNO"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DV_NOVOUSU">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CNEWUSULOGIN" type="s:string"/>
+            <s:element minOccurs="1" maxOccurs="1" name="CNEWUSUCPF" type="s:string"/>
+            <s:element minOccurs="1" maxOccurs="1" name="DNEWUSUDATNAS" type="s:date"/>
+            <s:element minOccurs="1" maxOccurs="1" name="CNEWUSUPSW" type="s:string"/>
+            <s:element minOccurs="1" maxOccurs="1" name="CNEWSEGMENTO" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DV_NOVOUSURESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DV_NOVOUSURESULT" type="s0:ONEWRETORNO"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DV_TROCAR">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CTRCUSULOGIN" type="s:string"/>
+            <s:element minOccurs="1" maxOccurs="1" name="CTRCSENHAATU" type="s:string"/>
+            <s:element minOccurs="1" maxOccurs="1" name="CTRCNOVASENHA" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DV_TROCARRESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DV_TROCARRESULT" type="s0:OTRCRETORNO"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="OLMBRETORNO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CALERTA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CEMAIL" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CLOGIN" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CMOTCRI" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CSENHA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CTELEFONE" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="LENVIADO" type="s:boolean"/>
+          <s:element minOccurs="1" maxOccurs="1" name="LSTATUS" type="s:boolean"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="OLOGRETORNO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ACONTRATOS" type="s0:ARRAYOFCONTRATOS"/>
+          <s:element minOccurs="0" maxOccurs="1" name="AFAMILIA" type="s0:ARRAYOFOUSULOGADO"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CALERTA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CMOTCRI" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="LSTATUS" type="s:boolean"/>
+          <s:element minOccurs="0" maxOccurs="1" name="OAGENTE" type="s0:OAGENTE"/>
+          <s:element minOccurs="0" maxOccurs="1" name="OPERMISSOES" type="s0:OPERMISSOES"/>
+          <s:element minOccurs="0" maxOccurs="1" name="OUSULOGADO" type="s0:OUSULOGADO"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ONEWRETORNO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ANEWFAMILIA" type="s0:ARRAYOFOUSULOGADO"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CNEWALERTA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CNEWMOTCRI" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="LNEWSTATUS" type="s:boolean"/>
+          <s:element minOccurs="0" maxOccurs="1" name="ONEWPERMISSOES" type="s0:OPERMISSOES"/>
+          <s:element minOccurs="0" maxOccurs="1" name="ONEWUSULOGADO" type="s0:OUSULOGADO"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="OTRCRETORNO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CALERTA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CMOTCRI" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="LSTATUS" type="s:boolean"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CONTRATOS">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="CCODCONTRATO" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="CNOMCONTRATO" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="OUSULOGADO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="CANSOP" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="CBAIRRO" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="CCELULAR" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="CCEP" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="CCHAVE" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="CCIDADE" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="CCONVABR" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="CCONVABRVER" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="CCONVACOMOD" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="CCONVDESCRI" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="CCONVID" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CCONVMODCOB" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CCONVPADCNF" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="CCONVPARTIC" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="CCONVREGULA" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="CCONVSEGMEN" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="CCONVTIPCON" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="CCPF" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="CDATINI" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="CDESCOP" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="CEMAIL" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="CEMPCHAVE" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="CEMPCONTRAT" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="CEMPNOME" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="CENDERECO" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="CESTADO" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="CGRAUDESCRI" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="CGRAUID" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="CMATANT" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="CMATRIC" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="CNOME" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="CNOMTIT" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="CNUMCARO" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="CNUMCARS" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="CNUMCARTNAS" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="CNUMCONVANS" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="CODONTO" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="CSEXO" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="CTIPOCOB" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="CTIPUSUARIO" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="DDATNAS" type="s:date"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="OAGENTE">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CEMAIL" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CLINKFOTO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CNOME" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CTELEFONE1" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CTELEFONE2" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="OPERMISSOES">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="LAGENDAMENTO" type="s:boolean"/>
+          <s:element minOccurs="1" maxOccurs="1" name="LATUALIZACAD" type="s:boolean"/>
+          <s:element minOccurs="1" maxOccurs="1" name="LBOLETOS" type="s:boolean"/>
+          <s:element minOccurs="1" maxOccurs="1" name="LBUSCAMEDIC" type="s:boolean"/>
+          <s:element minOccurs="1" maxOccurs="1" name="LCARTAOVIRTU" type="s:boolean"/>
+          <s:element minOccurs="1" maxOccurs="1" name="LCOPARTUTILI" type="s:boolean"/>
+          <s:element minOccurs="1" maxOccurs="1" name="LINFORMEIR" type="s:boolean"/>
+          <s:element minOccurs="1" maxOccurs="1" name="LREEMBOLSO" type="s:boolean"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ARRAYOFCONTRATOS">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CONTRATOS" type="s0:CONTRATOS"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ARRAYOFOUSULOGADO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="OUSULOGADO" type="s0:OUSULOGADO"/>
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </types>
+  <message name="DV_LEMBRARSOAPIN">
+    <part name="parameters" element="s0:DV_LEMBRAR"/>
+  </message>
+  <message name="DV_LEMBRARSOAPOUT">
+    <part name="parameters" element="s0:DV_LEMBRARRESPONSE"/>
+  </message>
+  <message name="DV_LOGINSOAPIN">
+    <part name="parameters" element="s0:DV_LOGIN"/>
+  </message>
+  <message name="DV_LOGINSOAPOUT">
+    <part name="parameters" element="s0:DV_LOGINRESPONSE"/>
+  </message>
+  <message name="DV_NOVOUSUSOAPIN">
+    <part name="parameters" element="s0:DV_NOVOUSU"/>
+  </message>
+  <message name="DV_NOVOUSUSOAPOUT">
+    <part name="parameters" element="s0:DV_NOVOUSURESPONSE"/>
+  </message>
+  <message name="DV_TROCARSOAPIN">
+    <part name="parameters" element="s0:DV_TROCAR"/>
+  </message>
+  <message name="DV_TROCARSOAPOUT">
+    <part name="parameters" element="s0:DV_TROCARRESPONSE"/>
+  </message>
+  <portType name="DV_AUTENTICACAOSOAP">
+    <operation name="DV_LEMBRAR">
+      <documentation>Método para recuperar os dados de acesso do beneficiário.</documentation>
+      <input message="s0:DV_LEMBRARSOAPIN"/>
+      <output message="s0:DV_LEMBRARSOAPOUT"/>
+    </operation>
+    <operation name="DV_LOGIN">
+      <documentation>Método que autentica um usuário por meio de login e senha.</documentation>
+      <input message="s0:DV_LOGINSOAPIN"/>
+      <output message="s0:DV_LOGINSOAPOUT"/>
+    </operation>
+    <operation name="DV_NOVOUSU">
+      <documentation>Método utilizado para acesso a novos usuários.</documentation>
+      <input message="s0:DV_NOVOUSUSOAPIN"/>
+      <output message="s0:DV_NOVOUSUSOAPOUT"/>
+    </operation>
+    <operation name="DV_TROCAR">
+      <documentation>Método utilizado para alterar a senha de acesso do beneficiário.</documentation>
+      <input message="s0:DV_TROCARSOAPIN"/>
+      <output message="s0:DV_TROCARSOAPOUT"/>
+    </operation>
+  </portType>
+  <binding name="DV_AUTENTICACAOSOAP" type="s0:DV_AUTENTICACAOSOAP">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+    <operation name="DV_LEMBRAR">
+      <soap:operation soapAction="http://187.94.62.86:8080/DV_LEMBRAR" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="DV_LOGIN">
+      <soap:operation soapAction="http://187.94.62.86:8080/DV_LOGIN" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="DV_NOVOUSU">
+      <soap:operation soapAction="http://187.94.62.86:8080/DV_NOVOUSU" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="DV_TROCAR">
+      <soap:operation soapAction="http://187.94.62.86:8080/DV_TROCAR" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="DV_AUTENTICACAO">
+    <documentation>Métodos para autenticação e controle de Login de usuários.</documentation>
+    <port name="DV_AUTENTICACAOSOAP" binding="s0:DV_AUTENTICACAOSOAP">
+      <soap:address location="http://divicomseguros.totvs.com.br:8080/ws/DV_AUTENTICACAO.apw"/>
+    </port>
+  </service>
+</definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://divicomseguros.totvs.com.br:8080/ws/DV_AUTENTICACAO.apw</con:endpoint></con:endpoints><con:operation id="286fbced-2330-4850-9640-112f33292943" isOneWay="false" action="http://187.94.62.86:8080/DV_LEMBRAR" name="DV_LEMBRAR" bindingOperationName="DV_LEMBRAR" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="6eab6929-185b-4c2c-940b-846ea53b58e1" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://divicomseguros.totvs.com.br:8080/ws/DV_AUTENTICACAO.apw</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://187.94.62.86:8080/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ns:DV_LEMBRAR>
+         <ns:CLMBUSULOGIN>?</ns:CLMBUSULOGIN>
+         <ns:CLMBUSUCPF>?</ns:CLMBUSUCPF>
+         <ns:DLMBUSUDATNAS>?</ns:DLMBUSUDATNAS>
+      </ns:DV_LEMBRAR>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://187.94.62.86:8080/DV_LEMBRAR"/></con:call></con:operation><con:operation id="6415332e-8aee-4bee-88fa-14e3bbd7987d" isOneWay="false" action="http://187.94.62.86:8080/DV_LOGIN" name="DV_LOGIN" bindingOperationName="DV_LOGIN" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="b32ed244-9218-4e58-8c55-ac1d473cda8e" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://divicomseguros.totvs.com.br:8080/ws/DV_AUTENTICACAO.apw</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://187.94.62.86:8080/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ns:DV_LOGIN>
+         <ns:CLOGUSULOGIN>53456280840</ns:CLOGUSULOGIN>
+         <ns:CLOGUSUPWS>YIVO424242</ns:CLOGUSUPWS>
+         <ns:CLOGSEGMENTO></ns:CLOGSEGMENTO>
+      </ns:DV_LOGIN>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://187.94.62.86:8080/DV_LOGIN"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="fcdcefb2-e1d9-4a18-8072-afe669bda5fd" isOneWay="false" action="http://187.94.62.86:8080/DV_NOVOUSU" name="DV_NOVOUSU" bindingOperationName="DV_NOVOUSU" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="a028a78a-120d-498f-b75e-5b97a4dd36e8" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://divicomseguros.totvs.com.br:8080/ws/DV_AUTENTICACAO.apw</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://187.94.62.86:8080/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ns:DV_NOVOUSU>
+         <ns:CNEWUSULOGIN>?</ns:CNEWUSULOGIN>
+         <ns:CNEWUSUCPF>?</ns:CNEWUSUCPF>
+         <ns:DNEWUSUDATNAS>?</ns:DNEWUSUDATNAS>
+         <ns:CNEWUSUPSW>?</ns:CNEWUSUPSW>
+         <ns:CNEWSEGMENTO>?</ns:CNEWSEGMENTO>
+      </ns:DV_NOVOUSU>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://187.94.62.86:8080/DV_NOVOUSU"/></con:call></con:operation><con:operation id="c9cd6923-37ab-4233-a022-a81018d2003d" isOneWay="false" action="http://187.94.62.86:8080/DV_TROCAR" name="DV_TROCAR" bindingOperationName="DV_TROCAR" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="071fbd32-a9ae-43af-9238-4b2d5aec63c9" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://divicomseguros.totvs.com.br:8080/ws/DV_AUTENTICACAO.apw</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://187.94.62.86:8080/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ns:DV_TROCAR>
+         <ns:CTRCUSULOGIN>?</ns:CTRCUSULOGIN>
+         <ns:CTRCSENHAATU>?</ns:CTRCSENHAATU>
+         <ns:CTRCNOVASENHA>?</ns:CTRCNOVASENHA>
+      </ns:DV_TROCAR>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://187.94.62.86:8080/DV_TROCAR"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="9284983e-ef42-4ef7-ac73-ed1656fc0ccf" wsaVersion="NONE" name="DV_COPARTIRSOAP" type="wsdl" bindingName="{http://187.94.62.86:8080/}DV_COPARTIRSOAP" soapVersion="1_1" anonymous="optional" definition="http://divicomseguros.totvs.com.br:8080/ws/DV_COPARTIR.apw?WSDL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://divicomseguros.totvs.com.br:8080/ws/DV_COPARTIR.apw?WSDL"><con:part><con:url>http://divicomseguros.totvs.com.br:8080/ws/DV_COPARTIR.apw?WSDL</con:url><con:content><![CDATA[<!--Generated 20190318 11:38:29 by ADVPL WSDL Server 1.110216 / Protheus 7.00.131227A-20171123 NG-->
+<definitions targetNamespace="http://187.94.62.86:8080/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://187.94.62.86:8080/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://187.94.62.86:8080/">
+      <s:element name="DV_DIRPDF">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CDIRBENCHAVE" type="s:string"/>
+            <s:element minOccurs="1" maxOccurs="1" name="CDIRANO" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DV_DIRPDFRESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DV_DIRPDFRESULT" type="s0:ODIRRETORNO"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DV_EXTCOPART">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CCOPBENCHAVE" type="s:string"/>
+            <s:element minOccurs="1" maxOccurs="1" name="CCOPEMPCHAVE" type="s:string"/>
+            <s:element minOccurs="1" maxOccurs="1" name="CCOPANO" type="s:string"/>
+            <s:element minOccurs="1" maxOccurs="1" name="CCOPMES" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DV_EXTCOPARTRESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DV_EXTCOPARTRESULT" type="s0:OCOPRETORNO"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DV_QUITACAOPDF">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CQTCBENCHAVE" type="s:string"/>
+            <s:element minOccurs="1" maxOccurs="1" name="CQTCANO" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DV_QUITACAOPDFRESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DV_QUITACAOPDFRESULT" type="s0:OQTCRETORNO"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="OCOPRETORNO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CALERTA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CMOTCRI" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="LSTATUS" type="s:boolean"/>
+          <s:element minOccurs="0" maxOccurs="1" name="OEMPRESA" type="s0:OSTRUCTEMP"/>
+          <s:element minOccurs="0" maxOccurs="1" name="OFAMILIA" type="s0:OSTRUCFAM"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ODIRRETORNO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CDECLAIR" type="s:base64Binary"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CMOTCRI" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="LSTATUS" type="s:boolean"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="OQTCRETORNO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CCARTAQTC" type="s:base64Binary"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CMOTCRI" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="LSTATUS" type="s:boolean"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="OSTRUCTEMP">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="CCNPJ" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="CCONTRATO" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="CESTIPULANTE" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="CNOME" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="OSTRUCFAM">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ABENEFICIARIOS" type="s0:ARRAYOFOBENEFICIARIO"/>
+          <s:element minOccurs="1" maxOccurs="1" name="CMATRTIT" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="CNOMETIT" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="OBENEFICIARIO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="AEXTRATO" type="s0:ARRAYOFOEXTRATO"/>
+          <s:element minOccurs="1" maxOccurs="1" name="CMATRICULA" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="CNOME" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="NVALUTILIZ" type="s:float"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="OEXTRATO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CCNPJPREST" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CCODPREST" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="CCODPROCED" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CCODTIPSERV" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CDESCTIPSERV" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="CDESPROCED" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CNOMEPREST" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DDATAATEN" type="s:date"/>
+          <s:element minOccurs="0" maxOccurs="1" name="NQUANTIDADE" type="s:float"/>
+          <s:element minOccurs="1" maxOccurs="1" name="NVALSERVICO" type="s:float"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ARRAYOFOBENEFICIARIO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="OBENEFICIARIO" type="s0:OBENEFICIARIO"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ARRAYOFOEXTRATO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="OEXTRATO" type="s0:OEXTRATO"/>
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </types>
+  <message name="DV_DIRPDFSOAPIN">
+    <part name="parameters" element="s0:DV_DIRPDF"/>
+  </message>
+  <message name="DV_DIRPDFSOAPOUT">
+    <part name="parameters" element="s0:DV_DIRPDFRESPONSE"/>
+  </message>
+  <message name="DV_EXTCOPARTSOAPIN">
+    <part name="parameters" element="s0:DV_EXTCOPART"/>
+  </message>
+  <message name="DV_EXTCOPARTSOAPOUT">
+    <part name="parameters" element="s0:DV_EXTCOPARTRESPONSE"/>
+  </message>
+  <message name="DV_QUITACAOPDFSOAPIN">
+    <part name="parameters" element="s0:DV_QUITACAOPDF"/>
+  </message>
+  <message name="DV_QUITACAOPDFSOAPOUT">
+    <part name="parameters" element="s0:DV_QUITACAOPDFRESPONSE"/>
+  </message>
+  <portType name="DV_COPARTIRSOAP">
+    <operation name="DV_DIRPDF">
+      <documentation>Método que retorna um PDF com a declaracao de IR com os dados de despesas do grupo familiar no ano de exercício solicitado.</documentation>
+      <input message="s0:DV_DIRPDFSOAPIN"/>
+      <output message="s0:DV_DIRPDFSOAPOUT"/>
+    </operation>
+    <operation name="DV_EXTCOPART">
+      <documentation>Método que lista os eventos realizados pelo beneficiário e seu grupo familiar em uma conpetência informada.</documentation>
+      <input message="s0:DV_EXTCOPARTSOAPIN"/>
+      <output message="s0:DV_EXTCOPARTSOAPOUT"/>
+    </operation>
+    <operation name="DV_QUITACAOPDF">
+      <documentation>Método que retorna um PDF com a carta de quitação de débitos do ano de exercício solicitado.</documentation>
+      <input message="s0:DV_QUITACAOPDFSOAPIN"/>
+      <output message="s0:DV_QUITACAOPDFSOAPOUT"/>
+    </operation>
+  </portType>
+  <binding name="DV_COPARTIRSOAP" type="s0:DV_COPARTIRSOAP">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+    <operation name="DV_DIRPDF">
+      <soap:operation soapAction="http://187.94.62.86:8080/DV_DIRPDF" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="DV_EXTCOPART">
+      <soap:operation soapAction="http://187.94.62.86:8080/DV_EXTCOPART" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="DV_QUITACAOPDF">
+      <soap:operation soapAction="http://187.94.62.86:8080/DV_QUITACAOPDF" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="DV_COPARTIR">
+    <documentation>Métodos para extrato de utilização e coparticipação e extrato de IR.</documentation>
+    <port name="DV_COPARTIRSOAP" binding="s0:DV_COPARTIRSOAP">
+      <soap:address location="http://divicomseguros.totvs.com.br:8080/ws/DV_COPARTIR.apw"/>
+    </port>
+  </service>
+</definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://divicomseguros.totvs.com.br:8080/ws/DV_COPARTIR.apw</con:endpoint></con:endpoints><con:operation id="f70c3c95-d7ea-4057-9d5d-5791a5172fe4" isOneWay="false" action="http://187.94.62.86:8080/DV_DIRPDF" name="DV_DIRPDF" bindingOperationName="DV_DIRPDF" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="2d6f3f98-63f5-4bf6-8a19-0e25e6e256ee" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://divicomseguros.totvs.com.br:8080/ws/DV_COPARTIR.apw</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://187.94.62.86:8080/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ns:DV_DIRPDF>
+         <ns:CDIRBENCHAVE>020103007500000000000100496900</ns:CDIRBENCHAVE>
+         <ns:CDIRANO>2018</ns:CDIRANO>
+      </ns:DV_DIRPDF>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://187.94.62.86:8080/DV_DIRPDF"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="38cb21b4-29ed-4688-97ed-0b306ca04fbf" isOneWay="false" action="http://187.94.62.86:8080/DV_EXTCOPART" name="DV_EXTCOPART" bindingOperationName="DV_EXTCOPART" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="ddd6fa06-ef85-4201-96ae-6b9a10a61cdb" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://divicomseguros.totvs.com.br:8080/ws/DV_COPARTIR.apw</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://187.94.62.86:8080/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ns:DV_EXTCOPART>
+         <ns:CCOPBENCHAVE>?</ns:CCOPBENCHAVE>
+         <ns:CCOPEMPCHAVE>?</ns:CCOPEMPCHAVE>
+         <ns:CCOPANO>?</ns:CCOPANO>
+         <ns:CCOPMES>?</ns:CCOPMES>
+      </ns:DV_EXTCOPART>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://187.94.62.86:8080/DV_EXTCOPART"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="44dde03b-88ac-4022-8b1a-f89ef3c95fd6" isOneWay="false" action="http://187.94.62.86:8080/DV_QUITACAOPDF" name="DV_QUITACAOPDF" bindingOperationName="DV_QUITACAOPDF" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="d7ef59dc-a202-4c02-9e86-5747c2d03755" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://divicomseguros.totvs.com.br:8080/ws/DV_COPARTIR.apw</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://187.94.62.86:8080/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ns:DV_QUITACAOPDF>
+         <ns:CQTCBENCHAVE>020103007500000000000100496900</ns:CQTCBENCHAVE>
+         <ns:CQTCANO>2018</ns:CQTCANO>
+      </ns:DV_QUITACAOPDF>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://187.94.62.86:8080/DV_QUITACAOPDF"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>

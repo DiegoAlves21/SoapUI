@@ -1,0 +1,612 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="5eaf541e-77eb-4c5a-b920-2d6411042054" activeEnvironment="Default" name="Sao Bernardo Saude - Producao - Login" resourceRoot="" soapui-version="5.5.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="d22c6a74-4261-4fdc-8538-80c975a1af56" wsaVersion="NONE" name="WsBeneficiarioLoginSoap12" type="wsdl" bindingName="{http://www.facilinformatica.com.br/SBSMobile}WsBeneficiarioLoginSoap12" soapVersion="1_2" anonymous="optional" definition="http://mobilesbs.gruposaobernardo.com.br:8088/WsBeneficiarioLogin.asmx?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>http://mobilesbs.gruposaobernardo.com.br:8088/WsBeneficiarioLogin.asmx</con:endpoint></con:endpoints><con:operation id="232e9216-fbde-4a5c-bdcf-ccb717df11b9" isOneWay="false" action="http://www.facilinformatica.com.br/SBSMobile/AlterarSenha" name="AlterarSenha" bindingOperationName="AlterarSenha" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="85ca434d-2f8a-48fa-b41e-fc3ddde20b07" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://mobilesbs.gruposaobernardo.com.br:8088/WsBeneficiarioLogin.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:sbs="http://www.facilinformatica.com.br/SBSMobile">
+   <soap:Header/>
+   <soap:Body>
+      <sbs:AlterarSenha>
+         <!--Optional:-->
+         <sbs:Login>?</sbs:Login>
+         <!--Optional:-->
+         <sbs:SenhaAntiga>?</sbs:SenhaAntiga>
+         <!--Optional:-->
+         <sbs:SenhaNova>?</sbs:SenhaNova>
+      </sbs:AlterarSenha>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.facilinformatica.com.br/SBSMobile/WsBeneficiarioLoginSoap/AlterarSenhaRequest"/></con:call></con:operation><con:operation id="c12191da-5479-4a4b-92da-287d7507f4e6" isOneWay="false" action="http://www.facilinformatica.com.br/SBSMobile/Login" name="Login" bindingOperationName="Login" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="c6931c7d-510e-4a2c-9888-b50bb37c67c1" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://mobilesbs.gruposaobernardo.com.br:8088/WsBeneficiarioLogin.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:sbs="http://www.facilinformatica.com.br/SBSMobile">
+   <soap:Header/>
+   <soap:Body>
+      <sbs:Login>
+         <!--Optional:-->
+         <sbs:UserLogin>?</sbs:UserLogin>
+         <!--Optional:-->
+         <sbs:Senha>?</sbs:Senha>
+      </sbs:Login>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.facilinformatica.com.br/SBSMobile/WsBeneficiarioLoginSoap/LoginRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="48b730c7-2387-4ca4-bc28-c459a2aee7b8" isOneWay="false" action="http://www.facilinformatica.com.br/SBSMobile/NovaSenha" name="NovaSenha" bindingOperationName="NovaSenha" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="3ca7e644-8a2b-4698-a82e-64da08a8d1a2" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://mobilesbs.gruposaobernardo.com.br:8088/WsBeneficiarioLogin.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:sbs="http://www.facilinformatica.com.br/SBSMobile">
+   <soap:Header/>
+   <soap:Body>
+      <sbs:NovaSenha>
+         <!--Optional:-->
+         <sbs:CPF>?</sbs:CPF>
+         <sbs:DataNasc>?</sbs:DataNasc>
+      </sbs:NovaSenha>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.facilinformatica.com.br/SBSMobile/WsBeneficiarioLoginSoap/NovaSenhaRequest"/></con:call></con:operation><con:operation id="d503f99b-302a-4fa8-8d5e-8e44da3a9257" isOneWay="false" action="http://www.facilinformatica.com.br/SBSMobile/PrimeiroAcesso" name="PrimeiroAcesso" bindingOperationName="PrimeiroAcesso" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="bb1385b1-1fd0-469c-b3d7-4609a956a7b5" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://mobilesbs.gruposaobernardo.com.br:8088/WsBeneficiarioLogin.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:sbs="http://www.facilinformatica.com.br/SBSMobile">
+   <soap:Header/>
+   <soap:Body>
+      <sbs:PrimeiroAcesso>
+         <!--Optional:-->
+         <sbs:CPF>?</sbs:CPF>
+         <sbs:DataNasc>?</sbs:DataNasc>
+         <!--Optional:-->
+         <sbs:Senha>?</sbs:Senha>
+      </sbs:PrimeiroAcesso>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.facilinformatica.com.br/SBSMobile/WsBeneficiarioLoginSoap/PrimeiroAcessoRequest"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="1236c89e-0b7b-4725-a8ea-5a19010b7afd" wsaVersion="NONE" name="WsBeneficiarioLoginSoap" type="wsdl" bindingName="{http://www.facilinformatica.com.br/SBSMobile}WsBeneficiarioLoginSoap" soapVersion="1_1" anonymous="optional" definition="http://mobilesbs.gruposaobernardo.com.br:8088/WsBeneficiarioLogin.asmx?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://mobilesbs.gruposaobernardo.com.br:8088/WsBeneficiarioLogin.asmx?wsdl"><con:part><con:url>http://mobilesbs.gruposaobernardo.com.br:8088/WsBeneficiarioLogin.asmx?wsdl</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://www.facilinformatica.com.br/SBSMobile" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.facilinformatica.com.br/SBSMobile" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.facilinformatica.com.br/SBSMobile">
+      <s:element name="Login">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserLogin" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="Senha" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoginResult" type="tns:LoginOutput"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="LoginOutput">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Status" type="s:boolean"/>
+          <s:element minOccurs="1" maxOccurs="1" name="MotivoRestricao" nillable="true" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="UsuarioLogin" nillable="true" type="tns:Usuario"/>
+          <s:element minOccurs="1" maxOccurs="1" name="Familia" nillable="true" type="tns:ArrayOfUsuario"/>
+          <s:element minOccurs="1" maxOccurs="1" name="Permissoes" nillable="true" type="tns:Permissoes"/>
+          <s:element minOccurs="1" maxOccurs="1" name="Alerta" nillable="true" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="Agente" nillable="true" type="tns:AgenteRelacionamento"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Usuario">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="IdUsuario" nillable="true" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="Matricula" nillable="true" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="MatriculaFuncionario" nillable="true" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="Nome" nillable="true" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="Sexo" nillable="true" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="Nascimento" type="s:dateTime"/>
+          <s:element minOccurs="1" maxOccurs="1" name="CPF" nillable="true" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="Telefone" nillable="true" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="Email" nillable="true" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="Endereco" nillable="true" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="Bairro" nillable="true" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="CEP" nillable="true" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="Cidade" nillable="true" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="Estado" nillable="true" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="DataInclusao" type="s:dateTime"/>
+          <s:element minOccurs="1" maxOccurs="1" name="TipoUsuario" nillable="true" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="MatriculaTitular" nillable="true" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="GrauParentescoId" type="s:decimal"/>
+          <s:element minOccurs="1" maxOccurs="1" name="GrauParentescoDescricao" nillable="true" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="ConvenioId" type="s:decimal"/>
+          <s:element minOccurs="1" maxOccurs="1" name="ConvenioDescricao" nillable="true" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="ConvenioAbrangencia" nillable="true" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="ConvenioAcomodacao" nillable="true" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="ConvenioModalidadeCobranca" nillable="true" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="ConvenioPadraoConforto" nillable="true" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="ConvenioParticipativo" nillable="true" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="ConvenioSegmentacao" nillable="true" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="ConvenioTipoContrato" nillable="true" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="CartaoImagem" nillable="true" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="CartaoImagemVerso" nillable="true" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="CartaoValidade" type="s:dateTime"/>
+          <s:element minOccurs="1" maxOccurs="1" name="CartaoVia" type="s:int"/>
+          <s:element minOccurs="1" maxOccurs="1" name="EmpresaId" type="s:decimal"/>
+          <s:element minOccurs="1" maxOccurs="1" name="EmpresaNome" nillable="true" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="TrocaSenha" nillable="true" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="NumeroCns" nillable="true" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="ConvenioAns" type="s:decimal"/>
+          <s:element minOccurs="1" maxOccurs="1" name="DataFinalCpt" nillable="true" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="Carencias" nillable="true" type="tns:ArrayOfCarencia"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfCarencia">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Carencia" nillable="true" type="tns:Carencia"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Carencia">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="TipoServico" nillable="true" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="Descricao" nillable="true" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfUsuario">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Usuario" nillable="true" type="tns:Usuario"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Permissoes">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Reembolso" type="s:boolean"/>
+          <s:element minOccurs="1" maxOccurs="1" name="Agendamento" type="s:boolean"/>
+          <s:element minOccurs="1" maxOccurs="1" name="Coparticipacao" type="s:boolean"/>
+          <s:element minOccurs="1" maxOccurs="1" name="Utilizacao" type="s:boolean"/>
+          <s:element minOccurs="1" maxOccurs="1" name="AtualizaCadastro" type="s:boolean"/>
+          <s:element minOccurs="1" maxOccurs="1" name="BuscaMedicamento" type="s:boolean"/>
+          <s:element minOccurs="1" maxOccurs="1" name="Boletos" type="s:boolean"/>
+          <s:element minOccurs="1" maxOccurs="1" name="InformeIR" type="s:boolean"/>
+          <s:element minOccurs="1" maxOccurs="1" name="Carteirinha" type="s:boolean"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AgenteRelacionamento">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Nome" nillable="true" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="Telefone1" nillable="true" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="Telefone2" nillable="true" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="Email" nillable="true" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="LinkFoto" nillable="true" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="TituloApresentacao" nillable="true" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:element name="NovaSenha">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CPF" type="s:string"/>
+            <s:element minOccurs="1" maxOccurs="1" name="DataNasc" type="s:dateTime"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NovaSenhaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NovaSenhaResult" type="tns:NovaSenhaOutput"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="NovaSenhaOutput">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Mensagem" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:element name="PrimeiroAcesso">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CPF" type="s:string"/>
+            <s:element minOccurs="1" maxOccurs="1" name="DataNasc" type="s:dateTime"/>
+            <s:element minOccurs="0" maxOccurs="1" name="Senha" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PrimeiroAcessoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PrimeiroAcessoResult" type="tns:PrimeiroAcessoOutput"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="PrimeiroAcessoOutput">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:LoginOutput"/>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="AlterarSenha">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Login" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="SenhaAntiga" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="SenhaNova" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AlterarSenhaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AlterarSenhaResult" type="tns:AlterarSenhaOutput"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="AlterarSenhaOutput">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Status" type="s:boolean"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Mensagem" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="LoginSoapIn">
+    <wsdl:part name="parameters" element="tns:Login"/>
+  </wsdl:message>
+  <wsdl:message name="LoginSoapOut">
+    <wsdl:part name="parameters" element="tns:LoginResponse"/>
+  </wsdl:message>
+  <wsdl:message name="NovaSenhaSoapIn">
+    <wsdl:part name="parameters" element="tns:NovaSenha"/>
+  </wsdl:message>
+  <wsdl:message name="NovaSenhaSoapOut">
+    <wsdl:part name="parameters" element="tns:NovaSenhaResponse"/>
+  </wsdl:message>
+  <wsdl:message name="PrimeiroAcessoSoapIn">
+    <wsdl:part name="parameters" element="tns:PrimeiroAcesso"/>
+  </wsdl:message>
+  <wsdl:message name="PrimeiroAcessoSoapOut">
+    <wsdl:part name="parameters" element="tns:PrimeiroAcessoResponse"/>
+  </wsdl:message>
+  <wsdl:message name="AlterarSenhaSoapIn">
+    <wsdl:part name="parameters" element="tns:AlterarSenha"/>
+  </wsdl:message>
+  <wsdl:message name="AlterarSenhaSoapOut">
+    <wsdl:part name="parameters" element="tns:AlterarSenhaResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="WsBeneficiarioLoginSoap">
+    <wsdl:operation name="Login">
+      <wsdl:input message="tns:LoginSoapIn"/>
+      <wsdl:output message="tns:LoginSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="NovaSenha">
+      <wsdl:input message="tns:NovaSenhaSoapIn"/>
+      <wsdl:output message="tns:NovaSenhaSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="PrimeiroAcesso">
+      <wsdl:input message="tns:PrimeiroAcessoSoapIn"/>
+      <wsdl:output message="tns:PrimeiroAcessoSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="AlterarSenha">
+      <wsdl:input message="tns:AlterarSenhaSoapIn"/>
+      <wsdl:output message="tns:AlterarSenhaSoapOut"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WsBeneficiarioLoginSoap" type="tns:WsBeneficiarioLoginSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="Login">
+      <soap:operation soapAction="http://www.facilinformatica.com.br/SBSMobile/Login" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NovaSenha">
+      <soap:operation soapAction="http://www.facilinformatica.com.br/SBSMobile/NovaSenha" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrimeiroAcesso">
+      <soap:operation soapAction="http://www.facilinformatica.com.br/SBSMobile/PrimeiroAcesso" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AlterarSenha">
+      <soap:operation soapAction="http://www.facilinformatica.com.br/SBSMobile/AlterarSenha" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WsBeneficiarioLoginSoap12" type="tns:WsBeneficiarioLoginSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="Login">
+      <soap12:operation soapAction="http://www.facilinformatica.com.br/SBSMobile/Login" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NovaSenha">
+      <soap12:operation soapAction="http://www.facilinformatica.com.br/SBSMobile/NovaSenha" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrimeiroAcesso">
+      <soap12:operation soapAction="http://www.facilinformatica.com.br/SBSMobile/PrimeiroAcesso" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AlterarSenha">
+      <soap12:operation soapAction="http://www.facilinformatica.com.br/SBSMobile/AlterarSenha" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WsBeneficiarioLogin">
+    <wsdl:port name="WsBeneficiarioLoginSoap" binding="tns:WsBeneficiarioLoginSoap">
+      <soap:address location="http://mobilesbs.gruposaobernardo.com.br:8088/WsBeneficiarioLogin.asmx"/>
+    </wsdl:port>
+    <wsdl:port name="WsBeneficiarioLoginSoap12" binding="tns:WsBeneficiarioLoginSoap12">
+      <soap12:address location="http://mobilesbs.gruposaobernardo.com.br:8088/WsBeneficiarioLogin.asmx"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://mobilesbs.gruposaobernardo.com.br:8088/WsBeneficiarioLogin.asmx</con:endpoint></con:endpoints><con:operation id="c34561de-9959-4225-bb82-46efec33880b" isOneWay="false" action="http://www.facilinformatica.com.br/SBSMobile/AlterarSenha" name="AlterarSenha" bindingOperationName="AlterarSenha" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="3f83c1ae-4685-4a2b-873f-6a9f4b355756" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://mobilesbs.gruposaobernardo.com.br:8088/WsBeneficiarioLogin.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sbs="http://www.facilinformatica.com.br/SBSMobile">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sbs:AlterarSenha>
+         <!--Optional:-->
+         <sbs:Login>?</sbs:Login>
+         <!--Optional:-->
+         <sbs:SenhaAntiga>?</sbs:SenhaAntiga>
+         <!--Optional:-->
+         <sbs:SenhaNova>?</sbs:SenhaNova>
+      </sbs:AlterarSenha>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.facilinformatica.com.br/SBSMobile/AlterarSenha"/></con:call></con:operation><con:operation id="63e6b37f-4e94-4fc9-a375-9a733138a8c6" isOneWay="false" action="http://www.facilinformatica.com.br/SBSMobile/Login" name="Login" bindingOperationName="Login" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="21a56a46-912a-4d50-832b-cce40a973c34" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://mobilesbs.gruposaobernardo.com.br:8088/WsBeneficiarioLogin.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sbs="http://www.facilinformatica.com.br/SBSMobile">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sbs:Login>
+         <!--Optional:-->
+         <sbs:UserLogin>5139376</sbs:UserLogin>
+         <!--Optional:-->
+         <sbs:Senha>5139376</sbs:Senha>
+      </sbs:Login>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.facilinformatica.com.br/SBSMobile/Login"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="ae3e255c-d71e-48ef-9505-d7ab6519608c" isOneWay="false" action="http://www.facilinformatica.com.br/SBSMobile/NovaSenha" name="NovaSenha" bindingOperationName="NovaSenha" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="5c9c8ad5-5fe0-47a2-98c8-23cdaf482989" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://mobilesbs.gruposaobernardo.com.br:8088/WsBeneficiarioLogin.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sbs="http://www.facilinformatica.com.br/SBSMobile">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sbs:NovaSenha>
+         <!--Optional:-->
+         <sbs:CPF>?</sbs:CPF>
+         <sbs:DataNasc>?</sbs:DataNasc>
+      </sbs:NovaSenha>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.facilinformatica.com.br/SBSMobile/NovaSenha"/></con:call></con:operation><con:operation id="839e2bdf-6e82-4a27-adbf-113c9e34f1a3" isOneWay="false" action="http://www.facilinformatica.com.br/SBSMobile/PrimeiroAcesso" name="PrimeiroAcesso" bindingOperationName="PrimeiroAcesso" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="764553bc-6fc5-4ba7-8a0c-bc477f137e11" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://mobilesbs.gruposaobernardo.com.br:8088/WsBeneficiarioLogin.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sbs="http://www.facilinformatica.com.br/SBSMobile">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sbs:PrimeiroAcesso>
+         <!--Optional:-->
+         <sbs:CPF>122.690.477-70</sbs:CPF>
+         <sbs:DataNasc>1990-10-30</sbs:DataNasc>
+         <!--Optional:-->
+         <sbs:Senha>12345678</sbs:Senha>
+      </sbs:PrimeiroAcesso>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.facilinformatica.com.br/SBSMobile/PrimeiroAcesso"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="8b883755-4458-404f-8a24-befd8d21deb1" wsaVersion="NONE" name="WsExtratoBoletoSoap" type="wsdl" bindingName="{http://www.facilinformatica.com.br/SBSMobile}WsExtratoBoletoSoap" soapVersion="1_1" anonymous="optional" definition="http://mobilesbshomo.gruposaobernardo.com.br:8089/WsExtratoBoleto.asmx?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>http://mobilesbshomo.gruposaobernardo.com.br:8089/WsExtratoBoleto.asmx</con:endpoint></con:endpoints><con:operation id="ef3ffb4b-5a30-4315-8f35-50a11015ffa7" isOneWay="false" action="http://www.facilinformatica.com.br/SBSMobile/DetalheBoleto" name="DetalheBoleto" bindingOperationName="DetalheBoleto" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="1e398915-c73a-4abf-b0bf-764ed547ebb3" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://mobilesbshomo.gruposaobernardo.com.br:8089/WsExtratoBoleto.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sbs="http://www.facilinformatica.com.br/SBSMobile">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sbs:DetalheBoleto>
+         <!--Optional:-->
+         <sbs:Fatura>?</sbs:Fatura>
+      </sbs:DetalheBoleto>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.facilinformatica.com.br/SBSMobile/DetalheBoleto"/></con:call></con:operation><con:operation id="82ced42f-35de-4d9f-a8d9-6747d80ea26c" isOneWay="false" action="http://www.facilinformatica.com.br/SBSMobile/ExtratoBoleto" name="ExtratoBoleto" bindingOperationName="ExtratoBoleto" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="25e90907-2b56-4d1f-a2f1-092ce7291dd9" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://mobilesbshomo.gruposaobernardo.com.br:8089/WsExtratoBoleto.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sbs="http://www.facilinformatica.com.br/SBSMobile">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sbs:ExtratoBoleto>
+         <!--Optional:-->
+         <sbs:Usuario>?</sbs:Usuario>
+      </sbs:ExtratoBoleto>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.facilinformatica.com.br/SBSMobile/ExtratoBoleto"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="f24bb73c-c597-4a85-8ada-3acebacedffc" wsaVersion="NONE" name="WsExtratoBoletoSoap12" type="wsdl" bindingName="{http://www.facilinformatica.com.br/SBSMobile}WsExtratoBoletoSoap12" soapVersion="1_2" anonymous="optional" definition="http://mobilesbshomo.gruposaobernardo.com.br:8089/WsExtratoBoleto.asmx?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://mobilesbshomo.gruposaobernardo.com.br:8089/WsExtratoBoleto.asmx?wsdl"><con:part><con:url>http://mobilesbshomo.gruposaobernardo.com.br:8089/WsExtratoBoleto.asmx?wsdl</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://www.facilinformatica.com.br/SBSMobile" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.facilinformatica.com.br/SBSMobile" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.facilinformatica.com.br/SBSMobile">
+      <s:element name="ExtratoBoleto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExtratoBoletoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ExtratoBoletoResult" type="tns:ExtratoBoletoOutput"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ExtratoBoletoOutput">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Status" type="s:boolean"/>
+          <s:element minOccurs="1" maxOccurs="1" name="MotivoRestricao" nillable="true" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="Boletos" nillable="true" type="tns:ArrayOfBoleto"/>
+          <s:element minOccurs="1" maxOccurs="1" name="Alerta" nillable="true" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfBoleto">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Boleto" nillable="true" type="tns:Boleto"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Boleto">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Fatura" type="s:decimal"/>
+          <s:element minOccurs="1" maxOccurs="1" name="Cedente" nillable="true" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="DataEmissao" type="s:dateTime"/>
+          <s:element minOccurs="1" maxOccurs="1" name="DataVencimento" type="s:dateTime"/>
+          <s:element minOccurs="1" maxOccurs="1" name="DataProcessamento" type="s:dateTime"/>
+          <s:element minOccurs="1" maxOccurs="1" name="NossoNumero" nillable="true" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="Valor" type="s:decimal"/>
+          <s:element minOccurs="1" maxOccurs="1" name="LinhaDigitavel" nillable="true" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="BancoPreferencial" nillable="true" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="Competencia" nillable="true" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="Status" nillable="true" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="Observacoes" nillable="true" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="DataBaixa" type="s:dateTime"/>
+          <s:element minOccurs="1" maxOccurs="1" name="ValorPago" type="s:decimal"/>
+        </s:sequence>
+      </s:complexType>
+      <s:element name="DetalheBoleto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Fatura" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DetalheBoletoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DetalheBoletoResult" type="tns:DetalheBoletoOutput"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="DetalheBoletoOutput">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Status" type="s:boolean"/>
+          <s:element minOccurs="1" maxOccurs="1" name="MotivoRestricao" nillable="true" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="Detalhes" nillable="true" type="tns:DetalheBoleto"/>
+          <s:element minOccurs="1" maxOccurs="1" name="Alerta" nillable="true" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DetalheBoleto">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Sacado" nillable="true" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="LocalPagamento" nillable="true" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="BancoCodigo" nillable="true" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="BancoNome" nillable="true" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="BancoAgencia" nillable="true" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="BancoConta" nillable="true" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="DocumentoEspecie" nillable="true" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="SacadoEndereco" nillable="true" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="SacadoEndComplemento" nillable="true" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="SacadoBairro" nillable="true" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="SacadoCidade" nillable="true" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="SacadoUF" nillable="true" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="SacadoCep" nillable="true" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="SacadoCPF" nillable="true" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="Grupos" nillable="true" type="tns:ArrayOfGrupoServicoBoleto"/>
+          <s:element minOccurs="1" maxOccurs="1" name="BancoCarteira" nillable="true" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfGrupoServicoBoleto">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="GrupoServicoBoleto" type="tns:GrupoServicoBoleto"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="GrupoServicoBoleto">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Descricao" nillable="true" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="Servicos" nillable="true" type="tns:ArrayOfServicoBoleto"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfServicoBoleto">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ServicoBoleto" nillable="true" type="tns:ServicoBoleto"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ServicoBoleto">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Descricao" nillable="true" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="Valor" type="s:decimal"/>
+          <s:element minOccurs="1" maxOccurs="1" name="Matricula" nillable="true" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="Nome" nillable="true" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="Plano" nillable="true" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="DataInclusao" type="s:dateTime"/>
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ExtratoBoletoSoapIn">
+    <wsdl:part name="parameters" element="tns:ExtratoBoleto"/>
+  </wsdl:message>
+  <wsdl:message name="ExtratoBoletoSoapOut">
+    <wsdl:part name="parameters" element="tns:ExtratoBoletoResponse"/>
+  </wsdl:message>
+  <wsdl:message name="DetalheBoletoSoapIn">
+    <wsdl:part name="parameters" element="tns:DetalheBoleto"/>
+  </wsdl:message>
+  <wsdl:message name="DetalheBoletoSoapOut">
+    <wsdl:part name="parameters" element="tns:DetalheBoletoResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="WsExtratoBoletoSoap">
+    <wsdl:operation name="ExtratoBoleto">
+      <wsdl:input message="tns:ExtratoBoletoSoapIn"/>
+      <wsdl:output message="tns:ExtratoBoletoSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="DetalheBoleto">
+      <wsdl:input message="tns:DetalheBoletoSoapIn"/>
+      <wsdl:output message="tns:DetalheBoletoSoapOut"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WsExtratoBoletoSoap" type="tns:WsExtratoBoletoSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="ExtratoBoleto">
+      <soap:operation soapAction="http://www.facilinformatica.com.br/SBSMobile/ExtratoBoleto" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DetalheBoleto">
+      <soap:operation soapAction="http://www.facilinformatica.com.br/SBSMobile/DetalheBoleto" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WsExtratoBoletoSoap12" type="tns:WsExtratoBoletoSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="ExtratoBoleto">
+      <soap12:operation soapAction="http://www.facilinformatica.com.br/SBSMobile/ExtratoBoleto" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DetalheBoleto">
+      <soap12:operation soapAction="http://www.facilinformatica.com.br/SBSMobile/DetalheBoleto" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WsExtratoBoleto">
+    <wsdl:port name="WsExtratoBoletoSoap" binding="tns:WsExtratoBoletoSoap">
+      <soap:address location="http://mobilesbshomo.gruposaobernardo.com.br:8089/WsExtratoBoleto.asmx"/>
+    </wsdl:port>
+    <wsdl:port name="WsExtratoBoletoSoap12" binding="tns:WsExtratoBoletoSoap12">
+      <soap12:address location="http://mobilesbshomo.gruposaobernardo.com.br:8089/WsExtratoBoleto.asmx"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://mobilesbshomo.gruposaobernardo.com.br:8089/WsExtratoBoleto.asmx</con:endpoint></con:endpoints><con:operation id="640cd647-22eb-4547-9cb2-78598e3eea0e" isOneWay="false" action="http://www.facilinformatica.com.br/SBSMobile/DetalheBoleto" name="DetalheBoleto" bindingOperationName="DetalheBoleto" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="b723e5d1-9984-400d-b4f5-df978ade0a7b" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://mobilesbshomo.gruposaobernardo.com.br:8089/WsExtratoBoleto.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:sbs="http://www.facilinformatica.com.br/SBSMobile">
+   <soap:Header/>
+   <soap:Body>
+      <sbs:DetalheBoleto>
+         <!--Optional:-->
+         <sbs:Fatura>6836228</sbs:Fatura>
+      </sbs:DetalheBoleto>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.facilinformatica.com.br/SBSMobile/WsExtratoBoletoSoap/DetalheBoletoRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="88aba6a1-bbdd-4131-a97f-0a35460b34fc" isOneWay="false" action="http://www.facilinformatica.com.br/SBSMobile/ExtratoBoleto" name="ExtratoBoleto" bindingOperationName="ExtratoBoleto" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="85f37ad4-c442-440a-92ff-405e00a6b5a9" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://mobilesbs.gruposaobernardo.com.br:8089/WsExtratoBoleto.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:sbs="http://www.facilinformatica.com.br/SBSMobile">
+   <soap:Header/>
+   <soap:Body>
+      <sbs:ExtratoBoleto>
+         <!--Optional:-->
+         <sbs:Usuario>666030-4</sbs:Usuario>
+      </sbs:ExtratoBoleto>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.facilinformatica.com.br/SBSMobile/WsExtratoBoletoSoap/ExtratoBoletoRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>

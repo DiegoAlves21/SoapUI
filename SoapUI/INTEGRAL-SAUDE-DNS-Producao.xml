@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="71c33b3f-d16d-4d81-b352-19cb26801d2b" activeEnvironment="Default" name="INTEGRAL - DNS" soapui-version="5.5.0" abortOnError="false" runType="SEQUENTIAL" resourceRoot="" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="1e4c0f59-3092-42ad-baff-f47bdc716e28" wsaVersion="NONE" name="WS_LOGIN_BENEFICIARIOSOAP" type="wsdl" bindingName="{https://www.caberj.com.br/wspp0201/}WS_LOGIN_BENEFICIARIOSOAP" soapVersion="1_1" anonymous="optional" definition="https://www.caberj.com.br/wspp0201/WS_LOGIN_BENEFICIARIO.apw?WSDL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="https://www.caberj.com.br/wspp0201/WS_LOGIN_BENEFICIARIO.apw?WSDL"><con:part><con:url>https://www.caberj.com.br/wspp0201/WS_LOGIN_BENEFICIARIO.apw?WSDL</con:url><con:content><![CDATA[<!--Generated 20190801 17:17:03 by ADVPL WSDL Server 1.110216 / Protheus 7.00.131227A-20181218 NG-->
+<definitions targetNamespace="https://www.caberj.com.br/wspp0201/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="https://www.caberj.com.br/wspp0201/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <s:schema elementFormDefault="qualified" targetNamespace="https://www.caberj.com.br/wspp0201/">
+      <s:element name="WS_BENEFICIARIO_CRIAR_ACESSO">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BENEFICIARIO_MATRICULA" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="BENEFICIARIO_CPF" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="BENEFICIARIO_DATA_NASCIMENTO" type="s:date"/>
+            <s:element minOccurs="0" maxOccurs="1" name="BENEFICIARIO_EMAIL" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="USER_MOBILE_SENHA" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_BENEFICIARIO_CRIAR_ACESSORESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="WS_BENEFICIARIO_CRIAR_ACESSORESULT" type="s0:ST_GRUPO_FAMILIAR"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_BENEFICIARIO_LEMBRAR_USUARIO">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BENEFICIARIO_CPF" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="BENEFICIARIO_DATA_NASCIMENTO" type="s:date"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_BENEFICIARIO_LEMBRAR_USUARIORESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="WS_BENEFICIARIO_LEMBRAR_USUARIORESULT" type="s0:ST_USUARIO_ACESSO"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_BENEFICIARIO_LOGIN">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="USER_MOBILE_LOGIN_TIPO" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="USER_MOBILE_LOGIN" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="USER_MOBILE_SENHA" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="USER_MOBILE_LOGIN_ORIGEM" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_BENEFICIARIO_LOGINRESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="WS_BENEFICIARIO_LOGINRESULT" type="s0:ST_GRUPO_FAMILIAR"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_BENEFICIARIO_REDEFINIR_SENHA">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BENEFICIARIO_MATRICULA" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="BENEFICIARIO_CPF" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="BENEFICIARIO_DATA_NASCIMENTO" type="s:date"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_BENEFICIARIO_REDEFINIR_SENHARESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="WS_BENEFICIARIO_REDEFINIR_SENHARESULT" type="s0:ST_REDEFINE_SENHA"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_BENEFICIARIO_TROCAR_SENHA">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BENEFICIARIO_MATRICULA" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="BENEFICIARIO_CPF" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="BENEFICIARIO_DATA_NASCIMENTO" type="s:date"/>
+            <s:element minOccurs="0" maxOccurs="1" name="USER_MOBILE_SENHA" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="USER_MOBILE_NOVA_SENHA" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="HASH_TROCA_SENHA" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_BENEFICIARIO_TROCAR_SENHARESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="WS_BENEFICIARIO_TROCAR_SENHARESULT" type="s0:ST_GRUPO_FAMILIAR"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ST_GRUPO_FAMILIAR">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="RETORNO_ACESSOS" type="s0:ACESSO"/>
+          <s:element minOccurs="0" maxOccurs="1" name="RETORNO_ALERTAS" type="s0:ARRAYOFALERTA"/>
+          <s:element minOccurs="0" maxOccurs="1" name="RETORNO_CRITICAS" type="s0:ARRAYOFCRITICA"/>
+          <s:element minOccurs="0" maxOccurs="1" name="RETORNO_DADOS" type="s0:ARRAYOFBENEFICIARIO"/>
+          <s:element minOccurs="0" maxOccurs="1" name="RETORNO_STATUS" type="s:boolean"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ST_REDEFINE_SENHA">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="RETORNO_ALERTAS" type="s0:ARRAYOFALERTA"/>
+          <s:element minOccurs="0" maxOccurs="1" name="RETORNO_CRITICAS" type="s0:ARRAYOFCRITICA"/>
+          <s:element minOccurs="0" maxOccurs="1" name="RETORNO_DADOS" type="s0:ARRAYOFREDEFINE_SENHA"/>
+          <s:element minOccurs="0" maxOccurs="1" name="RETORNO_STATUS" type="s:boolean"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ST_USUARIO_ACESSO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="RETORNO_ALERTAS" type="s0:ARRAYOFALERTA"/>
+          <s:element minOccurs="0" maxOccurs="1" name="RETORNO_CRITICAS" type="s0:ARRAYOFCRITICA"/>
+          <s:element minOccurs="0" maxOccurs="1" name="RETORNO_DADOS" type="s0:ARRAYOFUSUARIO_ACESSO"/>
+          <s:element minOccurs="0" maxOccurs="1" name="RETORNO_STATUS" type="s:boolean"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ACESSO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ACESSA_AGENDAMENTO" type="s:boolean"/>
+          <s:element minOccurs="0" maxOccurs="1" name="ACESSA_CARTAO" type="s:boolean"/>
+          <s:element minOccurs="0" maxOccurs="1" name="ACESSA_CONSULTA_CARENCIA" type="s:boolean"/>
+          <s:element minOccurs="0" maxOccurs="1" name="ACESSA_COPARTICIPACAO" type="s:boolean"/>
+          <s:element minOccurs="0" maxOccurs="1" name="ACESSA_EDITA_CADASTRO" type="s:boolean"/>
+          <s:element minOccurs="0" maxOccurs="1" name="ACESSA_MEDICAMENTO" type="s:boolean"/>
+          <s:element minOccurs="0" maxOccurs="1" name="ACESSA_REEMBOLSO" type="s:boolean"/>
+          <s:element minOccurs="0" maxOccurs="1" name="ACESSA_TROCA_SENHA" type="s:boolean"/>
+          <s:element minOccurs="0" maxOccurs="1" name="ACESSA_UTILIZACAO" type="s:boolean"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ALERTA">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ALERTA_CODIGO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="ALERTA_DESCRICAO" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CRITICA">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CRITICA_AUTORIZA_CONTATO" type="s:boolean"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CRITICA_CODIGO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CRITICA_DESCRICAO_PROBLEMA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CRITICA_REAL_MOTIVO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CRITICA_SOLUCAO_PROBLEMA" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="BENEFICIARIO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="BAIRRO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="BLOQUEADO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CARTAO_CONTATO1" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CARTAO_CONTATO2" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CARTAO_CONTATO3" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CARTAO_CONTATO4" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CARTAO_CONTATO5" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CARTAO_IMAGEM" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CARTAO_IMAGEM_VERSO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CARTAO_OBS" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CARTAO_VALIDADE" type="s:date"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CARTAO_VIA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CELULAR" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CEP" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CIDADE" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="COMPLEMENTO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CONVENIO_ABRANGENCIA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CONVENIO_ACOMODACAO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CONVENIO_ANS" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CONVENIO_CARENCIAS" type="s0:ARRAYOFCARENCIA"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CONVENIO_DESCRICAO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CONVENIO_ID" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CONVENIO_MODALIDADE_COBRANCA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CONVENIO_NATUREZA_CONTRATACAO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CONVENIO_OPCIONAL" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CONVENIO_PADRAO_CONFORTO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CONVENIO_PARTICIPATIVO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CONVENIO_PERMITE_REEMBOLSO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CONVENIO_REGULAMENTACAO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CONVENIO_SEGMENTACAO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CONVENIO_TIPO_CONTRATO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CONVENIO_TIPO_REDE_DESCRICAO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CONVENIO_TIPO_REDE_ID" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CONVENIO_VERSAO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CPF" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DATA_CPT" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DEPENDENCIA_ID" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="EMAIL" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="EMPRESA_ID" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="EMPRESA_NOME" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="EMPRESA_RESPONSAVEL" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="ENDERECO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="ESTADO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="EXPIROU_SENHA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="GRAU_PARENTESCO_DESCRICAO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="GRAU_PARENTESCO_ID" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="INCLUSAO" type="s:date"/>
+          <s:element minOccurs="0" maxOccurs="1" name="LAYOUT_CARTOES" type="s0:ARRAYOFLAYOUT_CARTAO"/>
+          <s:element minOccurs="0" maxOccurs="1" name="LOGIN" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="MATRICULA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="MATRICULA_FUNCIONARIO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="MATRICULA_SIS_ANTIGO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="MOTIVO_BLOQUEIO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="NASCIMENTO" type="s:date"/>
+          <s:element minOccurs="0" maxOccurs="1" name="NOME" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="NUMERO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="NUMERO_CNS" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="NUMERO_CONTRATO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="PRONTUARIO_ID" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="SEXO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="SOLICITA_ATUALIZACAO_CADASTRO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="TELEFONE" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="TIPO_BENEFICIARIO_DESCRICAO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="TIPO_BENEFICIARIO_ID" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="TIPO_PESSOA_CONTRATANTE" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="TITULAR" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="TITULAR_MATRICULA" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="REDEFINE_SENHA">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="BENEFICIARIO_EMAIL" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="BENEFICIARIO_NOME" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="HASH" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="SENHA" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="USUARIO_ACESSO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="BENEFICIARIO_EMPRESA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="BENEFICIARIO_LOGIN" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="BENEFICIARIO_MATRICULA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="BENEFICIARIO_NOME" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CARENCIA">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CARENCIA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="TIPO_SERVICO" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="LAYOUT_CARTAO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="LAYOUT_NICKNAME" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ARRAYOFALERTA">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ALERTA" type="s0:ALERTA"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ARRAYOFCRITICA">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CRITICA" type="s0:CRITICA"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ARRAYOFBENEFICIARIO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="BENEFICIARIO" type="s0:BENEFICIARIO"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ARRAYOFREDEFINE_SENHA">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="REDEFINE_SENHA" type="s0:REDEFINE_SENHA"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ARRAYOFUSUARIO_ACESSO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="USUARIO_ACESSO" type="s0:USUARIO_ACESSO"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ARRAYOFCARENCIA">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CARENCIA" type="s0:CARENCIA"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ARRAYOFLAYOUT_CARTAO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="LAYOUT_CARTAO" type="s0:LAYOUT_CARTAO"/>
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </types>
+  <message name="WS_BENEFICIARIO_CRIAR_ACESSOSOAPIN">
+    <part name="parameters" element="s0:WS_BENEFICIARIO_CRIAR_ACESSO"/>
+  </message>
+  <message name="WS_BENEFICIARIO_CRIAR_ACESSOSOAPOUT">
+    <part name="parameters" element="s0:WS_BENEFICIARIO_CRIAR_ACESSORESPONSE"/>
+  </message>
+  <message name="WS_BENEFICIARIO_LEMBRAR_USUARIOSOAPIN">
+    <part name="parameters" element="s0:WS_BENEFICIARIO_LEMBRAR_USUARIO"/>
+  </message>
+  <message name="WS_BENEFICIARIO_LEMBRAR_USUARIOSOAPOUT">
+    <part name="parameters" element="s0:WS_BENEFICIARIO_LEMBRAR_USUARIORESPONSE"/>
+  </message>
+  <message name="WS_BENEFICIARIO_LOGINSOAPIN">
+    <part name="parameters" element="s0:WS_BENEFICIARIO_LOGIN"/>
+  </message>
+  <message name="WS_BENEFICIARIO_LOGINSOAPOUT">
+    <part name="parameters" element="s0:WS_BENEFICIARIO_LOGINRESPONSE"/>
+  </message>
+  <message name="WS_BENEFICIARIO_REDEFINIR_SENHASOAPIN">
+    <part name="parameters" element="s0:WS_BENEFICIARIO_REDEFINIR_SENHA"/>
+  </message>
+  <message name="WS_BENEFICIARIO_REDEFINIR_SENHASOAPOUT">
+    <part name="parameters" element="s0:WS_BENEFICIARIO_REDEFINIR_SENHARESPONSE"/>
+  </message>
+  <message name="WS_BENEFICIARIO_TROCAR_SENHASOAPIN">
+    <part name="parameters" element="s0:WS_BENEFICIARIO_TROCAR_SENHA"/>
+  </message>
+  <message name="WS_BENEFICIARIO_TROCAR_SENHASOAPOUT">
+    <part name="parameters" element="s0:WS_BENEFICIARIO_TROCAR_SENHARESPONSE"/>
+  </message>
+  <portType name="WS_LOGIN_BENEFICIARIOSOAP">
+    <operation name="WS_BENEFICIARIO_CRIAR_ACESSO">
+      <documentation>Metodo que cria um usuário de acesso para o beneficiário mediante confirmação de dados pessoais</documentation>
+      <input message="s0:WS_BENEFICIARIO_CRIAR_ACESSOSOAPIN"/>
+      <output message="s0:WS_BENEFICIARIO_CRIAR_ACESSOSOAPOUT"/>
+    </operation>
+    <operation name="WS_BENEFICIARIO_LEMBRAR_USUARIO">
+      <documentation>Metodo retorna todos os usuários de acesso vinculados a um CPF</documentation>
+      <input message="s0:WS_BENEFICIARIO_LEMBRAR_USUARIOSOAPIN"/>
+      <output message="s0:WS_BENEFICIARIO_LEMBRAR_USUARIOSOAPOUT"/>
+    </operation>
+    <operation name="WS_BENEFICIARIO_LOGIN">
+      <documentation>login do beneficiario</documentation>
+      <input message="s0:WS_BENEFICIARIO_LOGINSOAPIN"/>
+      <output message="s0:WS_BENEFICIARIO_LOGINSOAPOUT"/>
+    </operation>
+    <operation name="WS_BENEFICIARIO_REDEFINIR_SENHA">
+      <documentation>Metodo retorna a senha do beneficiário mediante comprovacão de dados pessoais</documentation>
+      <input message="s0:WS_BENEFICIARIO_REDEFINIR_SENHASOAPIN"/>
+      <output message="s0:WS_BENEFICIARIO_REDEFINIR_SENHASOAPOUT"/>
+    </operation>
+    <operation name="WS_BENEFICIARIO_TROCAR_SENHA">
+      <documentation>Metodo troca senha do beneficiário mediate comprovação de dados pessoais</documentation>
+      <input message="s0:WS_BENEFICIARIO_TROCAR_SENHASOAPIN"/>
+      <output message="s0:WS_BENEFICIARIO_TROCAR_SENHASOAPOUT"/>
+    </operation>
+  </portType>
+  <binding name="WS_LOGIN_BENEFICIARIOSOAP" type="s0:WS_LOGIN_BENEFICIARIOSOAP">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+    <operation name="WS_BENEFICIARIO_CRIAR_ACESSO">
+      <soap:operation soapAction="https://www.caberj.com.br/wspp0201/WS_BENEFICIARIO_CRIAR_ACESSO" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="WS_BENEFICIARIO_LEMBRAR_USUARIO">
+      <soap:operation soapAction="https://www.caberj.com.br/wspp0201/WS_BENEFICIARIO_LEMBRAR_USUARIO" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="WS_BENEFICIARIO_LOGIN">
+      <soap:operation soapAction="https://www.caberj.com.br/wspp0201/WS_BENEFICIARIO_LOGIN" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="WS_BENEFICIARIO_REDEFINIR_SENHA">
+      <soap:operation soapAction="https://www.caberj.com.br/wspp0201/WS_BENEFICIARIO_REDEFINIR_SENHA" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="WS_BENEFICIARIO_TROCAR_SENHA">
+      <soap:operation soapAction="https://www.caberj.com.br/wspp0201/WS_BENEFICIARIO_TROCAR_SENHA" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="WS_LOGIN_BENEFICIARIO">
+    <documentation>Serviço de autenticação de beneficiários para produtos Mobile Saúde</documentation>
+    <port name="WS_LOGIN_BENEFICIARIOSOAP" binding="s0:WS_LOGIN_BENEFICIARIOSOAP">
+      <soap:address location="http://www.caberj.com.br/wspp0201/WS_LOGIN_BENEFICIARIO.apw"/>
+    </port>
+  </service>
+</definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://www.caberj.com.br/wspp0201/WS_LOGIN_BENEFICIARIO.apw</con:endpoint></con:endpoints><con:operation id="f7e310eb-344e-4e5a-81c6-f6848ff4823c" isOneWay="false" action="https://www.caberj.com.br/wspp0201/WS_BENEFICIARIO_CRIAR_ACESSO" name="WS_BENEFICIARIO_CRIAR_ACESSO" bindingOperationName="WS_BENEFICIARIO_CRIAR_ACESSO" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="dec2c1bf-a8ec-43b9-a580-1ab8df67723b" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.caberj.com.br/wspp0201/WS_LOGIN_BENEFICIARIO.apw</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsp="https://www.caberj.com.br/wspp0201/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <wsp:WS_BENEFICIARIO_CRIAR_ACESSO>
+         <!--Optional:-->
+         <wsp:BENEFICIARIO_MATRICULA>?</wsp:BENEFICIARIO_MATRICULA>
+         <!--Optional:-->
+         <wsp:BENEFICIARIO_CPF>?</wsp:BENEFICIARIO_CPF>
+         <!--Optional:-->
+         <wsp:BENEFICIARIO_DATA_NASCIMENTO>?</wsp:BENEFICIARIO_DATA_NASCIMENTO>
+         <!--Optional:-->
+         <wsp:BENEFICIARIO_EMAIL>?</wsp:BENEFICIARIO_EMAIL>
+         <!--Optional:-->
+         <wsp:USER_MOBILE_SENHA>?</wsp:USER_MOBILE_SENHA>
+      </wsp:WS_BENEFICIARIO_CRIAR_ACESSO>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="https://www.caberj.com.br/wspp0201/WS_BENEFICIARIO_CRIAR_ACESSO"/></con:call></con:operation><con:operation id="ae29a5e2-b2c4-4454-adb4-23ce004947c6" isOneWay="false" action="https://www.caberj.com.br/wspp0201/WS_BENEFICIARIO_LEMBRAR_USUARIO" name="WS_BENEFICIARIO_LEMBRAR_USUARIO" bindingOperationName="WS_BENEFICIARIO_LEMBRAR_USUARIO" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="99cf791a-a9bb-461b-8fa8-3c48cd9983ae" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.caberj.com.br/wspp0201/WS_LOGIN_BENEFICIARIO.apw</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsp="https://www.caberj.com.br/wspp0201/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <wsp:WS_BENEFICIARIO_LEMBRAR_USUARIO>
+         <!--Optional:-->
+         <wsp:BENEFICIARIO_CPF>?</wsp:BENEFICIARIO_CPF>
+         <!--Optional:-->
+         <wsp:BENEFICIARIO_DATA_NASCIMENTO>?</wsp:BENEFICIARIO_DATA_NASCIMENTO>
+      </wsp:WS_BENEFICIARIO_LEMBRAR_USUARIO>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="https://www.caberj.com.br/wspp0201/WS_BENEFICIARIO_LEMBRAR_USUARIO"/></con:call></con:operation><con:operation id="987f801d-7c1d-4ff7-8ebc-f4a867f34daa" isOneWay="false" action="https://www.caberj.com.br/wspp0201/WS_BENEFICIARIO_LOGIN" name="WS_BENEFICIARIO_LOGIN" bindingOperationName="WS_BENEFICIARIO_LOGIN" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="5a50be6e-4762-42da-8c64-139a03cdde36" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.caberj.com.br/wspp0201/WS_LOGIN_BENEFICIARIO.apw</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsp="https://www.caberj.com.br/wspp0201/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <wsp:WS_BENEFICIARIO_LOGIN>
+         <!--Optional:-->
+         <wsp:USER_MOBILE_LOGIN_TIPO>?</wsp:USER_MOBILE_LOGIN_TIPO>
+         <!--Optional:-->
+         <wsp:USER_MOBILE_LOGIN>00010325002360003</wsp:USER_MOBILE_LOGIN>
+         <!--Optional:-->
+         <wsp:USER_MOBILE_SENHA>11594253</wsp:USER_MOBILE_SENHA>
+         <!--Optional:-->
+         <wsp:USER_MOBILE_LOGIN_ORIGEM>?</wsp:USER_MOBILE_LOGIN_ORIGEM>
+      </wsp:WS_BENEFICIARIO_LOGIN>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="https://www.caberj.com.br/wspp0201/WS_BENEFICIARIO_LOGIN"/><con:wsrmConfig version="1.2"/></con:call><con:call id="f76c26dc-9cf9-4c5e-80e6-eff555604f87" name="Copy of Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.caberj.com.br/wspp0201/WS_LOGIN_BENEFICIARIO.apw?wsdl</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsp="https://www.caberj.com.br/wspp0201/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <wsp:WS_BENEFICIARIO_LOGIN>
+         <!--Optional:-->
+         <wsp:USER_MOBILE_LOGIN_TIPO>?</wsp:USER_MOBILE_LOGIN_TIPO>
+         <!--Optional:-->
+         <wsp:USER_MOBILE_LOGIN>00010010003876006</wsp:USER_MOBILE_LOGIN>
+         <!--Optional:-->
+         <wsp:USER_MOBILE_SENHA>09623393</wsp:USER_MOBILE_SENHA>
+         <!--Optional:-->
+         <wsp:USER_MOBILE_LOGIN_ORIGEM>?</wsp:USER_MOBILE_LOGIN_ORIGEM>
+      </wsp:WS_BENEFICIARIO_LOGIN>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="https://www.caberj.com.br/wspp0201/WS_BENEFICIARIO_LOGIN"/><con:wsrmConfig version="1.2"/></con:call><con:call id="073cf6ee-b276-45b4-b6aa-f66766adcb9c" name="Copy of Request 2"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.caberj.com.br/wspp0201/WS_LOGIN_BENEFICIARIO.apw</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsp="https://www.caberj.com.br/wspp0201/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <wsp:WS_BENEFICIARIO_LOGIN>
+         <!--Optional:-->
+         <wsp:USER_MOBILE_LOGIN_TIPO>?</wsp:USER_MOBILE_LOGIN_TIPO>
+         <!--Optional:-->
+         <wsp:USER_MOBILE_LOGIN>00010296005946001</wsp:USER_MOBILE_LOGIN>
+         <!--Optional:-->
+         <wsp:USER_MOBILE_SENHA>12591867</wsp:USER_MOBILE_SENHA>
+         <!--Optional:-->
+         <wsp:USER_MOBILE_LOGIN_ORIGEM>?</wsp:USER_MOBILE_LOGIN_ORIGEM>
+      </wsp:WS_BENEFICIARIO_LOGIN>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="https://www.caberj.com.br/wspp0201/WS_BENEFICIARIO_LOGIN"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="0fb7d6d7-ba69-4d62-9a96-21a292376c27" isOneWay="false" action="https://www.caberj.com.br/wspp0201/WS_BENEFICIARIO_REDEFINIR_SENHA" name="WS_BENEFICIARIO_REDEFINIR_SENHA" bindingOperationName="WS_BENEFICIARIO_REDEFINIR_SENHA" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="0fedc861-e352-4cd1-9dbf-f5e4414aa228" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.caberj.com.br/wspp0201/WS_LOGIN_BENEFICIARIO.apw</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsp="https://www.caberj.com.br/wspp0201/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <wsp:WS_BENEFICIARIO_REDEFINIR_SENHA>
+         <!--Optional:-->
+         <wsp:BENEFICIARIO_MATRICULA>?</wsp:BENEFICIARIO_MATRICULA>
+         <!--Optional:-->
+         <wsp:BENEFICIARIO_CPF>?</wsp:BENEFICIARIO_CPF>
+         <!--Optional:-->
+         <wsp:BENEFICIARIO_DATA_NASCIMENTO>?</wsp:BENEFICIARIO_DATA_NASCIMENTO>
+      </wsp:WS_BENEFICIARIO_REDEFINIR_SENHA>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="https://www.caberj.com.br/wspp0201/WS_BENEFICIARIO_REDEFINIR_SENHA"/></con:call></con:operation><con:operation id="f29688b2-daf9-40e2-b1e2-a47572a6b7e0" isOneWay="false" action="https://www.caberj.com.br/wspp0201/WS_BENEFICIARIO_TROCAR_SENHA" name="WS_BENEFICIARIO_TROCAR_SENHA" bindingOperationName="WS_BENEFICIARIO_TROCAR_SENHA" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="afca52bd-7d67-4985-856e-85467c9fd116" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.caberj.com.br/wspp0201/WS_LOGIN_BENEFICIARIO.apw</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsp="https://www.caberj.com.br/wspp0201/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <wsp:WS_BENEFICIARIO_TROCAR_SENHA>
+         <!--Optional:-->
+         <wsp:BENEFICIARIO_MATRICULA>?</wsp:BENEFICIARIO_MATRICULA>
+         <!--Optional:-->
+         <wsp:BENEFICIARIO_CPF>?</wsp:BENEFICIARIO_CPF>
+         <!--Optional:-->
+         <wsp:BENEFICIARIO_DATA_NASCIMENTO>?</wsp:BENEFICIARIO_DATA_NASCIMENTO>
+         <!--Optional:-->
+         <wsp:USER_MOBILE_SENHA>?</wsp:USER_MOBILE_SENHA>
+         <!--Optional:-->
+         <wsp:USER_MOBILE_NOVA_SENHA>?</wsp:USER_MOBILE_NOVA_SENHA>
+         <!--Optional:-->
+         <wsp:HASH_TROCA_SENHA>?</wsp:HASH_TROCA_SENHA>
+      </wsp:WS_BENEFICIARIO_TROCAR_SENHA>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="https://www.caberj.com.br/wspp0201/WS_BENEFICIARIO_TROCAR_SENHA"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>

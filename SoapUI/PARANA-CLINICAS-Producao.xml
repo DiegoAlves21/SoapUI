@@ -1,0 +1,1827 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="0490c478-0da9-4c05-8890-e4782045a9ab" activeEnvironment="Default" name="PARANA CLINICAS - PRD" resourceRoot="" soapui-version="5.5.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="60511a25-b5bd-4ca0-8bca-27f426c04307" wsaVersion="NONE" name="BasicHttpBinding_ws_login_service" type="wsdl" bindingName="{http://tempuri.org/}BasicHttpBinding_ws_login_service" soapVersion="1_1" anonymous="optional" definition="http://guianet.paranaclinicas.com.br/mobilesaudews/ws_login_service.svc?WSDL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://guianet.paranaclinicas.com.br/mobilesaudews/ws_login_service.svc?WSDL"><con:part><con:url>http://guianet.paranaclinicas.com.br/mobilesaudews/ws_login_service.svc?WSDL</con:url><con:content><![CDATA[<wsdl:definitions name="BeneficiarioLogin" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:i0="http://www.paranaclinicas.com.br/MobileSaudeWS" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+  <wsdl:import namespace="http://www.paranaclinicas.com.br/MobileSaudeWS" location="http://guianet.paranaclinicas.com.br/MobileSaudeWS/ws_login_service.svc?wsdl=wsdl0"/>
+  <wsdl:types/>
+  <wsdl:binding name="BasicHttpBinding_ws_login_service" type="i0:ws_login_service">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="login">
+      <soap:operation soapAction="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_login_service/login" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="lembrar_senha">
+      <soap:operation soapAction="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_login_service/lembrar_senha" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="trocar_senha">
+      <soap:operation soapAction="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_login_service/trocar_senha" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="novo_usuario">
+      <soap:operation soapAction="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_login_service/novo_usuario" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="BeneficiarioLogin">
+    <wsdl:port name="BasicHttpBinding_ws_login_service" binding="tns:BasicHttpBinding_ws_login_service">
+      <soap:address location="http://guianet.paranaclinicas.com.br/MobileSaudeWS/ws_login_service.svc"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://guianet.paranaclinicas.com.br/MobileSaudeWS/ws_login_service.svc?wsdl=wsdl0</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://www.paranaclinicas.com.br/MobileSaudeWS" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.paranaclinicas.com.br/MobileSaudeWS" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://www.paranaclinicas.com.br/MobileSaudeWS/Imports">
+      <xsd:import schemaLocation="http://guianet.paranaclinicas.com.br/MobileSaudeWS/ws_login_service.svc?xsd=xsd0" namespace="http://www.paranaclinicas.com.br/MobileSaudeWS"/>
+      <xsd:import schemaLocation="http://guianet.paranaclinicas.com.br/MobileSaudeWS/ws_login_service.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ws_login_service_login_InputMessage">
+    <wsdl:part name="parameters" element="tns:login"/>
+  </wsdl:message>
+  <wsdl:message name="ws_login_service_login_OutputMessage">
+    <wsdl:part name="parameters" element="tns:loginResponse"/>
+  </wsdl:message>
+  <wsdl:message name="ws_login_service_lembrar_senha_InputMessage">
+    <wsdl:part name="parameters" element="tns:lembrar_senha"/>
+  </wsdl:message>
+  <wsdl:message name="ws_login_service_lembrar_senha_OutputMessage">
+    <wsdl:part name="parameters" element="tns:lembrar_senhaResponse"/>
+  </wsdl:message>
+  <wsdl:message name="ws_login_service_trocar_senha_InputMessage">
+    <wsdl:part name="parameters" element="tns:trocar_senha"/>
+  </wsdl:message>
+  <wsdl:message name="ws_login_service_trocar_senha_OutputMessage">
+    <wsdl:part name="parameters" element="tns:trocar_senhaResponse"/>
+  </wsdl:message>
+  <wsdl:message name="ws_login_service_novo_usuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:novo_usuario"/>
+  </wsdl:message>
+  <wsdl:message name="ws_login_service_novo_usuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:novo_usuarioResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="ws_login_service">
+    <wsdl:operation name="login">
+      <wsdl:input wsaw:Action="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_login_service/login" message="tns:ws_login_service_login_InputMessage"/>
+      <wsdl:output wsaw:Action="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_login_service/loginResponse" message="tns:ws_login_service_login_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="lembrar_senha">
+      <wsdl:input wsaw:Action="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_login_service/lembrar_senha" message="tns:ws_login_service_lembrar_senha_InputMessage"/>
+      <wsdl:output wsaw:Action="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_login_service/lembrar_senhaResponse" message="tns:ws_login_service_lembrar_senha_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="trocar_senha">
+      <wsdl:input wsaw:Action="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_login_service/trocar_senha" message="tns:ws_login_service_trocar_senha_InputMessage"/>
+      <wsdl:output wsaw:Action="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_login_service/trocar_senhaResponse" message="tns:ws_login_service_trocar_senha_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="novo_usuario">
+      <wsdl:input wsaw:Action="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_login_service/novo_usuario" message="tns:ws_login_service_novo_usuario_InputMessage"/>
+      <wsdl:output wsaw:Action="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_login_service/novo_usuarioResponse" message="tns:ws_login_service_novo_usuario_OutputMessage"/>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://guianet.paranaclinicas.com.br/MobileSaudeWS/ws_login_service.svc?xsd=xsd0</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://www.paranaclinicas.com.br/MobileSaudeWS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.paranaclinicas.com.br/MobileSaudeWS">
+  <xs:element name="login">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="usuario_login" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="usuario_psw" nillable="true" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="loginResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="retorno_login" nillable="true" type="tns:RetornoEfetuarLogin"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="RetornoEfetuarLogin">
+    <xs:sequence>
+      <xs:element name="status" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="motivo_critica" nillable="true" type="xs:string"/>
+      <xs:element name="usuario_logado" nillable="true" type="tns:Beneficiario"/>
+      <xs:element name="familia" nillable="true" type="tns:ArrayOfBeneficiario"/>
+      <xs:element name="permissoes" nillable="true" type="tns:Permissoes"/>
+      <xs:element minOccurs="0" name="contratos" nillable="true" type="tns:ArrayOfContrato"/>
+      <xs:element minOccurs="0" name="alerta" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RetornoEfetuarLogin" nillable="true" type="tns:RetornoEfetuarLogin"/>
+  <xs:complexType name="Beneficiario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="chave_beneficiario" nillable="true" type="xs:string"/>
+      <xs:element name="matricula" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="matricula_antiga" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="matricula_funcionario" nillable="true" type="xs:string"/>
+      <xs:element name="nome" nillable="true" type="xs:string"/>
+      <xs:element name="sexo" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="nascimento" nillable="true" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="cpf" nillable="true" type="xs:string"/>
+      <xs:element name="celular" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="email" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="endereco" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="bairro" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="cep" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="cidade" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="estado" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="inclusao" nillable="true" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="tipo_usuario" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="matricula_titular" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="nome_titular" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="grau_parentesco_id" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="grau_parentesco_descricao" nillable="true" type="xs:string"/>
+      <xs:element name="data_inicio_cobertura" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="convenio_id" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="convenio_descricao" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="convenio_abrangencia" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="convenio_acomodacao" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="convenio_modalidade_cobranca" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="convenio_padrao_conforto" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="convenio_participativo" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="convenio_segmentacao" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="convenio_tipo_pessoa" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="convenio_tipo_contrato" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="convenio_regulamentacao" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="cartao_imagem" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="cartao_imagem_verso" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="cartao_validade" nillable="true" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="cartao_via" nillable="true" type="xs:int"/>
+      <xs:element minOccurs="0" name="chave_empresa" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="empresa_nome" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="contrato_empresa" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="numero_cns" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="convenio_ans" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="data_final_cpt" nillable="true" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="carencias" nillable="true" type="tns:ArrayOfCarencia"/>
+      <xs:element minOccurs="0" name="codigo_contrato" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Beneficiario" nillable="true" type="tns:Beneficiario"/>
+  <xs:complexType name="ArrayOfCarencia">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Carencia" nillable="true" type="tns:Carencia"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCarencia" nillable="true" type="tns:ArrayOfCarencia"/>
+  <xs:complexType name="Carencia">
+    <xs:sequence>
+      <xs:element name="tipo_servico" nillable="true" type="xs:string"/>
+      <xs:element name="carencia" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Carencia" nillable="true" type="tns:Carencia"/>
+  <xs:complexType name="ArrayOfBeneficiario">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Beneficiario" nillable="true" type="tns:Beneficiario"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBeneficiario" nillable="true" type="tns:ArrayOfBeneficiario"/>
+  <xs:complexType name="Permissoes">
+    <xs:sequence>
+      <xs:element name="reembolso" type="xs:boolean"/>
+      <xs:element name="agendamento" type="xs:boolean"/>
+      <xs:element name="coparticipacao_utilizacao" type="xs:boolean"/>
+      <xs:element name="atualiza_cadastro" type="xs:boolean"/>
+      <xs:element name="busca_medicamento" type="xs:boolean"/>
+      <xs:element name="boletos" type="xs:boolean"/>
+      <xs:element name="informe_ir" type="xs:boolean"/>
+      <xs:element name="cartao_virtual" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Permissoes" nillable="true" type="tns:Permissoes"/>
+  <xs:complexType name="ArrayOfContrato">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Contrato" nillable="true" type="tns:Contrato"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfContrato" nillable="true" type="tns:ArrayOfContrato"/>
+  <xs:complexType name="Contrato">
+    <xs:sequence>
+      <xs:element name="nome" nillable="true" type="xs:string"/>
+      <xs:element name="codigo_contrato" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Contrato" nillable="true" type="tns:Contrato"/>
+  <xs:element name="lembrar_senha">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="usuario_login" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="usuario_cpf" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="usuario_nascimento" type="xs:dateTime"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="lembrar_senhaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="retorno_lembrar_senha" nillable="true" type="tns:RetornoRecuperarSenha"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="RetornoRecuperarSenha">
+    <xs:sequence>
+      <xs:element name="status" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="motivo_critica" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="login" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="senha" nillable="true" type="xs:string"/>
+      <xs:element name="email" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="telefone" nillable="true" type="xs:string"/>
+      <xs:element name="enviado" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="alerta" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RetornoRecuperarSenha" nillable="true" type="tns:RetornoRecuperarSenha"/>
+  <xs:element name="trocar_senha">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="usuario_login" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="senha_atual" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="nova_senha" nillable="true" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="trocar_senhaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="retorno_trocar_senha" nillable="true" type="tns:RetornoTrocarSenha"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="RetornoTrocarSenha">
+    <xs:sequence>
+      <xs:element name="status" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="motivo_critica" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="alerta" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RetornoTrocarSenha" nillable="true" type="tns:RetornoTrocarSenha"/>
+  <xs:element name="novo_usuario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="usuario_login" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="usuario_cpf" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="usuario_nascimento" type="xs:dateTime"/>
+        <xs:element minOccurs="0" name="usuario_senha" nillable="true" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="novo_usuarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="retorno_novo_usuario" nillable="true" type="tns:RetornoNovoUsuario"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="RetornoNovoUsuario">
+    <xs:sequence>
+      <xs:element name="status" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="motivo_critica" nillable="true" type="xs:string"/>
+      <xs:element name="usuario_logado" nillable="true" type="tns:Beneficiario"/>
+      <xs:element name="familia" nillable="true" type="tns:ArrayOfBeneficiario"/>
+      <xs:element name="permissoes" nillable="true" type="tns:Permissoes"/>
+      <xs:element minOccurs="0" name="alerta" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RetornoNovoUsuario" nillable="true" type="tns:RetornoNovoUsuario"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://guianet.paranaclinicas.com.br/MobileSaudeWS/ws_login_service.svc?xsd=xsd1</con:url><con:content><![CDATA[<xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/">
+  <xs:element name="anyType" nillable="true" type="xs:anyType"/>
+  <xs:element name="anyURI" nillable="true" type="xs:anyURI"/>
+  <xs:element name="base64Binary" nillable="true" type="xs:base64Binary"/>
+  <xs:element name="boolean" nillable="true" type="xs:boolean"/>
+  <xs:element name="byte" nillable="true" type="xs:byte"/>
+  <xs:element name="dateTime" nillable="true" type="xs:dateTime"/>
+  <xs:element name="decimal" nillable="true" type="xs:decimal"/>
+  <xs:element name="double" nillable="true" type="xs:double"/>
+  <xs:element name="float" nillable="true" type="xs:float"/>
+  <xs:element name="int" nillable="true" type="xs:int"/>
+  <xs:element name="long" nillable="true" type="xs:long"/>
+  <xs:element name="QName" nillable="true" type="xs:QName"/>
+  <xs:element name="short" nillable="true" type="xs:short"/>
+  <xs:element name="string" nillable="true" type="xs:string"/>
+  <xs:element name="unsignedByte" nillable="true" type="xs:unsignedByte"/>
+  <xs:element name="unsignedInt" nillable="true" type="xs:unsignedInt"/>
+  <xs:element name="unsignedLong" nillable="true" type="xs:unsignedLong"/>
+  <xs:element name="unsignedShort" nillable="true" type="xs:unsignedShort"/>
+  <xs:element name="char" nillable="true" type="tns:char"/>
+  <xs:simpleType name="char">
+    <xs:restriction base="xs:int"/>
+  </xs:simpleType>
+  <xs:element name="duration" nillable="true" type="tns:duration"/>
+  <xs:simpleType name="duration">
+    <xs:restriction base="xs:duration">
+      <xs:pattern value="\-?P(\d*D)?(T(\d*H)?(\d*M)?(\d*(\.\d*)?S)?)?"/>
+      <xs:minInclusive value="-P10675199DT2H48M5.4775808S"/>
+      <xs:maxInclusive value="P10675199DT2H48M5.4775807S"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="guid" nillable="true" type="tns:guid"/>
+  <xs:simpleType name="guid">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:attribute name="FactoryType" type="xs:QName"/>
+  <xs:attribute name="Id" type="xs:ID"/>
+  <xs:attribute name="Ref" type="xs:IDREF"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://guianet.paranaclinicas.com.br/MobileSaudeWS/ws_login_service.svc</con:endpoint></con:endpoints><con:operation id="71241c7b-cbed-4414-8a78-17efd7a9675a" isOneWay="false" action="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_login_service/lembrar_senha" name="lembrar_senha" bindingOperationName="lembrar_senha" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="63752366-3e79-4224-ac07-f25cf31b7416" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://guianet.paranaclinicas.com.br/MobileSaudeWS/ws_login_service.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:mob="http://www.paranaclinicas.com.br/MobileSaudeWS">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <mob:lembrar_senha>
+         <!--Optional:-->
+         <mob:usuario_login>?</mob:usuario_login>
+         <!--Optional:-->
+         <mob:usuario_cpf>?</mob:usuario_cpf>
+         <!--Optional:-->
+         <mob:usuario_nascimento>?</mob:usuario_nascimento>
+      </mob:lembrar_senha>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_login_service/lembrar_senha"/></con:call></con:operation><con:operation id="2a339408-2c6d-47aa-a3ec-e16c56115759" isOneWay="false" action="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_login_service/login" name="login" bindingOperationName="login" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="7b7329ee-8942-43c8-9ef2-d9f49e72e424" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://guianet.paranaclinicas.com.br/MobileSaudeWS/ws_login_service.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:mob="http://www.paranaclinicas.com.br/MobileSaudeWS">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <mob:login>
+         <!--Optional:-->
+         <mob:usuario_login>10352580992</mob:usuario_login>
+         <!--Optional:-->
+         <mob:usuario_psw>19960625</mob:usuario_psw>
+      </mob:login>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_login_service/login"/><con:wsrmConfig version="1.2"/></con:call><con:call id="0003c1e4-7f1c-4ddc-af36-4b84406298fe" name="Request 2"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://guianet.paranaclinicas.com.br/MobileSaudeWS/ws_login_service.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:mob="http://www.paranaclinicas.com.br/MobileSaudeWS">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <mob:login>
+         <!--Optional:-->
+         <mob:usuario_login>04500595961</mob:usuario_login>
+         <!--Optional:-->
+         <mob:usuario_psw>hih19xOK</mob:usuario_psw>
+      </mob:login>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_login_service/login"/><con:wsrmConfig version="1.2"/></con:call><con:call id="c7aa625d-b762-41a0-87d7-398d34948b62" name="Request 3"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://guianet.paranaclinicas.com.br/MobileSaudeWS/ws_login_service.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:mob="http://www.paranaclinicas.com.br/MobileSaudeWS">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <mob:login>
+         <!--Optional:-->
+         <mob:usuario_login>50368443949</mob:usuario_login>
+         <!--Optional:-->
+         <mob:usuario_psw>19691027</mob:usuario_psw>
+      </mob:login>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_login_service/login"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="4a66346e-4f0e-4443-bdf6-ee977116e8ad" isOneWay="false" action="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_login_service/novo_usuario" name="novo_usuario" bindingOperationName="novo_usuario" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="05efab4a-a41f-4913-b086-13d37eb0bda2" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://guianet.paranaclinicas.com.br/MobileSaudeWS/ws_login_service.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:mob="http://www.paranaclinicas.com.br/MobileSaudeWS">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <mob:novo_usuario>
+         <!--Optional:-->
+         <mob:usuario_login>?</mob:usuario_login>
+         <!--Optional:-->
+         <mob:usuario_cpf>?</mob:usuario_cpf>
+         <!--Optional:-->
+         <mob:usuario_nascimento>?</mob:usuario_nascimento>
+         <!--Optional:-->
+         <mob:usuario_senha>?</mob:usuario_senha>
+      </mob:novo_usuario>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_login_service/novo_usuario"/></con:call></con:operation><con:operation id="a92d4a48-6ba4-4214-8011-a7d99d25edc7" isOneWay="false" action="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_login_service/trocar_senha" name="trocar_senha" bindingOperationName="trocar_senha" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="7bf8fd71-5a44-49ea-8a76-f43e74de3f41" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://guianet.paranaclinicas.com.br/MobileSaudeWS/ws_login_service.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:mob="http://www.paranaclinicas.com.br/MobileSaudeWS">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <mob:trocar_senha>
+         <!--Optional:-->
+         <mob:usuario_login>?</mob:usuario_login>
+         <!--Optional:-->
+         <mob:senha_atual>?</mob:senha_atual>
+         <!--Optional:-->
+         <mob:nova_senha>?</mob:nova_senha>
+      </mob:trocar_senha>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_login_service/trocar_senha"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="3fa6d182-8466-4749-8e1e-fb9fe0004085" wsaVersion="NONE" name="BasicHttpBinding_ws_extrato_utilizacao" type="wsdl" bindingName="{http://tempuri.org/}BasicHttpBinding_ws_extrato_utilizacao" soapVersion="1_1" anonymous="optional" definition="http://guianet.paranaclinicas.com.br/MobileSaudeWS/ws_extrato_utilizacao.svc?WSDL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://guianet.paranaclinicas.com.br/MobileSaudeWS/ws_extrato_utilizacao.svc?WSDL"><con:part><con:url>http://guianet.paranaclinicas.com.br/MobileSaudeWS/ws_extrato_utilizacao.svc?WSDL</con:url><con:content><![CDATA[<wsdl:definitions name="ExtratoUtilizacao" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:i0="http://www.paranaclinicas.com.br/MobileSaudeWS" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+  <wsdl:import namespace="http://www.paranaclinicas.com.br/MobileSaudeWS" location="http://guianet.paranaclinicas.com.br/MobileSaudeWS/ws_extrato_utilizacao.svc?wsdl=wsdl0"/>
+  <wsdl:types/>
+  <wsdl:binding name="BasicHttpBinding_ws_extrato_utilizacao" type="i0:ws_extrato_utilizacao">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="extrato">
+      <soap:operation soapAction="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_extrato_utilizacao/extrato" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ExtratoUtilizacao">
+    <wsdl:port name="BasicHttpBinding_ws_extrato_utilizacao" binding="tns:BasicHttpBinding_ws_extrato_utilizacao">
+      <soap:address location="http://guianet.paranaclinicas.com.br/MobileSaudeWS/ws_extrato_utilizacao.svc"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://guianet.paranaclinicas.com.br/MobileSaudeWS/ws_extrato_utilizacao.svc?wsdl=wsdl0</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://www.paranaclinicas.com.br/MobileSaudeWS" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.paranaclinicas.com.br/MobileSaudeWS" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://www.paranaclinicas.com.br/MobileSaudeWS/Imports">
+      <xsd:import schemaLocation="http://guianet.paranaclinicas.com.br/MobileSaudeWS/ws_extrato_utilizacao.svc?xsd=xsd0" namespace="http://www.paranaclinicas.com.br/MobileSaudeWS"/>
+      <xsd:import schemaLocation="http://guianet.paranaclinicas.com.br/MobileSaudeWS/ws_extrato_utilizacao.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ws_extrato_utilizacao_extrato_InputMessage">
+    <wsdl:part name="parameters" element="tns:extrato"/>
+  </wsdl:message>
+  <wsdl:message name="ws_extrato_utilizacao_extrato_OutputMessage">
+    <wsdl:part name="parameters" element="tns:extratoResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="ws_extrato_utilizacao">
+    <wsdl:operation name="extrato">
+      <wsdl:input wsaw:Action="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_extrato_utilizacao/extrato" message="tns:ws_extrato_utilizacao_extrato_InputMessage"/>
+      <wsdl:output wsaw:Action="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_extrato_utilizacao/extratoResponse" message="tns:ws_extrato_utilizacao_extrato_OutputMessage"/>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://guianet.paranaclinicas.com.br/MobileSaudeWS/ws_extrato_utilizacao.svc?xsd=xsd0</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://www.paranaclinicas.com.br/MobileSaudeWS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.paranaclinicas.com.br/MobileSaudeWS">
+  <xs:element name="extrato">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="chave_beneficiario" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="chave_empresa" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="ano" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="mes" nillable="true" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="extratoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="retorno_extratoutilizacao" nillable="true" type="tns:RetornoExtratoUtilizacao"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="RetornoExtratoUtilizacao">
+    <xs:sequence>
+      <xs:element name="status" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="motivo_critica" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="empresa" nillable="true" type="tns:Empresa"/>
+      <xs:element name="familias" nillable="true" type="tns:ArrayOfFamilia"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RetornoExtratoUtilizacao" nillable="true" type="tns:RetornoExtratoUtilizacao"/>
+  <xs:complexType name="Empresa">
+    <xs:sequence>
+      <xs:element name="nome" nillable="true" type="xs:string"/>
+      <xs:element name="cnpj" nillable="true" type="xs:string"/>
+      <xs:element name="contrato" nillable="true" type="xs:string"/>
+      <xs:element name="estipulante" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Empresa" nillable="true" type="tns:Empresa"/>
+  <xs:complexType name="ArrayOfFamilia">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Familia" nillable="true" type="tns:Familia"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFamilia" nillable="true" type="tns:ArrayOfFamilia"/>
+  <xs:complexType name="Familia">
+    <xs:sequence>
+      <xs:element name="nome_titular" nillable="true" type="xs:string"/>
+      <xs:element name="matricula_titular" nillable="true" type="xs:string"/>
+      <xs:element name="beneficiarios" nillable="true" type="tns:ArrayOfBeneficiarioUtilizacao"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Familia" nillable="true" type="tns:Familia"/>
+  <xs:complexType name="ArrayOfBeneficiarioUtilizacao">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BeneficiarioUtilizacao" nillable="true" type="tns:BeneficiarioUtilizacao"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBeneficiarioUtilizacao" nillable="true" type="tns:ArrayOfBeneficiarioUtilizacao"/>
+  <xs:complexType name="BeneficiarioUtilizacao">
+    <xs:sequence>
+      <xs:element name="nome" nillable="true" type="xs:string"/>
+      <xs:element name="matricula" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="valor_total_copart" type="xs:decimal"/>
+      <xs:element name="valor_total_utiliz" type="xs:decimal"/>
+      <xs:element name="extrato" nillable="true" type="tns:ArrayOfExtratoBeneficiarioUtilizacao"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BeneficiarioUtilizacao" nillable="true" type="tns:BeneficiarioUtilizacao"/>
+  <xs:complexType name="ArrayOfExtratoBeneficiarioUtilizacao">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ExtratoBeneficiarioUtilizacao" nillable="true" type="tns:ExtratoBeneficiarioUtilizacao"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfExtratoBeneficiarioUtilizacao" nillable="true" type="tns:ArrayOfExtratoBeneficiarioUtilizacao"/>
+  <xs:complexType name="ExtratoBeneficiarioUtilizacao">
+    <xs:sequence>
+      <xs:element name="codigo_procedimento" nillable="true" type="xs:string"/>
+      <xs:element name="descri_procedimento" nillable="true" type="xs:string"/>
+      <xs:element name="data_atendimento" type="xs:dateTime"/>
+      <xs:element name="codigo_prestador" nillable="true" type="xs:string"/>
+      <xs:element name="nome_prestador" nillable="true" type="xs:string"/>
+      <xs:element name="cpf_cnpj_prestador" nillable="true" type="xs:string"/>
+      <xs:element name="codigo_tipo_servico" nillable="true" type="xs:string"/>
+      <xs:element name="descri_tipo_servico" nillable="true" type="xs:string"/>
+      <xs:element name="quantidade" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="valor_servico" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="valor_coparticipacao" type="xs:decimal"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ExtratoBeneficiarioUtilizacao" nillable="true" type="tns:ExtratoBeneficiarioUtilizacao"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://guianet.paranaclinicas.com.br/MobileSaudeWS/ws_extrato_utilizacao.svc?xsd=xsd1</con:url><con:content><![CDATA[<xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/">
+  <xs:element name="anyType" nillable="true" type="xs:anyType"/>
+  <xs:element name="anyURI" nillable="true" type="xs:anyURI"/>
+  <xs:element name="base64Binary" nillable="true" type="xs:base64Binary"/>
+  <xs:element name="boolean" nillable="true" type="xs:boolean"/>
+  <xs:element name="byte" nillable="true" type="xs:byte"/>
+  <xs:element name="dateTime" nillable="true" type="xs:dateTime"/>
+  <xs:element name="decimal" nillable="true" type="xs:decimal"/>
+  <xs:element name="double" nillable="true" type="xs:double"/>
+  <xs:element name="float" nillable="true" type="xs:float"/>
+  <xs:element name="int" nillable="true" type="xs:int"/>
+  <xs:element name="long" nillable="true" type="xs:long"/>
+  <xs:element name="QName" nillable="true" type="xs:QName"/>
+  <xs:element name="short" nillable="true" type="xs:short"/>
+  <xs:element name="string" nillable="true" type="xs:string"/>
+  <xs:element name="unsignedByte" nillable="true" type="xs:unsignedByte"/>
+  <xs:element name="unsignedInt" nillable="true" type="xs:unsignedInt"/>
+  <xs:element name="unsignedLong" nillable="true" type="xs:unsignedLong"/>
+  <xs:element name="unsignedShort" nillable="true" type="xs:unsignedShort"/>
+  <xs:element name="char" nillable="true" type="tns:char"/>
+  <xs:simpleType name="char">
+    <xs:restriction base="xs:int"/>
+  </xs:simpleType>
+  <xs:element name="duration" nillable="true" type="tns:duration"/>
+  <xs:simpleType name="duration">
+    <xs:restriction base="xs:duration">
+      <xs:pattern value="\-?P(\d*D)?(T(\d*H)?(\d*M)?(\d*(\.\d*)?S)?)?"/>
+      <xs:minInclusive value="-P10675199DT2H48M5.4775808S"/>
+      <xs:maxInclusive value="P10675199DT2H48M5.4775807S"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="guid" nillable="true" type="tns:guid"/>
+  <xs:simpleType name="guid">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:attribute name="FactoryType" type="xs:QName"/>
+  <xs:attribute name="Id" type="xs:ID"/>
+  <xs:attribute name="Ref" type="xs:IDREF"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://guianet.paranaclinicas.com.br/MobileSaudeWS/ws_extrato_utilizacao.svc</con:endpoint></con:endpoints><con:operation id="665102d5-d10b-4f5d-925c-e4f6e6c26841" isOneWay="false" action="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_extrato_utilizacao/extrato" name="extrato" bindingOperationName="extrato" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="e7e32f54-6c1c-4e2b-b328-814d3414d21a" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://guianet.paranaclinicas.com.br/MobileSaudeWS/ws_extrato_utilizacao.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:mob="http://www.paranaclinicas.com.br/MobileSaudeWS">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <mob:extrato>
+         <!--Optional:-->
+         <mob:chave_beneficiario>586076</mob:chave_beneficiario>
+         <!--Optional:-->
+         <mob:chave_empresa>?</mob:chave_empresa>
+         <!--Optional:-->
+         <mob:ano>2017</mob:ano>
+         <!--Optional:-->
+         <mob:mes>08</mob:mes>
+      </mob:extrato>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_extrato_utilizacao/extrato"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="f24d7409-79b4-47bb-8cf0-27755ce5e6fd" wsaVersion="NONE" name="BasicHttpBinding_ws_extrato_coparticipacao" type="wsdl" bindingName="{http://tempuri.org/}BasicHttpBinding_ws_extrato_coparticipacao" soapVersion="1_1" anonymous="optional" definition="http://guianet.paranaclinicas.com.br/MobileSaudeWS/ws_extrato_coparticipacao.svc?WSDL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://guianet.paranaclinicas.com.br/MobileSaudeWS/ws_extrato_coparticipacao.svc?WSDL"><con:part><con:url>http://guianet.paranaclinicas.com.br/MobileSaudeWS/ws_extrato_coparticipacao.svc?WSDL</con:url><con:content><![CDATA[<wsdl:definitions name="ExtratoCoparticipacao" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:i0="http://www.paranaclinicas.com.br/MobileSaudeWS" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+  <wsdl:import namespace="http://www.paranaclinicas.com.br/MobileSaudeWS" location="http://guianet.paranaclinicas.com.br/MobileSaudeWS/ws_extrato_coparticipacao.svc?wsdl=wsdl0"/>
+  <wsdl:types/>
+  <wsdl:binding name="BasicHttpBinding_ws_extrato_coparticipacao" type="i0:ws_extrato_coparticipacao">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="extrato">
+      <soap:operation soapAction="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_extrato_coparticipacao/extrato" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ExtratoCoparticipacao">
+    <wsdl:port name="BasicHttpBinding_ws_extrato_coparticipacao" binding="tns:BasicHttpBinding_ws_extrato_coparticipacao">
+      <soap:address location="http://guianet.paranaclinicas.com.br/MobileSaudeWS/ws_extrato_coparticipacao.svc"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://guianet.paranaclinicas.com.br/MobileSaudeWS/ws_extrato_coparticipacao.svc?wsdl=wsdl0</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://www.paranaclinicas.com.br/MobileSaudeWS" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.paranaclinicas.com.br/MobileSaudeWS" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://www.paranaclinicas.com.br/MobileSaudeWS/Imports">
+      <xsd:import schemaLocation="http://guianet.paranaclinicas.com.br/MobileSaudeWS/ws_extrato_coparticipacao.svc?xsd=xsd0" namespace="http://www.paranaclinicas.com.br/MobileSaudeWS"/>
+      <xsd:import schemaLocation="http://guianet.paranaclinicas.com.br/MobileSaudeWS/ws_extrato_coparticipacao.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ws_extrato_coparticipacao_extrato_InputMessage">
+    <wsdl:part name="parameters" element="tns:extrato"/>
+  </wsdl:message>
+  <wsdl:message name="ws_extrato_coparticipacao_extrato_OutputMessage">
+    <wsdl:part name="parameters" element="tns:extratoResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="ws_extrato_coparticipacao">
+    <wsdl:operation name="extrato">
+      <wsdl:input wsaw:Action="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_extrato_coparticipacao/extrato" message="tns:ws_extrato_coparticipacao_extrato_InputMessage"/>
+      <wsdl:output wsaw:Action="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_extrato_coparticipacao/extratoResponse" message="tns:ws_extrato_coparticipacao_extrato_OutputMessage"/>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://guianet.paranaclinicas.com.br/MobileSaudeWS/ws_extrato_coparticipacao.svc?xsd=xsd0</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://www.paranaclinicas.com.br/MobileSaudeWS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.paranaclinicas.com.br/MobileSaudeWS">
+  <xs:element name="extrato">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="chave_beneficiario" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="chave_empresa" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="ano" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="mes" nillable="true" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="extratoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="retorno_extratocoparticipacao" nillable="true" type="tns:RetornoExtratoCoparticipacao"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="RetornoExtratoCoparticipacao">
+    <xs:sequence>
+      <xs:element name="status" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="motivo_critica" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="empresa" nillable="true" type="tns:Empresa"/>
+      <xs:element name="familias" nillable="true" type="tns:ArrayOfFamilia"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RetornoExtratoCoparticipacao" nillable="true" type="tns:RetornoExtratoCoparticipacao"/>
+  <xs:complexType name="Empresa">
+    <xs:sequence>
+      <xs:element name="nome" nillable="true" type="xs:string"/>
+      <xs:element name="cnpj" nillable="true" type="xs:string"/>
+      <xs:element name="contrato" nillable="true" type="xs:string"/>
+      <xs:element name="estipulante" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Empresa" nillable="true" type="tns:Empresa"/>
+  <xs:complexType name="ArrayOfFamilia">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Familia" nillable="true" type="tns:Familia"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFamilia" nillable="true" type="tns:ArrayOfFamilia"/>
+  <xs:complexType name="Familia">
+    <xs:sequence>
+      <xs:element name="nome_titular" nillable="true" type="xs:string"/>
+      <xs:element name="matricula_titular" nillable="true" type="xs:string"/>
+      <xs:element name="beneficiarios" nillable="true" type="tns:ArrayOfBeneficiarioUtilizacao"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Familia" nillable="true" type="tns:Familia"/>
+  <xs:complexType name="ArrayOfBeneficiarioUtilizacao">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BeneficiarioUtilizacao" nillable="true" type="tns:BeneficiarioUtilizacao"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBeneficiarioUtilizacao" nillable="true" type="tns:ArrayOfBeneficiarioUtilizacao"/>
+  <xs:complexType name="BeneficiarioUtilizacao">
+    <xs:sequence>
+      <xs:element name="nome" nillable="true" type="xs:string"/>
+      <xs:element name="matricula" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="valor_total_copart" type="xs:decimal"/>
+      <xs:element name="valor_total_utiliz" type="xs:decimal"/>
+      <xs:element name="extrato" nillable="true" type="tns:ArrayOfExtratoBeneficiarioUtilizacao"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BeneficiarioUtilizacao" nillable="true" type="tns:BeneficiarioUtilizacao"/>
+  <xs:complexType name="ArrayOfExtratoBeneficiarioUtilizacao">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ExtratoBeneficiarioUtilizacao" nillable="true" type="tns:ExtratoBeneficiarioUtilizacao"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfExtratoBeneficiarioUtilizacao" nillable="true" type="tns:ArrayOfExtratoBeneficiarioUtilizacao"/>
+  <xs:complexType name="ExtratoBeneficiarioUtilizacao">
+    <xs:sequence>
+      <xs:element name="codigo_procedimento" nillable="true" type="xs:string"/>
+      <xs:element name="descri_procedimento" nillable="true" type="xs:string"/>
+      <xs:element name="data_atendimento" type="xs:dateTime"/>
+      <xs:element name="codigo_prestador" nillable="true" type="xs:string"/>
+      <xs:element name="nome_prestador" nillable="true" type="xs:string"/>
+      <xs:element name="cpf_cnpj_prestador" nillable="true" type="xs:string"/>
+      <xs:element name="codigo_tipo_servico" nillable="true" type="xs:string"/>
+      <xs:element name="descri_tipo_servico" nillable="true" type="xs:string"/>
+      <xs:element name="quantidade" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="valor_servico" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="valor_coparticipacao" type="xs:decimal"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ExtratoBeneficiarioUtilizacao" nillable="true" type="tns:ExtratoBeneficiarioUtilizacao"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://guianet.paranaclinicas.com.br/MobileSaudeWS/ws_extrato_coparticipacao.svc?xsd=xsd1</con:url><con:content><![CDATA[<xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/">
+  <xs:element name="anyType" nillable="true" type="xs:anyType"/>
+  <xs:element name="anyURI" nillable="true" type="xs:anyURI"/>
+  <xs:element name="base64Binary" nillable="true" type="xs:base64Binary"/>
+  <xs:element name="boolean" nillable="true" type="xs:boolean"/>
+  <xs:element name="byte" nillable="true" type="xs:byte"/>
+  <xs:element name="dateTime" nillable="true" type="xs:dateTime"/>
+  <xs:element name="decimal" nillable="true" type="xs:decimal"/>
+  <xs:element name="double" nillable="true" type="xs:double"/>
+  <xs:element name="float" nillable="true" type="xs:float"/>
+  <xs:element name="int" nillable="true" type="xs:int"/>
+  <xs:element name="long" nillable="true" type="xs:long"/>
+  <xs:element name="QName" nillable="true" type="xs:QName"/>
+  <xs:element name="short" nillable="true" type="xs:short"/>
+  <xs:element name="string" nillable="true" type="xs:string"/>
+  <xs:element name="unsignedByte" nillable="true" type="xs:unsignedByte"/>
+  <xs:element name="unsignedInt" nillable="true" type="xs:unsignedInt"/>
+  <xs:element name="unsignedLong" nillable="true" type="xs:unsignedLong"/>
+  <xs:element name="unsignedShort" nillable="true" type="xs:unsignedShort"/>
+  <xs:element name="char" nillable="true" type="tns:char"/>
+  <xs:simpleType name="char">
+    <xs:restriction base="xs:int"/>
+  </xs:simpleType>
+  <xs:element name="duration" nillable="true" type="tns:duration"/>
+  <xs:simpleType name="duration">
+    <xs:restriction base="xs:duration">
+      <xs:pattern value="\-?P(\d*D)?(T(\d*H)?(\d*M)?(\d*(\.\d*)?S)?)?"/>
+      <xs:minInclusive value="-P10675199DT2H48M5.4775808S"/>
+      <xs:maxInclusive value="P10675199DT2H48M5.4775807S"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="guid" nillable="true" type="tns:guid"/>
+  <xs:simpleType name="guid">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:attribute name="FactoryType" type="xs:QName"/>
+  <xs:attribute name="Id" type="xs:ID"/>
+  <xs:attribute name="Ref" type="xs:IDREF"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://guianet.paranaclinicas.com.br/MobileSaudeWS/ws_extrato_coparticipacao.svc</con:endpoint></con:endpoints><con:operation id="4103f807-b299-4976-8995-f7e6034c8b84" isOneWay="false" action="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_extrato_coparticipacao/extrato" name="extrato" bindingOperationName="extrato" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="62f8f153-b78d-4766-954f-c9568015c209" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://guianet.paranaclinicas.com.br/MobileSaudeWS/ws_extrato_coparticipacao.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:mob="http://www.paranaclinicas.com.br/MobileSaudeWS">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <mob:extrato>
+         <!--Optional:-->
+         <mob:chave_beneficiario>847493</mob:chave_beneficiario>
+         <!--Optional:-->
+         <mob:chave_empresa>?</mob:chave_empresa>
+         <!--Optional:-->
+         <mob:ano>2018</mob:ano>
+         <!--Optional:-->
+         <mob:mes>09</mob:mes>
+      </mob:extrato>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_extrato_coparticipacao/extrato"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="56745211-9b8d-4631-954b-8f8e9c3656f4" wsaVersion="NONE" name="BasicHttpBinding_ws_agendamento_online" type="wsdl" bindingName="{http://tempuri.org/}BasicHttpBinding_ws_agendamento_online" soapVersion="1_1" anonymous="optional" definition="http://guianet.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online.svc?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://guianet.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online.svc?wsdl"><con:part><con:url>http://guianet.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online.svc?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="AgendamentoOnline" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:i0="http://www.paranaclinicas.com.br/MobileSaudeWS" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+  <wsdl:import namespace="http://www.paranaclinicas.com.br/MobileSaudeWS" location="http://guianet.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online.svc?wsdl=wsdl0"/>
+  <wsdl:types/>
+  <wsdl:binding name="BasicHttpBinding_ws_agendamento_online" type="i0:ws_agendamento_online">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="especialidade_disponivel">
+      <soap:operation soapAction="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online/especialidade_disponivel" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="servico_disponivel">
+      <soap:operation soapAction="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online/servico_disponivel" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="local_atendimento_disponivel">
+      <soap:operation soapAction="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online/local_atendimento_disponivel" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="profissional_disponivel">
+      <soap:operation soapAction="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online/profissional_disponivel" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="agenda_do_profissional">
+      <soap:operation soapAction="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online/agenda_do_profissional" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="grade_horarios_agenda">
+      <soap:operation soapAction="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online/grade_horarios_agenda" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="valida_autorizacao_previa">
+      <soap:operation soapAction="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online/valida_autorizacao_previa" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="grava_agendamento">
+      <soap:operation soapAction="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online/grava_agendamento" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="confirma_presenca">
+      <soap:operation soapAction="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online/confirma_presenca" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="avalia_atendimento">
+      <soap:operation soapAction="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online/avalia_atendimento" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancela_agendamento">
+      <soap:operation soapAction="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online/cancela_agendamento" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="status_agendas_paciente">
+      <soap:operation soapAction="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online/status_agendas_paciente" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="agenda_paciente">
+      <soap:operation soapAction="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online/agenda_paciente" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="agenda_detalhes">
+      <soap:operation soapAction="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online/agenda_detalhes" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AgendamentoOnline">
+    <wsdl:port name="BasicHttpBinding_ws_agendamento_online" binding="tns:BasicHttpBinding_ws_agendamento_online">
+      <soap:address location="http://guianet.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online.svc"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://guianet.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online.svc?wsdl=wsdl0</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://www.paranaclinicas.com.br/MobileSaudeWS" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.paranaclinicas.com.br/MobileSaudeWS" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://www.paranaclinicas.com.br/MobileSaudeWS/Imports">
+      <xsd:import schemaLocation="http://guianet.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online.svc?xsd=xsd0" namespace="http://www.paranaclinicas.com.br/MobileSaudeWS"/>
+      <xsd:import schemaLocation="http://guianet.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ws_agendamento_online_especialidade_disponivel_InputMessage">
+    <wsdl:part name="parameters" element="tns:especialidade_disponivel"/>
+  </wsdl:message>
+  <wsdl:message name="ws_agendamento_online_especialidade_disponivel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:especialidade_disponivelResponse"/>
+  </wsdl:message>
+  <wsdl:message name="ws_agendamento_online_servico_disponivel_InputMessage">
+    <wsdl:part name="parameters" element="tns:servico_disponivel"/>
+  </wsdl:message>
+  <wsdl:message name="ws_agendamento_online_servico_disponivel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:servico_disponivelResponse"/>
+  </wsdl:message>
+  <wsdl:message name="ws_agendamento_online_local_atendimento_disponivel_InputMessage">
+    <wsdl:part name="parameters" element="tns:local_atendimento_disponivel"/>
+  </wsdl:message>
+  <wsdl:message name="ws_agendamento_online_local_atendimento_disponivel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:local_atendimento_disponivelResponse"/>
+  </wsdl:message>
+  <wsdl:message name="ws_agendamento_online_profissional_disponivel_InputMessage">
+    <wsdl:part name="parameters" element="tns:profissional_disponivel"/>
+  </wsdl:message>
+  <wsdl:message name="ws_agendamento_online_profissional_disponivel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:profissional_disponivelResponse"/>
+  </wsdl:message>
+  <wsdl:message name="ws_agendamento_online_agenda_do_profissional_InputMessage">
+    <wsdl:part name="parameters" element="tns:agenda_do_profissional"/>
+  </wsdl:message>
+  <wsdl:message name="ws_agendamento_online_agenda_do_profissional_OutputMessage">
+    <wsdl:part name="parameters" element="tns:agenda_do_profissionalResponse"/>
+  </wsdl:message>
+  <wsdl:message name="ws_agendamento_online_grade_horarios_agenda_InputMessage">
+    <wsdl:part name="parameters" element="tns:grade_horarios_agenda"/>
+  </wsdl:message>
+  <wsdl:message name="ws_agendamento_online_grade_horarios_agenda_OutputMessage">
+    <wsdl:part name="parameters" element="tns:grade_horarios_agendaResponse"/>
+  </wsdl:message>
+  <wsdl:message name="ws_agendamento_online_valida_autorizacao_previa_InputMessage">
+    <wsdl:part name="parameters" element="tns:valida_autorizacao_previa"/>
+  </wsdl:message>
+  <wsdl:message name="ws_agendamento_online_valida_autorizacao_previa_OutputMessage">
+    <wsdl:part name="parameters" element="tns:valida_autorizacao_previaResponse"/>
+  </wsdl:message>
+  <wsdl:message name="ws_agendamento_online_grava_agendamento_InputMessage">
+    <wsdl:part name="parameters" element="tns:grava_agendamento"/>
+  </wsdl:message>
+  <wsdl:message name="ws_agendamento_online_grava_agendamento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:grava_agendamentoResponse"/>
+  </wsdl:message>
+  <wsdl:message name="ws_agendamento_online_confirma_presenca_InputMessage">
+    <wsdl:part name="parameters" element="tns:confirma_presenca"/>
+  </wsdl:message>
+  <wsdl:message name="ws_agendamento_online_confirma_presenca_OutputMessage">
+    <wsdl:part name="parameters" element="tns:confirma_presencaResponse"/>
+  </wsdl:message>
+  <wsdl:message name="ws_agendamento_online_avalia_atendimento_InputMessage">
+    <wsdl:part name="parameters" element="tns:avalia_atendimento"/>
+  </wsdl:message>
+  <wsdl:message name="ws_agendamento_online_avalia_atendimento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:avalia_atendimentoResponse"/>
+  </wsdl:message>
+  <wsdl:message name="ws_agendamento_online_cancela_agendamento_InputMessage">
+    <wsdl:part name="parameters" element="tns:cancela_agendamento"/>
+  </wsdl:message>
+  <wsdl:message name="ws_agendamento_online_cancela_agendamento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:cancela_agendamentoResponse"/>
+  </wsdl:message>
+  <wsdl:message name="ws_agendamento_online_status_agendas_paciente_InputMessage">
+    <wsdl:part name="parameters" element="tns:status_agendas_paciente"/>
+  </wsdl:message>
+  <wsdl:message name="ws_agendamento_online_status_agendas_paciente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:status_agendas_pacienteResponse"/>
+  </wsdl:message>
+  <wsdl:message name="ws_agendamento_online_agenda_paciente_InputMessage">
+    <wsdl:part name="parameters" element="tns:agenda_paciente"/>
+  </wsdl:message>
+  <wsdl:message name="ws_agendamento_online_agenda_paciente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:agenda_pacienteResponse"/>
+  </wsdl:message>
+  <wsdl:message name="ws_agendamento_online_agenda_detalhes_InputMessage">
+    <wsdl:part name="parameters" element="tns:agenda_detalhes"/>
+  </wsdl:message>
+  <wsdl:message name="ws_agendamento_online_agenda_detalhes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:agenda_detalhesResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="ws_agendamento_online">
+    <wsdl:operation name="especialidade_disponivel">
+      <wsdl:input wsaw:Action="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online/especialidade_disponivel" message="tns:ws_agendamento_online_especialidade_disponivel_InputMessage"/>
+      <wsdl:output wsaw:Action="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online/especialidade_disponivelResponse" message="tns:ws_agendamento_online_especialidade_disponivel_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="servico_disponivel">
+      <wsdl:input wsaw:Action="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online/servico_disponivel" message="tns:ws_agendamento_online_servico_disponivel_InputMessage"/>
+      <wsdl:output wsaw:Action="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online/servico_disponivelResponse" message="tns:ws_agendamento_online_servico_disponivel_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="local_atendimento_disponivel">
+      <wsdl:input wsaw:Action="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online/local_atendimento_disponivel" message="tns:ws_agendamento_online_local_atendimento_disponivel_InputMessage"/>
+      <wsdl:output wsaw:Action="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online/local_atendimento_disponivelResponse" message="tns:ws_agendamento_online_local_atendimento_disponivel_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="profissional_disponivel">
+      <wsdl:input wsaw:Action="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online/profissional_disponivel" message="tns:ws_agendamento_online_profissional_disponivel_InputMessage"/>
+      <wsdl:output wsaw:Action="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online/profissional_disponivelResponse" message="tns:ws_agendamento_online_profissional_disponivel_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="agenda_do_profissional">
+      <wsdl:input wsaw:Action="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online/agenda_do_profissional" message="tns:ws_agendamento_online_agenda_do_profissional_InputMessage"/>
+      <wsdl:output wsaw:Action="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online/agenda_do_profissionalResponse" message="tns:ws_agendamento_online_agenda_do_profissional_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="grade_horarios_agenda">
+      <wsdl:input wsaw:Action="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online/grade_horarios_agenda" message="tns:ws_agendamento_online_grade_horarios_agenda_InputMessage"/>
+      <wsdl:output wsaw:Action="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online/grade_horarios_agendaResponse" message="tns:ws_agendamento_online_grade_horarios_agenda_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="valida_autorizacao_previa">
+      <wsdl:input wsaw:Action="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online/valida_autorizacao_previa" message="tns:ws_agendamento_online_valida_autorizacao_previa_InputMessage"/>
+      <wsdl:output wsaw:Action="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online/valida_autorizacao_previaResponse" message="tns:ws_agendamento_online_valida_autorizacao_previa_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="grava_agendamento">
+      <wsdl:input wsaw:Action="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online/grava_agendamento" message="tns:ws_agendamento_online_grava_agendamento_InputMessage"/>
+      <wsdl:output wsaw:Action="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online/grava_agendamentoResponse" message="tns:ws_agendamento_online_grava_agendamento_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="confirma_presenca">
+      <wsdl:input wsaw:Action="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online/confirma_presenca" message="tns:ws_agendamento_online_confirma_presenca_InputMessage"/>
+      <wsdl:output wsaw:Action="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online/confirma_presencaResponse" message="tns:ws_agendamento_online_confirma_presenca_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="avalia_atendimento">
+      <wsdl:input wsaw:Action="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online/avalia_atendimento" message="tns:ws_agendamento_online_avalia_atendimento_InputMessage"/>
+      <wsdl:output wsaw:Action="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online/avalia_atendimentoResponse" message="tns:ws_agendamento_online_avalia_atendimento_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="cancela_agendamento">
+      <wsdl:input wsaw:Action="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online/cancela_agendamento" message="tns:ws_agendamento_online_cancela_agendamento_InputMessage"/>
+      <wsdl:output wsaw:Action="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online/cancela_agendamentoResponse" message="tns:ws_agendamento_online_cancela_agendamento_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="status_agendas_paciente">
+      <wsdl:input wsaw:Action="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online/status_agendas_paciente" message="tns:ws_agendamento_online_status_agendas_paciente_InputMessage"/>
+      <wsdl:output wsaw:Action="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online/status_agendas_pacienteResponse" message="tns:ws_agendamento_online_status_agendas_paciente_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="agenda_paciente">
+      <wsdl:input wsaw:Action="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online/agenda_paciente" message="tns:ws_agendamento_online_agenda_paciente_InputMessage"/>
+      <wsdl:output wsaw:Action="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online/agenda_pacienteResponse" message="tns:ws_agendamento_online_agenda_paciente_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="agenda_detalhes">
+      <wsdl:input wsaw:Action="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online/agenda_detalhes" message="tns:ws_agendamento_online_agenda_detalhes_InputMessage"/>
+      <wsdl:output wsaw:Action="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online/agenda_detalhesResponse" message="tns:ws_agendamento_online_agenda_detalhes_OutputMessage"/>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://guianet.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online.svc?xsd=xsd0</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://www.paranaclinicas.com.br/MobileSaudeWS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.paranaclinicas.com.br/MobileSaudeWS">
+  <xs:element name="especialidade_disponivel">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="chave_beneficiario" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="data_referencia" type="xs:dateTime"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="especialidade_disponivelResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="retorno_especialidade_disponivel" nillable="true" type="tns:RetornoEspecialidadeDisponivel"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="RetornoEspecialidadeDisponivel">
+    <xs:sequence>
+      <xs:element name="status" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="motivo_critica" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="especialidades" nillable="true" type="tns:ArrayOfEspecialidade"/>
+      <xs:element minOccurs="0" name="alerta" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RetornoEspecialidadeDisponivel" nillable="true" type="tns:RetornoEspecialidadeDisponivel"/>
+  <xs:complexType name="ArrayOfEspecialidade">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Especialidade" nillable="true" type="tns:Especialidade"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEspecialidade" nillable="true" type="tns:ArrayOfEspecialidade"/>
+  <xs:complexType name="Especialidade">
+    <xs:sequence>
+      <xs:element name="especialidade_id" nillable="true" type="xs:string"/>
+      <xs:element name="especialidade_descricao" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="cbos" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="alerta" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="exige_autorizacao" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Especialidade" nillable="true" type="tns:Especialidade"/>
+  <xs:element name="servico_disponivel">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="chave_beneficiario" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="data_referencia" type="xs:dateTime"/>
+        <xs:element minOccurs="0" name="especialidade_id" nillable="true" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="servico_disponivelResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="retorno_servico_disponivel" nillable="true" type="tns:RetornoServicoDisponivel"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="RetornoServicoDisponivel">
+    <xs:sequence>
+      <xs:element name="status" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="motivo_critica" nillable="true" type="xs:string"/>
+      <xs:element name="servicos" nillable="true" type="tns:ArrayOfServico"/>
+      <xs:element minOccurs="0" name="alerta" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RetornoServicoDisponivel" nillable="true" type="tns:RetornoServicoDisponivel"/>
+  <xs:complexType name="ArrayOfServico">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Servico" nillable="true" type="tns:Servico"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfServico" nillable="true" type="tns:ArrayOfServico"/>
+  <xs:complexType name="Servico">
+    <xs:sequence>
+      <xs:element name="servico_id" nillable="true" type="xs:string"/>
+      <xs:element name="procedimento" nillable="true" type="xs:string"/>
+      <xs:element name="servico_descricao" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="exige_autorizacao" nillable="true" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Servico" nillable="true" type="tns:Servico"/>
+  <xs:element name="local_atendimento_disponivel">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="chave_beneficiario" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="data_referencia" type="xs:dateTime"/>
+        <xs:element minOccurs="0" name="especialidade_id" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="servico_id" nillable="true" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="local_atendimento_disponivelResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="retorno_localatend_disponivel" nillable="true" type="tns:RetornoLocalAtendimentoDisponivel"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="RetornoLocalAtendimentoDisponivel">
+    <xs:sequence>
+      <xs:element name="status" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="motivo_critica" nillable="true" type="xs:string"/>
+      <xs:element name="locais" nillable="true" type="tns:ArrayOfLocal"/>
+      <xs:element minOccurs="0" name="alerta" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RetornoLocalAtendimentoDisponivel" nillable="true" type="tns:RetornoLocalAtendimentoDisponivel"/>
+  <xs:complexType name="ArrayOfLocal">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Local" nillable="true" type="tns:Local"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLocal" nillable="true" type="tns:ArrayOfLocal"/>
+  <xs:complexType name="Local">
+    <xs:sequence>
+      <xs:element name="local_id" nillable="true" type="xs:string"/>
+      <xs:element name="local_descricao" nillable="true" type="xs:string"/>
+      <xs:element name="local_endereco" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="local_numero" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="local_complemento" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="local_bairro" nillable="true" type="xs:string"/>
+      <xs:element name="local_cidade" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="local_cidade_id" nillable="true" type="xs:string"/>
+      <xs:element name="local_estado" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="local_cep" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="local_telefone" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="local_prioridade" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="local_prioridade_ordem" nillable="true" type="xs:int"/>
+      <xs:element minOccurs="0" name="alerta" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Local" nillable="true" type="tns:Local"/>
+  <xs:element name="profissional_disponivel">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="chave_beneficiario" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="data_referencia" type="xs:dateTime"/>
+        <xs:element minOccurs="0" name="especialidade_id" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="servico_id" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="local_id" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="nome" nillable="true" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="profissional_disponivelResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="retorno_profissional_disponivel" nillable="true" type="tns:RetornoProfissionalDisponivel"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="RetornoProfissionalDisponivel">
+    <xs:sequence>
+      <xs:element name="status" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="motivo_critica" nillable="true" type="xs:string"/>
+      <xs:element name="profissionais" nillable="true" type="tns:ArrayOfProfissional"/>
+      <xs:element minOccurs="0" name="alerta" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RetornoProfissionalDisponivel" nillable="true" type="tns:RetornoProfissionalDisponivel"/>
+  <xs:complexType name="ArrayOfProfissional">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Profissional" nillable="true" type="tns:Profissional"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProfissional" nillable="true" type="tns:ArrayOfProfissional"/>
+  <xs:complexType name="Profissional">
+    <xs:sequence>
+      <xs:element name="profissional_id" nillable="true" type="xs:string"/>
+      <xs:element name="profissional_nome" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="local_telefone" nillable="true" type="xs:string"/>
+      <xs:element name="local_id" nillable="true" type="xs:string"/>
+      <xs:element name="local_descricao" nillable="true" type="xs:string"/>
+      <xs:element name="local_endereco" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="local_numero" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="local_complemento" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="local_bairro" nillable="true" type="xs:string"/>
+      <xs:element name="local_estado" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="local_cidade_id" nillable="true" type="xs:string"/>
+      <xs:element name="local_cidade" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="local_cep" nillable="true" type="xs:string"/>
+      <xs:element name="primeira_agenda" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="quantidade_agendas_disponiveis" nillable="true" type="xs:int"/>
+      <xs:element minOccurs="0" name="alerta" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Profissional" nillable="true" type="tns:Profissional"/>
+  <xs:element name="agenda_do_profissional">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="chave_beneficiario" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="profissional_id" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="data_referencia" type="xs:dateTime"/>
+        <xs:element minOccurs="0" name="especialidade_id" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="servico_id" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="local_id" nillable="true" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="agenda_do_profissionalResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="retorno_agenda_profissional" nillable="true" type="tns:RetornoAgendaProfissional"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="RetornoAgendaProfissional">
+    <xs:sequence>
+      <xs:element name="status" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="motivo_critica" nillable="true" type="xs:string"/>
+      <xs:element name="primeira_agenda" type="xs:dateTime"/>
+      <xs:element name="disponibilidades" nillable="true" type="tns:ArrayOfDisponibilidade"/>
+      <xs:element minOccurs="0" name="alerta" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RetornoAgendaProfissional" nillable="true" type="tns:RetornoAgendaProfissional"/>
+  <xs:complexType name="ArrayOfDisponibilidade">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Disponibilidade" nillable="true" type="tns:Disponibilidade"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDisponibilidade" nillable="true" type="tns:ArrayOfDisponibilidade"/>
+  <xs:complexType name="Disponibilidade">
+    <xs:sequence>
+      <xs:element name="data" type="xs:dateTime"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Disponibilidade" nillable="true" type="tns:Disponibilidade"/>
+  <xs:element name="grade_horarios_agenda">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="chave_beneficiario" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="especialidade_id" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="servico_id" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="local_id" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="profissional_id" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="data" type="xs:dateTime"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="grade_horarios_agendaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="retorno_grade_horarios_agenda" nillable="true" type="tns:RetornoGradeHorariosAgenda"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="RetornoGradeHorariosAgenda">
+    <xs:sequence>
+      <xs:element name="status" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="motivo_critica" nillable="true" type="xs:string"/>
+      <xs:element name="horarios" nillable="true" type="tns:ArrayOfHorario"/>
+      <xs:element minOccurs="0" name="alerta" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RetornoGradeHorariosAgenda" nillable="true" type="tns:RetornoGradeHorariosAgenda"/>
+  <xs:complexType name="ArrayOfHorario">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Horario" nillable="true" type="tns:Horario"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHorario" nillable="true" type="tns:ArrayOfHorario"/>
+  <xs:complexType name="Horario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="agenda_id" nillable="true" type="xs:int"/>
+      <xs:element minOccurs="0" name="chave_beneficiario" nillable="true" type="xs:string"/>
+      <xs:element name="data" type="xs:dateTime"/>
+      <xs:element name="hora" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="nome_beneficiario" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Horario" nillable="true" type="tns:Horario"/>
+  <xs:element name="valida_autorizacao_previa">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="chave_beneficiario" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="numero_autorizacao" nillable="true" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="valida_autorizacao_previaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="retorno_valida_autorizacao_previa" nillable="true" type="tns:RetornoValidaAutorizacaoPrevia"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="RetornoValidaAutorizacaoPrevia">
+    <xs:sequence>
+      <xs:element name="status" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="motivo_critica" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="recomendacoes" nillable="true" type="tns:ArrayOfRecomendacao"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RetornoValidaAutorizacaoPrevia" nillable="true" type="tns:RetornoValidaAutorizacaoPrevia"/>
+  <xs:complexType name="ArrayOfRecomendacao">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Recomendacao" nillable="true" type="tns:Recomendacao"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRecomendacao" nillable="true" type="tns:ArrayOfRecomendacao"/>
+  <xs:complexType name="Recomendacao">
+    <xs:sequence>
+      <xs:element name="ordem" type="xs:int"/>
+      <xs:element name="recomendacao" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Recomendacao" nillable="true" type="tns:Recomendacao"/>
+  <xs:element name="grava_agendamento">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="chave_beneficiario" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="numero_autorizacao" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="agenda_id" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="data_hora" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="agenda_confirmada" type="xs:boolean"/>
+        <xs:element minOccurs="0" name="local_id" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="especialidade_id" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="servico_id" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="profissional_id" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="telefone_paciente" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="email_paciente" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="origem" nillable="true" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="grava_agendamentoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="retorno_grava_agendamento" nillable="true" type="tns:RetornoGravaAgendamento"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="RetornoGravaAgendamento">
+    <xs:sequence>
+      <xs:element name="status" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="motivo_critica" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="recomendacoes" nillable="true" type="tns:ArrayOfRecomendacao"/>
+      <xs:element minOccurs="0" name="agenda_id" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RetornoGravaAgendamento" nillable="true" type="tns:RetornoGravaAgendamento"/>
+  <xs:element name="confirma_presenca">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="agenda_id" nillable="true" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="confirma_presencaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="retorno_confirma_presenca" nillable="true" type="tns:RetornoConfirmaPresenca"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="RetornoConfirmaPresenca">
+    <xs:sequence>
+      <xs:element name="status" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="motivo_critica" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="recomendacoes" nillable="true" type="tns:ArrayOfRecomendacao"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RetornoConfirmaPresenca" nillable="true" type="tns:RetornoConfirmaPresenca"/>
+  <xs:element name="avalia_atendimento">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="agenda_id" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="nota" type="xs:int"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="avalia_atendimentoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="retorno_avalia_atendimento" nillable="true" type="tns:RetornoAvaliaAtendimento"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="RetornoAvaliaAtendimento">
+    <xs:sequence>
+      <xs:element name="status" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="motivo_critica" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="alerta" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RetornoAvaliaAtendimento" nillable="true" type="tns:RetornoAvaliaAtendimento"/>
+  <xs:element name="cancela_agendamento">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="agenda_id" nillable="true" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="cancela_agendamentoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="retorno_cancela_agendamento" nillable="true" type="tns:RetornoCancelaAgendamento"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="RetornoCancelaAgendamento">
+    <xs:sequence>
+      <xs:element name="status" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="motivo_critica" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="alerta" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RetornoCancelaAgendamento" nillable="true" type="tns:RetornoCancelaAgendamento"/>
+  <xs:element name="status_agendas_paciente">
+    <xs:complexType>
+      <xs:sequence/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="status_agendas_pacienteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="retorno_status_agenda_paciente" nillable="true" type="tns:RetornoStatusAgendaPaciente"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="RetornoStatusAgendaPaciente">
+    <xs:sequence>
+      <xs:element name="status" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="motivo_critica" nillable="true" type="xs:string"/>
+      <xs:element name="status_agenda" nillable="true" type="tns:ArrayOfStatusAgenda"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RetornoStatusAgendaPaciente" nillable="true" type="tns:RetornoStatusAgendaPaciente"/>
+  <xs:complexType name="ArrayOfStatusAgenda">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="StatusAgenda" nillable="true" type="tns:StatusAgenda"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfStatusAgenda" nillable="true" type="tns:ArrayOfStatusAgenda"/>
+  <xs:complexType name="StatusAgenda">
+    <xs:sequence>
+      <xs:element name="status_id" nillable="true" type="xs:string"/>
+      <xs:element name="status_descricao" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StatusAgenda" nillable="true" type="tns:StatusAgenda"/>
+  <xs:element name="agenda_paciente">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="chave_beneficiario" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="status_id" nillable="true" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="agenda_pacienteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="retorno_agenda_paciente" nillable="true" type="tns:RetornoAgendaPaciente"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="RetornoAgendaPaciente">
+    <xs:sequence>
+      <xs:element name="status" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="motivo_critica" nillable="true" type="xs:string"/>
+      <xs:element name="agendamentos" nillable="true" type="tns:ArrayOfAgendamento"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RetornoAgendaPaciente" nillable="true" type="tns:RetornoAgendaPaciente"/>
+  <xs:complexType name="ArrayOfAgendamento">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Agendamento" nillable="true" type="tns:Agendamento"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAgendamento" nillable="true" type="tns:ArrayOfAgendamento"/>
+  <xs:complexType name="Agendamento">
+    <xs:sequence>
+      <xs:element name="agenda_id" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="data_hora" nillable="true" type="xs:dateTime"/>
+      <xs:element name="status_id" nillable="true" type="xs:string"/>
+      <xs:element name="agenda_confirmada" type="xs:boolean"/>
+      <xs:element name="especialidade_id" nillable="true" type="xs:string"/>
+      <xs:element name="especialidade_descricao" nillable="true" type="xs:string"/>
+      <xs:element name="chave_beneficiario" nillable="true" type="xs:string"/>
+      <xs:element name="nome_beneficiario" nillable="true" type="xs:string"/>
+      <xs:element name="profissional_id" nillable="true" type="xs:string"/>
+      <xs:element name="profissional_nome" nillable="true" type="xs:string"/>
+      <xs:element name="local_id" nillable="true" type="xs:string"/>
+      <xs:element name="local_descricao" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Agendamento" nillable="true" type="tns:Agendamento"/>
+  <xs:element name="agenda_detalhes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="agenda_id" nillable="true" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="agenda_detalhesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="retorno_agenda_detalhes" nillable="true" type="tns:RetornoAgendaDetalhes"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="RetornoAgendaDetalhes">
+    <xs:sequence>
+      <xs:element name="status" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="motivo_critica" nillable="true" type="xs:string"/>
+      <xs:element name="detalhes" nillable="true" type="tns:ArrayOfDetalheAgenda"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RetornoAgendaDetalhes" nillable="true" type="tns:RetornoAgendaDetalhes"/>
+  <xs:complexType name="ArrayOfDetalheAgenda">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DetalheAgenda" nillable="true" type="tns:DetalheAgenda"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDetalheAgenda" nillable="true" type="tns:ArrayOfDetalheAgenda"/>
+  <xs:complexType name="DetalheAgenda">
+    <xs:sequence>
+      <xs:element name="agenda_id" nillable="true" type="xs:string"/>
+      <xs:element name="data_hora" type="xs:dateTime"/>
+      <xs:element name="status_id" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="cancelamento_data_hora" nillable="true" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="cancelamento_motivo" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="atendimento_data_hora" nillable="true" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="atendimento_nota" nillable="true" type="xs:int"/>
+      <xs:element name="especialidade_id" nillable="true" type="xs:string"/>
+      <xs:element name="especialidade_descricao" nillable="true" type="xs:string"/>
+      <xs:element name="chave_beneficiario" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="beneficiario_email" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="beneficiario_telefone" nillable="true" type="xs:string"/>
+      <xs:element name="profissional_id" nillable="true" type="xs:string"/>
+      <xs:element name="profissional_nome" nillable="true" type="xs:string"/>
+      <xs:element name="local_id" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="local_telefone" nillable="true" type="xs:string"/>
+      <xs:element name="local_descricao" nillable="true" type="xs:string"/>
+      <xs:element name="local_endereco" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="local_numero" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="local_complemento" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="local_bairro" nillable="true" type="xs:string"/>
+      <xs:element name="local_estado" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="local_cidade_id" nillable="true" type="xs:string"/>
+      <xs:element name="local_cidade" nillable="true" type="xs:string"/>
+      <xs:element name="local_cep" nillable="true" type="xs:string"/>
+      <xs:element name="recomendacoes" nillable="true" type="tns:ArrayOfRecomendacao"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DetalheAgenda" nillable="true" type="tns:DetalheAgenda"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://guianet.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online.svc?xsd=xsd1</con:url><con:content><![CDATA[<xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/">
+  <xs:element name="anyType" nillable="true" type="xs:anyType"/>
+  <xs:element name="anyURI" nillable="true" type="xs:anyURI"/>
+  <xs:element name="base64Binary" nillable="true" type="xs:base64Binary"/>
+  <xs:element name="boolean" nillable="true" type="xs:boolean"/>
+  <xs:element name="byte" nillable="true" type="xs:byte"/>
+  <xs:element name="dateTime" nillable="true" type="xs:dateTime"/>
+  <xs:element name="decimal" nillable="true" type="xs:decimal"/>
+  <xs:element name="double" nillable="true" type="xs:double"/>
+  <xs:element name="float" nillable="true" type="xs:float"/>
+  <xs:element name="int" nillable="true" type="xs:int"/>
+  <xs:element name="long" nillable="true" type="xs:long"/>
+  <xs:element name="QName" nillable="true" type="xs:QName"/>
+  <xs:element name="short" nillable="true" type="xs:short"/>
+  <xs:element name="string" nillable="true" type="xs:string"/>
+  <xs:element name="unsignedByte" nillable="true" type="xs:unsignedByte"/>
+  <xs:element name="unsignedInt" nillable="true" type="xs:unsignedInt"/>
+  <xs:element name="unsignedLong" nillable="true" type="xs:unsignedLong"/>
+  <xs:element name="unsignedShort" nillable="true" type="xs:unsignedShort"/>
+  <xs:element name="char" nillable="true" type="tns:char"/>
+  <xs:simpleType name="char">
+    <xs:restriction base="xs:int"/>
+  </xs:simpleType>
+  <xs:element name="duration" nillable="true" type="tns:duration"/>
+  <xs:simpleType name="duration">
+    <xs:restriction base="xs:duration">
+      <xs:pattern value="\-?P(\d*D)?(T(\d*H)?(\d*M)?(\d*(\.\d*)?S)?)?"/>
+      <xs:minInclusive value="-P10675199DT2H48M5.4775808S"/>
+      <xs:maxInclusive value="P10675199DT2H48M5.4775807S"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="guid" nillable="true" type="tns:guid"/>
+  <xs:simpleType name="guid">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:attribute name="FactoryType" type="xs:QName"/>
+  <xs:attribute name="Id" type="xs:ID"/>
+  <xs:attribute name="Ref" type="xs:IDREF"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://guianet.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online.svc</con:endpoint></con:endpoints><con:operation id="04cd89ad-7ebc-4643-92c6-df9a8b573a06" isOneWay="false" action="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online/agenda_detalhes" name="agenda_detalhes" bindingOperationName="agenda_detalhes" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="e1a000f6-33cc-4dd9-92a6-0446e2148ace" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://guianet.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:mob="http://www.paranaclinicas.com.br/MobileSaudeWS">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <mob:agenda_detalhes>
+         <!--Optional:-->
+         <mob:agenda_id></mob:agenda_id>
+      </mob:agenda_detalhes>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online/agenda_detalhes"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="19281e3c-6e02-4aa1-bafa-b0d0a6b31c41" isOneWay="false" action="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online/agenda_do_profissional" name="agenda_do_profissional" bindingOperationName="agenda_do_profissional" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="f7591850-40c5-4017-9c0c-ab14a254bfca" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://guianet.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:mob="http://www.paranaclinicas.com.br/MobileSaudeWS">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <mob:agenda_do_profissional>
+         <!--Optional:-->
+         <mob:chave_beneficiario>586076</mob:chave_beneficiario>
+         <!--Optional:-->
+         <mob:profissional_id>575</mob:profissional_id>
+         <!--Optional:-->
+         <mob:data_referencia>2019-06-24</mob:data_referencia>
+         <!--Optional:-->
+         <mob:especialidade_id>2</mob:especialidade_id>
+         <!--Optional:-->
+         <mob:servico_id>2905</mob:servico_id>
+         <!--Optional:-->
+         <mob:local_id></mob:local_id>
+      </mob:agenda_do_profissional>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online/agenda_do_profissional"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="8ac64d00-c633-4e9c-ba06-4b2b763cb778" isOneWay="false" action="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online/agenda_paciente" name="agenda_paciente" bindingOperationName="agenda_paciente" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="db5af0f6-e40c-4c3c-b20e-509f51e7122b" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://guianet.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:mob="http://www.paranaclinicas.com.br/MobileSaudeWS">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <mob:agenda_paciente>
+         <!--Optional:-->
+         <mob:chave_beneficiario>586076</mob:chave_beneficiario>
+         <!--Optional:-->
+         <mob:status_id>0</mob:status_id>
+      </mob:agenda_paciente>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online/agenda_paciente"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="aa241a18-4f09-46b9-b66d-0c6d035675b4" isOneWay="false" action="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online/avalia_atendimento" name="avalia_atendimento" bindingOperationName="avalia_atendimento" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="31ea9b15-3e75-425b-945b-0ed6e3a89a2d" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://guianet.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:mob="http://www.paranaclinicas.com.br/MobileSaudeWS">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <mob:avalia_atendimento>
+         <!--Optional:-->
+         <mob:agenda_id>?</mob:agenda_id>
+         <!--Optional:-->
+         <mob:nota>?</mob:nota>
+      </mob:avalia_atendimento>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online/avalia_atendimento"/></con:call></con:operation><con:operation id="26733c97-ec8a-4fab-afbf-9d21288bffec" isOneWay="false" action="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online/cancela_agendamento" name="cancela_agendamento" bindingOperationName="cancela_agendamento" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="2ebfcb9c-72a8-424d-9098-1471ba24089b" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://guianet.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:mob="http://www.paranaclinicas.com.br/MobileSaudeWS">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <mob:cancela_agendamento>
+         <!--Optional:-->
+         <mob:agenda_id>?</mob:agenda_id>
+      </mob:cancela_agendamento>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online/cancela_agendamento"/></con:call></con:operation><con:operation id="00ead080-c5f2-48f2-9380-7fdcb3f4d33d" isOneWay="false" action="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online/confirma_presenca" name="confirma_presenca" bindingOperationName="confirma_presenca" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="a4e5d846-90c7-42f0-8d74-5125f1a1c822" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://guianet.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:mob="http://www.paranaclinicas.com.br/MobileSaudeWS">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <mob:confirma_presenca>
+         <!--Optional:-->
+         <mob:agenda_id>?</mob:agenda_id>
+      </mob:confirma_presenca>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online/confirma_presenca"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="1da493df-4d45-41d2-a011-9d13b349b384" isOneWay="false" action="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online/especialidade_disponivel" name="especialidade_disponivel" bindingOperationName="especialidade_disponivel" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="5fdacb63-8cc1-4691-8486-09b287a3d012" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://guianet.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:mob="http://www.paranaclinicas.com.br/MobileSaudeWS">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <mob:especialidade_disponivel>
+         <!--Optional:-->
+         <mob:chave_beneficiario>586076</mob:chave_beneficiario>
+         <!--Optional:-->
+         <mob:data_referencia>2019-11-13</mob:data_referencia>
+      </mob:especialidade_disponivel>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online/especialidade_disponivel"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="1904f7e2-9241-4adb-b629-cb602a94180c" isOneWay="false" action="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online/grade_horarios_agenda" name="grade_horarios_agenda" bindingOperationName="grade_horarios_agenda" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="37333f3e-2ef3-4c58-bb6c-0b99943a8938" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://guianet.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:mob="http://www.paranaclinicas.com.br/MobileSaudeWS">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <mob:grade_horarios_agenda>
+         <!--Optional:-->
+         <mob:chave_beneficiario>?</mob:chave_beneficiario>
+         <!--Optional:-->
+         <mob:especialidade_id>?</mob:especialidade_id>
+         <!--Optional:-->
+         <mob:servico_id>?</mob:servico_id>
+         <!--Optional:-->
+         <mob:local_id>?</mob:local_id>
+         <!--Optional:-->
+         <mob:profissional_id>?</mob:profissional_id>
+         <!--Optional:-->
+         <mob:data>?</mob:data>
+      </mob:grade_horarios_agenda>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online/grade_horarios_agenda"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="88efe7cb-1771-4531-8c90-b2d294e59ce4" isOneWay="false" action="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online/grava_agendamento" name="grava_agendamento" bindingOperationName="grava_agendamento" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="cbed0de2-ae73-41b0-ad77-150dde0b6635" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://guianet.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:mob="http://www.paranaclinicas.com.br/MobileSaudeWS">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <mob:grava_agendamento>
+         <!--Optional:-->
+         <mob:chave_beneficiario>586076</mob:chave_beneficiario>
+         <!--Optional:-->
+         <mob:numero_autorizacao></mob:numero_autorizacao>
+         <!--Optional:-->
+         <mob:agenda_id></mob:agenda_id>
+         <!--Optional:-->
+         <mob:data_hora></mob:data_hora>
+         <!--Optional:-->
+         <mob:agenda_confirmada>1</mob:agenda_confirmada>
+         <!--Optional:-->
+         <mob:local_id>24</mob:local_id>
+         <!--Optional:-->
+         <mob:especialidade_id>2</mob:especialidade_id>
+         <!--Optional:-->
+         <mob:servico_id>2905</mob:servico_id>
+         <!--Optional:-->
+         <mob:profissional_id>575</mob:profissional_id>
+         <!--Optional:-->
+         <mob:telefone_paciente></mob:telefone_paciente>
+         <!--Optional:-->
+         <mob:email_paciente></mob:email_paciente>
+         <!--Optional:-->
+         <mob:origem></mob:origem>
+      </mob:grava_agendamento>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online/grava_agendamento"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="c04599e6-fe5d-485a-8821-0a50812d32d3" isOneWay="false" action="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online/local_atendimento_disponivel" name="local_atendimento_disponivel" bindingOperationName="local_atendimento_disponivel" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="f76fa984-eb54-46ad-b01b-4054b007c468" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://guianet.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:mob="http://www.paranaclinicas.com.br/MobileSaudeWS">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <mob:local_atendimento_disponivel>
+         <!--Optional:-->
+         <mob:chave_beneficiario>?</mob:chave_beneficiario>
+         <!--Optional:-->
+         <mob:data_referencia>?</mob:data_referencia>
+         <!--Optional:-->
+         <mob:especialidade_id>?</mob:especialidade_id>
+         <!--Optional:-->
+         <mob:servico_id>?</mob:servico_id>
+      </mob:local_atendimento_disponivel>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online/local_atendimento_disponivel"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="a658acef-1887-467c-8571-31af41677da6" isOneWay="false" action="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online/profissional_disponivel" name="profissional_disponivel" bindingOperationName="profissional_disponivel" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="0f69a28d-a600-48d3-913a-48643c76c22d" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://guianet.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:mob="http://www.paranaclinicas.com.br/MobileSaudeWS">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <mob:profissional_disponivel>
+         <!--Optional:-->
+         <mob:chave_beneficiario>586076</mob:chave_beneficiario>
+         <!--Optional:-->
+         <mob:data_referencia>2019-06-24</mob:data_referencia>
+         <!--Optional:-->
+         <mob:especialidade_id>2</mob:especialidade_id>
+         <!--Optional:-->
+         <mob:servico_id>2905</mob:servico_id>
+         <!--Optional:-->
+         <mob:local_id></mob:local_id>
+         <!--Optional:-->
+         <mob:nome></mob:nome>
+      </mob:profissional_disponivel>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online/profissional_disponivel"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="c18a31bb-ffd8-47bf-a771-58830051cd85" isOneWay="false" action="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online/servico_disponivel" name="servico_disponivel" bindingOperationName="servico_disponivel" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="1ad7cf7d-f5d3-49d1-96c7-a1394b872837" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://guianet.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:mob="http://www.paranaclinicas.com.br/MobileSaudeWS">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <mob:servico_disponivel>
+         <!--Optional:-->
+         <mob:chave_beneficiario>847493</mob:chave_beneficiario>
+         <!--Optional:-->
+         <mob:data_referencia>2019-11-13</mob:data_referencia>
+         <!--Optional:-->
+         <mob:especialidade_id>33</mob:especialidade_id>
+      </mob:servico_disponivel>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+
+]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online/servico_disponivel"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="73edde7d-561d-4aa4-955a-365fa47ebdf0" isOneWay="false" action="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online/status_agendas_paciente" name="status_agendas_paciente" bindingOperationName="status_agendas_paciente" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="c0d1ba7d-57d8-4b3e-ba4f-475cba3bc506" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://guianet.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:mob="http://www.paranaclinicas.com.br/MobileSaudeWS">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <mob:status_agendas_paciente/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online/status_agendas_paciente"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="edd1ae5c-b8f7-414a-bc44-b5fe4aaf2d06" isOneWay="false" action="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online/valida_autorizacao_previa" name="valida_autorizacao_previa" bindingOperationName="valida_autorizacao_previa" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="e08f49fb-f809-4ad3-950a-26610cf05ad5" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://guianet.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:mob="http://www.paranaclinicas.com.br/MobileSaudeWS">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <mob:valida_autorizacao_previa>
+         <!--Optional:-->
+         <mob:chave_beneficiario>?</mob:chave_beneficiario>
+         <!--Optional:-->
+         <mob:numero_autorizacao>?</mob:numero_autorizacao>
+      </mob:valida_autorizacao_previa>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online/valida_autorizacao_previa"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>

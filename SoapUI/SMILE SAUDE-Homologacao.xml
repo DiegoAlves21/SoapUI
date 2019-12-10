@@ -1,0 +1,1120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="816c7044-f275-4d70-8c9d-c8877912d973" activeEnvironment="Default" name="Smile Saúde - HOMOLOGACAO" soapui-version="5.5.0" abortOnError="false" runType="SEQUENTIAL" resourceRoot="" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="051389c4-bfe9-4896-b994-71687aebd91c" wsaVersion="NONE" name="wsmobileBinding" type="wsdl" bindingName="{urn:wsmobile}wsmobileBinding" soapVersion="1_1" anonymous="optional" definition="http://wbt.smilesaude.com.br/sos/wsmobile/geral/servidor.php?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://wbt.smilesaude.com.br/sos/wsmobile/geral/servidor.php?wsdl"><con:part><con:url>http://wbt.smilesaude.com.br/sos/wsmobile/geral/servidor.php?wsdl</con:url><con:content><![CDATA[<definitions targetNamespace="urn:wsmobile" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="urn:wsmobile" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema targetNamespace="urn:wsmobile">
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+      <xsd:import namespace="http://schemas.xmlsoap.org/wsdl/"/>
+      <xsd:complexType name="associado">
+        <xsd:all>
+          <xsd:element name="matricula" type="xsd:string"/>
+          <xsd:element name="nome" type="xsd:string"/>
+          <xsd:element name="email" type="xsd:string"/>
+          <xsd:element name="telefone" type="xsd:string"/>
+          <xsd:element name="celular" type="xsd:string"/>
+          <xsd:element name="cep" type="xsd:string"/>
+          <xsd:element name="endereco" type="xsd:string"/>
+          <xsd:element name="numero" type="xsd:string"/>
+          <xsd:element name="complemento" type="xsd:string"/>
+          <xsd:element name="bairro" type="xsd:string"/>
+          <xsd:element name="uf" type="xsd:string"/>
+          <xsd:element name="cidade" type="xsd:string"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="familia">
+        <xsd:all>
+          <xsd:element name="associado" type="tns:associado"/>
+        </xsd:all>
+      </xsd:complexType>
+    </xsd:schema>
+  </types>
+  <message name="autenticaAssociadoRequest">
+    <part name="login" type="xsd:string"/>
+    <part name="senha" type="xsd:string"/>
+    <part name="sistemaoperacional" type="xsd:string"/>
+  </message>
+  <message name="autenticaAssociadoResponse">
+    <part name="return" type="xsd:Array"/>
+  </message>
+  <message name="autenticaAssociado_novoRequest">
+    <part name="login" type="xsd:string"/>
+    <part name="senha" type="xsd:string"/>
+    <part name="sistemaoperacional" type="xsd:string"/>
+  </message>
+  <message name="autenticaAssociado_novoResponse">
+    <part name="return" type="xsd:Array"/>
+  </message>
+  <message name="lembrarSenhaRequest">
+    <part name="login" type="xsd:string"/>
+    <part name="cpf" type="xsd:string"/>
+    <part name="dtNascimento" type="xsd:date"/>
+  </message>
+  <message name="lembrarSenhaResponse">
+    <part name="return" type="xsd:Array"/>
+  </message>
+  <message name="lembrarSenha_novoRequest">
+    <part name="cpf" type="xsd:string"/>
+    <part name="dtNascimento" type="xsd:date"/>
+  </message>
+  <message name="lembrarSenha_novoResponse">
+    <part name="return" type="xsd:Array"/>
+  </message>
+  <message name="trocarSenhaRequest">
+    <part name="login" type="xsd:string"/>
+    <part name="senhaAtual" type="xsd:string"/>
+    <part name="novaSenha" type="xsd:string"/>
+  </message>
+  <message name="trocarSenhaResponse">
+    <part name="return" type="xsd:Array"/>
+  </message>
+  <message name="trocarSenha_novoRequest">
+    <part name="login" type="xsd:string"/>
+    <part name="senhaAtual" type="xsd:string"/>
+    <part name="novaSenha" type="xsd:string"/>
+  </message>
+  <message name="trocarSenha_novoResponse">
+    <part name="return" type="xsd:Array"/>
+  </message>
+  <message name="cadastraAssociadoRequest">
+    <part name="login" type="xsd:string"/>
+    <part name="cpf" type="xsd:string"/>
+    <part name="dtNascimento" type="xsd:date"/>
+    <part name="senha" type="xsd:string"/>
+  </message>
+  <message name="cadastraAssociadoResponse">
+    <part name="return" type="xsd:Array"/>
+  </message>
+  <message name="cadastraAssociado_novoRequest">
+    <part name="cpf" type="xsd:string"/>
+    <part name="dtNascimento" type="xsd:date"/>
+    <part name="senha" type="xsd:string"/>
+  </message>
+  <message name="cadastraAssociado_novoResponse">
+    <part name="return" type="xsd:Array"/>
+  </message>
+  <message name="listaMensalidadesRequest">
+    <part name="codUsuario" type="xsd:string"/>
+  </message>
+  <message name="listaMensalidadesResponse">
+    <part name="return" type="xsd:Array"/>
+  </message>
+  <message name="getDetalhesMensalidadeRequest">
+    <part name="numDocumento" type="xsd:string"/>
+    <part name="codMensalidade" type="xsd:string"/>
+    <part name="codContrato" type="xsd:string"/>
+  </message>
+  <message name="getDetalhesMensalidadeResponse">
+    <part name="return" type="xsd:Array"/>
+  </message>
+  <message name="getDadosNovaMensalidadeRequest">
+    <part name="codMensalidade" type="xsd:string"/>
+  </message>
+  <message name="getDadosNovaMensalidadeResponse">
+    <part name="return" type="xsd:Array"/>
+  </message>
+  <message name="getExtratoFaturaRequest">
+    <part name="numDocumento" type="xsd:string"/>
+    <part name="codMensalidade" type="xsd:string"/>
+    <part name="codContrato" type="xsd:string"/>
+  </message>
+  <message name="getExtratoFaturaResponse">
+    <part name="return" type="xsd:Array"/>
+  </message>
+  <message name="getExtratoReembolsoRequest">
+    <part name="codUsuario" type="xsd:string"/>
+    <part name="dataInicial" type="xsd:date"/>
+    <part name="dataFinal" type="xsd:date"/>
+  </message>
+  <message name="getExtratoReembolsoResponse">
+    <part name="return" type="xsd:Array"/>
+  </message>
+  <message name="getDetalhesReembolsoRequest">
+    <part name="codReembolso" type="xsd:string"/>
+  </message>
+  <message name="getDetalhesReembolsoResponse">
+    <part name="return" type="xsd:Array"/>
+  </message>
+  <message name="getBeneficiariosReembolsoRequest">
+    <part name="codReembolso" type="xsd:string"/>
+  </message>
+  <message name="getBeneficiariosReembolsoResponse">
+    <part name="return" type="xsd:Array"/>
+  </message>
+  <message name="getStatusRequest">
+    <part name="" type="xsd:"/>
+  </message>
+  <message name="getStatusResponse">
+    <part name="return" type="xsd:Array"/>
+  </message>
+  <message name="getTiposDocumentoRequest">
+    <part name="" type="xsd:"/>
+  </message>
+  <message name="getTiposDocumentoResponse">
+    <part name="return" type="xsd:Array"/>
+  </message>
+  <message name="getTipoDespesaRequest">
+    <part name="" type="xsd:"/>
+  </message>
+  <message name="getTipoDespesaResponse">
+    <part name="return" type="xsd:Array"/>
+  </message>
+  <message name="getRedeNaoReferenciadaRequest">
+    <part name="cpfCnpj" type="xsd:string"/>
+  </message>
+  <message name="getRedeNaoReferenciadaResponse">
+    <part name="return" type="xsd:Array"/>
+  </message>
+  <message name="salvaRedeNaoRefenciadaRequest">
+    <part name="cpfCnpj" type="xsd:string"/>
+    <part name="nome" type="xsd:string"/>
+    <part name="uf" type="xsd:string"/>
+  </message>
+  <message name="salvaRedeNaoRefenciadaResponse">
+    <part name="return" type="xsd:Array"/>
+  </message>
+  <message name="getHistoricoReembolsoRequest">
+    <part name="codReembolso" type="xsd:string"/>
+  </message>
+  <message name="getHistoricoReembolsoResponse">
+    <part name="return" type="xsd:Array"/>
+  </message>
+  <message name="getObservacaoReembolsoRequest">
+    <part name="codReembolso" type="xsd:string"/>
+  </message>
+  <message name="getObservacaoReembolsoResponse">
+    <part name="return" type="xsd:Array"/>
+  </message>
+  <message name="excluiReembolsoRequest">
+    <part name="codReembolso" type="xsd:string"/>
+  </message>
+  <message name="excluiReembolsoResponse">
+    <part name="return" type="xsd:Array"/>
+  </message>
+  <message name="finalizaReembolsoRequest">
+    <part name="codReembolso" type="xsd:string"/>
+  </message>
+  <message name="finalizaReembolsoResponse">
+    <part name="return" type="xsd:Array"/>
+  </message>
+  <message name="gravaReembolsoRequest">
+    <part name="codReembolso" type="xsd:string"/>
+    <part name="codUsuarioTitular" type="xsd:string"/>
+    <part name="codDocumento" type="xsd:string"/>
+    <part name="numDocumento" type="xsd:string"/>
+    <part name="dataSolicitacao" type="xsd:date"/>
+    <part name="itens" type="xsd:string"/>
+  </message>
+  <message name="gravaReembolsoResponse">
+    <part name="return" type="xsd:Array"/>
+  </message>
+  <message name="getExtratoCoparticipacaoRequest">
+    <part name="codUsuario" type="xsd:string"/>
+    <part name="codEmpresa" type="xsd:string"/>
+    <part name="ano" type="xsd:string"/>
+    <part name="mes" type="xsd:string"/>
+  </message>
+  <message name="getExtratoCoparticipacaoResponse">
+    <part name="return" type="xsd:Array"/>
+  </message>
+  <message name="atualizaCadastroRequest">
+    <part name="familia" type="tns:familia"/>
+  </message>
+  <message name="atualizaCadastroResponse">
+    <part name="return" type="xsd:Array"/>
+  </message>
+  <message name="recuperaCartaoRequest">
+    <part name="cpf" type="xsd:string"/>
+    <part name="dataNascimento" type="xsd:date"/>
+  </message>
+  <message name="recuperaCartaoResponse">
+    <part name="return" type="xsd:Array"/>
+  </message>
+  <message name="extratoAutorizacaoRequest">
+    <part name="codAssociado" type="xsd:string"/>
+    <part name="dataInicial" type="xsd:date"/>
+    <part name="dataFinal" type="xsd:date"/>
+  </message>
+  <message name="extratoAutorizacaoResponse">
+    <part name="return" type="xsd:Array"/>
+  </message>
+  <message name="detalhesAutorizacaoRequest">
+    <part name="numGuia" type="xsd:string"/>
+  </message>
+  <message name="detalhesAutorizacaoResponse">
+    <part name="return" type="xsd:Array"/>
+  </message>
+  <message name="statusAutorizacaoRequest">
+    <part name="" type="xsd:"/>
+  </message>
+  <message name="statusAutorizacaoResponse">
+    <part name="return" type="xsd:Array"/>
+  </message>
+  <message name="guiaPDFRequest">
+    <part name="numGuia" type="xsd:string"/>
+  </message>
+  <message name="guiaPDFResponse">
+    <part name="return" type="xsd:Array"/>
+  </message>
+  <message name="irPDFRequest">
+    <part name="codAssociado" type="xsd:string"/>
+    <part name="ano" type="xsd:string"/>
+  </message>
+  <message name="irPDFResponse">
+    <part name="return" type="xsd:Array"/>
+  </message>
+  <message name="quitacaoPDFRequest">
+    <part name="codAssociado" type="xsd:string"/>
+    <part name="codEmpresa" type="xsd:string"/>
+    <part name="ano" type="xsd:string"/>
+  </message>
+  <message name="quitacaoPDFResponse">
+    <part name="return" type="xsd:Array"/>
+  </message>
+  <message name="corrigirRedeRequest">
+    <part name="opcoes" type="xsd:string"/>
+    <part name="observacao" type="xsd:string"/>
+    <part name="nome" type="xsd:string"/>
+    <part name="endereco" type="xsd:string"/>
+    <part name="bairro" type="xsd:string"/>
+    <part name="cidade" type="xsd:string"/>
+    <part name="uf" type="xsd:string"/>
+    <part name="cep" type="xsd:string"/>
+    <part name="telefone" type="xsd:string"/>
+    <part name="email" type="xsd:string"/>
+    <part name="codSolus" type="xsd:string"/>
+    <part name="carteirinha" type="xsd:string"/>
+  </message>
+  <message name="corrigirRedeResponse">
+    <part name="return" type="xsd:Array"/>
+  </message>
+  <message name="associadosAgendamentoRequest">
+    <part name="codAssociado" type="xsd:string"/>
+    <part name="data" type="xsd:date"/>
+  </message>
+  <message name="associadosAgendamentoResponse">
+    <part name="return" type="xsd:Array"/>
+  </message>
+  <portType name="wsmobilePortType">
+    <operation name="autenticaAssociado">
+      <documentation>Retorna dados do associado / familia</documentation>
+      <input message="tns:autenticaAssociadoRequest"/>
+      <output message="tns:autenticaAssociadoResponse"/>
+    </operation>
+    <operation name="autenticaAssociado_novo">
+      <documentation>Retorna dados do associado / familia</documentation>
+      <input message="tns:autenticaAssociado_novoRequest"/>
+      <output message="tns:autenticaAssociado_novoResponse"/>
+    </operation>
+    <operation name="lembrarSenha">
+      <documentation>Retorna a senha do associado</documentation>
+      <input message="tns:lembrarSenhaRequest"/>
+      <output message="tns:lembrarSenhaResponse"/>
+    </operation>
+    <operation name="lembrarSenha_novo">
+      <documentation>Retorna a senha do associado</documentation>
+      <input message="tns:lembrarSenha_novoRequest"/>
+      <output message="tns:lembrarSenha_novoResponse"/>
+    </operation>
+    <operation name="trocarSenha">
+      <documentation>Efetua a troca da senha do associado</documentation>
+      <input message="tns:trocarSenhaRequest"/>
+      <output message="tns:trocarSenhaResponse"/>
+    </operation>
+    <operation name="trocarSenha_novo">
+      <documentation>Efetua a troca da senha do associado</documentation>
+      <input message="tns:trocarSenha_novoRequest"/>
+      <output message="tns:trocarSenha_novoResponse"/>
+    </operation>
+    <operation name="cadastraAssociado">
+      <documentation>Efetua o cadastro da senha do associado</documentation>
+      <input message="tns:cadastraAssociadoRequest"/>
+      <output message="tns:cadastraAssociadoResponse"/>
+    </operation>
+    <operation name="cadastraAssociado_novo">
+      <documentation>Efetua o cadastro da senha do associado</documentation>
+      <input message="tns:cadastraAssociado_novoRequest"/>
+      <output message="tns:cadastraAssociado_novoResponse"/>
+    </operation>
+    <operation name="listaMensalidades">
+      <documentation>Lista as mensalidades do associado</documentation>
+      <input message="tns:listaMensalidadesRequest"/>
+      <output message="tns:listaMensalidadesResponse"/>
+    </operation>
+    <operation name="getDetalhesMensalidade">
+      <documentation>Detalhes da mensalidade do associado</documentation>
+      <input message="tns:getDetalhesMensalidadeRequest"/>
+      <output message="tns:getDetalhesMensalidadeResponse"/>
+    </operation>
+    <operation name="getDadosNovaMensalidade">
+      <documentation>Dados Nova Mensalidade</documentation>
+      <input message="tns:getDadosNovaMensalidadeRequest"/>
+      <output message="tns:getDadosNovaMensalidadeResponse"/>
+    </operation>
+    <operation name="getExtratoFatura">
+      <documentation>Extrato da fatura</documentation>
+      <input message="tns:getExtratoFaturaRequest"/>
+      <output message="tns:getExtratoFaturaResponse"/>
+    </operation>
+    <operation name="getExtratoReembolso">
+      <documentation>Extrato de Reembolso</documentation>
+      <input message="tns:getExtratoReembolsoRequest"/>
+      <output message="tns:getExtratoReembolsoResponse"/>
+    </operation>
+    <operation name="getDetalhesReembolso">
+      <documentation>Detalhes do Reembolso</documentation>
+      <input message="tns:getDetalhesReembolsoRequest"/>
+      <output message="tns:getDetalhesReembolsoResponse"/>
+    </operation>
+    <operation name="getBeneficiariosReembolso">
+      <documentation>Beneficiarios do Reembolso</documentation>
+      <input message="tns:getBeneficiariosReembolsoRequest"/>
+      <output message="tns:getBeneficiariosReembolsoResponse"/>
+    </operation>
+    <operation name="getStatus">
+      <documentation>Status do Reembolso</documentation>
+      <input message="tns:getStatusRequest"/>
+      <output message="tns:getStatusResponse"/>
+    </operation>
+    <operation name="getTiposDocumento">
+      <documentation>Tipos de Documento do Reembolso</documentation>
+      <input message="tns:getTiposDocumentoRequest"/>
+      <output message="tns:getTiposDocumentoResponse"/>
+    </operation>
+    <operation name="getTipoDespesa">
+      <documentation>Tipos de Despesa do Reembolso</documentation>
+      <input message="tns:getTipoDespesaRequest"/>
+      <output message="tns:getTipoDespesaResponse"/>
+    </operation>
+    <operation name="getRedeNaoReferenciada">
+      <documentation>Dados Rede Nao Referenciada</documentation>
+      <input message="tns:getRedeNaoReferenciadaRequest"/>
+      <output message="tns:getRedeNaoReferenciadaResponse"/>
+    </operation>
+    <operation name="salvaRedeNaoRefenciada">
+      <documentation>Cadastra Rede Nao Referenciada</documentation>
+      <input message="tns:salvaRedeNaoRefenciadaRequest"/>
+      <output message="tns:salvaRedeNaoRefenciadaResponse"/>
+    </operation>
+    <operation name="getHistoricoReembolso">
+      <documentation>Historico do Reembolso</documentation>
+      <input message="tns:getHistoricoReembolsoRequest"/>
+      <output message="tns:getHistoricoReembolsoResponse"/>
+    </operation>
+    <operation name="getObservacaoReembolso">
+      <documentation>Observacao do Reembolso</documentation>
+      <input message="tns:getObservacaoReembolsoRequest"/>
+      <output message="tns:getObservacaoReembolsoResponse"/>
+    </operation>
+    <operation name="excluiReembolso">
+      <documentation>Exclui do Reembolso</documentation>
+      <input message="tns:excluiReembolsoRequest"/>
+      <output message="tns:excluiReembolsoResponse"/>
+    </operation>
+    <operation name="finalizaReembolso">
+      <documentation>Finaliza Reembolso</documentation>
+      <input message="tns:finalizaReembolsoRequest"/>
+      <output message="tns:finalizaReembolsoResponse"/>
+    </operation>
+    <operation name="gravaReembolso">
+      <documentation>Grava Reembolso</documentation>
+      <input message="tns:gravaReembolsoRequest"/>
+      <output message="tns:gravaReembolsoResponse"/>
+    </operation>
+    <operation name="getExtratoCoparticipacao">
+      <documentation>Extrato Coparticipacao</documentation>
+      <input message="tns:getExtratoCoparticipacaoRequest"/>
+      <output message="tns:getExtratoCoparticipacaoResponse"/>
+    </operation>
+    <operation name="atualizaCadastro">
+      <documentation>Atualizacao Cadastral</documentation>
+      <input message="tns:atualizaCadastroRequest"/>
+      <output message="tns:atualizaCadastroResponse"/>
+    </operation>
+    <operation name="recuperaCartao">
+      <documentation>Recupera Cartao</documentation>
+      <input message="tns:recuperaCartaoRequest"/>
+      <output message="tns:recuperaCartaoResponse"/>
+    </operation>
+    <operation name="extratoAutorizacao">
+      <documentation>Extrato Autorizacao</documentation>
+      <input message="tns:extratoAutorizacaoRequest"/>
+      <output message="tns:extratoAutorizacaoResponse"/>
+    </operation>
+    <operation name="detalhesAutorizacao">
+      <documentation>Detalhes da Autorizacao</documentation>
+      <input message="tns:detalhesAutorizacaoRequest"/>
+      <output message="tns:detalhesAutorizacaoResponse"/>
+    </operation>
+    <operation name="statusAutorizacao">
+      <documentation>Status da Autorizacao</documentation>
+      <input message="tns:statusAutorizacaoRequest"/>
+      <output message="tns:statusAutorizacaoResponse"/>
+    </operation>
+    <operation name="guiaPDF">
+      <documentation>Guia PDF</documentation>
+      <input message="tns:guiaPDFRequest"/>
+      <output message="tns:guiaPDFResponse"/>
+    </operation>
+    <operation name="irPDF">
+      <documentation>IR PDF</documentation>
+      <input message="tns:irPDFRequest"/>
+      <output message="tns:irPDFResponse"/>
+    </operation>
+    <operation name="quitacaoPDF">
+      <documentation>Carta de Quitacao PDF</documentation>
+      <input message="tns:quitacaoPDFRequest"/>
+      <output message="tns:quitacaoPDFResponse"/>
+    </operation>
+    <operation name="corrigirRede">
+      <documentation>Correcao de Problemas na Rede Credenciada</documentation>
+      <input message="tns:corrigirRedeRequest"/>
+      <output message="tns:corrigirRedeResponse"/>
+    </operation>
+    <operation name="associadosAgendamento">
+      <documentation>Associado com permissao para relizar agendamento</documentation>
+      <input message="tns:associadosAgendamentoRequest"/>
+      <output message="tns:associadosAgendamentoResponse"/>
+    </operation>
+  </portType>
+  <binding name="wsmobileBinding" type="tns:wsmobilePortType">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="autenticaAssociado">
+      <soap:operation soapAction="urn:wsmobile.autenticaAssociado#autenticaAssociado" style="rpc"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:wsmobile.autenticaAssociado" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:wsmobile.autenticaAssociado" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="autenticaAssociado_novo">
+      <soap:operation soapAction="urn:wsmobile.autenticaAssociado_novo#autenticaAssociado_novo" style="rpc"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:wsmobile.autenticaAssociado_novo" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:wsmobile.autenticaAssociado_novo" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="lembrarSenha">
+      <soap:operation soapAction="urn:wsmobile.lembrarSenha#lembrarSenha" style="rpc"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:wsmobile.lembrarSenha" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:wsmobile.lembrarSenha" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="lembrarSenha_novo">
+      <soap:operation soapAction="urn:wsmobile.lembrarSenha_novo#lembrarSenha_novo" style="rpc"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:wsmobile.lembrarSenha_novo" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:wsmobile.lembrarSenha_novo" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="trocarSenha">
+      <soap:operation soapAction="urn:wsmobile.trocarSenha#trocarSenha" style="rpc"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:wsmobile.trocarSenha" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:wsmobile.trocarSenha" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="trocarSenha_novo">
+      <soap:operation soapAction="urn:wsmobile.trocarSenha_novo#trocarSenha_novo" style="rpc"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:wsmobile.trocarSenha_novo" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:wsmobile.trocarSenha_novo" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="cadastraAssociado">
+      <soap:operation soapAction="urn:wsmobile.cadastraAssociado#cadastraAssociado" style="rpc"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:wsmobile.cadastraAssociado" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:wsmobile.cadastraAssociado" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="cadastraAssociado_novo">
+      <soap:operation soapAction="urn:wsmobile.cadastraAssociado_novo#cadastraAssociado_novo" style="rpc"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:wsmobile.cadastraAssociado_novo" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:wsmobile.cadastraAssociado_novo" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="listaMensalidades">
+      <soap:operation soapAction="urn:wsmobile.listaMensalidades#listaMensalidades" style="rpc"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:wsmobile.listaMensalidades" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:wsmobile.listaMensalidades" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="getDetalhesMensalidade">
+      <soap:operation soapAction="urn:wsmobile.getDetalhesMensalidade#getDetalhesMensalidade" style="rpc"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:wsmobile.getDetalhesMensalidade" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:wsmobile.getDetalhesMensalidade" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="getDadosNovaMensalidade">
+      <soap:operation soapAction="urn:wsmobile.getDadosNovaMensalidade#getDadosNovaMensalidade" style="rpc"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:wsmobile.getDadosNovaMensalidade" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:wsmobile.getDadosNovaMensalidade" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="getExtratoFatura">
+      <soap:operation soapAction="urn:wsmobile.getExtratoFatura#getExtratoFatura" style="rpc"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:wsmobile.getExtratoFatura" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:wsmobile.getExtratoFatura" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="getExtratoReembolso">
+      <soap:operation soapAction="urn:wsmobile.getExtratoReembolso#getExtratoReembolso" style="rpc"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:wsmobile.getExtratoReembolso" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:wsmobile.getExtratoReembolso" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="getDetalhesReembolso">
+      <soap:operation soapAction="urn:wsmobile.getDetalhesReembolso#getDetalhesReembolso" style="rpc"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:wsmobile.getDetalhesReembolso" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:wsmobile.getDetalhesReembolso" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="getBeneficiariosReembolso">
+      <soap:operation soapAction="urn:wsmobile.getBeneficiariosReembolso#getBeneficiariosReembolso" style="rpc"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:wsmobile.getBeneficiariosReembolso" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:wsmobile.getBeneficiariosReembolso" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="getStatus">
+      <soap:operation soapAction="urn:wsmobile.getStatus#getStatus" style="rpc"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:wsmobile.getStatus" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:wsmobile.getStatus" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="getTiposDocumento">
+      <soap:operation soapAction="urn:wsmobile.getTiposDocumento#getTiposDocumento" style="rpc"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:wsmobile.getTiposDocumento" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:wsmobile.getTiposDocumento" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="getTipoDespesa">
+      <soap:operation soapAction="urn:wsmobile.getTipoDespesa#getTipoDespesa" style="rpc"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:wsmobile.getTipoDespesa" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:wsmobile.getTipoDespesa" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="getRedeNaoReferenciada">
+      <soap:operation soapAction="urn:wsmobile.getRedeNaoReferenciada#getRedeNaoReferenciada" style="rpc"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:wsmobile.getRedeNaoReferenciada" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:wsmobile.getRedeNaoReferenciada" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="salvaRedeNaoRefenciada">
+      <soap:operation soapAction="urn:wsmobile.salvaRedeNaoRefenciada#salvaRedeNaoRefenciada" style="rpc"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:wsmobile.salvaRedeNaoRefenciada" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:wsmobile.salvaRedeNaoRefenciada" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="getHistoricoReembolso">
+      <soap:operation soapAction="urn:wsmobile.getHistoricoReembolso#getHistoricoReembolso" style="rpc"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:wsmobile.getHistoricoReembolso" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:wsmobile.getHistoricoReembolso" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="getObservacaoReembolso">
+      <soap:operation soapAction="urn:wsmobile.getObservacaoReembolso#getObservacaoReembolso" style="rpc"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:wsmobile.getObservacaoReembolso" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:wsmobile.getObservacaoReembolso" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="excluiReembolso">
+      <soap:operation soapAction="urn:wsmobile.excluiReembolso#excluiReembolso" style="rpc"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:wsmobile.excluiReembolso" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:wsmobile.excluiReembolso" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="finalizaReembolso">
+      <soap:operation soapAction="urn:wsmobile.finalizaReembolso#finalizaReembolso" style="rpc"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:wsmobile.finalizaReembolso" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:wsmobile.finalizaReembolso" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="gravaReembolso">
+      <soap:operation soapAction="urn:wsmobile.gravaReembolso#gravaReembolso" style="rpc"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:wsmobile.gravaReembolso" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:wsmobile.gravaReembolso" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="getExtratoCoparticipacao">
+      <soap:operation soapAction="urn:wsmobile.getExtratoCoparticipacao#getExtratoCoparticipacao" style="rpc"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:wsmobile.getExtratoCoparticipacao" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:wsmobile.getExtratoCoparticipacao" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="atualizaCadastro">
+      <soap:operation soapAction="urn:wsmobile.atualizaCadastro#atualizaCadastro" style="rpc"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:wsmobile.atualizaCadastro" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:wsmobile.atualizaCadastro" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="recuperaCartao">
+      <soap:operation soapAction="urn:wsmobile.recuperaCartao#recuperaCartao" style="rpc"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:wsmobile.recuperaCartao" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:wsmobile.recuperaCartao" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="extratoAutorizacao">
+      <soap:operation soapAction="urn:wsmobile.extratoAutorizacao#extratoAutorizacao" style="rpc"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:wsmobile.extratoAutorizacao" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:wsmobile.extratoAutorizacao" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="detalhesAutorizacao">
+      <soap:operation soapAction="urn:wsmobile.detalhesAutorizacao#detalhesAutorizacao" style="rpc"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:wsmobile.detalhesAutorizacao" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:wsmobile.detalhesAutorizacao" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="statusAutorizacao">
+      <soap:operation soapAction="urn:wsmobile.statusAutorizacao#statusAutorizacao" style="rpc"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:wsmobile.statusAutorizacao" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:wsmobile.statusAutorizacao" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="guiaPDF">
+      <soap:operation soapAction="urn:wsmobile.guiaPDF#guiaPDF" style="rpc"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:wsmobile.guiaPDF" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:wsmobile.guiaPDF" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="irPDF">
+      <soap:operation soapAction="urn:wsmobile.irPDF#irPDF" style="rpc"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:wsmobile.irPDF" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:wsmobile.irPDF" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="quitacaoPDF">
+      <soap:operation soapAction="urn:wsmobile.quitacaoPDF#quitacaoPDF" style="rpc"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:wsmobile.quitacaoPDF" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:wsmobile.quitacaoPDF" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="corrigirRede">
+      <soap:operation soapAction="urn:wsmobile.corrigirRede#corrigirRede" style="rpc"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:wsmobile.corrigirRede" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:wsmobile.corrigirRede" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="associadosAgendamento">
+      <soap:operation soapAction="urn:wsmobile.associadosAgendamento#associadosAgendamento" style="rpc"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:wsmobile.associadosAgendamento" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:wsmobile.associadosAgendamento" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="wsmobile">
+    <port name="wsmobilePort" binding="tns:wsmobileBinding">
+      <soap:address location="http://wbt.smilesaude.com.br/sos/wsmobile/geral/servidor.php"/>
+    </port>
+  </service>
+</definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://wbt.smilesaude.com.br/sos/wsmobile/geral/servidor.php</con:endpoint></con:endpoints><con:operation id="b6a204c0-fb85-42bb-88a4-af5012dccd14" isOneWay="false" action="urn:wsmobile.associadosAgendamento#associadosAgendamento" name="associadosAgendamento" bindingOperationName="associadosAgendamento" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="2f807214-a41c-48aa-bf38-5fb8ec32cf2b" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://wbt.smilesaude.com.br/sos/wsmobile/geral/servidor.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:wsmobile.associadosAgendamento">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:associadosAgendamento soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <codAssociado xsi:type="xsd:string">?</codAssociado>
+         <data xsi:type="xsd:date">?</data>
+      </urn:associadosAgendamento>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:wsmobile.associadosAgendamento#associadosAgendamento"/></con:call></con:operation><con:operation id="3a782132-37d8-4b15-9070-8eb25b35eb09" isOneWay="false" action="urn:wsmobile.atualizaCadastro#atualizaCadastro" name="atualizaCadastro" bindingOperationName="atualizaCadastro" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="a6449d86-16b8-4353-ae37-90ad1197a365" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://wbt.smilesaude.com.br/sos/wsmobile/geral/servidor.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:wsmobile.atualizaCadastro">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:atualizaCadastro soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <familia xsi:type="urn:familia" xmlns:urn="urn:wsmobile">
+            <associado xsi:type="urn:associado">
+               <!--You may enter the following 12 items in any order-->
+               <matricula xsi:type="xsd:string">?</matricula>
+               <nome xsi:type="xsd:string">?</nome>
+               <email xsi:type="xsd:string">?</email>
+               <telefone xsi:type="xsd:string">?</telefone>
+               <celular xsi:type="xsd:string">?</celular>
+               <cep xsi:type="xsd:string">?</cep>
+               <endereco xsi:type="xsd:string">?</endereco>
+               <numero xsi:type="xsd:string">?</numero>
+               <complemento xsi:type="xsd:string">?</complemento>
+               <bairro xsi:type="xsd:string">?</bairro>
+               <uf xsi:type="xsd:string">?</uf>
+               <cidade xsi:type="xsd:string">?</cidade>
+            </associado>
+         </familia>
+      </urn:atualizaCadastro>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:wsmobile.atualizaCadastro#atualizaCadastro"/></con:call></con:operation><con:operation id="64df68ad-6667-47fa-8807-768f4f083ebb" isOneWay="false" action="urn:wsmobile.autenticaAssociado#autenticaAssociado" name="autenticaAssociado" bindingOperationName="autenticaAssociado" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="bf2e3fd0-516f-4e17-8e58-012cea669d43" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://wbt.smilesaude.com.br/sos/wsmobile/geral/servidor.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:wsmobile.autenticaAssociado">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:autenticaAssociado soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <login xsi:type="xsd:string">0573844.00</login>
+         <senha xsi:type="xsd:string">12345678</senha>
+         <sistemaoperacional xsi:type="xsd:string">?</sistemaoperacional>
+      </urn:autenticaAssociado>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:wsmobile.autenticaAssociado#autenticaAssociado"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="1f665b43-e48a-4a2c-b48b-ebbfd4333abf" isOneWay="false" action="urn:wsmobile.autenticaAssociado_novo#autenticaAssociado_novo" name="autenticaAssociado_novo" bindingOperationName="autenticaAssociado_novo" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="57d65204-851b-44f1-90f9-2165cb8851bb" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://wbt.smilesaude.com.br/sos/wsmobile/geral/servidor.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:wsmobile.autenticaAssociado_novo">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:autenticaAssociado_novo soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <login xsi:type="xsd:string">?</login>
+         <senha xsi:type="xsd:string">?</senha>
+         <sistemaoperacional xsi:type="xsd:string">?</sistemaoperacional>
+      </urn:autenticaAssociado_novo>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:wsmobile.autenticaAssociado_novo#autenticaAssociado_novo"/></con:call></con:operation><con:operation id="f66e281e-8c3d-42b6-9ceb-fca5cab1f590" isOneWay="false" action="urn:wsmobile.cadastraAssociado#cadastraAssociado" name="cadastraAssociado" bindingOperationName="cadastraAssociado" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="c145d6f4-e39d-4f17-ad73-2d49c8f2ad38" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://wbt.smilesaude.com.br/sos/wsmobile/geral/servidor.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:wsmobile.cadastraAssociado">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:cadastraAssociado soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <login xsi:type="xsd:string">?</login>
+         <cpf xsi:type="xsd:string">?</cpf>
+         <dtNascimento xsi:type="xsd:date">?</dtNascimento>
+         <senha xsi:type="xsd:string">?</senha>
+      </urn:cadastraAssociado>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:wsmobile.cadastraAssociado#cadastraAssociado"/></con:call></con:operation><con:operation id="12592394-7647-473b-8680-2f63f2ae2a17" isOneWay="false" action="urn:wsmobile.cadastraAssociado_novo#cadastraAssociado_novo" name="cadastraAssociado_novo" bindingOperationName="cadastraAssociado_novo" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="c308a625-6bda-45f7-b181-55f1a8219b91" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://wbt.smilesaude.com.br/sos/wsmobile/geral/servidor.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:wsmobile.cadastraAssociado_novo">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:cadastraAssociado_novo soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <cpf xsi:type="xsd:string">?</cpf>
+         <dtNascimento xsi:type="xsd:date">?</dtNascimento>
+         <senha xsi:type="xsd:string">?</senha>
+      </urn:cadastraAssociado_novo>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:wsmobile.cadastraAssociado_novo#cadastraAssociado_novo"/></con:call></con:operation><con:operation id="56daa2c3-4623-4c12-8d66-39140ba6da21" isOneWay="false" action="urn:wsmobile.corrigirRede#corrigirRede" name="corrigirRede" bindingOperationName="corrigirRede" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="844879a8-958b-4c3f-8970-4d8af8a262da" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://wbt.smilesaude.com.br/sos/wsmobile/geral/servidor.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:wsmobile.corrigirRede">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:corrigirRede soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <opcoes xsi:type="xsd:string">?</opcoes>
+         <observacao xsi:type="xsd:string">?</observacao>
+         <nome xsi:type="xsd:string">?</nome>
+         <endereco xsi:type="xsd:string">?</endereco>
+         <bairro xsi:type="xsd:string">?</bairro>
+         <cidade xsi:type="xsd:string">?</cidade>
+         <uf xsi:type="xsd:string">?</uf>
+         <cep xsi:type="xsd:string">?</cep>
+         <telefone xsi:type="xsd:string">?</telefone>
+         <email xsi:type="xsd:string">?</email>
+         <codSolus xsi:type="xsd:string">?</codSolus>
+         <carteirinha xsi:type="xsd:string">?</carteirinha>
+      </urn:corrigirRede>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:wsmobile.corrigirRede#corrigirRede"/></con:call></con:operation><con:operation id="ee2c9e59-c3d8-4fb4-a5e1-2af68b7b46a2" isOneWay="false" action="urn:wsmobile.detalhesAutorizacao#detalhesAutorizacao" name="detalhesAutorizacao" bindingOperationName="detalhesAutorizacao" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="92c4f5fb-2615-4c0a-a4a6-5c261f6edd7d" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://wbt.smilesaude.com.br/sos/wsmobile/geral/servidor.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:wsmobile.detalhesAutorizacao">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:detalhesAutorizacao soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <numGuia xsi:type="xsd:string">?</numGuia>
+      </urn:detalhesAutorizacao>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:wsmobile.detalhesAutorizacao#detalhesAutorizacao"/></con:call></con:operation><con:operation id="08fdb2cb-8d32-4fa0-94a6-9269c844fecc" isOneWay="false" action="urn:wsmobile.excluiReembolso#excluiReembolso" name="excluiReembolso" bindingOperationName="excluiReembolso" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="cc1f2913-ceac-4f9d-bb08-63c5e1cfa7f9" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://wbt.smilesaude.com.br/sos/wsmobile/geral/servidor.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:wsmobile.excluiReembolso">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:excluiReembolso soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <codReembolso xsi:type="xsd:string">?</codReembolso>
+      </urn:excluiReembolso>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:wsmobile.excluiReembolso#excluiReembolso"/></con:call></con:operation><con:operation id="5de4c63a-f5fe-47c5-9eb8-83a971b4511f" isOneWay="false" action="urn:wsmobile.extratoAutorizacao#extratoAutorizacao" name="extratoAutorizacao" bindingOperationName="extratoAutorizacao" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="b9aadae4-d202-4b00-9e79-d758b2035291" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://wbt.smilesaude.com.br/sos/wsmobile/geral/servidor.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:wsmobile.extratoAutorizacao">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:extratoAutorizacao soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <codAssociado xsi:type="xsd:string">?</codAssociado>
+         <dataInicial xsi:type="xsd:date">?</dataInicial>
+         <dataFinal xsi:type="xsd:date">?</dataFinal>
+      </urn:extratoAutorizacao>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:wsmobile.extratoAutorizacao#extratoAutorizacao"/></con:call></con:operation><con:operation id="a4e572cc-da7d-408b-ba0c-11c61135924c" isOneWay="false" action="urn:wsmobile.finalizaReembolso#finalizaReembolso" name="finalizaReembolso" bindingOperationName="finalizaReembolso" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="4e52f5bc-4b6a-4aab-9d75-e017fd631542" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://wbt.smilesaude.com.br/sos/wsmobile/geral/servidor.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:wsmobile.finalizaReembolso">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:finalizaReembolso soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <codReembolso xsi:type="xsd:string">?</codReembolso>
+      </urn:finalizaReembolso>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:wsmobile.finalizaReembolso#finalizaReembolso"/></con:call></con:operation><con:operation id="4b4d960d-234f-4af5-86b9-4153bcec119c" isOneWay="false" action="urn:wsmobile.getBeneficiariosReembolso#getBeneficiariosReembolso" name="getBeneficiariosReembolso" bindingOperationName="getBeneficiariosReembolso" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="7b71bbd4-f749-47c9-9b9b-583082f058f2" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://wbt.smilesaude.com.br/sos/wsmobile/geral/servidor.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:wsmobile.getBeneficiariosReembolso">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:getBeneficiariosReembolso soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <codReembolso xsi:type="xsd:string">?</codReembolso>
+      </urn:getBeneficiariosReembolso>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:wsmobile.getBeneficiariosReembolso#getBeneficiariosReembolso"/></con:call></con:operation><con:operation id="a17dae27-4816-45cd-9490-f9a4f2f28a37" isOneWay="false" action="urn:wsmobile.getDadosNovaMensalidade#getDadosNovaMensalidade" name="getDadosNovaMensalidade" bindingOperationName="getDadosNovaMensalidade" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="adcf03a9-59a2-40de-bc14-6c3d4847284c" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://wbt.smilesaude.com.br/sos/wsmobile/geral/servidor.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:wsmobile.getDadosNovaMensalidade">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:getDadosNovaMensalidade soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <codMensalidade xsi:type="xsd:string">?</codMensalidade>
+      </urn:getDadosNovaMensalidade>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:wsmobile.getDadosNovaMensalidade#getDadosNovaMensalidade"/></con:call></con:operation><con:operation id="3f4d5140-ede1-4b4d-9206-41c2bddacb62" isOneWay="false" action="urn:wsmobile.getDetalhesMensalidade#getDetalhesMensalidade" name="getDetalhesMensalidade" bindingOperationName="getDetalhesMensalidade" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="518acc4a-0e35-42bc-a16c-123c4cb5f2a3" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://wbt.smilesaude.com.br/sos/wsmobile/geral/servidor.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:wsmobile.getDetalhesMensalidade">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:getDetalhesMensalidade soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <numDocumento xsi:type="xsd:string">?</numDocumento>
+         <codMensalidade xsi:type="xsd:string">?</codMensalidade>
+         <codContrato xsi:type="xsd:string">?</codContrato>
+      </urn:getDetalhesMensalidade>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:wsmobile.getDetalhesMensalidade#getDetalhesMensalidade"/></con:call></con:operation><con:operation id="44adefb9-23eb-460a-9576-ccdcd4f20196" isOneWay="false" action="urn:wsmobile.getDetalhesReembolso#getDetalhesReembolso" name="getDetalhesReembolso" bindingOperationName="getDetalhesReembolso" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="899fe0bc-16e9-4291-9984-f73ce37e0584" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://wbt.smilesaude.com.br/sos/wsmobile/geral/servidor.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:wsmobile.getDetalhesReembolso">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:getDetalhesReembolso soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <codReembolso xsi:type="xsd:string">?</codReembolso>
+      </urn:getDetalhesReembolso>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:wsmobile.getDetalhesReembolso#getDetalhesReembolso"/></con:call></con:operation><con:operation id="584834a5-7d41-4929-a3e6-e027eff1606c" isOneWay="false" action="urn:wsmobile.getExtratoCoparticipacao#getExtratoCoparticipacao" name="getExtratoCoparticipacao" bindingOperationName="getExtratoCoparticipacao" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="660aa75d-2fa2-4242-a3c8-f37763720ffc" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://wbt.smilesaude.com.br/sos/wsmobile/geral/servidor.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:wsmobile.getExtratoCoparticipacao">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:getExtratoCoparticipacao soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <codUsuario xsi:type="xsd:string">?</codUsuario>
+         <codEmpresa xsi:type="xsd:string">?</codEmpresa>
+         <ano xsi:type="xsd:string">?</ano>
+         <mes xsi:type="xsd:string">?</mes>
+      </urn:getExtratoCoparticipacao>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:wsmobile.getExtratoCoparticipacao#getExtratoCoparticipacao"/></con:call></con:operation><con:operation id="87acb099-b7ba-4559-872b-2e60d49411cc" isOneWay="false" action="urn:wsmobile.getExtratoFatura#getExtratoFatura" name="getExtratoFatura" bindingOperationName="getExtratoFatura" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="074bbb63-7935-4fba-98b9-b1a564e1d747" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://wbt.smilesaude.com.br/sos/wsmobile/geral/servidor.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:wsmobile.getExtratoFatura">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:getExtratoFatura soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <numDocumento xsi:type="xsd:string">?</numDocumento>
+         <codMensalidade xsi:type="xsd:string">?</codMensalidade>
+         <codContrato xsi:type="xsd:string">?</codContrato>
+      </urn:getExtratoFatura>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:wsmobile.getExtratoFatura#getExtratoFatura"/></con:call></con:operation><con:operation id="c9cbcc02-ae2d-4ae8-8523-f5d87012626e" isOneWay="false" action="urn:wsmobile.getExtratoReembolso#getExtratoReembolso" name="getExtratoReembolso" bindingOperationName="getExtratoReembolso" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="ab0e7088-7a18-46fd-a20d-856c53fd3037" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://wbt.smilesaude.com.br/sos/wsmobile/geral/servidor.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:wsmobile.getExtratoReembolso">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:getExtratoReembolso soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <codUsuario xsi:type="xsd:string">?</codUsuario>
+         <dataInicial xsi:type="xsd:date">?</dataInicial>
+         <dataFinal xsi:type="xsd:date">?</dataFinal>
+      </urn:getExtratoReembolso>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:wsmobile.getExtratoReembolso#getExtratoReembolso"/></con:call></con:operation><con:operation id="95199bdb-cdc6-4d8f-83c5-44ab746b26a5" isOneWay="false" action="urn:wsmobile.getHistoricoReembolso#getHistoricoReembolso" name="getHistoricoReembolso" bindingOperationName="getHistoricoReembolso" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="dc3e08f5-4eda-4d97-ada7-11b8708d94fd" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://wbt.smilesaude.com.br/sos/wsmobile/geral/servidor.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:wsmobile.getHistoricoReembolso">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:getHistoricoReembolso soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <codReembolso xsi:type="xsd:string">?</codReembolso>
+      </urn:getHistoricoReembolso>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:wsmobile.getHistoricoReembolso#getHistoricoReembolso"/></con:call></con:operation><con:operation id="81550f88-c726-4423-a3fb-ab61241a2985" isOneWay="false" action="urn:wsmobile.getObservacaoReembolso#getObservacaoReembolso" name="getObservacaoReembolso" bindingOperationName="getObservacaoReembolso" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="2cca3fad-0471-43e0-a983-02b0a9d7cbe2" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://wbt.smilesaude.com.br/sos/wsmobile/geral/servidor.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:wsmobile.getObservacaoReembolso">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:getObservacaoReembolso soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <codReembolso xsi:type="xsd:string">?</codReembolso>
+      </urn:getObservacaoReembolso>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:wsmobile.getObservacaoReembolso#getObservacaoReembolso"/></con:call></con:operation><con:operation id="d96a8737-e261-49d1-86ca-7fd47c8503e9" isOneWay="false" action="urn:wsmobile.getRedeNaoReferenciada#getRedeNaoReferenciada" name="getRedeNaoReferenciada" bindingOperationName="getRedeNaoReferenciada" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="f8c9be8b-34ee-4fc6-aa44-bcbd6795cf08" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://wbt.smilesaude.com.br/sos/wsmobile/geral/servidor.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:wsmobile.getRedeNaoReferenciada">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:getRedeNaoReferenciada soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <cpfCnpj xsi:type="xsd:string">?</cpfCnpj>
+      </urn:getRedeNaoReferenciada>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:wsmobile.getRedeNaoReferenciada#getRedeNaoReferenciada"/></con:call></con:operation><con:operation id="69d99c98-e2c0-464c-a3d8-46929d000d71" isOneWay="false" action="urn:wsmobile.getStatus#getStatus" name="getStatus" bindingOperationName="getStatus" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="efb6e5e2-d434-4543-9993-44170f1f1c25" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://wbt.smilesaude.com.br/sos/wsmobile/geral/servidor.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:wsmobile.getStatus">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:getStatus soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:wsmobile.getStatus#getStatus"/></con:call></con:operation><con:operation id="06b869be-7999-48ac-a71a-bee4d7656cbc" isOneWay="false" action="urn:wsmobile.getTipoDespesa#getTipoDespesa" name="getTipoDespesa" bindingOperationName="getTipoDespesa" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="cb1abf0a-f364-4c15-8fcb-18e954e9a4fa" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://wbt.smilesaude.com.br/sos/wsmobile/geral/servidor.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:wsmobile.getTipoDespesa">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:getTipoDespesa soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:wsmobile.getTipoDespesa#getTipoDespesa"/></con:call></con:operation><con:operation id="a45a55d7-64f1-434e-8932-68a4deca38e6" isOneWay="false" action="urn:wsmobile.getTiposDocumento#getTiposDocumento" name="getTiposDocumento" bindingOperationName="getTiposDocumento" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="1ecc88cb-1b7c-4155-acd7-24a92d28b4fb" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://wbt.smilesaude.com.br/sos/wsmobile/geral/servidor.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:wsmobile.getTiposDocumento">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:getTiposDocumento soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:wsmobile.getTiposDocumento#getTiposDocumento"/></con:call></con:operation><con:operation id="d506f5e1-a515-45f8-b64d-ddec93205a84" isOneWay="false" action="urn:wsmobile.gravaReembolso#gravaReembolso" name="gravaReembolso" bindingOperationName="gravaReembolso" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="4abdacb7-0849-44f7-a481-3d6de5ce8a7f" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://wbt.smilesaude.com.br/sos/wsmobile/geral/servidor.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:wsmobile.gravaReembolso">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:gravaReembolso soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <codReembolso xsi:type="xsd:string">?</codReembolso>
+         <codUsuarioTitular xsi:type="xsd:string">?</codUsuarioTitular>
+         <codDocumento xsi:type="xsd:string">?</codDocumento>
+         <numDocumento xsi:type="xsd:string">?</numDocumento>
+         <dataSolicitacao xsi:type="xsd:date">?</dataSolicitacao>
+         <itens xsi:type="xsd:string">?</itens>
+      </urn:gravaReembolso>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:wsmobile.gravaReembolso#gravaReembolso"/></con:call></con:operation><con:operation id="df674544-866b-4be5-88c9-c1edcd34809f" isOneWay="false" action="urn:wsmobile.guiaPDF#guiaPDF" name="guiaPDF" bindingOperationName="guiaPDF" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="e8c5f3d6-2a8e-4a60-8175-275129ab4df6" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://wbt.smilesaude.com.br/sos/wsmobile/geral/servidor.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:wsmobile.guiaPDF">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:guiaPDF soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <numGuia xsi:type="xsd:string">?</numGuia>
+      </urn:guiaPDF>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:wsmobile.guiaPDF#guiaPDF"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="b8a38a76-6357-46d5-b938-903739e0f1f3" isOneWay="false" action="urn:wsmobile.irPDF#irPDF" name="irPDF" bindingOperationName="irPDF" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="6a3cf459-3adc-4e80-9212-810c4b5269df" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://wbt.smilesaude.com.br/sos/wsmobile/geral/servidor.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:wsmobile.irPDF">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:irPDF soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <codAssociado xsi:type="xsd:string">3304044</codAssociado>
+         <ano xsi:type="xsd:string">2018</ano>
+      </urn:irPDF>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:wsmobile.irPDF#irPDF"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="c259147a-007b-45f0-9b72-f6a97cf6db6d" isOneWay="false" action="urn:wsmobile.lembrarSenha#lembrarSenha" name="lembrarSenha" bindingOperationName="lembrarSenha" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="5c5adb51-cb0d-4012-b28f-08aa913c565c" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://wbt.smilesaude.com.br/sos/wsmobile/geral/servidor.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:wsmobile.lembrarSenha">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:lembrarSenha soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <login xsi:type="xsd:string">?</login>
+         <cpf xsi:type="xsd:string">?</cpf>
+         <dtNascimento xsi:type="xsd:date">?</dtNascimento>
+      </urn:lembrarSenha>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:wsmobile.lembrarSenha#lembrarSenha"/></con:call></con:operation><con:operation id="865325f4-ce8c-4856-98e3-a98e53cc81db" isOneWay="false" action="urn:wsmobile.lembrarSenha_novo#lembrarSenha_novo" name="lembrarSenha_novo" bindingOperationName="lembrarSenha_novo" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="a2b0bcca-e1ab-48f8-942f-9dafb2d5c62d" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://wbt.smilesaude.com.br/sos/wsmobile/geral/servidor.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:wsmobile.lembrarSenha_novo">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:lembrarSenha_novo soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <cpf xsi:type="xsd:string">?</cpf>
+         <dtNascimento xsi:type="xsd:date">?</dtNascimento>
+      </urn:lembrarSenha_novo>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:wsmobile.lembrarSenha_novo#lembrarSenha_novo"/></con:call></con:operation><con:operation id="4fb4c703-a51a-4a76-a6a4-376e8a720eed" isOneWay="false" action="urn:wsmobile.listaMensalidades#listaMensalidades" name="listaMensalidades" bindingOperationName="listaMensalidades" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="458938a9-071c-470a-9151-9440de495cdc" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://wbt.smilesaude.com.br/sos/wsmobile/geral/servidor.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:wsmobile.listaMensalidades">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:listaMensalidades soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <codUsuario xsi:type="xsd:string">?</codUsuario>
+      </urn:listaMensalidades>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:wsmobile.listaMensalidades#listaMensalidades"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="8fa12692-7c4e-48eb-8393-01fd684fbe60" isOneWay="false" action="urn:wsmobile.quitacaoPDF#quitacaoPDF" name="quitacaoPDF" bindingOperationName="quitacaoPDF" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="cfd0e724-6693-4ea9-9f82-d8d2c0642d8e" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://wbt.smilesaude.com.br/sos/wsmobile/geral/servidor.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:wsmobile.quitacaoPDF">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:quitacaoPDF soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <codAssociado xsi:type="xsd:string">3304044</codAssociado>
+         <codEmpresa xsi:type="xsd:string"></codEmpresa>
+         <ano xsi:type="xsd:string">2017</ano>
+      </urn:quitacaoPDF>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:wsmobile.quitacaoPDF#quitacaoPDF"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="62b561fd-f589-4540-978e-ff75043e3bcd" isOneWay="false" action="urn:wsmobile.recuperaCartao#recuperaCartao" name="recuperaCartao" bindingOperationName="recuperaCartao" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="3a4e898e-493e-4672-96c6-b7e1d97fcd47" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://wbt.smilesaude.com.br/sos/wsmobile/geral/servidor.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:wsmobile.recuperaCartao">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:recuperaCartao soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <cpf xsi:type="xsd:string">?</cpf>
+         <dataNascimento xsi:type="xsd:date">?</dataNascimento>
+      </urn:recuperaCartao>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:wsmobile.recuperaCartao#recuperaCartao"/></con:call></con:operation><con:operation id="30b6cb70-ddf0-498d-9687-9a4d544358e2" isOneWay="false" action="urn:wsmobile.salvaRedeNaoRefenciada#salvaRedeNaoRefenciada" name="salvaRedeNaoRefenciada" bindingOperationName="salvaRedeNaoRefenciada" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="580fd799-8d67-4a05-bdd4-f1c7d6bd76b9" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://wbt.smilesaude.com.br/sos/wsmobile/geral/servidor.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:wsmobile.salvaRedeNaoRefenciada">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:salvaRedeNaoRefenciada soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <cpfCnpj xsi:type="xsd:string">?</cpfCnpj>
+         <nome xsi:type="xsd:string">?</nome>
+         <uf xsi:type="xsd:string">?</uf>
+      </urn:salvaRedeNaoRefenciada>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:wsmobile.salvaRedeNaoRefenciada#salvaRedeNaoRefenciada"/></con:call></con:operation><con:operation id="f719d292-7971-45eb-9529-36fbb433512a" isOneWay="false" action="urn:wsmobile.statusAutorizacao#statusAutorizacao" name="statusAutorizacao" bindingOperationName="statusAutorizacao" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="3003fd92-4fdb-4b9b-8402-5626c579d8b0" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://wbt.smilesaude.com.br/sos/wsmobile/geral/servidor.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:wsmobile.statusAutorizacao">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:statusAutorizacao soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:wsmobile.statusAutorizacao#statusAutorizacao"/></con:call></con:operation><con:operation id="ae2ae96c-798f-4e45-8734-1cdbbb9700e4" isOneWay="false" action="urn:wsmobile.trocarSenha#trocarSenha" name="trocarSenha" bindingOperationName="trocarSenha" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="c056b14c-740b-49f4-ba19-c66caac088a3" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://wbt.smilesaude.com.br/sos/wsmobile/geral/servidor.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:wsmobile.trocarSenha">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:trocarSenha soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <login xsi:type="xsd:string">?</login>
+         <senhaAtual xsi:type="xsd:string">?</senhaAtual>
+         <novaSenha xsi:type="xsd:string">?</novaSenha>
+      </urn:trocarSenha>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:wsmobile.trocarSenha#trocarSenha"/></con:call></con:operation><con:operation id="ef2dc9c4-4db2-4c1c-9e71-c43287debf93" isOneWay="false" action="urn:wsmobile.trocarSenha_novo#trocarSenha_novo" name="trocarSenha_novo" bindingOperationName="trocarSenha_novo" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="72d6819e-e4e2-4a79-9965-7b24bea8065f" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://wbt.smilesaude.com.br/sos/wsmobile/geral/servidor.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:wsmobile.trocarSenha_novo">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:trocarSenha_novo soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <login xsi:type="xsd:string">?</login>
+         <senhaAtual xsi:type="xsd:string">?</senhaAtual>
+         <novaSenha xsi:type="xsd:string">?</novaSenha>
+      </urn:trocarSenha_novo>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:wsmobile.trocarSenha_novo#trocarSenha_novo"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>

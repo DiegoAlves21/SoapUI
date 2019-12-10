@@ -1,0 +1,726 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="94c1908b-2b72-45c9-b2fd-99d2546a93ec" activeEnvironment="Default" name="SMILE-SAUDE-Agendamento-PRD" resourceRoot="" soapui-version="5.5.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="d600dbe4-ba41-4ec0-a888-e20db1f7e1ad" wsaVersion="NONE" name="ApiAgendamentoBinding" type="wsdl" bindingName="{urn:ApiAgendamento}ApiAgendamentoBinding" soapVersion="1_1" anonymous="optional" definition="http://sos.smilesaude.com.br/mobile/wsagendamento/index.php?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://sos.smilesaude.com.br/mobile/wsagendamento/index.php?wsdl"><con:part><con:url>http://sos.smilesaude.com.br/mobile/wsagendamento/index.php?wsdl</con:url><con:content><![CDATA[<definitions targetNamespace="urn:ApiAgendamento" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="urn:ApiAgendamento" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema targetNamespace="urn:ApiAgendamento">
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+      <xsd:import namespace="http://schemas.xmlsoap.org/wsdl/"/>
+      <xsd:complexType name="especialidades2">
+        <xsd:sequence>
+          <xsd:element name="especialidade_id" type="xsd:string"/>
+          <xsd:element name="Especialidade_descricao" type="xsd:string"/>
+          <xsd:element name="cbos" type="xsd:string"/>
+          <xsd:element name="alerta" type="xsd:string"/>
+          <xsd:element name="exige_autorizacao" type="xsd:boolean"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="listarEspecialidade">
+        <xsd:all>
+          <xsd:element name="especialidade_id" type="xsd:string"/>
+          <xsd:element name="Especialidade_descricao" type="xsd:string"/>
+          <xsd:element name="cbos" type="xsd:string"/>
+          <xsd:element name="alerta" type="xsd:string"/>
+          <xsd:element name="exige_autorizacao" type="xsd:boolean"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="especialidades">
+        <xsd:complexContent>
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute ref="SOAP-ENC:arrayType" wsdl:arrayType="tns:listarEspecialidade[]" xmlns:wsdl1="http://schemas.xmlsoap.org/wsdl/"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="listarServicos">
+        <xsd:all>
+          <xsd:element name="servico_id" type="xsd:string"/>
+          <xsd:element name="procedimento" type="xsd:string"/>
+          <xsd:element name="servico_descricao" type="xsd:string"/>
+          <xsd:element name="exige_autorizacao" type="xsd:boolean"/>
+          <xsd:element name="alerta" type="xsd:string"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="servicos">
+        <xsd:complexContent>
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute ref="SOAP-ENC:arrayType" wsdl:arrayType="tns:listarServicos[]" xmlns:wsdl1="http://schemas.xmlsoap.org/wsdl/"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="listarLocais">
+        <xsd:all>
+          <xsd:element name="local_id" type="xsd:string"/>
+          <xsd:element name="local_descricao" type="xsd:string"/>
+          <xsd:element name="local_endereco" type="xsd:string"/>
+          <xsd:element name="local_numero" type="xsd:string"/>
+          <xsd:element name="local_complemento" type="xsd:string"/>
+          <xsd:element name="local_bairro" type="xsd:string"/>
+          <xsd:element name="local_cidade" type="xsd:string"/>
+          <xsd:element name="local_cidade_id" type="xsd:string"/>
+          <xsd:element name="local_estado" type="xsd:string"/>
+          <xsd:element name="local_cep" type="xsd:string"/>
+          <xsd:element name="local_telefone" type="xsd:string"/>
+          <xsd:element name="local_prioridade" type="xsd:string"/>
+          <xsd:element name="local_prioridade_ordem" type="xsd:string"/>
+          <xsd:element name="alerta" type="xsd:string"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="locais">
+        <xsd:complexContent>
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute ref="SOAP-ENC:arrayType" wsdl:arrayType="tns:listarLocais[]" xmlns:wsdl1="http://schemas.xmlsoap.org/wsdl/"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="listarProfissionais">
+        <xsd:all>
+          <xsd:element name="profissional_id" type="xsd:string"/>
+          <xsd:element name="profissional_nome" type="xsd:string"/>
+          <xsd:element name="local_telefone" type="xsd:string"/>
+          <xsd:element name="local_id" type="xsd:string"/>
+          <xsd:element name="local_descricao" type="xsd:string"/>
+          <xsd:element name="local_endereco" type="xsd:string"/>
+          <xsd:element name="local_numero" type="xsd:string"/>
+          <xsd:element name="local_complemento" type="xsd:string"/>
+          <xsd:element name="local_bairro" type="xsd:string"/>
+          <xsd:element name="local_estado" type="xsd:string"/>
+          <xsd:element name="local_cidade_id" type="xsd:string"/>
+          <xsd:element name="local_cidade" type="xsd:string"/>
+          <xsd:element name="local_cep" type="xsd:string"/>
+          <xsd:element name="primeira_agenda" type="xsd:dateTime"/>
+          <xsd:element name="quantidade_agendas_disponiveis" type="xsd:int"/>
+          <xsd:element name="alerta" type="xsd:int"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="profissionais">
+        <xsd:complexContent>
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute ref="SOAP-ENC:arrayType" wsdl:arrayType="tns:listarProfissionais[]" xmlns:wsdl1="http://schemas.xmlsoap.org/wsdl/"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="listarAgendaDisponivel">
+        <xsd:all>
+          <xsd:element name="Data" type="xsd:date"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="disponibilidades">
+        <xsd:complexContent>
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute ref="SOAP-ENC:arrayType" wsdl:arrayType="tns:listarAgendaDisponivel[]" xmlns:wsdl1="http://schemas.xmlsoap.org/wsdl/"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="listarHorariosDisponivel">
+        <xsd:all>
+          <xsd:element name="Data" type="xsd:date"/>
+          <xsd:element name="hora" type="xsd:string"/>
+          <xsd:element name="agenda_id" type="xsd:string"/>
+          <xsd:element name="chave_beneficiario" type="xsd:string"/>
+          <xsd:element name="nome_beneficiario" type="xsd:string"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="horarios">
+        <xsd:complexContent>
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute ref="SOAP-ENC:arrayType" wsdl:arrayType="tns:listarHorariosDisponivel[]" xmlns:wsdl1="http://schemas.xmlsoap.org/wsdl/"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="listarRecomendacoes">
+        <xsd:all>
+          <xsd:element name="ordem" type="xsd:int"/>
+          <xsd:element name="recomendacao" type="xsd:string"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="recomendacoes">
+        <xsd:complexContent>
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute ref="SOAP-ENC:arrayType" wsdl:arrayType="tns:listarRecomendacoes[]" xmlns:wsdl1="http://schemas.xmlsoap.org/wsdl/"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="listarStatus">
+        <xsd:all>
+          <xsd:element name="status_id" type="xsd:string"/>
+          <xsd:element name="status_descricao" type="xsd:string"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="status_agenda">
+        <xsd:complexContent>
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute ref="SOAP-ENC:arrayType" wsdl:arrayType="tns:listarStatus[]" xmlns:wsdl1="http://schemas.xmlsoap.org/wsdl/"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="listarAgendamentos">
+        <xsd:all>
+          <xsd:element name="agenda_id" type="xsd:string"/>
+          <xsd:element name="data_hora" type="xsd:dateTime"/>
+          <xsd:element name="status_id" type="xsd:string"/>
+          <xsd:element name="agenda_confirmada" type="xsd:string"/>
+          <xsd:element name="especialidade_id" type="xsd:string"/>
+          <xsd:element name="especialidade_descricao" type="xsd:string"/>
+          <xsd:element name="chave_beneficiario" type="xsd:string"/>
+          <xsd:element name="nome_beneficiario" type="xsd:string"/>
+          <xsd:element name="profissional_id" type="xsd:string"/>
+          <xsd:element name="profissional_nome" type="xsd:string"/>
+          <xsd:element name="local_id" type="xsd:string"/>
+          <xsd:element name="Local_descricao" type="xsd:string"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="Agendamentos">
+        <xsd:complexContent>
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute ref="SOAP-ENC:arrayType" wsdl:arrayType="tns:listarAgendamentos[]" xmlns:wsdl1="http://schemas.xmlsoap.org/wsdl/"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="listarDetalhe">
+        <xsd:all>
+          <xsd:element name="agenda_id" type="xsd:string"/>
+          <xsd:element name="data_hora" type="xsd:dateTime"/>
+          <xsd:element name="status_id" type="xsd:string"/>
+          <xsd:element name="cancelamento_data_hora" type="xsd:string"/>
+          <xsd:element name="cancelamento_motivo" type="xsd:string"/>
+          <xsd:element name="atendimento_data_hora" type="xsd:string"/>
+          <xsd:element name="atendimento_nota" type="xsd:string"/>
+          <xsd:element name="especialidade_id" type="xsd:string"/>
+          <xsd:element name="especialidade_descricao" type="xsd:string"/>
+          <xsd:element name="chave_beneficiario" type="xsd:string"/>
+          <xsd:element name="beneficiario_nome" type="xsd:string"/>
+          <xsd:element name="beneficiario_email" type="xsd:string"/>
+          <xsd:element name="beneficiario_telefone" type="xsd:string"/>
+          <xsd:element name="profissional_id" type="xsd:string"/>
+          <xsd:element name="profissional_nome" type="xsd:string"/>
+          <xsd:element name="local_id" type="xsd:string"/>
+          <xsd:element name="local_descricao" type="xsd:string"/>
+          <xsd:element name="local_telefone" type="xsd:string"/>
+          <xsd:element name="local_endereco" type="xsd:string"/>
+          <xsd:element name="local_numero" type="xsd:string"/>
+          <xsd:element name="local_complemento" type="xsd:string"/>
+          <xsd:element name="local_bairro" type="xsd:string"/>
+          <xsd:element name="local_estado" type="xsd:string"/>
+          <xsd:element name="local_cidade_id" type="xsd:string"/>
+          <xsd:element name="local_cidade" type="xsd:string"/>
+          <xsd:element name="local_cep" type="xsd:string"/>
+          <xsd:element name="recomendacoes" type="tns:recomendacoes"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="detalhes">
+        <xsd:complexContent>
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute ref="SOAP-ENC:arrayType" wsdl:arrayType="tns:listarDetalhe[]" xmlns:wsdl1="http://schemas.xmlsoap.org/wsdl/"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+    </xsd:schema>
+  </types>
+  <message name="especialidade_disponivelRequest">
+    <part name="chave_beneficiario" type="xsd:string"/>
+    <part name="data_referencia" type="xsd:date"/>
+  </message>
+  <message name="especialidade_disponivelResponse">
+    <part name="status" type="xsd:boolean"/>
+    <part name="motivo_critica" type="xsd:string"/>
+    <part name="especialidades" type="tns:especialidades"/>
+    <part name="alerta" type="xsd:string"/>
+  </message>
+  <message name="servico_disponivelRequest">
+    <part name="chave_beneficiario" type="xsd:string"/>
+    <part name="data_referencia" type="xsd:date"/>
+    <part name="especialidade_id" type="xsd:int"/>
+  </message>
+  <message name="servico_disponivelResponse">
+    <part name="status" type="xsd:boolean"/>
+    <part name="motivo_critica" type="xsd:string"/>
+    <part name="servicos" type="tns:servicos"/>
+    <part name="alerta" type="xsd:string"/>
+  </message>
+  <message name="local_atendimento_disponivelRequest">
+    <part name="chave_beneficiario" type="xsd:string"/>
+    <part name="data_referencia" type="xsd:date"/>
+    <part name="especialidade_id" type="xsd:string"/>
+    <part name="servico_id" type="xsd:string"/>
+  </message>
+  <message name="local_atendimento_disponivelResponse">
+    <part name="status" type="xsd:boolean"/>
+    <part name="motivo_critica" type="xsd:string"/>
+    <part name="locais" type="tns:locais"/>
+    <part name="alerta" type="xsd:string"/>
+  </message>
+  <message name="profissional_disponivelRequest">
+    <part name="chave_beneficiario" type="xsd:string"/>
+    <part name="data_referencia" type="xsd:date"/>
+    <part name="especialidade_id" type="xsd:string"/>
+    <part name="servico_id" type="xsd:string"/>
+    <part name="local_id" type="xsd:string"/>
+    <part name="nome" type="xsd:string"/>
+  </message>
+  <message name="profissional_disponivelResponse">
+    <part name="status" type="xsd:boolean"/>
+    <part name="motivo_critica" type="xsd:string"/>
+    <part name="profissionais" type="tns:profissionais"/>
+    <part name="alerta" type="xsd:string"/>
+  </message>
+  <message name="agenda_do_profissionalRequest">
+    <part name="chave_beneficiario" type="xsd:string"/>
+    <part name="profissional_id" type="xsd:string"/>
+    <part name="data_referencia" type="xsd:date"/>
+    <part name="especialidade_id" type="xsd:string"/>
+    <part name="servico_id" type="xsd:string"/>
+    <part name="local_id" type="xsd:string"/>
+  </message>
+  <message name="agenda_do_profissionalResponse">
+    <part name="status" type="xsd:boolean"/>
+    <part name="motivo_critica" type="xsd:string"/>
+    <part name="primeira_agenda" type="xsd:dateTime"/>
+    <part name="disponibilidades" type="tns:disponibilidades"/>
+    <part name="alerta" type="xsd:string"/>
+  </message>
+  <message name="grade_horarios_agendaRequest">
+    <part name="chave_beneficiario" type="xsd:string"/>
+    <part name="especialidade_id" type="xsd:string"/>
+    <part name="servico_id" type="xsd:string"/>
+    <part name="local_id" type="xsd:string"/>
+    <part name="profissional_id" type="xsd:string"/>
+    <part name="data" type="xsd:date"/>
+  </message>
+  <message name="grade_horarios_agendaResponse">
+    <part name="status" type="xsd:boolean"/>
+    <part name="motivo_critica" type="xsd:string"/>
+    <part name="horarios" type="tns:horarios"/>
+    <part name="alerta" type="xsd:string"/>
+  </message>
+  <message name="valida_autorizacao_previaRequest">
+    <part name="chave_beneficiario" type="xsd:string"/>
+    <part name="numero_autorizacao" type="xsd:string"/>
+  </message>
+  <message name="valida_autorizacao_previaResponse">
+    <part name="status" type="xsd:boolean"/>
+    <part name="motivo_critica" type="xsd:string"/>
+    <part name="recomendacoes" type="tns:recomendacoes"/>
+  </message>
+  <message name="grava_agendamentoRequest">
+    <part name="chave_beneficiario" type="xsd:string"/>
+    <part name="numero_autorizacao" type="xsd:string"/>
+    <part name="agenda_id" type="xsd:string"/>
+    <part name="data_hora" type="xsd:string"/>
+    <part name="agenda_confirmada" type="xsd:boolean"/>
+    <part name="local_id" type="xsd:string"/>
+    <part name="especialidade_id" type="xsd:string"/>
+    <part name="servico_id" type="xsd:string"/>
+    <part name="profissional_id" type="xsd:string"/>
+    <part name="telefone_paciente" type="xsd:string"/>
+    <part name="email_paciente" type="xsd:string"/>
+    <part name="origem" type="xsd:string"/>
+  </message>
+  <message name="grava_agendamentoResponse">
+    <part name="status" type="xsd:boolean"/>
+    <part name="motivo_critica" type="xsd:string"/>
+    <part name="recomendacoes" type="tns:recomendacoes"/>
+    <part name="agenda_id" type="xsd:string"/>
+  </message>
+  <message name="confirma_presencaRequest">
+    <part name="agenda_id" type="xsd:string"/>
+  </message>
+  <message name="confirma_presencaResponse">
+    <part name="status" type="xsd:boolean"/>
+    <part name="motivo_critica" type="xsd:string"/>
+    <part name="recomendacoes" type="tns:recomendacoes"/>
+  </message>
+  <message name="avalia_atendimentoRequest">
+    <part name="agenda_id" type="xsd:string"/>
+    <part name="nota" type="xsd:int"/>
+  </message>
+  <message name="avalia_atendimentoResponse">
+    <part name="status" type="xsd:boolean"/>
+    <part name="motivo_critica" type="xsd:string"/>
+    <part name="alerta" type="xsd:string"/>
+  </message>
+  <message name="status_agendas_pacienteRequest"/>
+  <message name="status_agendas_pacienteResponse">
+    <part name="status" type="xsd:boolean"/>
+    <part name="motivo_critica" type="xsd:string"/>
+    <part name="status_agenda" type="tns:status_agenda"/>
+  </message>
+  <message name="cancela_agendamentoRequest">
+    <part name="agenda_id" type="xsd:string"/>
+  </message>
+  <message name="cancela_agendamentoResponse">
+    <part name="status" type="xsd:boolean"/>
+    <part name="motivo_critica" type="xsd:string"/>
+    <part name="alerta" type="xsd:string"/>
+  </message>
+  <message name="agenda_pacienteRequest">
+    <part name="chave_beneficiario" type="xsd:string"/>
+    <part name="status_id" type="xsd:string"/>
+  </message>
+  <message name="agenda_pacienteResponse">
+    <part name="status" type="xsd:boolean"/>
+    <part name="motivo_critica" type="xsd:string"/>
+    <part name="Agendamentos" type="tns:Agendamentos"/>
+  </message>
+  <message name="agenda_detalhesRequest">
+    <part name="agenda_id" type="xsd:string"/>
+  </message>
+  <message name="agenda_detalhesResponse">
+    <part name="status" type="xsd:boolean"/>
+    <part name="motivo_critica" type="xsd:string"/>
+    <part name="detalhes" type="tns:detalhes"/>
+  </message>
+  <portType name="ApiAgendamentoPortType">
+    <operation name="especialidade_disponivel">
+      <documentation>Este mÃ©todo deverÃ¡ considerar o paciente e a data de start informados pelo usuÃ¡rio do app e retornar as especialidades disponÃ­veis para agendamento.</documentation>
+      <input message="tns:especialidade_disponivelRequest"/>
+      <output message="tns:especialidade_disponivelResponse"/>
+    </operation>
+    <operation name="servico_disponivel">
+      <documentation>Este mÃ©todo deverÃ¡ considerar o paciente, a data inicial e a especialidade selecionados pelo
+usuÃ¡rio do agendador e retornar a lista de exames/serviÃ§os disponÃ­veis.</documentation>
+      <input message="tns:servico_disponivelRequest"/>
+      <output message="tns:servico_disponivelResponse"/>
+    </operation>
+    <operation name="local_atendimento_disponivel">
+      <documentation>Este mÃ©todo deverÃ¡ considerar o paciente, a data inicial, a especialidade e o exame/serviÃ§o
+                    selecionados pelo usuÃ¡rio do agendador e retornar a lista de locais de atendimento disponÃ­veis
+                    para agendamento.</documentation>
+      <input message="tns:local_atendimento_disponivelRequest"/>
+      <output message="tns:local_atendimento_disponivelResponse"/>
+    </operation>
+    <operation name="profissional_disponivel">
+      <documentation>Este serviÃ§o Ã© utilizado para retornar os profissionais
+                disponÃ­veis para agendamento. Este webservice tem que ser
+                preparado para responder a pesquisa pelo nome do
+                profissional caso o nome seja informado nos parÃ¢metros de
+                busca pelo usuÃ¡rio do app.</documentation>
+      <input message="tns:profissional_disponivelRequest"/>
+      <output message="tns:profissional_disponivelResponse"/>
+    </operation>
+    <operation name="agenda_do_profissional">
+      <documentation>Este mÃ©todo Ã© utilizado para retornar os dias da agenda do profissional ou equipamento com base
+                nos parÃ¢metros informados pelo usuÃ¡rio</documentation>
+      <input message="tns:agenda_do_profissionalRequest"/>
+      <output message="tns:agenda_do_profissionalResponse"/>
+    </operation>
+    <operation name="grade_horarios_agenda">
+      <documentation>Este mÃ©todo Ã© utilizado para retornar os horÃ¡rios da agenda do profissional ou equipamento com
+                base em uma data informada por parÃ¢metro.</documentation>
+      <input message="tns:grade_horarios_agendaRequest"/>
+      <output message="tns:grade_horarios_agendaResponse"/>
+    </operation>
+    <operation name="valida_autorizacao_previa">
+      <documentation>ESSE MÃTODO NÃO SERÃ ULTIZADO. Este mÃ©todo Ã© utilizado para confirmar a validade do cÃ³digo da autorizaÃ§Ã£o prÃ©via, digitada pelo
+                usuÃ¡rio quando o atendimento exigir autorizaÃ§Ã£o prÃ©via</documentation>
+      <input message="tns:valida_autorizacao_previaRequest"/>
+      <output message="tns:valida_autorizacao_previaResponse"/>
+    </operation>
+    <operation name="grava_agendamento">
+      <documentation>Este mÃ©todo Ã© utilizado para gravar a agenda selecionada pelo beneficiÃ¡rio</documentation>
+      <input message="tns:grava_agendamentoRequest"/>
+      <output message="tns:grava_agendamentoResponse"/>
+    </operation>
+    <operation name="confirma_presenca">
+      <documentation>A confirmaÃ§Ã£o da agenda pode ser feita pelo usuÃ¡rio por meio do aplicativo mobile, ou
+                respondendo um SMS, ou in-app ou e-mail.</documentation>
+      <input message="tns:confirma_presencaRequest"/>
+      <output message="tns:confirma_presencaResponse"/>
+    </operation>
+    <operation name="avalia_atendimento">
+      <documentation>A confirmaÃ§Ã£o da agenda pode ser feita pelo usuÃ¡rio por meio do aplicativo mobile, ou
+                respondendo um SMS, ou in-app ou e-mail.</documentation>
+      <input message="tns:avalia_atendimentoRequest"/>
+      <output message="tns:avalia_atendimentoResponse"/>
+    </operation>
+    <operation name="status_agendas_paciente">
+      <documentation>A confirmaÃ§Ã£o da agenda pode ser feita pelo usuÃ¡rio por meio do aplicativo mobile, ou
+                respondendo um SMS, ou in-app ou e-mail.</documentation>
+      <input message="tns:status_agendas_pacienteRequest"/>
+      <output message="tns:status_agendas_pacienteResponse"/>
+    </operation>
+    <operation name="cancela_agendamento">
+      <documentation>A confirmaÃ§Ã£o da agenda pode ser feita pelo usuÃ¡rio por meio do aplicativo mobile, ou
+                respondendo um SMS, ou in-app ou e-mail.</documentation>
+      <input message="tns:cancela_agendamentoRequest"/>
+      <output message="tns:cancela_agendamentoResponse"/>
+    </operation>
+    <operation name="agenda_paciente">
+      <documentation>Este serviÃ§o Ã© utilizado para retornar os agendamentos do paciente de acordo com o perÃ­odo que
+                sua empresa desejar.</documentation>
+      <input message="tns:agenda_pacienteRequest"/>
+      <output message="tns:agenda_pacienteResponse"/>
+    </operation>
+    <operation name="agenda_detalhes">
+      <documentation>Este serviÃ§o Ã© utilizado para retornar os agendamentos do paciente de acordo com o perÃ­odo que
+                sua empresa desejar.</documentation>
+      <input message="tns:agenda_detalhesRequest"/>
+      <output message="tns:agenda_detalhesResponse"/>
+    </operation>
+  </portType>
+  <binding name="ApiAgendamentoBinding" type="tns:ApiAgendamentoPortType">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="especialidade_disponivel">
+      <soap:operation soapAction="urn:Api#especialidade_disponivel" style="rpc"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:Api" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:Api" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="servico_disponivel">
+      <soap:operation soapAction="urn:Api#servico_disponivel" style="rpc"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:Api" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:Api" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="local_atendimento_disponivel">
+      <soap:operation soapAction="urn:Api#local_atendimento_disponivel" style="rpc"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:Api" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:Api" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="profissional_disponivel">
+      <soap:operation soapAction="urn:Api#profissional_disponivel" style="rpc"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:Api" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:Api" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="agenda_do_profissional">
+      <soap:operation soapAction="urn:Api#agenda_do_profissional" style="rpc"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:Api" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:Api" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="grade_horarios_agenda">
+      <soap:operation soapAction="urn:Api#grade_horarios_agenda" style="rpc"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:Api" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:Api" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="valida_autorizacao_previa">
+      <soap:operation soapAction="urn:Api#valida_autorizacao_previa" style="rpc"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:Api" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:Api" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="grava_agendamento">
+      <soap:operation soapAction="urn:Api#grava_agendamento" style="rpc"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:Api" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:Api" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="confirma_presenca">
+      <soap:operation soapAction="urn:Api#confirma_presenca" style="rpc"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:Api" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:Api" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="avalia_atendimento">
+      <soap:operation soapAction="urn:Api#avalia_atendimento" style="rpc"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:Api" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:Api" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="status_agendas_paciente">
+      <soap:operation soapAction="urn:Api#status_agendas_paciente" style="rpc"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:Api" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:Api" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="cancela_agendamento">
+      <soap:operation soapAction="urn:Api#cancela_agendamento" style="rpc"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:Api" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:Api" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="agenda_paciente">
+      <soap:operation soapAction="urn:Api#agenda_paciente" style="rpc"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:Api" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:Api" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="agenda_detalhes">
+      <soap:operation soapAction="urn:Api#agenda_detalhes" style="rpc"/>
+      <input>
+        <soap:body use="encoded" namespace="urn:Api" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:Api" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="ApiAgendamento">
+    <port name="ApiAgendamentoPort" binding="tns:ApiAgendamentoBinding">
+      <soap:address location="http://sos.smilesaude.com.br/mobile/wsagendamento/index.php"/>
+    </port>
+  </service>
+</definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://sos.smilesaude.com.br/mobile/wsagendamento/index.php</con:endpoint></con:endpoints><con:operation id="3cfcd15b-d5ad-4595-9609-01ab2d32ee1d" isOneWay="false" action="urn:Api#agenda_detalhes" name="agenda_detalhes" bindingOperationName="agenda_detalhes" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="ee7c71ce-b535-4ff4-9cc8-24d058f276ad" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://sos.smilesaude.com.br/mobile/wsagendamento/index.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:Api">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:agenda_detalhes soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <agenda_id xsi:type="xsd:string">?</agenda_id>
+      </urn:agenda_detalhes>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:Api#agenda_detalhes"/></con:call></con:operation><con:operation id="08faf5d0-a2c5-4b85-b63a-c4b95aa1703e" isOneWay="false" action="urn:Api#agenda_do_profissional" name="agenda_do_profissional" bindingOperationName="agenda_do_profissional" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="4fe19f26-66ba-4632-9173-3827c66dbdf0" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://sos.smilesaude.com.br/mobile/wsagendamento/index.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:Api">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:agenda_do_profissional soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <chave_beneficiario xsi:type="xsd:string">068176200</chave_beneficiario>
+         <profissional_id xsi:type="xsd:string">?</profissional_id>
+         <data_referencia xsi:type="xsd:date">2019-06-25</data_referencia>
+         <especialidade_id xsi:type="xsd:string">45</especialidade_id>
+         <servico_id xsi:type="xsd:string">1</servico_id>
+         <local_id xsi:type="xsd:string">2042</local_id>
+      </urn:agenda_do_profissional>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:Api#agenda_do_profissional"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="7daec85b-9ecf-45de-8ac2-00c5cb8c754b" isOneWay="false" action="urn:Api#agenda_paciente" name="agenda_paciente" bindingOperationName="agenda_paciente" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="3c0bc97b-9ec0-4751-a3d4-debc008dd99a" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://sos.smilesaude.com.br/mobile/wsagendamento/index.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:Api">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:agenda_paciente soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <chave_beneficiario xsi:type="xsd:string">?</chave_beneficiario>
+         <status_id xsi:type="xsd:string">?</status_id>
+      </urn:agenda_paciente>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:Api#agenda_paciente"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="3494b416-15eb-4fb4-9c32-cca115b7f5a2" isOneWay="false" action="urn:Api#avalia_atendimento" name="avalia_atendimento" bindingOperationName="avalia_atendimento" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="45da836b-8223-4fb8-b011-0eb51d11d1b9" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://sos.smilesaude.com.br/mobile/wsagendamento/index.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:Api">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:avalia_atendimento soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <agenda_id xsi:type="xsd:string">?</agenda_id>
+         <nota xsi:type="xsd:int">?</nota>
+      </urn:avalia_atendimento>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:Api#avalia_atendimento"/></con:call></con:operation><con:operation id="77960079-03de-4afc-ba0f-0b7cb9d865ec" isOneWay="false" action="urn:Api#cancela_agendamento" name="cancela_agendamento" bindingOperationName="cancela_agendamento" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="f550e2d0-be5d-4bed-906c-dd8ed7a33ad4" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://sos.smilesaude.com.br/mobile/wsagendamento/index.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:Api">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:cancela_agendamento soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <agenda_id xsi:type="xsd:string">?</agenda_id>
+      </urn:cancela_agendamento>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:Api#cancela_agendamento"/></con:call></con:operation><con:operation id="a94799c0-5d9e-4f3a-a11d-182ea913f077" isOneWay="false" action="urn:Api#confirma_presenca" name="confirma_presenca" bindingOperationName="confirma_presenca" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="20c612ff-445a-4c83-bc60-1426f89b5ed0" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://sos.smilesaude.com.br/mobile/wsagendamento/index.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:Api">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:confirma_presenca soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <agenda_id xsi:type="xsd:string">?</agenda_id>
+      </urn:confirma_presenca>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:Api#confirma_presenca"/></con:call></con:operation><con:operation id="8fcfd362-2d7b-4c17-a560-97fec6ce7ad2" isOneWay="false" action="urn:Api#especialidade_disponivel" name="especialidade_disponivel" bindingOperationName="especialidade_disponivel" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="ef909942-3426-450b-b82a-ddd340885c67" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://sos.smilesaude.com.br/mobile/wsagendamento/index.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:Api">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:especialidade_disponivel soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <chave_beneficiario xsi:type="xsd:string">068176200</chave_beneficiario>
+         <data_referencia xsi:type="xsd:date">2019-06-25</data_referencia>
+      </urn:especialidade_disponivel>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:Api#especialidade_disponivel"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="ea4aae70-6aa3-4513-b3d9-56ecb04b66c2" isOneWay="false" action="urn:Api#grade_horarios_agenda" name="grade_horarios_agenda" bindingOperationName="grade_horarios_agenda" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="2c07558d-7909-46a2-bdd9-78dcab84f6ed" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://sos.smilesaude.com.br/mobile/wsagendamento/index.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:Api">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:grade_horarios_agenda soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <chave_beneficiario xsi:type="xsd:string">068176200</chave_beneficiario>
+         <especialidade_id xsi:type="xsd:string">45</especialidade_id>
+         <servico_id xsi:type="xsd:string">1</servico_id>
+         <local_id xsi:type="xsd:string">2042</local_id>
+         <profissional_id xsi:type="xsd:string">9562</profissional_id>
+         <data xsi:type="xsd:date">2019-07-17</data>
+      </urn:grade_horarios_agenda>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:Api#grade_horarios_agenda"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="86439183-34fe-4e13-924d-85c0baff1142" isOneWay="false" action="urn:Api#grava_agendamento" name="grava_agendamento" bindingOperationName="grava_agendamento" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="0bdf9b1c-bfbf-45dd-aff9-01e3fd0c0c8c" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://sos.smilesaude.com.br/mobile/wsagendamento/index.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:Api">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:grava_agendamento soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <chave_beneficiario xsi:type="xsd:string">068176200</chave_beneficiario>
+         <numero_autorizacao xsi:type="xsd:string">0</numero_autorizacao>
+         <agenda_id xsi:type="xsd:string"></agenda_id>
+         <data_hora xsi:type="xsd:string">2019-07-17 10:12:00</data_hora>
+         <agenda_confirmada xsi:type="xsd:boolean">1</agenda_confirmada>
+         <local_id xsi:type="xsd:string">2042</local_id>
+         <especialidade_id xsi:type="xsd:string">45</especialidade_id>
+         <servico_id xsi:type="xsd:string">1</servico_id>
+         <profissional_id xsi:type="xsd:string">9562</profissional_id>
+         <telefone_paciente xsi:type="xsd:string"></telefone_paciente>
+         <email_paciente xsi:type="xsd:string"></email_paciente>
+         <origem xsi:type="xsd:string"></origem>
+      </urn:grava_agendamento>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+
+]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:Api#grava_agendamento"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="5cecca36-03c6-437e-8aa7-d8036c7e907b" isOneWay="false" action="urn:Api#local_atendimento_disponivel" name="local_atendimento_disponivel" bindingOperationName="local_atendimento_disponivel" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="0db48e36-f955-4033-93cb-c6b59e4e31ba" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://sos.smilesaude.com.br/mobile/wsagendamento/index.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:Api">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:local_atendimento_disponivel soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <chave_beneficiario xsi:type="xsd:string">068176200</chave_beneficiario>
+         <data_referencia xsi:type="xsd:date">2019-06-25</data_referencia>
+         <especialidade_id xsi:type="xsd:string">45</especialidade_id>
+         <servico_id xsi:type="xsd:string">1</servico_id>
+      </urn:local_atendimento_disponivel>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:Api#local_atendimento_disponivel"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="369a6cd7-250c-4e2d-8d0e-5b0e2dd8eaef" isOneWay="false" action="urn:Api#profissional_disponivel" name="profissional_disponivel" bindingOperationName="profissional_disponivel" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="d12a874b-a530-4815-8c7d-2de5a7d75569" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://sos.smilesaude.com.br/mobile/wsagendamento/index.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:Api">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:profissional_disponivel soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <chave_beneficiario xsi:type="xsd:string">068176200</chave_beneficiario>
+         <data_referencia xsi:type="xsd:date">2019-06-25</data_referencia>
+         <especialidade_id xsi:type="xsd:string">45</especialidade_id>
+         <servico_id xsi:type="xsd:string">1</servico_id>
+         <local_id xsi:type="xsd:string">2042</local_id>
+         <nome xsi:type="xsd:string"></nome>
+      </urn:profissional_disponivel>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:Api#profissional_disponivel"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="8d59a99d-e0d5-4f50-b2a9-3750893d4062" isOneWay="false" action="urn:Api#servico_disponivel" name="servico_disponivel" bindingOperationName="servico_disponivel" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="3b47560d-4386-416c-aea6-adebe08753a0" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://sos.smilesaude.com.br/mobile/wsagendamento/index.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:Api">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:servico_disponivel soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <chave_beneficiario xsi:type="xsd:string">068176200</chave_beneficiario>
+         <data_referencia xsi:type="xsd:date">2019-06-25</data_referencia>
+         <especialidade_id xsi:type="xsd:int">45</especialidade_id>
+      </urn:servico_disponivel>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:Api#servico_disponivel"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="0e8c7ba6-9dc7-4e38-b37e-75fe2aa340d6" isOneWay="false" action="urn:Api#status_agendas_paciente" name="status_agendas_paciente" bindingOperationName="status_agendas_paciente" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="397d996e-a938-4742-b811-9d20e77f9f3a" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://sos.smilesaude.com.br/mobile/wsagendamento/index.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:Api">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:status_agendas_paciente soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:Api#status_agendas_paciente"/></con:call></con:operation><con:operation id="e1de411e-18bd-4bde-abe6-225fe09c6518" isOneWay="false" action="urn:Api#valida_autorizacao_previa" name="valida_autorizacao_previa" bindingOperationName="valida_autorizacao_previa" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="a2c6aa4f-787c-4e05-bf4d-6a400d377540" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://sos.smilesaude.com.br/mobile/wsagendamento/index.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:Api">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:valida_autorizacao_previa soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <chave_beneficiario xsi:type="xsd:string">?</chave_beneficiario>
+         <numero_autorizacao xsi:type="xsd:string">?</numero_autorizacao>
+      </urn:valida_autorizacao_previa>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:Api#valida_autorizacao_previa"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>

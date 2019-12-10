@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="d58a5404-6169-4ffa-a981-dba829f2fea7" activeEnvironment="Default" name="Clinipam - Marcacao de Consulta - PRD" soapui-version="5.4.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="87043d6e-426d-425e-87c7-b63674877019" wsaVersion="NONE" name="ConsultaServiceServiceSoapBinding" type="wsdl" bindingName="{http://consulta.service.clinipam.mobilesaude.com.br/}ConsultaServiceServiceSoapBinding" soapVersion="1_1" anonymous="optional" definition="http://mobile.clinipam.com.br:8080/servicoclinipam/ConsultaService?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://mobile.clinipam.com.br:8080/servicoclinipam/ConsultaService?wsdl"><con:part><con:url>http://mobile.clinipam.com.br:8080/servicoclinipam/ConsultaService?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="ConsultaServiceService" targetNamespace="http://consulta.service.clinipam.mobilesaude.com.br/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://consulta.service.clinipam.mobilesaude.com.br/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http">
+  <wsdl:types>
+    <xs:schema elementFormDefault="unqualified" targetNamespace="http://consulta.service.clinipam.mobilesaude.com.br/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="cancelarConsulta" type="tns:cancelarConsulta"/>
+      <xs:element name="cancelarConsultaResponse" type="tns:cancelarConsultaResponse"/>
+      <xs:element name="getHistorico" type="tns:getHistorico"/>
+      <xs:element name="getHistoricoResponse" type="tns:getHistoricoResponse"/>
+      <xs:element name="getProximas" type="tns:getProximas"/>
+      <xs:element name="getProximasResponse" type="tns:getProximasResponse"/>
+      <xs:complexType name="getProximas">
+        <xs:sequence>
+          <xs:element name="codigo" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getProximasResponse">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:consultaTO"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="consultaTO">
+        <xs:sequence>
+          <xs:element name="idConsulta" type="xs:long"/>
+          <xs:element minOccurs="0" name="nmBeneficiario" type="xs:string"/>
+          <xs:element minOccurs="0" name="dtConsultaAsDate" type="xs:dateTime"/>
+          <xs:element minOccurs="0" name="dtConsulta" type="xs:string"/>
+          <xs:element minOccurs="0" name="hrConsulta" type="xs:string"/>
+          <xs:element minOccurs="0" name="dtMarcacao" type="xs:dateTime"/>
+          <xs:element minOccurs="0" name="situacao" type="xs:string"/>
+          <xs:element minOccurs="0" name="nmUnidade" type="xs:string"/>
+          <xs:element minOccurs="0" name="nmMedico" type="xs:string"/>
+          <xs:element minOccurs="0" name="nmEspecialidade" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getHistorico">
+        <xs:sequence>
+          <xs:element name="codigo" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getHistoricoResponse">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:consultaTO"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="cancelarConsulta">
+        <xs:sequence>
+          <xs:element name="idConsulta" type="xs:long"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="cancelarConsultaResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:retornoCancelamento"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="retornoCancelamento">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="mensagem" type="xs:string"/>
+          <xs:element name="status" type="xs:boolean"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="cancelarConsultaResponse">
+    <wsdl:part element="tns:cancelarConsultaResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="cancelarConsulta">
+    <wsdl:part element="tns:cancelarConsulta" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getProximas">
+    <wsdl:part element="tns:getProximas" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getProximasResponse">
+    <wsdl:part element="tns:getProximasResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getHistorico">
+    <wsdl:part element="tns:getHistorico" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getHistoricoResponse">
+    <wsdl:part element="tns:getHistoricoResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="ConsultaService">
+    <wsdl:operation name="getProximas">
+      <wsdl:input message="tns:getProximas" name="getProximas"></wsdl:input>
+      <wsdl:output message="tns:getProximasResponse" name="getProximasResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getHistorico">
+      <wsdl:input message="tns:getHistorico" name="getHistorico"></wsdl:input>
+      <wsdl:output message="tns:getHistoricoResponse" name="getHistoricoResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancelarConsulta">
+      <wsdl:input message="tns:cancelarConsulta" name="cancelarConsulta"></wsdl:input>
+      <wsdl:output message="tns:cancelarConsultaResponse" name="cancelarConsultaResponse"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ConsultaServiceServiceSoapBinding" type="tns:ConsultaService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="getProximas">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getProximas">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getProximasResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getHistorico">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getHistorico">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getHistoricoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancelarConsulta">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="cancelarConsulta">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="cancelarConsultaResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ConsultaServiceService">
+    <wsdl:port binding="tns:ConsultaServiceServiceSoapBinding" name="ConsultaServicePort">
+      <soap:address location="http://mobile.clinipam.com.br:8080/servicoclinipam/ConsultaService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://mobile.clinipam.com.br:8080/servicoclinipam/ConsultaService</con:endpoint></con:endpoints><con:operation id="77c9d8f4-0dc5-49c9-945f-4434be553430" isOneWay="false" action="" name="cancelarConsulta" bindingOperationName="cancelarConsulta" type="Request-Response" outputName="cancelarConsultaResponse" inputName="cancelarConsulta" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="b696cf0b-566f-42ae-b7bb-79cd42b36079" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://mobile.clinipam.com.br:8080/servicoclinipam/ConsultaService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:con="http://consulta.service.clinipam.mobilesaude.com.br/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <con:cancelarConsulta>
+         <idConsulta>?</idConsulta>
+      </con:cancelarConsulta>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://consulta.service.clinipam.mobilesaude.com.br/ConsultaService/cancelarConsulta"/></con:call></con:operation><con:operation id="c09b0353-d4e3-4209-9bf1-87b2c5ba9fca" isOneWay="false" action="" name="getHistorico" bindingOperationName="getHistorico" type="Request-Response" outputName="getHistoricoResponse" inputName="getHistorico" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="9905e567-4a4a-4413-88bc-a3a5edaebb83" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://mobile.clinipam.com.br:8080/servicoclinipam/ConsultaService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:con="http://consulta.service.clinipam.mobilesaude.com.br/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <con:getHistorico>
+         <codigo>30947152</codigo>
+      </con:getHistorico>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://consulta.service.clinipam.mobilesaude.com.br/ConsultaService/getHistorico"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="8fa9975a-2182-43e3-bd9e-0ee1b9fca0a2" isOneWay="false" action="" name="getProximas" bindingOperationName="getProximas" type="Request-Response" outputName="getProximasResponse" inputName="getProximas" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="0c7ced3a-83ed-44ab-b414-ba16403b13bf" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://mobile.clinipam.com.br:8080/servicoclinipam/ConsultaService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:con="http://consulta.service.clinipam.mobilesaude.com.br/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <con:getProximas>
+         <codigo>30947152</codigo>
+      </con:getProximas>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://consulta.service.clinipam.mobilesaude.com.br/ConsultaService/getProximas"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>

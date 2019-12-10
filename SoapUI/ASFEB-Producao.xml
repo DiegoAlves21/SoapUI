@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="9cb0e7d6-6340-4090-a4c5-bb28c68590c4" activeEnvironment="Default" name="ASFEB - Producao" resourceRoot="" soapui-version="5.5.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="42929a74-d5a2-45c7-9eb6-4668f38d7d04" wsaVersion="NONE" name="ws_beneficiario_loginBinding" type="wsdl" bindingName="{http://www.asfeb.org.br/ws}ws_beneficiario_loginBinding" soapVersion="1_1" anonymous="optional" definition="http://www.asfeb.org.br/ws/ws_beneficiario_login.php?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://www.asfeb.org.br/ws/ws_beneficiario_login.php?wsdl"><con:part><con:url>http://www.asfeb.org.br/ws/ws_beneficiario_login.php?wsdl</con:url><con:content><![CDATA[<definitions targetNamespace="http://www.asfeb.org.br/ws" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://www.asfeb.org.br/ws" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema targetNamespace="http://www.asfeb.org.br/ws">
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+      <xsd:import namespace="http://schemas.xmlsoap.org/wsdl/"/>
+      <xsd:complexType name="permissoes">
+        <xsd:sequence>
+          <xsd:element name="Reembolso" type="xsd:boolean"/>
+          <xsd:element name="Agendamento" type="xsd:boolean"/>
+          <xsd:element name="Coparticipacao" type="xsd:boolean"/>
+          <xsd:element name="Utilizacao" type="xsd:boolean"/>
+          <xsd:element name="AtualizaCadastro" type="xsd:boolean"/>
+          <xsd:element name="BuscaMedicamento" type="xsd:boolean"/>
+          <xsd:element name="Boletos" type="xsd:boolean"/>
+          <xsd:element name="InformeIR" type="xsd:boolean"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="carencia">
+        <xsd:sequence>
+          <xsd:element name="Tipo_servico" type="xsd:string"/>
+          <xsd:element name="Carencia" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="usuario">
+        <xsd:sequence>
+          <xsd:element name="Id_sistema_interno" type="xsd:string"/>
+          <xsd:element name="matricula" type="xsd:string"/>
+          <xsd:element name="matricula_funcionario" type="xsd:string"/>
+          <xsd:element name="nome" type="xsd:string"/>
+          <xsd:element name="sexo" type="xsd:string"/>
+          <xsd:element name="nascimento" type="xsd:date"/>
+          <xsd:element name="cpf" type="xsd:string"/>
+          <xsd:element name="telefone" type="xsd:string"/>
+          <xsd:element name="email" type="xsd:string"/>
+          <xsd:element name="endereco" type="xsd:string"/>
+          <xsd:element name="bairro" type="xsd:string"/>
+          <xsd:element name="cep" type="xsd:string"/>
+          <xsd:element name="cidade" type="xsd:string"/>
+          <xsd:element name="estado" type="xsd:string"/>
+          <xsd:element name="inclusao" type="xsd:date"/>
+          <xsd:element name="Tipo_usuario" type="xsd:string"/>
+          <xsd:element name="Matricula_titular" type="xsd:string"/>
+          <xsd:element name="grau_parentesco_id" type="xsd:string"/>
+          <xsd:element name="grau_parentesco_descricao" type="xsd:string"/>
+          <xsd:element name="convenio_id" type="xsd:string"/>
+          <xsd:element name="convenio_descricao" type="xsd:string"/>
+          <xsd:element name="convenio_abrangencia" type="xsd:string"/>
+          <xsd:element name="convenio_acomodacao" type="xsd:string"/>
+          <xsd:element name="convenio_modalidade_cobranca" type="xsd:string"/>
+          <xsd:element name="convenio_padrao_conforto" type="xsd:string"/>
+          <xsd:element name="convenio_participativo" type="xsd:string"/>
+          <xsd:element name="convenio_segmentacao" type="xsd:string"/>
+          <xsd:element name="convenio_tipo_contrato" type="xsd:string"/>
+          <xsd:element name="cartao_imagem" type="xsd:string"/>
+          <xsd:element name="cartao_imagem_verso" type="xsd:string"/>
+          <xsd:element name="cartao_validade" type="xsd:date"/>
+          <xsd:element name="cartao_via" type="xsd:int"/>
+          <xsd:element name="empresa_id" type="xsd:string"/>
+          <xsd:element name="empresa_nome" type="xsd:string"/>
+          <xsd:element name="Troca_senha" type="xsd:string"/>
+          <xsd:element name="Numero_cns" type="xsd:string"/>
+          <xsd:element name="Convenio_ans" type="xsd:string"/>
+          <xsd:element name="Data_final_cpt" type="xsd:date"/>
+          <xsd:element name="Carencias" type="tns:carencia" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="lembrar_senhaInput">
+        <xsd:sequence>
+          <xsd:element name="Usuario_id" type="xsd:string"/>
+          <xsd:element name="Usuario_cpf" type="xsd:string"/>
+          <xsd:element name="Usuario_nascimento" type="xsd:date"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="lembrar_senhaOutput">
+        <xsd:sequence>
+          <xsd:element name="Status" type="xsd:boolean"/>
+          <xsd:element name="Motivo_restricao" type="xsd:string"/>
+          <xsd:element name="Login" type="xsd:string"/>
+          <xsd:element name="Senha" type="xsd:string"/>
+          <xsd:element name="Email" type="xsd:string"/>
+          <xsd:element name="Telefone" type="xsd:string"/>
+          <xsd:element name="Enviado" type="xsd:boolean"/>
+          <xsd:element name="Alerta" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="loginInput">
+        <xsd:sequence>
+          <xsd:element name="User_login" type="xsd:string"/>
+          <xsd:element name="User_psw" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="loginOutput">
+        <xsd:sequence>
+          <xsd:element name="Status" type="xsd:boolean"/>
+          <xsd:element name="Motivo_restricao" type="xsd:string"/>
+          <xsd:element name="usuario_login" type="tns:usuario"/>
+          <xsd:element name="familia" type="tns:usuario" minOccurs="0" maxOccurs="unbounded"/>
+          <xsd:element name="permissoes" type="tns:permissoes"/>
+          <xsd:element name="Alerta" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="novo_usuarioInput">
+        <xsd:sequence>
+          <xsd:element name="Usuario_id" type="xsd:string"/>
+          <xsd:element name="Usuario_cpf" type="xsd:string"/>
+          <xsd:element name="Usuario_nascimento" type="xsd:date"/>
+          <xsd:element name="Usuario_senha" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="novo_usuarioOutput">
+        <xsd:sequence>
+          <xsd:element name="Status" type="xsd:boolean"/>
+          <xsd:element name="Motivo_restricao" type="xsd:string"/>
+          <xsd:element name="usuario_login" type="tns:usuario"/>
+          <xsd:element name="familia" type="tns:usuario" minOccurs="0" maxOccurs="unbounded"/>
+          <xsd:element name="permissoes" type="tns:permissoes"/>
+          <xsd:element name="Alerta" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="trocar_senhaInput">
+        <xsd:sequence>
+          <xsd:element name="Usuario_id" type="xsd:string"/>
+          <xsd:element name="nova_senha" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="trocar_senhaOutput">
+        <xsd:sequence>
+          <xsd:element name="Status" type="xsd:boolean"/>
+          <xsd:element name="Motivo_restricao" type="xsd:string"/>
+          <xsd:element name="Alerta" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </types>
+  <message name="lembrar_senhaRequest">
+    <part name="lembrar_senhaInput" type="tns:lembrar_senhaInput"/>
+  </message>
+  <message name="lembrar_senhaResponse">
+    <part name="lembrar_senhaOutput" type="tns:lembrar_senhaOutput"/>
+  </message>
+  <message name="loginRequest">
+    <part name="loginInput" type="tns:loginInput"/>
+  </message>
+  <message name="loginResponse">
+    <part name="loginOutput" type="tns:loginOutput"/>
+  </message>
+  <message name="novo_usuarioRequest">
+    <part name="novo_usuarioInput" type="tns:novo_usuarioInput"/>
+  </message>
+  <message name="novo_usuarioResponse">
+    <part name="novo_usuarioOutput" type="tns:novo_usuarioOutput"/>
+  </message>
+  <message name="trocar_senhaRequest">
+    <part name="trocar_senhaInput" type="tns:trocar_senhaInput"/>
+  </message>
+  <message name="trocar_senhaResponse">
+    <part name="trocar_senhaOutput" type="tns:trocar_senhaOutput"/>
+  </message>
+  <portType name="ws_beneficiario_loginPortType">
+    <operation name="lembrar_senha">
+      <documentation>Lembrar Senha</documentation>
+      <input message="tns:lembrar_senhaRequest"/>
+      <output message="tns:lembrar_senhaResponse"/>
+    </operation>
+    <operation name="login">
+      <documentation>Login</documentation>
+      <input message="tns:loginRequest"/>
+      <output message="tns:loginResponse"/>
+    </operation>
+    <operation name="novo_usuario">
+      <documentation>Novo usuário</documentation>
+      <input message="tns:novo_usuarioRequest"/>
+      <output message="tns:novo_usuarioResponse"/>
+    </operation>
+    <operation name="trocar_senha">
+      <documentation>trocar Senha</documentation>
+      <input message="tns:trocar_senhaRequest"/>
+      <output message="tns:trocar_senhaResponse"/>
+    </operation>
+  </portType>
+  <binding name="ws_beneficiario_loginBinding" type="tns:ws_beneficiario_loginPortType">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="lembrar_senha">
+      <soap:operation soapAction="http://www.asfeb.org.br/ws/ws_beneficiario_login.php/lembrar_senha" style="rpc"/>
+      <input>
+        <soap:body use="literal" namespace="http://www.asfeb.org.br/ws/ws_beneficiario_login.php"/>
+      </input>
+      <output>
+        <soap:body use="literal" namespace="http://www.asfeb.org.br/ws/ws_beneficiario_login.php"/>
+      </output>
+    </operation>
+    <operation name="login">
+      <soap:operation soapAction="http://www.asfeb.org.br/ws/ws_beneficiario_login.php/login" style="rpc"/>
+      <input>
+        <soap:body use="literal" namespace="http://www.asfeb.org.br/ws/ws_beneficiario_login.php"/>
+      </input>
+      <output>
+        <soap:body use="literal" namespace="http://www.asfeb.org.br/ws/ws_beneficiario_login.php"/>
+      </output>
+    </operation>
+    <operation name="novo_usuario">
+      <soap:operation soapAction="http://www.asfeb.org.br/ws/ws_beneficiario_login.php/novo_usuario" style="rpc"/>
+      <input>
+        <soap:body use="literal" namespace="http://www.asfeb.org.br/ws/ws_beneficiario_login.php"/>
+      </input>
+      <output>
+        <soap:body use="literal" namespace="http://www.asfeb.org.br/ws/ws_beneficiario_login.php"/>
+      </output>
+    </operation>
+    <operation name="trocar_senha">
+      <soap:operation soapAction="http://www.asfeb.org.br/ws/ws_beneficiario_login.php/trocar_senha" style="rpc"/>
+      <input>
+        <soap:body use="literal" namespace="http://www.asfeb.org.br/ws/ws_beneficiario_login.php"/>
+      </input>
+      <output>
+        <soap:body use="literal" namespace="http://www.asfeb.org.br/ws/ws_beneficiario_login.php"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="ws_beneficiario_login">
+    <port name="ws_beneficiario_loginPort" binding="tns:ws_beneficiario_loginBinding">
+      <soap:address location="http://www.asfeb.org.br/ws/ws_beneficiario_login.php"/>
+    </port>
+  </service>
+</definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://www.asfeb.org.br/ws/ws_beneficiario_login.php</con:endpoint></con:endpoints><con:operation id="eca3ed46-5d22-4ac2-be8a-5b39c6f3ba92" isOneWay="false" action="http://www.asfeb.org.br/ws/ws_beneficiario_login.php/lembrar_senha" name="lembrar_senha" bindingOperationName="lembrar_senha" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="5c9facff-8d54-4217-9580-fc34d9ec3993" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.asfeb.org.br/ws/ws_beneficiario_login.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://www.asfeb.org.br/ws/ws_beneficiario_login.php">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:lembrar_senha>
+         <lembrar_senhaInput>
+            <Usuario_id>?</Usuario_id>
+            <Usuario_cpf>?</Usuario_cpf>
+            <Usuario_nascimento>?</Usuario_nascimento>
+         </lembrar_senhaInput>
+      </ws:lembrar_senha>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.asfeb.org.br/ws/ws_beneficiario_login.php/lembrar_senha"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="c81c083f-d10f-4982-9120-20c8b3808d04" isOneWay="false" action="http://www.asfeb.org.br/ws/ws_beneficiario_login.php/login" name="login" bindingOperationName="login" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="d87053fd-8e57-4dde-bd83-5f0a63f0c4aa" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.asfeb.org.br/ws/ws_beneficiario_login.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://www.asfeb.org.br/ws/ws_beneficiario_login.php">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:login>
+         <loginInput>
+            <User_login>1070180007</User_login>
+            <User_psw>29081966</User_psw>
+         </loginInput>
+      </ws:login>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.asfeb.org.br/ws/ws_beneficiario_login.php/login"/><con:wsrmConfig version="1.2"/></con:call><con:call id="01b3a7ea-b8d4-4ada-9a4e-d571b6c4854f" name="Request2"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.asfeb.org.br/ws/ws_beneficiario_login.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://www.asfeb.org.br/ws/ws_beneficiario_login.php">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:login>
+         <loginInput>
+            <User_login>1062930021</User_login>
+            <User_psw>07011982</User_psw>
+         </loginInput>
+      </ws:login>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.asfeb.org.br/ws/ws_beneficiario_login.php/login"/><con:wsrmConfig version="1.2"/></con:call><con:call id="5688025e-6985-485a-b9c5-6aeec03680fc" name="extrato-utilizacao"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.asfeb.org.br/ws/ws_beneficiario_login.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://www.asfeb.org.br/ws/ws_beneficiario_login.php">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:login>
+         <loginInput>
+            <User_login>0100875003</User_login>
+            <User_psw>26031958</User_psw>
+         </loginInput>
+      </ws:login>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.asfeb.org.br/ws/ws_beneficiario_login.php/login"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="63c74268-2186-4637-842d-290fdf7899c0" isOneWay="false" action="http://www.asfeb.org.br/ws/ws_beneficiario_login.php/novo_usuario" name="novo_usuario" bindingOperationName="novo_usuario" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="e3ad9684-2f53-4227-8fbc-f129ce5751f9" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.asfeb.org.br/ws/ws_beneficiario_login.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://www.asfeb.org.br/ws/ws_beneficiario_login.php">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:novo_usuario>
+         <novo_usuarioInput>
+            <Usuario_id>?</Usuario_id>
+            <Usuario_cpf>?</Usuario_cpf>
+            <Usuario_nascimento>?</Usuario_nascimento>
+            <Usuario_senha>?</Usuario_senha>
+         </novo_usuarioInput>
+      </ws:novo_usuario>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.asfeb.org.br/ws/ws_beneficiario_login.php/novo_usuario"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="8d408417-fb49-45b9-8e13-6069fe13520f" isOneWay="false" action="http://www.asfeb.org.br/ws/ws_beneficiario_login.php/trocar_senha" name="trocar_senha" bindingOperationName="trocar_senha" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="ef8ab5ba-ab9d-4f68-81a8-3ec693fe5150" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.asfeb.org.br/ws/ws_beneficiario_login.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://www.asfeb.org.br/ws/ws_beneficiario_login.php">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:trocar_senha>
+         <trocar_senhaInput>
+            <Usuario_id>?</Usuario_id>
+            <nova_senha>?</nova_senha>
+         </trocar_senhaInput>
+      </ws:trocar_senha>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.asfeb.org.br/ws/ws_beneficiario_login.php/trocar_senha"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>

@@ -1,0 +1,3714 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="e473419c-62f5-4ab4-a7bf-83e8194cb280" activeEnvironment="Default" name="Vale/AMS - PRD" soapui-version="5.5.0" abortOnError="false" runType="SEQUENTIAL" resourceRoot="" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="130de036-8867-44dd-89c4-36cd345df81e" wsaVersion="NONE" name="AutenticacaoBeneficiarioServiceBinding" type="wsdl" bindingName="{http://service.autenticacao.ws.tempoassist.com.br}AutenticacaoBeneficiarioServiceBinding" soapVersion="1_1" anonymous="optional" definition="https://wwwt.connectmed.com.br/saudeweb/autenticacaoWSContainer/services/AutenticacaoBeneficiarioService?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="https://wwwt.connectmed.com.br/saudeweb/autenticacaoWSContainer/services/AutenticacaoBeneficiarioService?wsdl"><con:part><con:url>https://wwwt.connectmed.com.br/saudeweb/autenticacaoWSContainer/services/AutenticacaoBeneficiarioService?wsdl</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://service.autenticacao.ws.tempoassist.com.br" xmlns:ns1="http://org.apache.axis2/xsd" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:common="http://ws.common.tempoassist.com.br/schema" xmlns:xsd="http://service.autenticacao.ws.tempoassist.com.br" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:beneficiario="http://ws.beneficiario.tempoassist.com.br/schema">
+  <wsdl:types>
+    <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://service.autenticacao.ws.tempoassist.com.br">
+      <xs:import namespace="http://ws.common.tempoassist.com.br/schema" schemaLocation="AutenticacaoBeneficiarioService?xsd=Common.xsd"/>
+      <xs:import namespace="http://ws.beneficiario.tempoassist.com.br/schema" schemaLocation="AutenticacaoBeneficiarioService?xsd=Beneficiario.xsd"/>
+      <xs:element name="autenticar">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="operadora" type="common:Operadora"/>
+            <xs:element minOccurs="0" name="autenticacaoBeneficiario" type="beneficiario:AutenticacaoBeneficiario"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="autenticarResponse">
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:extension base="common:ServiceResponse">
+              <xs:sequence>
+                <xs:element minOccurs="0" name="beneficiario" type="beneficiario:Beneficiario"/>
+              </xs:sequence>
+            </xs:extension>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="autenticarCPF">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="operadora" type="common:Operadora"/>
+            <xs:element minOccurs="0" name="autenticacaoBeneficiarioCPF" type="beneficiario:AutenticacaoBeneficiarioCPF"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="autenticarCPFResponse">
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:extension base="common:ServiceResponse">
+              <xs:sequence>
+                <xs:element minOccurs="0" name="beneficiarioCPF" type="beneficiario:BeneficiarioCPF"/>
+              </xs:sequence>
+            </xs:extension>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getToken">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="operadora" type="common:Operadora"/>
+            <xs:element minOccurs="0" name="autenticacaoBeneficiario" type="beneficiario:AutenticacaoBeneficiario"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getTokenResponse">
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:extension base="common:ServiceResponse">
+              <xs:sequence>
+                <xs:element minOccurs="0" name="token" nillable="true" type="xs:string"/>
+              </xs:sequence>
+            </xs:extension>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="criarSenha">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="operadora" type="common:Operadora"/>
+            <xs:element minOccurs="0" name="autenticacaoBeneficiario" type="beneficiario:AutenticacaoBeneficiario"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="criarSenhaResponse">
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:extension base="common:ServiceResponse"/>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="criarSenhaGsp">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="params" type="beneficiario:CriarSenhaGsp"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="criarSenhaGspResponse">
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:extension base="common:ServiceResponse">
+              <xs:sequence>
+                <xs:element minOccurs="0" name="beneficiario" type="beneficiario:Beneficiario"/>
+              </xs:sequence>
+            </xs:extension>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="recuperarSenha">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="operadora" type="common:Operadora"/>
+            <xs:element minOccurs="0" name="autenticacaoBeneficiario" type="beneficiario:AutenticacaoBeneficiario"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="recuperarSenhaResponse">
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:extension base="common:ServiceResponse"/>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="criarProtocolo">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="operadora" type="common:Operadora"/>
+            <xs:element minOccurs="0" name="params" type="beneficiario:CriarProtocolo"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="criarProtocoloResponse">
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:extension base="common:ServiceResponse">
+              <xs:sequence>
+                <xs:element minOccurs="0" name="protocolo" type="beneficiario:CriarProtocolo"/>
+              </xs:sequence>
+            </xs:extension>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="trocarSenha">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="operadora" type="common:Operadora"/>
+            <xs:element minOccurs="0" name="autenticacaoBeneficiario" type="beneficiario:AutenticacaoBeneficiario"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="trocarSenhaResponse">
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:extension base="common:ServiceResponse"/>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="consultarToken">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="token" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="consultarTokenResponse">
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:extension base="common:ServiceResponse">
+              <xs:sequence>
+                <xs:element minOccurs="0" name="beneficiario" type="beneficiario:Beneficiario"/>
+              </xs:sequence>
+            </xs:extension>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="atualizarBeneficiario">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="params" type="beneficiario:AtualizarBeneficiario"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="atualizarBeneficiarioResponse">
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:extension base="common:ServiceResponse"/>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AutenticacaoBeneficiarioService" type="xs:string"/>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="criarSenhaGspResponse">
+    <wsdl:part name="parameters" element="xsd:criarSenhaGspResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="criarProtocoloRequest">
+    <wsdl:part name="parameters" element="xsd:criarProtocolo"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="consultarTokenResponse">
+    <wsdl:part name="parameters" element="xsd:consultarTokenResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="trocarSenhaRequest">
+    <wsdl:part name="parameters" element="xsd:trocarSenha"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="atualizarBeneficiarioResponse">
+    <wsdl:part name="parameters" element="xsd:atualizarBeneficiarioResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="consultarTokenRequest">
+    <wsdl:part name="parameters" element="xsd:consultarToken"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="criarSenhaRequest">
+    <wsdl:part name="parameters" element="xsd:criarSenha"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="criarSenhaResponse">
+    <wsdl:part name="parameters" element="xsd:criarSenhaResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="autenticarCPFResponse">
+    <wsdl:part name="parameters" element="xsd:autenticarCPFResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="AutenticacaoBeneficiarioService">
+    <wsdl:part name="AutenticacaoBeneficiarioService" element="xsd:AutenticacaoBeneficiarioService"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getTokenResponse">
+    <wsdl:part name="parameters" element="xsd:getTokenResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="autenticarCPFRequest">
+    <wsdl:part name="parameters" element="xsd:autenticarCPF"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="criarSenhaGspRequest">
+    <wsdl:part name="parameters" element="xsd:criarSenhaGsp"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="autenticarRequest">
+    <wsdl:part name="parameters" element="xsd:autenticar"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="criarProtocoloResponse">
+    <wsdl:part name="parameters" element="xsd:criarProtocoloResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getTokenRequest">
+    <wsdl:part name="parameters" element="xsd:getToken"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="atualizarBeneficiarioRequest">
+    <wsdl:part name="parameters" element="xsd:atualizarBeneficiario"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="autenticarResponse">
+    <wsdl:part name="parameters" element="xsd:autenticarResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="trocarSenhaResponse">
+    <wsdl:part name="parameters" element="xsd:trocarSenhaResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="recuperarSenhaRequest">
+    <wsdl:part name="parameters" element="xsd:recuperarSenha"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="recuperarSenhaResponse">
+    <wsdl:part name="parameters" element="xsd:recuperarSenhaResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="AutenticacaoBeneficiarioServicePortType">
+    <wsdl:operation name="autenticar">
+      <wsdl:input message="xsd:autenticarRequest" wsaw:Action="urn:autenticarRequest"></wsdl:input>
+      <wsdl:output message="xsd:autenticarResponse" wsaw:Action="urn:autenticarResponse"></wsdl:output>
+      <wsdl:fault name="AutenticacaoBeneficiarioService" message="xsd:AutenticacaoBeneficiarioService"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="autenticarCPF">
+      <wsdl:input message="xsd:autenticarCPFRequest" wsaw:Action="urn:autenticarCPFRequest"></wsdl:input>
+      <wsdl:output message="xsd:autenticarCPFResponse" wsaw:Action="urn:autenticarCPFResponse"></wsdl:output>
+      <wsdl:fault name="AutenticacaoBeneficiarioService" message="xsd:AutenticacaoBeneficiarioService"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getToken">
+      <wsdl:input message="xsd:getTokenRequest" wsaw:Action="urn:getTokenRequest"></wsdl:input>
+      <wsdl:output message="xsd:getTokenResponse" wsaw:Action="urn:getTokenResponse"></wsdl:output>
+      <wsdl:fault name="AutenticacaoBeneficiarioService" message="xsd:AutenticacaoBeneficiarioService"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="criarSenha">
+      <wsdl:input message="xsd:criarSenhaRequest" wsaw:Action="urn:criarSenhaRequest"></wsdl:input>
+      <wsdl:output message="xsd:criarSenhaResponse" wsaw:Action="urn:criarSenhaResponse"></wsdl:output>
+      <wsdl:fault name="AutenticacaoBeneficiarioService" message="xsd:AutenticacaoBeneficiarioService"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="criarSenhaGsp">
+      <wsdl:input message="xsd:criarSenhaGspRequest" wsaw:Action="urn:criarSenhaGspRequest"></wsdl:input>
+      <wsdl:output message="xsd:criarSenhaGspResponse" wsaw:Action="urn:criarSenhaGspResponse"></wsdl:output>
+      <wsdl:fault name="AutenticacaoBeneficiarioService" message="xsd:AutenticacaoBeneficiarioService"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="recuperarSenha">
+      <wsdl:input message="xsd:recuperarSenhaRequest" wsaw:Action="urn:recuperarSenhaRequest"></wsdl:input>
+      <wsdl:output message="xsd:recuperarSenhaResponse" wsaw:Action="urn:recuperarSenhaResponse"></wsdl:output>
+      <wsdl:fault name="AutenticacaoBeneficiarioService" message="xsd:AutenticacaoBeneficiarioService"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="criarProtocolo">
+      <wsdl:input message="xsd:criarProtocoloRequest" wsaw:Action="urn:criarProtocoloRequest"></wsdl:input>
+      <wsdl:output message="xsd:criarProtocoloResponse" wsaw:Action="urn:criarProtocoloResponse"></wsdl:output>
+      <wsdl:fault name="AutenticacaoBeneficiarioService" message="xsd:AutenticacaoBeneficiarioService"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="trocarSenha">
+      <wsdl:input message="xsd:trocarSenhaRequest" wsaw:Action="urn:trocarSenhaRequest"></wsdl:input>
+      <wsdl:output message="xsd:trocarSenhaResponse" wsaw:Action="urn:trocarSenhaResponse"></wsdl:output>
+      <wsdl:fault name="AutenticacaoBeneficiarioService" message="xsd:AutenticacaoBeneficiarioService"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="consultarToken">
+      <wsdl:input message="xsd:consultarTokenRequest" wsaw:Action="urn:consultarTokenRequest"></wsdl:input>
+      <wsdl:output message="xsd:consultarTokenResponse" wsaw:Action="urn:consultarTokenResponse"></wsdl:output>
+      <wsdl:fault name="AutenticacaoBeneficiarioService" message="xsd:AutenticacaoBeneficiarioService"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="atualizarBeneficiario">
+      <wsdl:input message="xsd:atualizarBeneficiarioRequest" wsaw:Action="urn:atualizarBeneficiarioRequest"></wsdl:input>
+      <wsdl:output message="xsd:atualizarBeneficiarioResponse" wsaw:Action="urn:atualizarBeneficiarioResponse"></wsdl:output>
+      <wsdl:fault name="AutenticacaoBeneficiarioService" message="xsd:AutenticacaoBeneficiarioService"></wsdl:fault>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="AutenticacaoBeneficiarioServiceBinding" type="xsd:AutenticacaoBeneficiarioServicePortType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="autenticar">
+      <soap:operation soapAction="urn:autenticar" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="AutenticacaoBeneficiarioService">
+        <soap:fault name="AutenticacaoBeneficiarioService" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="autenticarCPF">
+      <soap:operation soapAction="urn:autenticarCPF" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="AutenticacaoBeneficiarioService">
+        <soap:fault name="AutenticacaoBeneficiarioService" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getToken">
+      <soap:operation soapAction="urn:getToken" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="AutenticacaoBeneficiarioService">
+        <soap:fault name="AutenticacaoBeneficiarioService" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="criarSenha">
+      <soap:operation soapAction="urn:criarSenha" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="AutenticacaoBeneficiarioService">
+        <soap:fault name="AutenticacaoBeneficiarioService" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="criarSenhaGsp">
+      <soap:operation soapAction="urn:criarSenhaGsp" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="AutenticacaoBeneficiarioService">
+        <soap:fault name="AutenticacaoBeneficiarioService" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="recuperarSenha">
+      <soap:operation soapAction="urn:recuperarSenha" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="AutenticacaoBeneficiarioService">
+        <soap:fault name="AutenticacaoBeneficiarioService" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="criarProtocolo">
+      <soap:operation soapAction="urn:criarProtocolo" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="AutenticacaoBeneficiarioService">
+        <soap:fault name="AutenticacaoBeneficiarioService" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="trocarSenha">
+      <soap:operation soapAction="urn:trocarSenha" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="AutenticacaoBeneficiarioService">
+        <soap:fault name="AutenticacaoBeneficiarioService" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="consultarToken">
+      <soap:operation soapAction="urn:consultarToken" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="AutenticacaoBeneficiarioService">
+        <soap:fault name="AutenticacaoBeneficiarioService" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="atualizarBeneficiario">
+      <soap:operation soapAction="urn:atualizarBeneficiario" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="AutenticacaoBeneficiarioService">
+        <soap:fault name="AutenticacaoBeneficiarioService" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AutenticacaoBeneficiarioService">
+    <wsdl:port name="AutenticacaoBeneficiarioServiceHttpSoapEndpoint" binding="xsd:AutenticacaoBeneficiarioServiceBinding">
+      <soap:address location="https://wwwt.connectmed.com.br/saudeweb/autenticacaoWSContainer/services/AutenticacaoBeneficiarioService/"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>https://wwwt.connectmed.com.br/saudeweb/autenticacaoWSContainer/services/AutenticacaoBeneficiarioService?xsd=Common.xsd</con:url><con:content><![CDATA[<xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://ws.common.tempoassist.com.br/schema" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:common="http://ws.common.tempoassist.com.br/schema">
+  <xs:complexType name="Hierarquia">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codigoSistema" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="estipulante" nillable="true" type="common:Operadora"/>
+      <xs:element minOccurs="0" name="operadora" nillable="true" type="common:Operadora"/>
+      <xs:element minOccurs="0" name="subestipulante" nillable="true" type="common:Operadora"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Operadora">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cnpj" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="codigo" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="codigoSistema" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="descricao" nillable="true" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="areas" nillable="true" type="common:Enumerado"/>
+      <xs:element minOccurs="0" name="codigoConnectmed" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="pathLogo" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Enum">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ordinal" nillable="true" type="xs:int"/>
+      <xs:element minOccurs="0" name="name" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Enumerado">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codigo" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="descricao" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="DadosPessoais">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cpf" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="dataNascimento" nillable="true" type="xs:date"/>
+      <xs:element minOccurs="0" name="ddd" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="email" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="nome" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ramal" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="telefone" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="cnpj" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Contato">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="email" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="departamento" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="codigoContato" nillable="true" type="xs:long"/>
+      <xs:element minOccurs="0" name="nomeContato" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="telefoneContato" nillable="true" type="common:Telefone"/>
+      <xs:element minOccurs="0" name="telefoneFax" nillable="true" type="common:Telefone"/>
+      <xs:element minOccurs="0" name="telefonePrincipal" nillable="true" type="common:Telefone"/>
+      <xs:element minOccurs="0" name="tipoContato" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Telefone">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ddd" nillable="true" type="xs:int"/>
+      <xs:element minOccurs="0" name="numero" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ramal" nillable="true" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Plano">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codigo" nillable="true" type="xs:long"/>
+      <xs:element minOccurs="0" name="nome" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="titular" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="vigencia" nillable="true" type="xs:date"/>
+      <xs:element minOccurs="0" name="numeroAns" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="UnidadeFuncional">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codigo" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="descricao" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Rede">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codigo" nillable="true" type="xs:long"/>
+      <xs:element minOccurs="0" name="nome" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="titular" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="vigencia" nillable="true" type="xs:date"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Empresa">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codigo" nillable="true" type="xs:int"/>
+      <xs:element minOccurs="0" name="nome" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="cnpj" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="sigla" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Endereco">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="bairro" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="cep" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="cidade" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="codigoIBGE" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="complemento" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="estado" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="logradouro" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="numero" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="pais" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="tipoLogradouro" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="uf" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ServiceResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="resultado" nillable="true" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="codigoErro" nillable="true" type="common:TipoErro"/>
+      <xs:element minOccurs="0" name="mensagem" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="TipoErro">
+    <xs:restriction base="xs:int">
+      <xs:enumeration value="0"/>
+      <xs:enumeration value="1"/>
+      <xs:enumeration value="2"/>
+      <xs:enumeration value="3"/>
+      <xs:enumeration value="4"/>
+      <xs:enumeration value="5"/>
+      <xs:enumeration value="6"/>
+      <xs:enumeration value="7"/>
+      <xs:enumeration value="8"/>
+      <xs:enumeration value="9"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>https://wwwt.connectmed.com.br/saudeweb/autenticacaoWSContainer/services/AutenticacaoBeneficiarioService?xsd=Beneficiario.xsd</con:url><con:content><![CDATA[<xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://ws.beneficiario.tempoassist.com.br/schema" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:common="http://ws.common.tempoassist.com.br/schema" xmlns:beneficiario="http://ws.beneficiario.tempoassist.com.br/schema">
+  <xs:import namespace="http://ws.common.tempoassist.com.br/schema" schemaLocation="AutenticacaoBeneficiarioService?xsd=Common.xsd"/>
+  <xs:complexType name="Beneficiario">
+    <xs:complexContent>
+      <xs:extension base="common:Contato">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="hierarquia" nillable="true" type="common:Hierarquia"/>
+          <xs:element minOccurs="0" name="codigo" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="numeroCNS" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="nome" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="codigoCarteirinha" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="dataNascimento" nillable="true" type="xs:date"/>
+          <xs:element minOccurs="0" name="cpf" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="sexo" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="status" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="cidade" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="vinculo" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="plano" nillable="true" type="common:Plano"/>
+          <xs:element minOccurs="0" name="acomodacao" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="abrangencia" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="numeroAns" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="historicoMovimentacao" type="xs:int"/>
+          <xs:element minOccurs="0" name="idade" nillable="true" type="xs:int"/>
+          <xs:element minOccurs="0" name="peso" nillable="true" type="xs:decimal"/>
+          <xs:element minOccurs="0" name="altura" nillable="true" type="xs:decimal"/>
+          <xs:element minOccurs="0" name="massaCorporal" nillable="true" type="xs:decimal"/>
+          <xs:element minOccurs="0" name="tipo" nillable="true" type="beneficiario:TipoBeneficiario"/>
+          <xs:element minOccurs="0" name="identidade" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="posto" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="titular" nillable="true" type="beneficiario:Beneficiario"/>
+          <xs:element minOccurs="0" name="matriculaFuncional" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="unidadeFuncional" nillable="true" type="common:UnidadeFuncional"/>
+          <xs:element minOccurs="0" name="rede" nillable="true" type="common:Rede"/>
+          <xs:element minOccurs="0" name="validadeCarteirinha" nillable="true" type="xs:date"/>
+          <xs:element minOccurs="0" name="dataRealizacaoAtendimento" nillable="true" type="xs:date"/>
+          <xs:element minOccurs="0" name="estadoCivil" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="nomeMae" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="empresa" nillable="true" type="common:Empresa"/>
+          <xs:element minOccurs="0" name="endereco" nillable="true" type="common:Endereco"/>
+          <xs:element minOccurs="0" name="rg" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="orgaoEmissor" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="dataEmissaoCarteirinha" nillable="true" type="xs:date"/>
+          <xs:element minOccurs="0" name="dataEntradaPlano" nillable="true" type="xs:date"/>
+          <xs:element minOccurs="0" name="dataBaseCarencia" nillable="true" type="xs:date"/>
+          <xs:element minOccurs="0" name="codigoInterno" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="cobertura" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="matricula" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="tipoContratacao" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="carenciaDescricao1" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="carenciaData1" nillable="true" type="xs:date"/>
+          <xs:element minOccurs="0" name="carenciaDescricao2" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="carenciaData2" nillable="true" type="xs:date"/>
+          <xs:element minOccurs="0" name="carenciaDescricao3" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="carenciaData3" nillable="true" type="xs:date"/>
+          <xs:element minOccurs="0" name="carenciaDescricao4" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="carenciaData4" nillable="true" type="xs:date"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="grupoFamiliar" nillable="true" type="beneficiario:Beneficiario"/>
+          <xs:element minOccurs="0" name="token" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="subestipulante" nillable="true" type="common:Empresa"/>
+          <xs:element minOccurs="0" name="smart" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="numeroDevice" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="estabelecimento" nillable="true" type="beneficiario:Estabelecimento"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="BeneficiarioCPFs">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nome" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="codigoCarteirinha" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="cpf" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="vinculo" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="plano" nillable="true" type="common:Plano"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="BeneficiarioCPF">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="beneficiarios" nillable="true" type="beneficiario:BeneficiarioCPFs"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="TipoBeneficiario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codigo" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="descricao" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Token">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="valor" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="dataAcesso" nillable="true" type="xs:date"/>
+      <xs:element minOccurs="0" name="dataExpiracao" nillable="true" type="xs:date"/>
+      <xs:element minOccurs="0" name="codigoBeneficiario" nillable="true" type="xs:int"/>
+      <xs:element minOccurs="0" name="usuario" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AutenticacaoBeneficiario">
+    <xs:complexContent>
+      <xs:extension base="beneficiario:Beneficiario">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="usuario" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="senha" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="senhaAnterior" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="confirmacaoSenha" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="confirmacaoEmail" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="AutenticacaoBeneficiarioCPF">
+    <xs:complexContent>
+      <xs:extension base="beneficiario:BeneficiarioCPF">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="cpfUsuario" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="senha" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="senhaAnterior" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="confirmacaoSenha" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="confirmacaoEmail" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CriarSenhaGsp">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codigoOperadora" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="codigoSistema" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="codigoCarteirinha" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="cpf" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="nomeMae" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="dataNascimento" nillable="true" type="xs:date"/>
+      <xs:element minOccurs="0" name="senha" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="confirmacaoSenha" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="numeroDevice" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CriarProtocolo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codigoOperadora" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="codigoCarteirinha" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="codigoTipo" nillable="true" type="xs:integer"/>
+      <xs:element minOccurs="0" name="codigoAssunto" nillable="true" type="xs:integer"/>
+      <xs:element minOccurs="0" name="codigoEvento" nillable="true" type="xs:integer"/>
+      <xs:element minOccurs="0" name="descricaoObs" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="codigoProtocolo" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="token" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AtualizarBeneficiario">
+    <xs:sequence>
+      <xs:element name="codigoEstipulante" type="xs:integer"/>
+      <xs:element name="codigoBeneficiario" type="xs:integer"/>
+      <xs:element name="email" type="xs:string"/>
+      <xs:element name="ddd" type="xs:integer"/>
+      <xs:element name="numTel" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Estabelecimento">
+    <xs:sequence>
+      <xs:element name="codigo" type="xs:integer"/>
+      <xs:element name="descricao" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>https://wwwt.connectmed.com.br/saudeweb/autenticacaoWSContainer/services/AutenticacaoBeneficiarioService/</con:endpoint></con:endpoints><con:operation id="b1ea0d01-e42e-4f48-b4a6-5df25c4bd706" isOneWay="false" action="urn:atualizarBeneficiario" name="atualizarBeneficiario" bindingOperationName="atualizarBeneficiario" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="ab51aa1c-dbd0-46d9-9436-0cd1253d1e48" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://wwwt.connectmed.com.br/saudeweb/autenticacaoWSContainer/services/AutenticacaoBeneficiarioService/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://service.autenticacao.ws.tempoassist.com.br" xmlns:sch="http://ws.beneficiario.tempoassist.com.br/schema">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ser:atualizarBeneficiario>
+         <ser:params>
+            <sch:codigoEstipulante>?</sch:codigoEstipulante>
+            <sch:codigoBeneficiario>?</sch:codigoBeneficiario>
+            <sch:email>?</sch:email>
+            <sch:ddd>?</sch:ddd>
+            <sch:numTel>?</sch:numTel>
+         </ser:params>
+      </ser:atualizarBeneficiario>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:atualizarBeneficiario"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="5d3cf425-da4f-4a39-9cf2-7d25e0e0dc0a" isOneWay="false" action="urn:autenticar" name="autenticar" bindingOperationName="autenticar" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="5366b0af-5f2f-49d8-800c-096cebc12f75" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://wwwt.connectmed.com.br/saudeweb/autenticacaoWSContainer/services/AutenticacaoBeneficiarioService/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://service.autenticacao.ws.tempoassist.com.br" xmlns:sch="http://ws.common.tempoassist.com.br/schema" xmlns:sch1="http://ws.beneficiario.tempoassist.com.br/schema">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ser:autenticar>
+         <!--Optional:-->
+         <ser:operadora>
+            <!--Optional:-->
+            <sch:cnpj></sch:cnpj>
+            <!--Optional:-->
+            <sch:codigo>20</sch:codigo>
+            <!--Optional:-->
+            <sch:codigoSistema>1</sch:codigoSistema>
+         </ser:operadora>
+         <!--Optional:-->
+         <ser:autenticacaoBeneficiario>
+            <!--Optional:-->
+            <sch1:usuario>0147291500</sch1:usuario>
+            <!--Optional:-->
+            <sch1:senha>H#*()Fh983</sch1:senha>
+         </ser:autenticacaoBeneficiario>
+      </ser:autenticar>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:autenticar"/><con:wsrmConfig version="1.2"/></con:call><con:call id="790cb130-1389-4fb7-a01d-e7da6e47b109" name="Request Vale 2"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://wwwt.connectmed.com.br/saudeweb/autenticacaoWSContainer/services/AutenticacaoBeneficiarioService/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://service.autenticacao.ws.tempoassist.com.br" xmlns:sch="http://ws.common.tempoassist.com.br/schema" xmlns:sch1="http://ws.beneficiario.tempoassist.com.br/schema">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ser:autenticar>
+         <!--Optional:-->
+         <ser:operadora>
+            <!--Optional:-->
+            <sch:cnpj></sch:cnpj>
+            <!--Optional:-->
+            <sch:codigo>20</sch:codigo>
+            <!--Optional:-->
+            <sch:codigoSistema>1</sch:codigoSistema>
+         </ser:operadora>
+         <!--Optional:-->
+         <ser:autenticacaoBeneficiario>
+            <!--Optional:-->
+            <sch1:usuario>0153840800</sch1:usuario>
+            <!--Optional:-->
+            <sch1:senha>H#*()Fh983</sch1:senha>
+         </ser:autenticacaoBeneficiario>
+      </ser:autenticar>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:autenticar"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="18e86258-4420-48ad-87af-ad39e690d647" isOneWay="false" action="urn:autenticarCPF" name="autenticarCPF" bindingOperationName="autenticarCPF" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="10ad6f88-604b-4c76-a098-3f56d8d54f0f" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://wwwt.connectmed.com.br/saudeweb/autenticacaoWSContainer/services/AutenticacaoBeneficiarioService/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://service.autenticacao.ws.tempoassist.com.br" xmlns:sch="http://ws.common.tempoassist.com.br/schema" xmlns:sch1="http://ws.beneficiario.tempoassist.com.br/schema">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ser:autenticarCPF>
+         <!--Optional:-->
+         <ser:operadora>
+            <!--Optional:-->
+            <sch:cnpj>?</sch:cnpj>
+            <!--Optional:-->
+            <sch:codigo>?</sch:codigo>
+            <!--Optional:-->
+            <sch:codigoSistema>?</sch:codigoSistema>
+            <!--Optional:-->
+            <sch:descricao>?</sch:descricao>
+            <!--Zero or more repetitions:-->
+            <sch:areas>
+               <!--Optional:-->
+               <sch:codigo>?</sch:codigo>
+               <!--Optional:-->
+               <sch:descricao>?</sch:descricao>
+            </sch:areas>
+            <!--Optional:-->
+            <sch:codigoConnectmed>?</sch:codigoConnectmed>
+            <!--Optional:-->
+            <sch:pathLogo>?</sch:pathLogo>
+         </ser:operadora>
+         <!--Optional:-->
+         <ser:autenticacaoBeneficiarioCPF>
+            <!--Zero or more repetitions:-->
+            <sch1:beneficiarios>
+               <!--Optional:-->
+               <sch1:nome>?</sch1:nome>
+               <!--Optional:-->
+               <sch1:codigoCarteirinha>?</sch1:codigoCarteirinha>
+               <!--Optional:-->
+               <sch1:cpf>?</sch1:cpf>
+               <!--Optional:-->
+               <sch1:vinculo>?</sch1:vinculo>
+               <!--Optional:-->
+               <sch1:plano>
+                  <!--Optional:-->
+                  <sch:codigo>?</sch:codigo>
+                  <!--Optional:-->
+                  <sch:nome>?</sch:nome>
+                  <!--Optional:-->
+                  <sch:titular>?</sch:titular>
+                  <!--Optional:-->
+                  <sch:vigencia>?</sch:vigencia>
+                  <!--Optional:-->
+                  <sch:numeroAns>?</sch:numeroAns>
+               </sch1:plano>
+            </sch1:beneficiarios>
+            <!--Optional:-->
+            <sch1:cpfUsuario>?</sch1:cpfUsuario>
+            <!--Optional:-->
+            <sch1:senha>?</sch1:senha>
+            <!--Optional:-->
+            <sch1:senhaAnterior>?</sch1:senhaAnterior>
+            <!--Optional:-->
+            <sch1:confirmacaoSenha>?</sch1:confirmacaoSenha>
+            <!--Optional:-->
+            <sch1:confirmacaoEmail>?</sch1:confirmacaoEmail>
+         </ser:autenticacaoBeneficiarioCPF>
+      </ser:autenticarCPF>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:autenticarCPF"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="7d0f0e4c-3640-4963-ad6f-4159a6969224" isOneWay="false" action="urn:consultarToken" name="consultarToken" bindingOperationName="consultarToken" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="565b85ef-73f1-4edf-8d47-3002bc9264b4" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://wwwt.connectmed.com.br/saudeweb/autenticacaoWSContainer/services/AutenticacaoBeneficiarioService/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://service.autenticacao.ws.tempoassist.com.br">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ser:consultarToken>
+         <!--Optional:-->
+         <ser:token>5Z1QC4UAUDHZ2ICYL8YHU7WL4</ser:token>
+      </ser:consultarToken>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:consultarToken"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="56bfd0be-de7a-4d0e-96f1-384bfed949ab" isOneWay="false" action="urn:criarProtocolo" name="criarProtocolo" bindingOperationName="criarProtocolo" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="00cbc910-f299-4c2f-9b9b-f87abca4468b" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://wwwt.connectmed.com.br/saudeweb/autenticacaoWSContainer/services/AutenticacaoBeneficiarioService/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://service.autenticacao.ws.tempoassist.com.br" xmlns:sch="http://ws.common.tempoassist.com.br/schema" xmlns:sch1="http://ws.beneficiario.tempoassist.com.br/schema">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ser:criarProtocolo>
+         <!--Optional:-->
+         <ser:operadora>
+            <!--Optional:-->
+            <sch:cnpj>?</sch:cnpj>
+            <!--Optional:-->
+            <sch:codigo>?</sch:codigo>
+            <!--Optional:-->
+            <sch:codigoSistema>?</sch:codigoSistema>
+            <!--Optional:-->
+            <sch:descricao>?</sch:descricao>
+            <!--Zero or more repetitions:-->
+            <sch:areas>
+               <!--Optional:-->
+               <sch:codigo>?</sch:codigo>
+               <!--Optional:-->
+               <sch:descricao>?</sch:descricao>
+            </sch:areas>
+            <!--Optional:-->
+            <sch:codigoConnectmed>?</sch:codigoConnectmed>
+            <!--Optional:-->
+            <sch:pathLogo>?</sch:pathLogo>
+         </ser:operadora>
+         <!--Optional:-->
+         <ser:params>
+            <!--Optional:-->
+            <sch1:codigoOperadora>?</sch1:codigoOperadora>
+            <!--Optional:-->
+            <sch1:codigoCarteirinha>?</sch1:codigoCarteirinha>
+            <!--Optional:-->
+            <sch1:codigoTipo>?</sch1:codigoTipo>
+            <!--Optional:-->
+            <sch1:codigoAssunto>?</sch1:codigoAssunto>
+            <!--Optional:-->
+            <sch1:codigoEvento>?</sch1:codigoEvento>
+            <!--Optional:-->
+            <sch1:descricaoObs>?</sch1:descricaoObs>
+            <!--Optional:-->
+            <sch1:codigoProtocolo>?</sch1:codigoProtocolo>
+            <!--Optional:-->
+            <sch1:token>?</sch1:token>
+         </ser:params>
+      </ser:criarProtocolo>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:criarProtocolo"/></con:call></con:operation><con:operation id="25f45666-6dc3-45c5-9372-b42fb6e1e518" isOneWay="false" action="urn:criarSenha" name="criarSenha" bindingOperationName="criarSenha" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="cedcff99-4cf1-42ba-b272-9e985f4b2900" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://wwwt.connectmed.com.br/saudeweb/autenticacaoWSContainer/services/AutenticacaoBeneficiarioService/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://service.autenticacao.ws.tempoassist.com.br" xmlns:sch="http://ws.common.tempoassist.com.br/schema" xmlns:sch1="http://ws.beneficiario.tempoassist.com.br/schema">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ser:criarSenha>
+         <!--Optional:-->
+         <ser:operadora>
+            <!--Optional:-->
+            <sch:cnpj>?</sch:cnpj>
+            <!--Optional:-->
+            <sch:codigo>?</sch:codigo>
+            <!--Optional:-->
+            <sch:codigoSistema>?</sch:codigoSistema>
+            <!--Optional:-->
+            <sch:descricao>?</sch:descricao>
+            <!--Zero or more repetitions:-->
+            <sch:areas>
+               <!--Optional:-->
+               <sch:codigo>?</sch:codigo>
+               <!--Optional:-->
+               <sch:descricao>?</sch:descricao>
+            </sch:areas>
+            <!--Optional:-->
+            <sch:codigoConnectmed>?</sch:codigoConnectmed>
+            <!--Optional:-->
+            <sch:pathLogo>?</sch:pathLogo>
+         </ser:operadora>
+         <!--Optional:-->
+         <ser:autenticacaoBeneficiario>
+            <!--Optional:-->
+            <sch:email>?</sch:email>
+            <!--Optional:-->
+            <sch:departamento>?</sch:departamento>
+            <!--Optional:-->
+            <sch:codigoContato>?</sch:codigoContato>
+            <!--Optional:-->
+            <sch:nomeContato>?</sch:nomeContato>
+            <!--Optional:-->
+            <sch:telefoneContato>
+               <!--Optional:-->
+               <sch:ddd>?</sch:ddd>
+               <!--Optional:-->
+               <sch:numero>?</sch:numero>
+               <!--Optional:-->
+               <sch:ramal>?</sch:ramal>
+            </sch:telefoneContato>
+            <!--Optional:-->
+            <sch:telefoneFax>
+               <!--Optional:-->
+               <sch:ddd>?</sch:ddd>
+               <!--Optional:-->
+               <sch:numero>?</sch:numero>
+               <!--Optional:-->
+               <sch:ramal>?</sch:ramal>
+            </sch:telefoneFax>
+            <!--Optional:-->
+            <sch:telefonePrincipal>
+               <!--Optional:-->
+               <sch:ddd>?</sch:ddd>
+               <!--Optional:-->
+               <sch:numero>?</sch:numero>
+               <!--Optional:-->
+               <sch:ramal>?</sch:ramal>
+            </sch:telefonePrincipal>
+            <!--Optional:-->
+            <sch:tipoContato>?</sch:tipoContato>
+            <!--Optional:-->
+            <sch1:hierarquia>
+               <!--Optional:-->
+               <sch:codigoSistema>?</sch:codigoSistema>
+               <!--Optional:-->
+               <sch:estipulante>
+                  <!--Optional:-->
+                  <sch:cnpj>?</sch:cnpj>
+                  <!--Optional:-->
+                  <sch:codigo>?</sch:codigo>
+                  <!--Optional:-->
+                  <sch:codigoSistema>?</sch:codigoSistema>
+                  <!--Optional:-->
+                  <sch:descricao>?</sch:descricao>
+                  <!--Zero or more repetitions:-->
+                  <sch:areas>
+                     <!--Optional:-->
+                     <sch:codigo>?</sch:codigo>
+                     <!--Optional:-->
+                     <sch:descricao>?</sch:descricao>
+                  </sch:areas>
+                  <!--Optional:-->
+                  <sch:codigoConnectmed>?</sch:codigoConnectmed>
+                  <!--Optional:-->
+                  <sch:pathLogo>?</sch:pathLogo>
+               </sch:estipulante>
+               <!--Optional:-->
+               <sch:operadora>
+                  <!--Optional:-->
+                  <sch:cnpj>?</sch:cnpj>
+                  <!--Optional:-->
+                  <sch:codigo>?</sch:codigo>
+                  <!--Optional:-->
+                  <sch:codigoSistema>?</sch:codigoSistema>
+                  <!--Optional:-->
+                  <sch:descricao>?</sch:descricao>
+                  <!--Zero or more repetitions:-->
+                  <sch:areas>
+                     <!--Optional:-->
+                     <sch:codigo>?</sch:codigo>
+                     <!--Optional:-->
+                     <sch:descricao>?</sch:descricao>
+                  </sch:areas>
+                  <!--Optional:-->
+                  <sch:codigoConnectmed>?</sch:codigoConnectmed>
+                  <!--Optional:-->
+                  <sch:pathLogo>?</sch:pathLogo>
+               </sch:operadora>
+               <!--Optional:-->
+               <sch:subestipulante>
+                  <!--Optional:-->
+                  <sch:cnpj>?</sch:cnpj>
+                  <!--Optional:-->
+                  <sch:codigo>?</sch:codigo>
+                  <!--Optional:-->
+                  <sch:codigoSistema>?</sch:codigoSistema>
+                  <!--Optional:-->
+                  <sch:descricao>?</sch:descricao>
+                  <!--Zero or more repetitions:-->
+                  <sch:areas>
+                     <!--Optional:-->
+                     <sch:codigo>?</sch:codigo>
+                     <!--Optional:-->
+                     <sch:descricao>?</sch:descricao>
+                  </sch:areas>
+                  <!--Optional:-->
+                  <sch:codigoConnectmed>?</sch:codigoConnectmed>
+                  <!--Optional:-->
+                  <sch:pathLogo>?</sch:pathLogo>
+               </sch:subestipulante>
+            </sch1:hierarquia>
+            <!--Optional:-->
+            <sch1:codigo>?</sch1:codigo>
+            <!--Optional:-->
+            <sch1:numeroCNS>?</sch1:numeroCNS>
+            <!--Optional:-->
+            <sch1:nome>?</sch1:nome>
+            <!--Optional:-->
+            <sch1:codigoCarteirinha>?</sch1:codigoCarteirinha>
+            <!--Optional:-->
+            <sch1:dataNascimento>?</sch1:dataNascimento>
+            <!--Optional:-->
+            <sch1:cpf>?</sch1:cpf>
+            <!--Optional:-->
+            <sch1:sexo>?</sch1:sexo>
+            <!--Optional:-->
+            <sch1:status>?</sch1:status>
+            <!--Optional:-->
+            <sch1:cidade>?</sch1:cidade>
+            <!--Optional:-->
+            <sch1:vinculo>?</sch1:vinculo>
+            <!--Optional:-->
+            <sch1:plano>
+               <!--Optional:-->
+               <sch:codigo>?</sch:codigo>
+               <!--Optional:-->
+               <sch:nome>?</sch:nome>
+               <!--Optional:-->
+               <sch:titular>?</sch:titular>
+               <!--Optional:-->
+               <sch:vigencia>?</sch:vigencia>
+               <!--Optional:-->
+               <sch:numeroAns>?</sch:numeroAns>
+            </sch1:plano>
+            <!--Optional:-->
+            <sch1:acomodacao>?</sch1:acomodacao>
+            <!--Optional:-->
+            <sch1:abrangencia>?</sch1:abrangencia>
+            <!--Optional:-->
+            <sch1:numeroAns>?</sch1:numeroAns>
+            <!--Optional:-->
+            <sch1:historicoMovimentacao>?</sch1:historicoMovimentacao>
+            <!--Optional:-->
+            <sch1:idade>?</sch1:idade>
+            <!--Optional:-->
+            <sch1:peso>?</sch1:peso>
+            <!--Optional:-->
+            <sch1:altura>?</sch1:altura>
+            <!--Optional:-->
+            <sch1:massaCorporal>?</sch1:massaCorporal>
+            <!--Optional:-->
+            <sch1:tipo>
+               <!--Optional:-->
+               <sch1:codigo>?</sch1:codigo>
+               <!--Optional:-->
+               <sch1:descricao>?</sch1:descricao>
+            </sch1:tipo>
+            <!--Optional:-->
+            <sch1:identidade>?</sch1:identidade>
+            <!--Optional:-->
+            <sch1:posto>?</sch1:posto>
+            <!--Optional:-->
+            <sch1:titular>
+               <!--Optional:-->
+               <sch:email>?</sch:email>
+               <!--Optional:-->
+               <sch:departamento>?</sch:departamento>
+               <!--Optional:-->
+               <sch:codigoContato>?</sch:codigoContato>
+               <!--Optional:-->
+               <sch:nomeContato>?</sch:nomeContato>
+               <!--Optional:-->
+               <sch:telefoneContato>
+                  <!--Optional:-->
+                  <sch:ddd>?</sch:ddd>
+                  <!--Optional:-->
+                  <sch:numero>?</sch:numero>
+                  <!--Optional:-->
+                  <sch:ramal>?</sch:ramal>
+               </sch:telefoneContato>
+               <!--Optional:-->
+               <sch:telefoneFax>
+                  <!--Optional:-->
+                  <sch:ddd>?</sch:ddd>
+                  <!--Optional:-->
+                  <sch:numero>?</sch:numero>
+                  <!--Optional:-->
+                  <sch:ramal>?</sch:ramal>
+               </sch:telefoneFax>
+               <!--Optional:-->
+               <sch:telefonePrincipal>
+                  <!--Optional:-->
+                  <sch:ddd>?</sch:ddd>
+                  <!--Optional:-->
+                  <sch:numero>?</sch:numero>
+                  <!--Optional:-->
+                  <sch:ramal>?</sch:ramal>
+               </sch:telefonePrincipal>
+               <!--Optional:-->
+               <sch:tipoContato>?</sch:tipoContato>
+               <!--Optional:-->
+               <sch1:hierarquia>
+                  <!--Optional:-->
+                  <sch:codigoSistema>?</sch:codigoSistema>
+                  <!--Optional:-->
+                  <sch:estipulante>
+                     <!--Optional:-->
+                     <sch:cnpj>?</sch:cnpj>
+                     <!--Optional:-->
+                     <sch:codigo>?</sch:codigo>
+                     <!--Optional:-->
+                     <sch:codigoSistema>?</sch:codigoSistema>
+                     <!--Optional:-->
+                     <sch:descricao>?</sch:descricao>
+                     <!--Zero or more repetitions:-->
+                     <sch:areas>
+                        <!--Optional:-->
+                        <sch:codigo>?</sch:codigo>
+                        <!--Optional:-->
+                        <sch:descricao>?</sch:descricao>
+                     </sch:areas>
+                     <!--Optional:-->
+                     <sch:codigoConnectmed>?</sch:codigoConnectmed>
+                     <!--Optional:-->
+                     <sch:pathLogo>?</sch:pathLogo>
+                  </sch:estipulante>
+                  <!--Optional:-->
+                  <sch:operadora>
+                     <!--Optional:-->
+                     <sch:cnpj>?</sch:cnpj>
+                     <!--Optional:-->
+                     <sch:codigo>?</sch:codigo>
+                     <!--Optional:-->
+                     <sch:codigoSistema>?</sch:codigoSistema>
+                     <!--Optional:-->
+                     <sch:descricao>?</sch:descricao>
+                     <!--Zero or more repetitions:-->
+                     <sch:areas>
+                        <!--Optional:-->
+                        <sch:codigo>?</sch:codigo>
+                        <!--Optional:-->
+                        <sch:descricao>?</sch:descricao>
+                     </sch:areas>
+                     <!--Optional:-->
+                     <sch:codigoConnectmed>?</sch:codigoConnectmed>
+                     <!--Optional:-->
+                     <sch:pathLogo>?</sch:pathLogo>
+                  </sch:operadora>
+                  <!--Optional:-->
+                  <sch:subestipulante>
+                     <!--Optional:-->
+                     <sch:cnpj>?</sch:cnpj>
+                     <!--Optional:-->
+                     <sch:codigo>?</sch:codigo>
+                     <!--Optional:-->
+                     <sch:codigoSistema>?</sch:codigoSistema>
+                     <!--Optional:-->
+                     <sch:descricao>?</sch:descricao>
+                     <!--Zero or more repetitions:-->
+                     <sch:areas>
+                        <!--Optional:-->
+                        <sch:codigo>?</sch:codigo>
+                        <!--Optional:-->
+                        <sch:descricao>?</sch:descricao>
+                     </sch:areas>
+                     <!--Optional:-->
+                     <sch:codigoConnectmed>?</sch:codigoConnectmed>
+                     <!--Optional:-->
+                     <sch:pathLogo>?</sch:pathLogo>
+                  </sch:subestipulante>
+               </sch1:hierarquia>
+               <!--Optional:-->
+               <sch1:codigo>?</sch1:codigo>
+               <!--Optional:-->
+               <sch1:numeroCNS>?</sch1:numeroCNS>
+               <!--Optional:-->
+               <sch1:nome>?</sch1:nome>
+               <!--Optional:-->
+               <sch1:codigoCarteirinha>?</sch1:codigoCarteirinha>
+               <!--Optional:-->
+               <sch1:dataNascimento>?</sch1:dataNascimento>
+               <!--Optional:-->
+               <sch1:cpf>?</sch1:cpf>
+               <!--Optional:-->
+               <sch1:sexo>?</sch1:sexo>
+               <!--Optional:-->
+               <sch1:status>?</sch1:status>
+               <!--Optional:-->
+               <sch1:cidade>?</sch1:cidade>
+               <!--Optional:-->
+               <sch1:vinculo>?</sch1:vinculo>
+               <!--Optional:-->
+               <sch1:plano>
+                  <!--Optional:-->
+                  <sch:codigo>?</sch:codigo>
+                  <!--Optional:-->
+                  <sch:nome>?</sch:nome>
+                  <!--Optional:-->
+                  <sch:titular>?</sch:titular>
+                  <!--Optional:-->
+                  <sch:vigencia>?</sch:vigencia>
+                  <!--Optional:-->
+                  <sch:numeroAns>?</sch:numeroAns>
+               </sch1:plano>
+               <!--Optional:-->
+               <sch1:acomodacao>?</sch1:acomodacao>
+               <!--Optional:-->
+               <sch1:abrangencia>?</sch1:abrangencia>
+               <!--Optional:-->
+               <sch1:numeroAns>?</sch1:numeroAns>
+               <!--Optional:-->
+               <sch1:historicoMovimentacao>?</sch1:historicoMovimentacao>
+               <!--Optional:-->
+               <sch1:idade>?</sch1:idade>
+               <!--Optional:-->
+               <sch1:peso>?</sch1:peso>
+               <!--Optional:-->
+               <sch1:altura>?</sch1:altura>
+               <!--Optional:-->
+               <sch1:massaCorporal>?</sch1:massaCorporal>
+               <!--Optional:-->
+               <sch1:tipo>
+                  <!--Optional:-->
+                  <sch1:codigo>?</sch1:codigo>
+                  <!--Optional:-->
+                  <sch1:descricao>?</sch1:descricao>
+               </sch1:tipo>
+               <!--Optional:-->
+               <sch1:identidade>?</sch1:identidade>
+               <!--Optional:-->
+               <sch1:posto>?</sch1:posto>
+               <!--Optional:-->
+               <sch1:titular/>
+               <!--Optional:-->
+               <sch1:matriculaFuncional>?</sch1:matriculaFuncional>
+               <!--Optional:-->
+               <sch1:unidadeFuncional>
+                  <!--Optional:-->
+                  <sch:codigo>?</sch:codigo>
+                  <!--Optional:-->
+                  <sch:descricao>?</sch:descricao>
+               </sch1:unidadeFuncional>
+               <!--Optional:-->
+               <sch1:rede>
+                  <!--Optional:-->
+                  <sch:codigo>?</sch:codigo>
+                  <!--Optional:-->
+                  <sch:nome>?</sch:nome>
+                  <!--Optional:-->
+                  <sch:titular>?</sch:titular>
+                  <!--Optional:-->
+                  <sch:vigencia>?</sch:vigencia>
+               </sch1:rede>
+               <!--Optional:-->
+               <sch1:validadeCarteirinha>?</sch1:validadeCarteirinha>
+               <!--Optional:-->
+               <sch1:dataRealizacaoAtendimento>?</sch1:dataRealizacaoAtendimento>
+               <!--Optional:-->
+               <sch1:estadoCivil>?</sch1:estadoCivil>
+               <!--Optional:-->
+               <sch1:nomeMae>?</sch1:nomeMae>
+               <!--Optional:-->
+               <sch1:empresa>
+                  <!--Optional:-->
+                  <sch:codigo>?</sch:codigo>
+                  <!--Optional:-->
+                  <sch:nome>?</sch:nome>
+                  <!--Optional:-->
+                  <sch:cnpj>?</sch:cnpj>
+                  <!--Optional:-->
+                  <sch:sigla>?</sch:sigla>
+               </sch1:empresa>
+               <!--Optional:-->
+               <sch1:endereco>
+                  <!--Optional:-->
+                  <sch:bairro>?</sch:bairro>
+                  <!--Optional:-->
+                  <sch:cep>?</sch:cep>
+                  <!--Optional:-->
+                  <sch:cidade>?</sch:cidade>
+                  <!--Optional:-->
+                  <sch:codigoIBGE>?</sch:codigoIBGE>
+                  <!--Optional:-->
+                  <sch:complemento>?</sch:complemento>
+                  <!--Optional:-->
+                  <sch:estado>?</sch:estado>
+                  <!--Optional:-->
+                  <sch:logradouro>?</sch:logradouro>
+                  <!--Optional:-->
+                  <sch:numero>?</sch:numero>
+                  <!--Optional:-->
+                  <sch:pais>?</sch:pais>
+                  <!--Optional:-->
+                  <sch:tipoLogradouro>?</sch:tipoLogradouro>
+                  <!--Optional:-->
+                  <sch:uf>?</sch:uf>
+               </sch1:endereco>
+               <!--Optional:-->
+               <sch1:rg>?</sch1:rg>
+               <!--Optional:-->
+               <sch1:orgaoEmissor>?</sch1:orgaoEmissor>
+               <!--Optional:-->
+               <sch1:dataEmissaoCarteirinha>?</sch1:dataEmissaoCarteirinha>
+               <!--Optional:-->
+               <sch1:dataEntradaPlano>?</sch1:dataEntradaPlano>
+               <!--Optional:-->
+               <sch1:dataBaseCarencia>?</sch1:dataBaseCarencia>
+               <!--Optional:-->
+               <sch1:codigoInterno>?</sch1:codigoInterno>
+               <!--Optional:-->
+               <sch1:cobertura>?</sch1:cobertura>
+               <!--Optional:-->
+               <sch1:matricula>?</sch1:matricula>
+               <!--Optional:-->
+               <sch1:tipoContratacao>?</sch1:tipoContratacao>
+               <!--Optional:-->
+               <sch1:carenciaDescricao1>?</sch1:carenciaDescricao1>
+               <!--Optional:-->
+               <sch1:carenciaData1>?</sch1:carenciaData1>
+               <!--Optional:-->
+               <sch1:carenciaDescricao2>?</sch1:carenciaDescricao2>
+               <!--Optional:-->
+               <sch1:carenciaData2>?</sch1:carenciaData2>
+               <!--Optional:-->
+               <sch1:carenciaDescricao3>?</sch1:carenciaDescricao3>
+               <!--Optional:-->
+               <sch1:carenciaData3>?</sch1:carenciaData3>
+               <!--Optional:-->
+               <sch1:carenciaDescricao4>?</sch1:carenciaDescricao4>
+               <!--Optional:-->
+               <sch1:carenciaData4>?</sch1:carenciaData4>
+               <!--Zero or more repetitions:-->
+               <sch1:grupoFamiliar/>
+               <!--Optional:-->
+               <sch1:token>?</sch1:token>
+               <!--Optional:-->
+               <sch1:subestipulante>
+                  <!--Optional:-->
+                  <sch:codigo>?</sch:codigo>
+                  <!--Optional:-->
+                  <sch:nome>?</sch:nome>
+                  <!--Optional:-->
+                  <sch:cnpj>?</sch:cnpj>
+                  <!--Optional:-->
+                  <sch:sigla>?</sch:sigla>
+               </sch1:subestipulante>
+               <!--Optional:-->
+               <sch1:smart>?</sch1:smart>
+               <!--Optional:-->
+               <sch1:numeroDevice>?</sch1:numeroDevice>
+               <!--Optional:-->
+               <sch1:estabelecimento>
+                  <sch1:codigo>?</sch1:codigo>
+                  <sch1:descricao>?</sch1:descricao>
+               </sch1:estabelecimento>
+            </sch1:titular>
+            <!--Optional:-->
+            <sch1:matriculaFuncional>?</sch1:matriculaFuncional>
+            <!--Optional:-->
+            <sch1:unidadeFuncional>
+               <!--Optional:-->
+               <sch:codigo>?</sch:codigo>
+               <!--Optional:-->
+               <sch:descricao>?</sch:descricao>
+            </sch1:unidadeFuncional>
+            <!--Optional:-->
+            <sch1:rede>
+               <!--Optional:-->
+               <sch:codigo>?</sch:codigo>
+               <!--Optional:-->
+               <sch:nome>?</sch:nome>
+               <!--Optional:-->
+               <sch:titular>?</sch:titular>
+               <!--Optional:-->
+               <sch:vigencia>?</sch:vigencia>
+            </sch1:rede>
+            <!--Optional:-->
+            <sch1:validadeCarteirinha>?</sch1:validadeCarteirinha>
+            <!--Optional:-->
+            <sch1:dataRealizacaoAtendimento>?</sch1:dataRealizacaoAtendimento>
+            <!--Optional:-->
+            <sch1:estadoCivil>?</sch1:estadoCivil>
+            <!--Optional:-->
+            <sch1:nomeMae>?</sch1:nomeMae>
+            <!--Optional:-->
+            <sch1:empresa>
+               <!--Optional:-->
+               <sch:codigo>?</sch:codigo>
+               <!--Optional:-->
+               <sch:nome>?</sch:nome>
+               <!--Optional:-->
+               <sch:cnpj>?</sch:cnpj>
+               <!--Optional:-->
+               <sch:sigla>?</sch:sigla>
+            </sch1:empresa>
+            <!--Optional:-->
+            <sch1:endereco>
+               <!--Optional:-->
+               <sch:bairro>?</sch:bairro>
+               <!--Optional:-->
+               <sch:cep>?</sch:cep>
+               <!--Optional:-->
+               <sch:cidade>?</sch:cidade>
+               <!--Optional:-->
+               <sch:codigoIBGE>?</sch:codigoIBGE>
+               <!--Optional:-->
+               <sch:complemento>?</sch:complemento>
+               <!--Optional:-->
+               <sch:estado>?</sch:estado>
+               <!--Optional:-->
+               <sch:logradouro>?</sch:logradouro>
+               <!--Optional:-->
+               <sch:numero>?</sch:numero>
+               <!--Optional:-->
+               <sch:pais>?</sch:pais>
+               <!--Optional:-->
+               <sch:tipoLogradouro>?</sch:tipoLogradouro>
+               <!--Optional:-->
+               <sch:uf>?</sch:uf>
+            </sch1:endereco>
+            <!--Optional:-->
+            <sch1:rg>?</sch1:rg>
+            <!--Optional:-->
+            <sch1:orgaoEmissor>?</sch1:orgaoEmissor>
+            <!--Optional:-->
+            <sch1:dataEmissaoCarteirinha>?</sch1:dataEmissaoCarteirinha>
+            <!--Optional:-->
+            <sch1:dataEntradaPlano>?</sch1:dataEntradaPlano>
+            <!--Optional:-->
+            <sch1:dataBaseCarencia>?</sch1:dataBaseCarencia>
+            <!--Optional:-->
+            <sch1:codigoInterno>?</sch1:codigoInterno>
+            <!--Optional:-->
+            <sch1:cobertura>?</sch1:cobertura>
+            <!--Optional:-->
+            <sch1:matricula>?</sch1:matricula>
+            <!--Optional:-->
+            <sch1:tipoContratacao>?</sch1:tipoContratacao>
+            <!--Optional:-->
+            <sch1:carenciaDescricao1>?</sch1:carenciaDescricao1>
+            <!--Optional:-->
+            <sch1:carenciaData1>?</sch1:carenciaData1>
+            <!--Optional:-->
+            <sch1:carenciaDescricao2>?</sch1:carenciaDescricao2>
+            <!--Optional:-->
+            <sch1:carenciaData2>?</sch1:carenciaData2>
+            <!--Optional:-->
+            <sch1:carenciaDescricao3>?</sch1:carenciaDescricao3>
+            <!--Optional:-->
+            <sch1:carenciaData3>?</sch1:carenciaData3>
+            <!--Optional:-->
+            <sch1:carenciaDescricao4>?</sch1:carenciaDescricao4>
+            <!--Optional:-->
+            <sch1:carenciaData4>?</sch1:carenciaData4>
+            <!--Zero or more repetitions:-->
+            <sch1:grupoFamiliar>
+               <!--Optional:-->
+               <sch:email>?</sch:email>
+               <!--Optional:-->
+               <sch:departamento>?</sch:departamento>
+               <!--Optional:-->
+               <sch:codigoContato>?</sch:codigoContato>
+               <!--Optional:-->
+               <sch:nomeContato>?</sch:nomeContato>
+               <!--Optional:-->
+               <sch:telefoneContato>
+                  <!--Optional:-->
+                  <sch:ddd>?</sch:ddd>
+                  <!--Optional:-->
+                  <sch:numero>?</sch:numero>
+                  <!--Optional:-->
+                  <sch:ramal>?</sch:ramal>
+               </sch:telefoneContato>
+               <!--Optional:-->
+               <sch:telefoneFax>
+                  <!--Optional:-->
+                  <sch:ddd>?</sch:ddd>
+                  <!--Optional:-->
+                  <sch:numero>?</sch:numero>
+                  <!--Optional:-->
+                  <sch:ramal>?</sch:ramal>
+               </sch:telefoneFax>
+               <!--Optional:-->
+               <sch:telefonePrincipal>
+                  <!--Optional:-->
+                  <sch:ddd>?</sch:ddd>
+                  <!--Optional:-->
+                  <sch:numero>?</sch:numero>
+                  <!--Optional:-->
+                  <sch:ramal>?</sch:ramal>
+               </sch:telefonePrincipal>
+               <!--Optional:-->
+               <sch:tipoContato>?</sch:tipoContato>
+               <!--Optional:-->
+               <sch1:hierarquia>
+                  <!--Optional:-->
+                  <sch:codigoSistema>?</sch:codigoSistema>
+                  <!--Optional:-->
+                  <sch:estipulante>
+                     <!--Optional:-->
+                     <sch:cnpj>?</sch:cnpj>
+                     <!--Optional:-->
+                     <sch:codigo>?</sch:codigo>
+                     <!--Optional:-->
+                     <sch:codigoSistema>?</sch:codigoSistema>
+                     <!--Optional:-->
+                     <sch:descricao>?</sch:descricao>
+                     <!--Zero or more repetitions:-->
+                     <sch:areas>
+                        <!--Optional:-->
+                        <sch:codigo>?</sch:codigo>
+                        <!--Optional:-->
+                        <sch:descricao>?</sch:descricao>
+                     </sch:areas>
+                     <!--Optional:-->
+                     <sch:codigoConnectmed>?</sch:codigoConnectmed>
+                     <!--Optional:-->
+                     <sch:pathLogo>?</sch:pathLogo>
+                  </sch:estipulante>
+                  <!--Optional:-->
+                  <sch:operadora>
+                     <!--Optional:-->
+                     <sch:cnpj>?</sch:cnpj>
+                     <!--Optional:-->
+                     <sch:codigo>?</sch:codigo>
+                     <!--Optional:-->
+                     <sch:codigoSistema>?</sch:codigoSistema>
+                     <!--Optional:-->
+                     <sch:descricao>?</sch:descricao>
+                     <!--Zero or more repetitions:-->
+                     <sch:areas>
+                        <!--Optional:-->
+                        <sch:codigo>?</sch:codigo>
+                        <!--Optional:-->
+                        <sch:descricao>?</sch:descricao>
+                     </sch:areas>
+                     <!--Optional:-->
+                     <sch:codigoConnectmed>?</sch:codigoConnectmed>
+                     <!--Optional:-->
+                     <sch:pathLogo>?</sch:pathLogo>
+                  </sch:operadora>
+                  <!--Optional:-->
+                  <sch:subestipulante>
+                     <!--Optional:-->
+                     <sch:cnpj>?</sch:cnpj>
+                     <!--Optional:-->
+                     <sch:codigo>?</sch:codigo>
+                     <!--Optional:-->
+                     <sch:codigoSistema>?</sch:codigoSistema>
+                     <!--Optional:-->
+                     <sch:descricao>?</sch:descricao>
+                     <!--Zero or more repetitions:-->
+                     <sch:areas>
+                        <!--Optional:-->
+                        <sch:codigo>?</sch:codigo>
+                        <!--Optional:-->
+                        <sch:descricao>?</sch:descricao>
+                     </sch:areas>
+                     <!--Optional:-->
+                     <sch:codigoConnectmed>?</sch:codigoConnectmed>
+                     <!--Optional:-->
+                     <sch:pathLogo>?</sch:pathLogo>
+                  </sch:subestipulante>
+               </sch1:hierarquia>
+               <!--Optional:-->
+               <sch1:codigo>?</sch1:codigo>
+               <!--Optional:-->
+               <sch1:numeroCNS>?</sch1:numeroCNS>
+               <!--Optional:-->
+               <sch1:nome>?</sch1:nome>
+               <!--Optional:-->
+               <sch1:codigoCarteirinha>?</sch1:codigoCarteirinha>
+               <!--Optional:-->
+               <sch1:dataNascimento>?</sch1:dataNascimento>
+               <!--Optional:-->
+               <sch1:cpf>?</sch1:cpf>
+               <!--Optional:-->
+               <sch1:sexo>?</sch1:sexo>
+               <!--Optional:-->
+               <sch1:status>?</sch1:status>
+               <!--Optional:-->
+               <sch1:cidade>?</sch1:cidade>
+               <!--Optional:-->
+               <sch1:vinculo>?</sch1:vinculo>
+               <!--Optional:-->
+               <sch1:plano>
+                  <!--Optional:-->
+                  <sch:codigo>?</sch:codigo>
+                  <!--Optional:-->
+                  <sch:nome>?</sch:nome>
+                  <!--Optional:-->
+                  <sch:titular>?</sch:titular>
+                  <!--Optional:-->
+                  <sch:vigencia>?</sch:vigencia>
+                  <!--Optional:-->
+                  <sch:numeroAns>?</sch:numeroAns>
+               </sch1:plano>
+               <!--Optional:-->
+               <sch1:acomodacao>?</sch1:acomodacao>
+               <!--Optional:-->
+               <sch1:abrangencia>?</sch1:abrangencia>
+               <!--Optional:-->
+               <sch1:numeroAns>?</sch1:numeroAns>
+               <!--Optional:-->
+               <sch1:historicoMovimentacao>?</sch1:historicoMovimentacao>
+               <!--Optional:-->
+               <sch1:idade>?</sch1:idade>
+               <!--Optional:-->
+               <sch1:peso>?</sch1:peso>
+               <!--Optional:-->
+               <sch1:altura>?</sch1:altura>
+               <!--Optional:-->
+               <sch1:massaCorporal>?</sch1:massaCorporal>
+               <!--Optional:-->
+               <sch1:tipo>
+                  <!--Optional:-->
+                  <sch1:codigo>?</sch1:codigo>
+                  <!--Optional:-->
+                  <sch1:descricao>?</sch1:descricao>
+               </sch1:tipo>
+               <!--Optional:-->
+               <sch1:identidade>?</sch1:identidade>
+               <!--Optional:-->
+               <sch1:posto>?</sch1:posto>
+               <!--Optional:-->
+               <sch1:titular/>
+               <!--Optional:-->
+               <sch1:matriculaFuncional>?</sch1:matriculaFuncional>
+               <!--Optional:-->
+               <sch1:unidadeFuncional>
+                  <!--Optional:-->
+                  <sch:codigo>?</sch:codigo>
+                  <!--Optional:-->
+                  <sch:descricao>?</sch:descricao>
+               </sch1:unidadeFuncional>
+               <!--Optional:-->
+               <sch1:rede>
+                  <!--Optional:-->
+                  <sch:codigo>?</sch:codigo>
+                  <!--Optional:-->
+                  <sch:nome>?</sch:nome>
+                  <!--Optional:-->
+                  <sch:titular>?</sch:titular>
+                  <!--Optional:-->
+                  <sch:vigencia>?</sch:vigencia>
+               </sch1:rede>
+               <!--Optional:-->
+               <sch1:validadeCarteirinha>?</sch1:validadeCarteirinha>
+               <!--Optional:-->
+               <sch1:dataRealizacaoAtendimento>?</sch1:dataRealizacaoAtendimento>
+               <!--Optional:-->
+               <sch1:estadoCivil>?</sch1:estadoCivil>
+               <!--Optional:-->
+               <sch1:nomeMae>?</sch1:nomeMae>
+               <!--Optional:-->
+               <sch1:empresa>
+                  <!--Optional:-->
+                  <sch:codigo>?</sch:codigo>
+                  <!--Optional:-->
+                  <sch:nome>?</sch:nome>
+                  <!--Optional:-->
+                  <sch:cnpj>?</sch:cnpj>
+                  <!--Optional:-->
+                  <sch:sigla>?</sch:sigla>
+               </sch1:empresa>
+               <!--Optional:-->
+               <sch1:endereco>
+                  <!--Optional:-->
+                  <sch:bairro>?</sch:bairro>
+                  <!--Optional:-->
+                  <sch:cep>?</sch:cep>
+                  <!--Optional:-->
+                  <sch:cidade>?</sch:cidade>
+                  <!--Optional:-->
+                  <sch:codigoIBGE>?</sch:codigoIBGE>
+                  <!--Optional:-->
+                  <sch:complemento>?</sch:complemento>
+                  <!--Optional:-->
+                  <sch:estado>?</sch:estado>
+                  <!--Optional:-->
+                  <sch:logradouro>?</sch:logradouro>
+                  <!--Optional:-->
+                  <sch:numero>?</sch:numero>
+                  <!--Optional:-->
+                  <sch:pais>?</sch:pais>
+                  <!--Optional:-->
+                  <sch:tipoLogradouro>?</sch:tipoLogradouro>
+                  <!--Optional:-->
+                  <sch:uf>?</sch:uf>
+               </sch1:endereco>
+               <!--Optional:-->
+               <sch1:rg>?</sch1:rg>
+               <!--Optional:-->
+               <sch1:orgaoEmissor>?</sch1:orgaoEmissor>
+               <!--Optional:-->
+               <sch1:dataEmissaoCarteirinha>?</sch1:dataEmissaoCarteirinha>
+               <!--Optional:-->
+               <sch1:dataEntradaPlano>?</sch1:dataEntradaPlano>
+               <!--Optional:-->
+               <sch1:dataBaseCarencia>?</sch1:dataBaseCarencia>
+               <!--Optional:-->
+               <sch1:codigoInterno>?</sch1:codigoInterno>
+               <!--Optional:-->
+               <sch1:cobertura>?</sch1:cobertura>
+               <!--Optional:-->
+               <sch1:matricula>?</sch1:matricula>
+               <!--Optional:-->
+               <sch1:tipoContratacao>?</sch1:tipoContratacao>
+               <!--Optional:-->
+               <sch1:carenciaDescricao1>?</sch1:carenciaDescricao1>
+               <!--Optional:-->
+               <sch1:carenciaData1>?</sch1:carenciaData1>
+               <!--Optional:-->
+               <sch1:carenciaDescricao2>?</sch1:carenciaDescricao2>
+               <!--Optional:-->
+               <sch1:carenciaData2>?</sch1:carenciaData2>
+               <!--Optional:-->
+               <sch1:carenciaDescricao3>?</sch1:carenciaDescricao3>
+               <!--Optional:-->
+               <sch1:carenciaData3>?</sch1:carenciaData3>
+               <!--Optional:-->
+               <sch1:carenciaDescricao4>?</sch1:carenciaDescricao4>
+               <!--Optional:-->
+               <sch1:carenciaData4>?</sch1:carenciaData4>
+               <!--Zero or more repetitions:-->
+               <sch1:grupoFamiliar/>
+               <!--Optional:-->
+               <sch1:token>?</sch1:token>
+               <!--Optional:-->
+               <sch1:subestipulante>
+                  <!--Optional:-->
+                  <sch:codigo>?</sch:codigo>
+                  <!--Optional:-->
+                  <sch:nome>?</sch:nome>
+                  <!--Optional:-->
+                  <sch:cnpj>?</sch:cnpj>
+                  <!--Optional:-->
+                  <sch:sigla>?</sch:sigla>
+               </sch1:subestipulante>
+               <!--Optional:-->
+               <sch1:smart>?</sch1:smart>
+               <!--Optional:-->
+               <sch1:numeroDevice>?</sch1:numeroDevice>
+               <!--Optional:-->
+               <sch1:estabelecimento>
+                  <sch1:codigo>?</sch1:codigo>
+                  <sch1:descricao>?</sch1:descricao>
+               </sch1:estabelecimento>
+            </sch1:grupoFamiliar>
+            <!--Optional:-->
+            <sch1:token>?</sch1:token>
+            <!--Optional:-->
+            <sch1:subestipulante>
+               <!--Optional:-->
+               <sch:codigo>?</sch:codigo>
+               <!--Optional:-->
+               <sch:nome>?</sch:nome>
+               <!--Optional:-->
+               <sch:cnpj>?</sch:cnpj>
+               <!--Optional:-->
+               <sch:sigla>?</sch:sigla>
+            </sch1:subestipulante>
+            <!--Optional:-->
+            <sch1:smart>?</sch1:smart>
+            <!--Optional:-->
+            <sch1:numeroDevice>?</sch1:numeroDevice>
+            <!--Optional:-->
+            <sch1:estabelecimento>
+               <sch1:codigo>?</sch1:codigo>
+               <sch1:descricao>?</sch1:descricao>
+            </sch1:estabelecimento>
+            <!--Optional:-->
+            <sch1:usuario>?</sch1:usuario>
+            <!--Optional:-->
+            <sch1:senha>?</sch1:senha>
+            <!--Optional:-->
+            <sch1:senhaAnterior>?</sch1:senhaAnterior>
+            <!--Optional:-->
+            <sch1:confirmacaoSenha>?</sch1:confirmacaoSenha>
+            <!--Optional:-->
+            <sch1:confirmacaoEmail>?</sch1:confirmacaoEmail>
+         </ser:autenticacaoBeneficiario>
+      </ser:criarSenha>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:criarSenha"/></con:call></con:operation><con:operation id="846e8b1e-3848-4ea9-832a-ba0d78babaed" isOneWay="false" action="urn:criarSenhaGsp" name="criarSenhaGsp" bindingOperationName="criarSenhaGsp" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="3555db47-56eb-4b3e-a955-4e8cc50ec139" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://wwwt.connectmed.com.br/saudeweb/autenticacaoWSContainer/services/AutenticacaoBeneficiarioService/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://service.autenticacao.ws.tempoassist.com.br" xmlns:sch="http://ws.beneficiario.tempoassist.com.br/schema">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ser:criarSenhaGsp>
+         <!--Optional:-->
+         <ser:params>
+            <!--Optional:-->
+            <sch:codigoOperadora>?</sch:codigoOperadora>
+            <!--Optional:-->
+            <sch:codigoSistema>?</sch:codigoSistema>
+            <!--Optional:-->
+            <sch:codigoCarteirinha>?</sch:codigoCarteirinha>
+            <!--Optional:-->
+            <sch:cpf>?</sch:cpf>
+            <!--Optional:-->
+            <sch:nomeMae>?</sch:nomeMae>
+            <!--Optional:-->
+            <sch:dataNascimento>?</sch:dataNascimento>
+            <!--Optional:-->
+            <sch:senha>?</sch:senha>
+            <!--Optional:-->
+            <sch:confirmacaoSenha>?</sch:confirmacaoSenha>
+            <!--Optional:-->
+            <sch:numeroDevice>?</sch:numeroDevice>
+         </ser:params>
+      </ser:criarSenhaGsp>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:criarSenhaGsp"/></con:call></con:operation><con:operation id="2448edb1-d6d5-48b8-955b-5e55504ab7a9" isOneWay="false" action="urn:getToken" name="getToken" bindingOperationName="getToken" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="e4113b4d-26a6-490b-8fa4-248e3559003c" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://wwwt.connectmed.com.br/saudeweb/autenticacaoWSContainer/services/AutenticacaoBeneficiarioService/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://service.autenticacao.ws.tempoassist.com.br" xmlns:sch="http://ws.common.tempoassist.com.br/schema" xmlns:sch1="http://ws.beneficiario.tempoassist.com.br/schema">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ser:getToken>
+         <!--Optional:-->
+         <ser:operadora>
+            <!--Optional:-->
+            <sch:cnpj>?</sch:cnpj>
+            <!--Optional:-->
+            <sch:codigo>?</sch:codigo>
+            <!--Optional:-->
+            <sch:codigoSistema>?</sch:codigoSistema>
+            <!--Optional:-->
+            <sch:descricao>?</sch:descricao>
+            <!--Zero or more repetitions:-->
+            <sch:areas>
+               <!--Optional:-->
+               <sch:codigo>?</sch:codigo>
+               <!--Optional:-->
+               <sch:descricao>?</sch:descricao>
+            </sch:areas>
+            <!--Optional:-->
+            <sch:codigoConnectmed>?</sch:codigoConnectmed>
+            <!--Optional:-->
+            <sch:pathLogo>?</sch:pathLogo>
+         </ser:operadora>
+         <!--Optional:-->
+         <ser:autenticacaoBeneficiario>
+            <!--Optional:-->
+            <sch:email>?</sch:email>
+            <!--Optional:-->
+            <sch:departamento>?</sch:departamento>
+            <!--Optional:-->
+            <sch:codigoContato>?</sch:codigoContato>
+            <!--Optional:-->
+            <sch:nomeContato>?</sch:nomeContato>
+            <!--Optional:-->
+            <sch:telefoneContato>
+               <!--Optional:-->
+               <sch:ddd>?</sch:ddd>
+               <!--Optional:-->
+               <sch:numero>?</sch:numero>
+               <!--Optional:-->
+               <sch:ramal>?</sch:ramal>
+            </sch:telefoneContato>
+            <!--Optional:-->
+            <sch:telefoneFax>
+               <!--Optional:-->
+               <sch:ddd>?</sch:ddd>
+               <!--Optional:-->
+               <sch:numero>?</sch:numero>
+               <!--Optional:-->
+               <sch:ramal>?</sch:ramal>
+            </sch:telefoneFax>
+            <!--Optional:-->
+            <sch:telefonePrincipal>
+               <!--Optional:-->
+               <sch:ddd>?</sch:ddd>
+               <!--Optional:-->
+               <sch:numero>?</sch:numero>
+               <!--Optional:-->
+               <sch:ramal>?</sch:ramal>
+            </sch:telefonePrincipal>
+            <!--Optional:-->
+            <sch:tipoContato>?</sch:tipoContato>
+            <!--Optional:-->
+            <sch1:hierarquia>
+               <!--Optional:-->
+               <sch:codigoSistema>?</sch:codigoSistema>
+               <!--Optional:-->
+               <sch:estipulante>
+                  <!--Optional:-->
+                  <sch:cnpj>?</sch:cnpj>
+                  <!--Optional:-->
+                  <sch:codigo>?</sch:codigo>
+                  <!--Optional:-->
+                  <sch:codigoSistema>?</sch:codigoSistema>
+                  <!--Optional:-->
+                  <sch:descricao>?</sch:descricao>
+                  <!--Zero or more repetitions:-->
+                  <sch:areas>
+                     <!--Optional:-->
+                     <sch:codigo>?</sch:codigo>
+                     <!--Optional:-->
+                     <sch:descricao>?</sch:descricao>
+                  </sch:areas>
+                  <!--Optional:-->
+                  <sch:codigoConnectmed>?</sch:codigoConnectmed>
+                  <!--Optional:-->
+                  <sch:pathLogo>?</sch:pathLogo>
+               </sch:estipulante>
+               <!--Optional:-->
+               <sch:operadora>
+                  <!--Optional:-->
+                  <sch:cnpj>?</sch:cnpj>
+                  <!--Optional:-->
+                  <sch:codigo>?</sch:codigo>
+                  <!--Optional:-->
+                  <sch:codigoSistema>?</sch:codigoSistema>
+                  <!--Optional:-->
+                  <sch:descricao>?</sch:descricao>
+                  <!--Zero or more repetitions:-->
+                  <sch:areas>
+                     <!--Optional:-->
+                     <sch:codigo>?</sch:codigo>
+                     <!--Optional:-->
+                     <sch:descricao>?</sch:descricao>
+                  </sch:areas>
+                  <!--Optional:-->
+                  <sch:codigoConnectmed>?</sch:codigoConnectmed>
+                  <!--Optional:-->
+                  <sch:pathLogo>?</sch:pathLogo>
+               </sch:operadora>
+               <!--Optional:-->
+               <sch:subestipulante>
+                  <!--Optional:-->
+                  <sch:cnpj>?</sch:cnpj>
+                  <!--Optional:-->
+                  <sch:codigo>?</sch:codigo>
+                  <!--Optional:-->
+                  <sch:codigoSistema>?</sch:codigoSistema>
+                  <!--Optional:-->
+                  <sch:descricao>?</sch:descricao>
+                  <!--Zero or more repetitions:-->
+                  <sch:areas>
+                     <!--Optional:-->
+                     <sch:codigo>?</sch:codigo>
+                     <!--Optional:-->
+                     <sch:descricao>?</sch:descricao>
+                  </sch:areas>
+                  <!--Optional:-->
+                  <sch:codigoConnectmed>?</sch:codigoConnectmed>
+                  <!--Optional:-->
+                  <sch:pathLogo>?</sch:pathLogo>
+               </sch:subestipulante>
+            </sch1:hierarquia>
+            <!--Optional:-->
+            <sch1:codigo>?</sch1:codigo>
+            <!--Optional:-->
+            <sch1:numeroCNS>?</sch1:numeroCNS>
+            <!--Optional:-->
+            <sch1:nome>?</sch1:nome>
+            <!--Optional:-->
+            <sch1:codigoCarteirinha>?</sch1:codigoCarteirinha>
+            <!--Optional:-->
+            <sch1:dataNascimento>?</sch1:dataNascimento>
+            <!--Optional:-->
+            <sch1:cpf>?</sch1:cpf>
+            <!--Optional:-->
+            <sch1:sexo>?</sch1:sexo>
+            <!--Optional:-->
+            <sch1:status>?</sch1:status>
+            <!--Optional:-->
+            <sch1:cidade>?</sch1:cidade>
+            <!--Optional:-->
+            <sch1:vinculo>?</sch1:vinculo>
+            <!--Optional:-->
+            <sch1:plano>
+               <!--Optional:-->
+               <sch:codigo>?</sch:codigo>
+               <!--Optional:-->
+               <sch:nome>?</sch:nome>
+               <!--Optional:-->
+               <sch:titular>?</sch:titular>
+               <!--Optional:-->
+               <sch:vigencia>?</sch:vigencia>
+               <!--Optional:-->
+               <sch:numeroAns>?</sch:numeroAns>
+            </sch1:plano>
+            <!--Optional:-->
+            <sch1:acomodacao>?</sch1:acomodacao>
+            <!--Optional:-->
+            <sch1:abrangencia>?</sch1:abrangencia>
+            <!--Optional:-->
+            <sch1:numeroAns>?</sch1:numeroAns>
+            <!--Optional:-->
+            <sch1:historicoMovimentacao>?</sch1:historicoMovimentacao>
+            <!--Optional:-->
+            <sch1:idade>?</sch1:idade>
+            <!--Optional:-->
+            <sch1:peso>?</sch1:peso>
+            <!--Optional:-->
+            <sch1:altura>?</sch1:altura>
+            <!--Optional:-->
+            <sch1:massaCorporal>?</sch1:massaCorporal>
+            <!--Optional:-->
+            <sch1:tipo>
+               <!--Optional:-->
+               <sch1:codigo>?</sch1:codigo>
+               <!--Optional:-->
+               <sch1:descricao>?</sch1:descricao>
+            </sch1:tipo>
+            <!--Optional:-->
+            <sch1:identidade>?</sch1:identidade>
+            <!--Optional:-->
+            <sch1:posto>?</sch1:posto>
+            <!--Optional:-->
+            <sch1:titular>
+               <!--Optional:-->
+               <sch:email>?</sch:email>
+               <!--Optional:-->
+               <sch:departamento>?</sch:departamento>
+               <!--Optional:-->
+               <sch:codigoContato>?</sch:codigoContato>
+               <!--Optional:-->
+               <sch:nomeContato>?</sch:nomeContato>
+               <!--Optional:-->
+               <sch:telefoneContato>
+                  <!--Optional:-->
+                  <sch:ddd>?</sch:ddd>
+                  <!--Optional:-->
+                  <sch:numero>?</sch:numero>
+                  <!--Optional:-->
+                  <sch:ramal>?</sch:ramal>
+               </sch:telefoneContato>
+               <!--Optional:-->
+               <sch:telefoneFax>
+                  <!--Optional:-->
+                  <sch:ddd>?</sch:ddd>
+                  <!--Optional:-->
+                  <sch:numero>?</sch:numero>
+                  <!--Optional:-->
+                  <sch:ramal>?</sch:ramal>
+               </sch:telefoneFax>
+               <!--Optional:-->
+               <sch:telefonePrincipal>
+                  <!--Optional:-->
+                  <sch:ddd>?</sch:ddd>
+                  <!--Optional:-->
+                  <sch:numero>?</sch:numero>
+                  <!--Optional:-->
+                  <sch:ramal>?</sch:ramal>
+               </sch:telefonePrincipal>
+               <!--Optional:-->
+               <sch:tipoContato>?</sch:tipoContato>
+               <!--Optional:-->
+               <sch1:hierarquia>
+                  <!--Optional:-->
+                  <sch:codigoSistema>?</sch:codigoSistema>
+                  <!--Optional:-->
+                  <sch:estipulante>
+                     <!--Optional:-->
+                     <sch:cnpj>?</sch:cnpj>
+                     <!--Optional:-->
+                     <sch:codigo>?</sch:codigo>
+                     <!--Optional:-->
+                     <sch:codigoSistema>?</sch:codigoSistema>
+                     <!--Optional:-->
+                     <sch:descricao>?</sch:descricao>
+                     <!--Zero or more repetitions:-->
+                     <sch:areas>
+                        <!--Optional:-->
+                        <sch:codigo>?</sch:codigo>
+                        <!--Optional:-->
+                        <sch:descricao>?</sch:descricao>
+                     </sch:areas>
+                     <!--Optional:-->
+                     <sch:codigoConnectmed>?</sch:codigoConnectmed>
+                     <!--Optional:-->
+                     <sch:pathLogo>?</sch:pathLogo>
+                  </sch:estipulante>
+                  <!--Optional:-->
+                  <sch:operadora>
+                     <!--Optional:-->
+                     <sch:cnpj>?</sch:cnpj>
+                     <!--Optional:-->
+                     <sch:codigo>?</sch:codigo>
+                     <!--Optional:-->
+                     <sch:codigoSistema>?</sch:codigoSistema>
+                     <!--Optional:-->
+                     <sch:descricao>?</sch:descricao>
+                     <!--Zero or more repetitions:-->
+                     <sch:areas>
+                        <!--Optional:-->
+                        <sch:codigo>?</sch:codigo>
+                        <!--Optional:-->
+                        <sch:descricao>?</sch:descricao>
+                     </sch:areas>
+                     <!--Optional:-->
+                     <sch:codigoConnectmed>?</sch:codigoConnectmed>
+                     <!--Optional:-->
+                     <sch:pathLogo>?</sch:pathLogo>
+                  </sch:operadora>
+                  <!--Optional:-->
+                  <sch:subestipulante>
+                     <!--Optional:-->
+                     <sch:cnpj>?</sch:cnpj>
+                     <!--Optional:-->
+                     <sch:codigo>?</sch:codigo>
+                     <!--Optional:-->
+                     <sch:codigoSistema>?</sch:codigoSistema>
+                     <!--Optional:-->
+                     <sch:descricao>?</sch:descricao>
+                     <!--Zero or more repetitions:-->
+                     <sch:areas>
+                        <!--Optional:-->
+                        <sch:codigo>?</sch:codigo>
+                        <!--Optional:-->
+                        <sch:descricao>?</sch:descricao>
+                     </sch:areas>
+                     <!--Optional:-->
+                     <sch:codigoConnectmed>?</sch:codigoConnectmed>
+                     <!--Optional:-->
+                     <sch:pathLogo>?</sch:pathLogo>
+                  </sch:subestipulante>
+               </sch1:hierarquia>
+               <!--Optional:-->
+               <sch1:codigo>?</sch1:codigo>
+               <!--Optional:-->
+               <sch1:numeroCNS>?</sch1:numeroCNS>
+               <!--Optional:-->
+               <sch1:nome>?</sch1:nome>
+               <!--Optional:-->
+               <sch1:codigoCarteirinha>?</sch1:codigoCarteirinha>
+               <!--Optional:-->
+               <sch1:dataNascimento>?</sch1:dataNascimento>
+               <!--Optional:-->
+               <sch1:cpf>?</sch1:cpf>
+               <!--Optional:-->
+               <sch1:sexo>?</sch1:sexo>
+               <!--Optional:-->
+               <sch1:status>?</sch1:status>
+               <!--Optional:-->
+               <sch1:cidade>?</sch1:cidade>
+               <!--Optional:-->
+               <sch1:vinculo>?</sch1:vinculo>
+               <!--Optional:-->
+               <sch1:plano>
+                  <!--Optional:-->
+                  <sch:codigo>?</sch:codigo>
+                  <!--Optional:-->
+                  <sch:nome>?</sch:nome>
+                  <!--Optional:-->
+                  <sch:titular>?</sch:titular>
+                  <!--Optional:-->
+                  <sch:vigencia>?</sch:vigencia>
+                  <!--Optional:-->
+                  <sch:numeroAns>?</sch:numeroAns>
+               </sch1:plano>
+               <!--Optional:-->
+               <sch1:acomodacao>?</sch1:acomodacao>
+               <!--Optional:-->
+               <sch1:abrangencia>?</sch1:abrangencia>
+               <!--Optional:-->
+               <sch1:numeroAns>?</sch1:numeroAns>
+               <!--Optional:-->
+               <sch1:historicoMovimentacao>?</sch1:historicoMovimentacao>
+               <!--Optional:-->
+               <sch1:idade>?</sch1:idade>
+               <!--Optional:-->
+               <sch1:peso>?</sch1:peso>
+               <!--Optional:-->
+               <sch1:altura>?</sch1:altura>
+               <!--Optional:-->
+               <sch1:massaCorporal>?</sch1:massaCorporal>
+               <!--Optional:-->
+               <sch1:tipo>
+                  <!--Optional:-->
+                  <sch1:codigo>?</sch1:codigo>
+                  <!--Optional:-->
+                  <sch1:descricao>?</sch1:descricao>
+               </sch1:tipo>
+               <!--Optional:-->
+               <sch1:identidade>?</sch1:identidade>
+               <!--Optional:-->
+               <sch1:posto>?</sch1:posto>
+               <!--Optional:-->
+               <sch1:titular/>
+               <!--Optional:-->
+               <sch1:matriculaFuncional>?</sch1:matriculaFuncional>
+               <!--Optional:-->
+               <sch1:unidadeFuncional>
+                  <!--Optional:-->
+                  <sch:codigo>?</sch:codigo>
+                  <!--Optional:-->
+                  <sch:descricao>?</sch:descricao>
+               </sch1:unidadeFuncional>
+               <!--Optional:-->
+               <sch1:rede>
+                  <!--Optional:-->
+                  <sch:codigo>?</sch:codigo>
+                  <!--Optional:-->
+                  <sch:nome>?</sch:nome>
+                  <!--Optional:-->
+                  <sch:titular>?</sch:titular>
+                  <!--Optional:-->
+                  <sch:vigencia>?</sch:vigencia>
+               </sch1:rede>
+               <!--Optional:-->
+               <sch1:validadeCarteirinha>?</sch1:validadeCarteirinha>
+               <!--Optional:-->
+               <sch1:dataRealizacaoAtendimento>?</sch1:dataRealizacaoAtendimento>
+               <!--Optional:-->
+               <sch1:estadoCivil>?</sch1:estadoCivil>
+               <!--Optional:-->
+               <sch1:nomeMae>?</sch1:nomeMae>
+               <!--Optional:-->
+               <sch1:empresa>
+                  <!--Optional:-->
+                  <sch:codigo>?</sch:codigo>
+                  <!--Optional:-->
+                  <sch:nome>?</sch:nome>
+                  <!--Optional:-->
+                  <sch:cnpj>?</sch:cnpj>
+                  <!--Optional:-->
+                  <sch:sigla>?</sch:sigla>
+               </sch1:empresa>
+               <!--Optional:-->
+               <sch1:endereco>
+                  <!--Optional:-->
+                  <sch:bairro>?</sch:bairro>
+                  <!--Optional:-->
+                  <sch:cep>?</sch:cep>
+                  <!--Optional:-->
+                  <sch:cidade>?</sch:cidade>
+                  <!--Optional:-->
+                  <sch:codigoIBGE>?</sch:codigoIBGE>
+                  <!--Optional:-->
+                  <sch:complemento>?</sch:complemento>
+                  <!--Optional:-->
+                  <sch:estado>?</sch:estado>
+                  <!--Optional:-->
+                  <sch:logradouro>?</sch:logradouro>
+                  <!--Optional:-->
+                  <sch:numero>?</sch:numero>
+                  <!--Optional:-->
+                  <sch:pais>?</sch:pais>
+                  <!--Optional:-->
+                  <sch:tipoLogradouro>?</sch:tipoLogradouro>
+                  <!--Optional:-->
+                  <sch:uf>?</sch:uf>
+               </sch1:endereco>
+               <!--Optional:-->
+               <sch1:rg>?</sch1:rg>
+               <!--Optional:-->
+               <sch1:orgaoEmissor>?</sch1:orgaoEmissor>
+               <!--Optional:-->
+               <sch1:dataEmissaoCarteirinha>?</sch1:dataEmissaoCarteirinha>
+               <!--Optional:-->
+               <sch1:dataEntradaPlano>?</sch1:dataEntradaPlano>
+               <!--Optional:-->
+               <sch1:dataBaseCarencia>?</sch1:dataBaseCarencia>
+               <!--Optional:-->
+               <sch1:codigoInterno>?</sch1:codigoInterno>
+               <!--Optional:-->
+               <sch1:cobertura>?</sch1:cobertura>
+               <!--Optional:-->
+               <sch1:matricula>?</sch1:matricula>
+               <!--Optional:-->
+               <sch1:tipoContratacao>?</sch1:tipoContratacao>
+               <!--Optional:-->
+               <sch1:carenciaDescricao1>?</sch1:carenciaDescricao1>
+               <!--Optional:-->
+               <sch1:carenciaData1>?</sch1:carenciaData1>
+               <!--Optional:-->
+               <sch1:carenciaDescricao2>?</sch1:carenciaDescricao2>
+               <!--Optional:-->
+               <sch1:carenciaData2>?</sch1:carenciaData2>
+               <!--Optional:-->
+               <sch1:carenciaDescricao3>?</sch1:carenciaDescricao3>
+               <!--Optional:-->
+               <sch1:carenciaData3>?</sch1:carenciaData3>
+               <!--Optional:-->
+               <sch1:carenciaDescricao4>?</sch1:carenciaDescricao4>
+               <!--Optional:-->
+               <sch1:carenciaData4>?</sch1:carenciaData4>
+               <!--Zero or more repetitions:-->
+               <sch1:grupoFamiliar/>
+               <!--Optional:-->
+               <sch1:token>?</sch1:token>
+               <!--Optional:-->
+               <sch1:subestipulante>
+                  <!--Optional:-->
+                  <sch:codigo>?</sch:codigo>
+                  <!--Optional:-->
+                  <sch:nome>?</sch:nome>
+                  <!--Optional:-->
+                  <sch:cnpj>?</sch:cnpj>
+                  <!--Optional:-->
+                  <sch:sigla>?</sch:sigla>
+               </sch1:subestipulante>
+               <!--Optional:-->
+               <sch1:smart>?</sch1:smart>
+               <!--Optional:-->
+               <sch1:numeroDevice>?</sch1:numeroDevice>
+               <!--Optional:-->
+               <sch1:estabelecimento>
+                  <sch1:codigo>?</sch1:codigo>
+                  <sch1:descricao>?</sch1:descricao>
+               </sch1:estabelecimento>
+            </sch1:titular>
+            <!--Optional:-->
+            <sch1:matriculaFuncional>?</sch1:matriculaFuncional>
+            <!--Optional:-->
+            <sch1:unidadeFuncional>
+               <!--Optional:-->
+               <sch:codigo>?</sch:codigo>
+               <!--Optional:-->
+               <sch:descricao>?</sch:descricao>
+            </sch1:unidadeFuncional>
+            <!--Optional:-->
+            <sch1:rede>
+               <!--Optional:-->
+               <sch:codigo>?</sch:codigo>
+               <!--Optional:-->
+               <sch:nome>?</sch:nome>
+               <!--Optional:-->
+               <sch:titular>?</sch:titular>
+               <!--Optional:-->
+               <sch:vigencia>?</sch:vigencia>
+            </sch1:rede>
+            <!--Optional:-->
+            <sch1:validadeCarteirinha>?</sch1:validadeCarteirinha>
+            <!--Optional:-->
+            <sch1:dataRealizacaoAtendimento>?</sch1:dataRealizacaoAtendimento>
+            <!--Optional:-->
+            <sch1:estadoCivil>?</sch1:estadoCivil>
+            <!--Optional:-->
+            <sch1:nomeMae>?</sch1:nomeMae>
+            <!--Optional:-->
+            <sch1:empresa>
+               <!--Optional:-->
+               <sch:codigo>?</sch:codigo>
+               <!--Optional:-->
+               <sch:nome>?</sch:nome>
+               <!--Optional:-->
+               <sch:cnpj>?</sch:cnpj>
+               <!--Optional:-->
+               <sch:sigla>?</sch:sigla>
+            </sch1:empresa>
+            <!--Optional:-->
+            <sch1:endereco>
+               <!--Optional:-->
+               <sch:bairro>?</sch:bairro>
+               <!--Optional:-->
+               <sch:cep>?</sch:cep>
+               <!--Optional:-->
+               <sch:cidade>?</sch:cidade>
+               <!--Optional:-->
+               <sch:codigoIBGE>?</sch:codigoIBGE>
+               <!--Optional:-->
+               <sch:complemento>?</sch:complemento>
+               <!--Optional:-->
+               <sch:estado>?</sch:estado>
+               <!--Optional:-->
+               <sch:logradouro>?</sch:logradouro>
+               <!--Optional:-->
+               <sch:numero>?</sch:numero>
+               <!--Optional:-->
+               <sch:pais>?</sch:pais>
+               <!--Optional:-->
+               <sch:tipoLogradouro>?</sch:tipoLogradouro>
+               <!--Optional:-->
+               <sch:uf>?</sch:uf>
+            </sch1:endereco>
+            <!--Optional:-->
+            <sch1:rg>?</sch1:rg>
+            <!--Optional:-->
+            <sch1:orgaoEmissor>?</sch1:orgaoEmissor>
+            <!--Optional:-->
+            <sch1:dataEmissaoCarteirinha>?</sch1:dataEmissaoCarteirinha>
+            <!--Optional:-->
+            <sch1:dataEntradaPlano>?</sch1:dataEntradaPlano>
+            <!--Optional:-->
+            <sch1:dataBaseCarencia>?</sch1:dataBaseCarencia>
+            <!--Optional:-->
+            <sch1:codigoInterno>?</sch1:codigoInterno>
+            <!--Optional:-->
+            <sch1:cobertura>?</sch1:cobertura>
+            <!--Optional:-->
+            <sch1:matricula>?</sch1:matricula>
+            <!--Optional:-->
+            <sch1:tipoContratacao>?</sch1:tipoContratacao>
+            <!--Optional:-->
+            <sch1:carenciaDescricao1>?</sch1:carenciaDescricao1>
+            <!--Optional:-->
+            <sch1:carenciaData1>?</sch1:carenciaData1>
+            <!--Optional:-->
+            <sch1:carenciaDescricao2>?</sch1:carenciaDescricao2>
+            <!--Optional:-->
+            <sch1:carenciaData2>?</sch1:carenciaData2>
+            <!--Optional:-->
+            <sch1:carenciaDescricao3>?</sch1:carenciaDescricao3>
+            <!--Optional:-->
+            <sch1:carenciaData3>?</sch1:carenciaData3>
+            <!--Optional:-->
+            <sch1:carenciaDescricao4>?</sch1:carenciaDescricao4>
+            <!--Optional:-->
+            <sch1:carenciaData4>?</sch1:carenciaData4>
+            <!--Zero or more repetitions:-->
+            <sch1:grupoFamiliar>
+               <!--Optional:-->
+               <sch:email>?</sch:email>
+               <!--Optional:-->
+               <sch:departamento>?</sch:departamento>
+               <!--Optional:-->
+               <sch:codigoContato>?</sch:codigoContato>
+               <!--Optional:-->
+               <sch:nomeContato>?</sch:nomeContato>
+               <!--Optional:-->
+               <sch:telefoneContato>
+                  <!--Optional:-->
+                  <sch:ddd>?</sch:ddd>
+                  <!--Optional:-->
+                  <sch:numero>?</sch:numero>
+                  <!--Optional:-->
+                  <sch:ramal>?</sch:ramal>
+               </sch:telefoneContato>
+               <!--Optional:-->
+               <sch:telefoneFax>
+                  <!--Optional:-->
+                  <sch:ddd>?</sch:ddd>
+                  <!--Optional:-->
+                  <sch:numero>?</sch:numero>
+                  <!--Optional:-->
+                  <sch:ramal>?</sch:ramal>
+               </sch:telefoneFax>
+               <!--Optional:-->
+               <sch:telefonePrincipal>
+                  <!--Optional:-->
+                  <sch:ddd>?</sch:ddd>
+                  <!--Optional:-->
+                  <sch:numero>?</sch:numero>
+                  <!--Optional:-->
+                  <sch:ramal>?</sch:ramal>
+               </sch:telefonePrincipal>
+               <!--Optional:-->
+               <sch:tipoContato>?</sch:tipoContato>
+               <!--Optional:-->
+               <sch1:hierarquia>
+                  <!--Optional:-->
+                  <sch:codigoSistema>?</sch:codigoSistema>
+                  <!--Optional:-->
+                  <sch:estipulante>
+                     <!--Optional:-->
+                     <sch:cnpj>?</sch:cnpj>
+                     <!--Optional:-->
+                     <sch:codigo>?</sch:codigo>
+                     <!--Optional:-->
+                     <sch:codigoSistema>?</sch:codigoSistema>
+                     <!--Optional:-->
+                     <sch:descricao>?</sch:descricao>
+                     <!--Zero or more repetitions:-->
+                     <sch:areas>
+                        <!--Optional:-->
+                        <sch:codigo>?</sch:codigo>
+                        <!--Optional:-->
+                        <sch:descricao>?</sch:descricao>
+                     </sch:areas>
+                     <!--Optional:-->
+                     <sch:codigoConnectmed>?</sch:codigoConnectmed>
+                     <!--Optional:-->
+                     <sch:pathLogo>?</sch:pathLogo>
+                  </sch:estipulante>
+                  <!--Optional:-->
+                  <sch:operadora>
+                     <!--Optional:-->
+                     <sch:cnpj>?</sch:cnpj>
+                     <!--Optional:-->
+                     <sch:codigo>?</sch:codigo>
+                     <!--Optional:-->
+                     <sch:codigoSistema>?</sch:codigoSistema>
+                     <!--Optional:-->
+                     <sch:descricao>?</sch:descricao>
+                     <!--Zero or more repetitions:-->
+                     <sch:areas>
+                        <!--Optional:-->
+                        <sch:codigo>?</sch:codigo>
+                        <!--Optional:-->
+                        <sch:descricao>?</sch:descricao>
+                     </sch:areas>
+                     <!--Optional:-->
+                     <sch:codigoConnectmed>?</sch:codigoConnectmed>
+                     <!--Optional:-->
+                     <sch:pathLogo>?</sch:pathLogo>
+                  </sch:operadora>
+                  <!--Optional:-->
+                  <sch:subestipulante>
+                     <!--Optional:-->
+                     <sch:cnpj>?</sch:cnpj>
+                     <!--Optional:-->
+                     <sch:codigo>?</sch:codigo>
+                     <!--Optional:-->
+                     <sch:codigoSistema>?</sch:codigoSistema>
+                     <!--Optional:-->
+                     <sch:descricao>?</sch:descricao>
+                     <!--Zero or more repetitions:-->
+                     <sch:areas>
+                        <!--Optional:-->
+                        <sch:codigo>?</sch:codigo>
+                        <!--Optional:-->
+                        <sch:descricao>?</sch:descricao>
+                     </sch:areas>
+                     <!--Optional:-->
+                     <sch:codigoConnectmed>?</sch:codigoConnectmed>
+                     <!--Optional:-->
+                     <sch:pathLogo>?</sch:pathLogo>
+                  </sch:subestipulante>
+               </sch1:hierarquia>
+               <!--Optional:-->
+               <sch1:codigo>?</sch1:codigo>
+               <!--Optional:-->
+               <sch1:numeroCNS>?</sch1:numeroCNS>
+               <!--Optional:-->
+               <sch1:nome>?</sch1:nome>
+               <!--Optional:-->
+               <sch1:codigoCarteirinha>?</sch1:codigoCarteirinha>
+               <!--Optional:-->
+               <sch1:dataNascimento>?</sch1:dataNascimento>
+               <!--Optional:-->
+               <sch1:cpf>?</sch1:cpf>
+               <!--Optional:-->
+               <sch1:sexo>?</sch1:sexo>
+               <!--Optional:-->
+               <sch1:status>?</sch1:status>
+               <!--Optional:-->
+               <sch1:cidade>?</sch1:cidade>
+               <!--Optional:-->
+               <sch1:vinculo>?</sch1:vinculo>
+               <!--Optional:-->
+               <sch1:plano>
+                  <!--Optional:-->
+                  <sch:codigo>?</sch:codigo>
+                  <!--Optional:-->
+                  <sch:nome>?</sch:nome>
+                  <!--Optional:-->
+                  <sch:titular>?</sch:titular>
+                  <!--Optional:-->
+                  <sch:vigencia>?</sch:vigencia>
+                  <!--Optional:-->
+                  <sch:numeroAns>?</sch:numeroAns>
+               </sch1:plano>
+               <!--Optional:-->
+               <sch1:acomodacao>?</sch1:acomodacao>
+               <!--Optional:-->
+               <sch1:abrangencia>?</sch1:abrangencia>
+               <!--Optional:-->
+               <sch1:numeroAns>?</sch1:numeroAns>
+               <!--Optional:-->
+               <sch1:historicoMovimentacao>?</sch1:historicoMovimentacao>
+               <!--Optional:-->
+               <sch1:idade>?</sch1:idade>
+               <!--Optional:-->
+               <sch1:peso>?</sch1:peso>
+               <!--Optional:-->
+               <sch1:altura>?</sch1:altura>
+               <!--Optional:-->
+               <sch1:massaCorporal>?</sch1:massaCorporal>
+               <!--Optional:-->
+               <sch1:tipo>
+                  <!--Optional:-->
+                  <sch1:codigo>?</sch1:codigo>
+                  <!--Optional:-->
+                  <sch1:descricao>?</sch1:descricao>
+               </sch1:tipo>
+               <!--Optional:-->
+               <sch1:identidade>?</sch1:identidade>
+               <!--Optional:-->
+               <sch1:posto>?</sch1:posto>
+               <!--Optional:-->
+               <sch1:titular/>
+               <!--Optional:-->
+               <sch1:matriculaFuncional>?</sch1:matriculaFuncional>
+               <!--Optional:-->
+               <sch1:unidadeFuncional>
+                  <!--Optional:-->
+                  <sch:codigo>?</sch:codigo>
+                  <!--Optional:-->
+                  <sch:descricao>?</sch:descricao>
+               </sch1:unidadeFuncional>
+               <!--Optional:-->
+               <sch1:rede>
+                  <!--Optional:-->
+                  <sch:codigo>?</sch:codigo>
+                  <!--Optional:-->
+                  <sch:nome>?</sch:nome>
+                  <!--Optional:-->
+                  <sch:titular>?</sch:titular>
+                  <!--Optional:-->
+                  <sch:vigencia>?</sch:vigencia>
+               </sch1:rede>
+               <!--Optional:-->
+               <sch1:validadeCarteirinha>?</sch1:validadeCarteirinha>
+               <!--Optional:-->
+               <sch1:dataRealizacaoAtendimento>?</sch1:dataRealizacaoAtendimento>
+               <!--Optional:-->
+               <sch1:estadoCivil>?</sch1:estadoCivil>
+               <!--Optional:-->
+               <sch1:nomeMae>?</sch1:nomeMae>
+               <!--Optional:-->
+               <sch1:empresa>
+                  <!--Optional:-->
+                  <sch:codigo>?</sch:codigo>
+                  <!--Optional:-->
+                  <sch:nome>?</sch:nome>
+                  <!--Optional:-->
+                  <sch:cnpj>?</sch:cnpj>
+                  <!--Optional:-->
+                  <sch:sigla>?</sch:sigla>
+               </sch1:empresa>
+               <!--Optional:-->
+               <sch1:endereco>
+                  <!--Optional:-->
+                  <sch:bairro>?</sch:bairro>
+                  <!--Optional:-->
+                  <sch:cep>?</sch:cep>
+                  <!--Optional:-->
+                  <sch:cidade>?</sch:cidade>
+                  <!--Optional:-->
+                  <sch:codigoIBGE>?</sch:codigoIBGE>
+                  <!--Optional:-->
+                  <sch:complemento>?</sch:complemento>
+                  <!--Optional:-->
+                  <sch:estado>?</sch:estado>
+                  <!--Optional:-->
+                  <sch:logradouro>?</sch:logradouro>
+                  <!--Optional:-->
+                  <sch:numero>?</sch:numero>
+                  <!--Optional:-->
+                  <sch:pais>?</sch:pais>
+                  <!--Optional:-->
+                  <sch:tipoLogradouro>?</sch:tipoLogradouro>
+                  <!--Optional:-->
+                  <sch:uf>?</sch:uf>
+               </sch1:endereco>
+               <!--Optional:-->
+               <sch1:rg>?</sch1:rg>
+               <!--Optional:-->
+               <sch1:orgaoEmissor>?</sch1:orgaoEmissor>
+               <!--Optional:-->
+               <sch1:dataEmissaoCarteirinha>?</sch1:dataEmissaoCarteirinha>
+               <!--Optional:-->
+               <sch1:dataEntradaPlano>?</sch1:dataEntradaPlano>
+               <!--Optional:-->
+               <sch1:dataBaseCarencia>?</sch1:dataBaseCarencia>
+               <!--Optional:-->
+               <sch1:codigoInterno>?</sch1:codigoInterno>
+               <!--Optional:-->
+               <sch1:cobertura>?</sch1:cobertura>
+               <!--Optional:-->
+               <sch1:matricula>?</sch1:matricula>
+               <!--Optional:-->
+               <sch1:tipoContratacao>?</sch1:tipoContratacao>
+               <!--Optional:-->
+               <sch1:carenciaDescricao1>?</sch1:carenciaDescricao1>
+               <!--Optional:-->
+               <sch1:carenciaData1>?</sch1:carenciaData1>
+               <!--Optional:-->
+               <sch1:carenciaDescricao2>?</sch1:carenciaDescricao2>
+               <!--Optional:-->
+               <sch1:carenciaData2>?</sch1:carenciaData2>
+               <!--Optional:-->
+               <sch1:carenciaDescricao3>?</sch1:carenciaDescricao3>
+               <!--Optional:-->
+               <sch1:carenciaData3>?</sch1:carenciaData3>
+               <!--Optional:-->
+               <sch1:carenciaDescricao4>?</sch1:carenciaDescricao4>
+               <!--Optional:-->
+               <sch1:carenciaData4>?</sch1:carenciaData4>
+               <!--Zero or more repetitions:-->
+               <sch1:grupoFamiliar/>
+               <!--Optional:-->
+               <sch1:token>?</sch1:token>
+               <!--Optional:-->
+               <sch1:subestipulante>
+                  <!--Optional:-->
+                  <sch:codigo>?</sch:codigo>
+                  <!--Optional:-->
+                  <sch:nome>?</sch:nome>
+                  <!--Optional:-->
+                  <sch:cnpj>?</sch:cnpj>
+                  <!--Optional:-->
+                  <sch:sigla>?</sch:sigla>
+               </sch1:subestipulante>
+               <!--Optional:-->
+               <sch1:smart>?</sch1:smart>
+               <!--Optional:-->
+               <sch1:numeroDevice>?</sch1:numeroDevice>
+               <!--Optional:-->
+               <sch1:estabelecimento>
+                  <sch1:codigo>?</sch1:codigo>
+                  <sch1:descricao>?</sch1:descricao>
+               </sch1:estabelecimento>
+            </sch1:grupoFamiliar>
+            <!--Optional:-->
+            <sch1:token>?</sch1:token>
+            <!--Optional:-->
+            <sch1:subestipulante>
+               <!--Optional:-->
+               <sch:codigo>?</sch:codigo>
+               <!--Optional:-->
+               <sch:nome>?</sch:nome>
+               <!--Optional:-->
+               <sch:cnpj>?</sch:cnpj>
+               <!--Optional:-->
+               <sch:sigla>?</sch:sigla>
+            </sch1:subestipulante>
+            <!--Optional:-->
+            <sch1:smart>?</sch1:smart>
+            <!--Optional:-->
+            <sch1:numeroDevice>?</sch1:numeroDevice>
+            <!--Optional:-->
+            <sch1:estabelecimento>
+               <sch1:codigo>?</sch1:codigo>
+               <sch1:descricao>?</sch1:descricao>
+            </sch1:estabelecimento>
+            <!--Optional:-->
+            <sch1:usuario>?</sch1:usuario>
+            <!--Optional:-->
+            <sch1:senha>?</sch1:senha>
+            <!--Optional:-->
+            <sch1:senhaAnterior>?</sch1:senhaAnterior>
+            <!--Optional:-->
+            <sch1:confirmacaoSenha>?</sch1:confirmacaoSenha>
+            <!--Optional:-->
+            <sch1:confirmacaoEmail>?</sch1:confirmacaoEmail>
+         </ser:autenticacaoBeneficiario>
+      </ser:getToken>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:getToken"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="8f49278c-3afe-45f6-81ca-b5fc56b54f84" isOneWay="false" action="urn:recuperarSenha" name="recuperarSenha" bindingOperationName="recuperarSenha" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="5d692b9e-2eaf-4322-8525-f5ee8ab0889b" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://wwwt.connectmed.com.br/saudeweb/autenticacaoWSContainer/services/AutenticacaoBeneficiarioService/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://service.autenticacao.ws.tempoassist.com.br" xmlns:sch="http://ws.common.tempoassist.com.br/schema" xmlns:sch1="http://ws.beneficiario.tempoassist.com.br/schema">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ser:recuperarSenha>
+         <!--Optional:-->
+         <ser:operadora>
+            <!--Optional:-->
+            <sch:cnpj></sch:cnpj>
+            <!--Optional:-->
+            <sch:codigo>20</sch:codigo>
+            <!--Optional:-->
+            <sch:codigoSistema></sch:codigoSistema>
+            <!--Optional:-->
+            <sch:descricao></sch:descricao>
+            <!--Zero or more repetitions:-->
+            <sch:areas>
+               <!--Optional:-->
+               <sch:codigo></sch:codigo>
+               <!--Optional:-->
+               <sch:descricao></sch:descricao>
+            </sch:areas>
+            <!--Optional:-->
+            <sch:codigoConnectmed></sch:codigoConnectmed>
+            <!--Optional:-->
+            <sch:pathLogo></sch:pathLogo>
+         </ser:operadora>
+         <!--Optional:-->
+         <ser:autenticacaoBeneficiario>
+            <!--Optional:-->
+            <sch:email>vinicius.ribeiro@vale.com</sch:email>
+            <!--Optional:-->
+            <sch1:dataNascimento>02061986</sch1:dataNascimento>
+            <!--Optional:-->
+            <sch1:cpf>11387277700</sch1:cpf>
+            <!--Optional:-->
+         </ser:autenticacaoBeneficiario>
+      </ser:recuperarSenha>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:recuperarSenha"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="d0b9eddd-6e1b-432f-8c10-b0d39d711d05" isOneWay="false" action="urn:trocarSenha" name="trocarSenha" bindingOperationName="trocarSenha" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="300f009e-5548-4cb9-9d68-60a0639d5773" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://wwwt.connectmed.com.br/saudeweb/autenticacaoWSContainer/services/AutenticacaoBeneficiarioService/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://service.autenticacao.ws.tempoassist.com.br" xmlns:sch="http://ws.common.tempoassist.com.br/schema" xmlns:sch1="http://ws.beneficiario.tempoassist.com.br/schema">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ser:trocarSenha>
+         <!--Optional:-->
+         <ser:operadora>
+            <!--Optional:-->
+            <sch:cnpj>?</sch:cnpj>
+            <!--Optional:-->
+            <sch:codigo>?</sch:codigo>
+            <!--Optional:-->
+            <sch:codigoSistema>?</sch:codigoSistema>
+            <!--Optional:-->
+            <sch:descricao>?</sch:descricao>
+            <!--Zero or more repetitions:-->
+            <sch:areas>
+               <!--Optional:-->
+               <sch:codigo>?</sch:codigo>
+               <!--Optional:-->
+               <sch:descricao>?</sch:descricao>
+            </sch:areas>
+            <!--Optional:-->
+            <sch:codigoConnectmed>?</sch:codigoConnectmed>
+            <!--Optional:-->
+            <sch:pathLogo>?</sch:pathLogo>
+         </ser:operadora>
+         <!--Optional:-->
+         <ser:autenticacaoBeneficiario>
+            <!--Optional:-->
+            <sch:email>?</sch:email>
+            <!--Optional:-->
+            <sch:departamento>?</sch:departamento>
+            <!--Optional:-->
+            <sch:codigoContato>?</sch:codigoContato>
+            <!--Optional:-->
+            <sch:nomeContato>?</sch:nomeContato>
+            <!--Optional:-->
+            <sch:telefoneContato>
+               <!--Optional:-->
+               <sch:ddd>?</sch:ddd>
+               <!--Optional:-->
+               <sch:numero>?</sch:numero>
+               <!--Optional:-->
+               <sch:ramal>?</sch:ramal>
+            </sch:telefoneContato>
+            <!--Optional:-->
+            <sch:telefoneFax>
+               <!--Optional:-->
+               <sch:ddd>?</sch:ddd>
+               <!--Optional:-->
+               <sch:numero>?</sch:numero>
+               <!--Optional:-->
+               <sch:ramal>?</sch:ramal>
+            </sch:telefoneFax>
+            <!--Optional:-->
+            <sch:telefonePrincipal>
+               <!--Optional:-->
+               <sch:ddd>?</sch:ddd>
+               <!--Optional:-->
+               <sch:numero>?</sch:numero>
+               <!--Optional:-->
+               <sch:ramal>?</sch:ramal>
+            </sch:telefonePrincipal>
+            <!--Optional:-->
+            <sch:tipoContato>?</sch:tipoContato>
+            <!--Optional:-->
+            <sch1:hierarquia>
+               <!--Optional:-->
+               <sch:codigoSistema>?</sch:codigoSistema>
+               <!--Optional:-->
+               <sch:estipulante>
+                  <!--Optional:-->
+                  <sch:cnpj>?</sch:cnpj>
+                  <!--Optional:-->
+                  <sch:codigo>?</sch:codigo>
+                  <!--Optional:-->
+                  <sch:codigoSistema>?</sch:codigoSistema>
+                  <!--Optional:-->
+                  <sch:descricao>?</sch:descricao>
+                  <!--Zero or more repetitions:-->
+                  <sch:areas>
+                     <!--Optional:-->
+                     <sch:codigo>?</sch:codigo>
+                     <!--Optional:-->
+                     <sch:descricao>?</sch:descricao>
+                  </sch:areas>
+                  <!--Optional:-->
+                  <sch:codigoConnectmed>?</sch:codigoConnectmed>
+                  <!--Optional:-->
+                  <sch:pathLogo>?</sch:pathLogo>
+               </sch:estipulante>
+               <!--Optional:-->
+               <sch:operadora>
+                  <!--Optional:-->
+                  <sch:cnpj>?</sch:cnpj>
+                  <!--Optional:-->
+                  <sch:codigo>?</sch:codigo>
+                  <!--Optional:-->
+                  <sch:codigoSistema>?</sch:codigoSistema>
+                  <!--Optional:-->
+                  <sch:descricao>?</sch:descricao>
+                  <!--Zero or more repetitions:-->
+                  <sch:areas>
+                     <!--Optional:-->
+                     <sch:codigo>?</sch:codigo>
+                     <!--Optional:-->
+                     <sch:descricao>?</sch:descricao>
+                  </sch:areas>
+                  <!--Optional:-->
+                  <sch:codigoConnectmed>?</sch:codigoConnectmed>
+                  <!--Optional:-->
+                  <sch:pathLogo>?</sch:pathLogo>
+               </sch:operadora>
+               <!--Optional:-->
+               <sch:subestipulante>
+                  <!--Optional:-->
+                  <sch:cnpj>?</sch:cnpj>
+                  <!--Optional:-->
+                  <sch:codigo>?</sch:codigo>
+                  <!--Optional:-->
+                  <sch:codigoSistema>?</sch:codigoSistema>
+                  <!--Optional:-->
+                  <sch:descricao>?</sch:descricao>
+                  <!--Zero or more repetitions:-->
+                  <sch:areas>
+                     <!--Optional:-->
+                     <sch:codigo>?</sch:codigo>
+                     <!--Optional:-->
+                     <sch:descricao>?</sch:descricao>
+                  </sch:areas>
+                  <!--Optional:-->
+                  <sch:codigoConnectmed>?</sch:codigoConnectmed>
+                  <!--Optional:-->
+                  <sch:pathLogo>?</sch:pathLogo>
+               </sch:subestipulante>
+            </sch1:hierarquia>
+            <!--Optional:-->
+            <sch1:codigo>?</sch1:codigo>
+            <!--Optional:-->
+            <sch1:numeroCNS>?</sch1:numeroCNS>
+            <!--Optional:-->
+            <sch1:nome>?</sch1:nome>
+            <!--Optional:-->
+            <sch1:codigoCarteirinha>?</sch1:codigoCarteirinha>
+            <!--Optional:-->
+            <sch1:dataNascimento>?</sch1:dataNascimento>
+            <!--Optional:-->
+            <sch1:cpf>?</sch1:cpf>
+            <!--Optional:-->
+            <sch1:sexo>?</sch1:sexo>
+            <!--Optional:-->
+            <sch1:status>?</sch1:status>
+            <!--Optional:-->
+            <sch1:cidade>?</sch1:cidade>
+            <!--Optional:-->
+            <sch1:vinculo>?</sch1:vinculo>
+            <!--Optional:-->
+            <sch1:plano>
+               <!--Optional:-->
+               <sch:codigo>?</sch:codigo>
+               <!--Optional:-->
+               <sch:nome>?</sch:nome>
+               <!--Optional:-->
+               <sch:titular>?</sch:titular>
+               <!--Optional:-->
+               <sch:vigencia>?</sch:vigencia>
+               <!--Optional:-->
+               <sch:numeroAns>?</sch:numeroAns>
+            </sch1:plano>
+            <!--Optional:-->
+            <sch1:acomodacao>?</sch1:acomodacao>
+            <!--Optional:-->
+            <sch1:abrangencia>?</sch1:abrangencia>
+            <!--Optional:-->
+            <sch1:numeroAns>?</sch1:numeroAns>
+            <!--Optional:-->
+            <sch1:historicoMovimentacao>?</sch1:historicoMovimentacao>
+            <!--Optional:-->
+            <sch1:idade>?</sch1:idade>
+            <!--Optional:-->
+            <sch1:peso>?</sch1:peso>
+            <!--Optional:-->
+            <sch1:altura>?</sch1:altura>
+            <!--Optional:-->
+            <sch1:massaCorporal>?</sch1:massaCorporal>
+            <!--Optional:-->
+            <sch1:tipo>
+               <!--Optional:-->
+               <sch1:codigo>?</sch1:codigo>
+               <!--Optional:-->
+               <sch1:descricao>?</sch1:descricao>
+            </sch1:tipo>
+            <!--Optional:-->
+            <sch1:identidade>?</sch1:identidade>
+            <!--Optional:-->
+            <sch1:posto>?</sch1:posto>
+            <!--Optional:-->
+            <sch1:titular>
+               <!--Optional:-->
+               <sch:email>?</sch:email>
+               <!--Optional:-->
+               <sch:departamento>?</sch:departamento>
+               <!--Optional:-->
+               <sch:codigoContato>?</sch:codigoContato>
+               <!--Optional:-->
+               <sch:nomeContato>?</sch:nomeContato>
+               <!--Optional:-->
+               <sch:telefoneContato>
+                  <!--Optional:-->
+                  <sch:ddd>?</sch:ddd>
+                  <!--Optional:-->
+                  <sch:numero>?</sch:numero>
+                  <!--Optional:-->
+                  <sch:ramal>?</sch:ramal>
+               </sch:telefoneContato>
+               <!--Optional:-->
+               <sch:telefoneFax>
+                  <!--Optional:-->
+                  <sch:ddd>?</sch:ddd>
+                  <!--Optional:-->
+                  <sch:numero>?</sch:numero>
+                  <!--Optional:-->
+                  <sch:ramal>?</sch:ramal>
+               </sch:telefoneFax>
+               <!--Optional:-->
+               <sch:telefonePrincipal>
+                  <!--Optional:-->
+                  <sch:ddd>?</sch:ddd>
+                  <!--Optional:-->
+                  <sch:numero>?</sch:numero>
+                  <!--Optional:-->
+                  <sch:ramal>?</sch:ramal>
+               </sch:telefonePrincipal>
+               <!--Optional:-->
+               <sch:tipoContato>?</sch:tipoContato>
+               <!--Optional:-->
+               <sch1:hierarquia>
+                  <!--Optional:-->
+                  <sch:codigoSistema>?</sch:codigoSistema>
+                  <!--Optional:-->
+                  <sch:estipulante>
+                     <!--Optional:-->
+                     <sch:cnpj>?</sch:cnpj>
+                     <!--Optional:-->
+                     <sch:codigo>?</sch:codigo>
+                     <!--Optional:-->
+                     <sch:codigoSistema>?</sch:codigoSistema>
+                     <!--Optional:-->
+                     <sch:descricao>?</sch:descricao>
+                     <!--Zero or more repetitions:-->
+                     <sch:areas>
+                        <!--Optional:-->
+                        <sch:codigo>?</sch:codigo>
+                        <!--Optional:-->
+                        <sch:descricao>?</sch:descricao>
+                     </sch:areas>
+                     <!--Optional:-->
+                     <sch:codigoConnectmed>?</sch:codigoConnectmed>
+                     <!--Optional:-->
+                     <sch:pathLogo>?</sch:pathLogo>
+                  </sch:estipulante>
+                  <!--Optional:-->
+                  <sch:operadora>
+                     <!--Optional:-->
+                     <sch:cnpj>?</sch:cnpj>
+                     <!--Optional:-->
+                     <sch:codigo>?</sch:codigo>
+                     <!--Optional:-->
+                     <sch:codigoSistema>?</sch:codigoSistema>
+                     <!--Optional:-->
+                     <sch:descricao>?</sch:descricao>
+                     <!--Zero or more repetitions:-->
+                     <sch:areas>
+                        <!--Optional:-->
+                        <sch:codigo>?</sch:codigo>
+                        <!--Optional:-->
+                        <sch:descricao>?</sch:descricao>
+                     </sch:areas>
+                     <!--Optional:-->
+                     <sch:codigoConnectmed>?</sch:codigoConnectmed>
+                     <!--Optional:-->
+                     <sch:pathLogo>?</sch:pathLogo>
+                  </sch:operadora>
+                  <!--Optional:-->
+                  <sch:subestipulante>
+                     <!--Optional:-->
+                     <sch:cnpj>?</sch:cnpj>
+                     <!--Optional:-->
+                     <sch:codigo>?</sch:codigo>
+                     <!--Optional:-->
+                     <sch:codigoSistema>?</sch:codigoSistema>
+                     <!--Optional:-->
+                     <sch:descricao>?</sch:descricao>
+                     <!--Zero or more repetitions:-->
+                     <sch:areas>
+                        <!--Optional:-->
+                        <sch:codigo>?</sch:codigo>
+                        <!--Optional:-->
+                        <sch:descricao>?</sch:descricao>
+                     </sch:areas>
+                     <!--Optional:-->
+                     <sch:codigoConnectmed>?</sch:codigoConnectmed>
+                     <!--Optional:-->
+                     <sch:pathLogo>?</sch:pathLogo>
+                  </sch:subestipulante>
+               </sch1:hierarquia>
+               <!--Optional:-->
+               <sch1:codigo>?</sch1:codigo>
+               <!--Optional:-->
+               <sch1:numeroCNS>?</sch1:numeroCNS>
+               <!--Optional:-->
+               <sch1:nome>?</sch1:nome>
+               <!--Optional:-->
+               <sch1:codigoCarteirinha>?</sch1:codigoCarteirinha>
+               <!--Optional:-->
+               <sch1:dataNascimento>?</sch1:dataNascimento>
+               <!--Optional:-->
+               <sch1:cpf>?</sch1:cpf>
+               <!--Optional:-->
+               <sch1:sexo>?</sch1:sexo>
+               <!--Optional:-->
+               <sch1:status>?</sch1:status>
+               <!--Optional:-->
+               <sch1:cidade>?</sch1:cidade>
+               <!--Optional:-->
+               <sch1:vinculo>?</sch1:vinculo>
+               <!--Optional:-->
+               <sch1:plano>
+                  <!--Optional:-->
+                  <sch:codigo>?</sch:codigo>
+                  <!--Optional:-->
+                  <sch:nome>?</sch:nome>
+                  <!--Optional:-->
+                  <sch:titular>?</sch:titular>
+                  <!--Optional:-->
+                  <sch:vigencia>?</sch:vigencia>
+                  <!--Optional:-->
+                  <sch:numeroAns>?</sch:numeroAns>
+               </sch1:plano>
+               <!--Optional:-->
+               <sch1:acomodacao>?</sch1:acomodacao>
+               <!--Optional:-->
+               <sch1:abrangencia>?</sch1:abrangencia>
+               <!--Optional:-->
+               <sch1:numeroAns>?</sch1:numeroAns>
+               <!--Optional:-->
+               <sch1:historicoMovimentacao>?</sch1:historicoMovimentacao>
+               <!--Optional:-->
+               <sch1:idade>?</sch1:idade>
+               <!--Optional:-->
+               <sch1:peso>?</sch1:peso>
+               <!--Optional:-->
+               <sch1:altura>?</sch1:altura>
+               <!--Optional:-->
+               <sch1:massaCorporal>?</sch1:massaCorporal>
+               <!--Optional:-->
+               <sch1:tipo>
+                  <!--Optional:-->
+                  <sch1:codigo>?</sch1:codigo>
+                  <!--Optional:-->
+                  <sch1:descricao>?</sch1:descricao>
+               </sch1:tipo>
+               <!--Optional:-->
+               <sch1:identidade>?</sch1:identidade>
+               <!--Optional:-->
+               <sch1:posto>?</sch1:posto>
+               <!--Optional:-->
+               <sch1:titular/>
+               <!--Optional:-->
+               <sch1:matriculaFuncional>?</sch1:matriculaFuncional>
+               <!--Optional:-->
+               <sch1:unidadeFuncional>
+                  <!--Optional:-->
+                  <sch:codigo>?</sch:codigo>
+                  <!--Optional:-->
+                  <sch:descricao>?</sch:descricao>
+               </sch1:unidadeFuncional>
+               <!--Optional:-->
+               <sch1:rede>
+                  <!--Optional:-->
+                  <sch:codigo>?</sch:codigo>
+                  <!--Optional:-->
+                  <sch:nome>?</sch:nome>
+                  <!--Optional:-->
+                  <sch:titular>?</sch:titular>
+                  <!--Optional:-->
+                  <sch:vigencia>?</sch:vigencia>
+               </sch1:rede>
+               <!--Optional:-->
+               <sch1:validadeCarteirinha>?</sch1:validadeCarteirinha>
+               <!--Optional:-->
+               <sch1:dataRealizacaoAtendimento>?</sch1:dataRealizacaoAtendimento>
+               <!--Optional:-->
+               <sch1:estadoCivil>?</sch1:estadoCivil>
+               <!--Optional:-->
+               <sch1:nomeMae>?</sch1:nomeMae>
+               <!--Optional:-->
+               <sch1:empresa>
+                  <!--Optional:-->
+                  <sch:codigo>?</sch:codigo>
+                  <!--Optional:-->
+                  <sch:nome>?</sch:nome>
+                  <!--Optional:-->
+                  <sch:cnpj>?</sch:cnpj>
+                  <!--Optional:-->
+                  <sch:sigla>?</sch:sigla>
+               </sch1:empresa>
+               <!--Optional:-->
+               <sch1:endereco>
+                  <!--Optional:-->
+                  <sch:bairro>?</sch:bairro>
+                  <!--Optional:-->
+                  <sch:cep>?</sch:cep>
+                  <!--Optional:-->
+                  <sch:cidade>?</sch:cidade>
+                  <!--Optional:-->
+                  <sch:codigoIBGE>?</sch:codigoIBGE>
+                  <!--Optional:-->
+                  <sch:complemento>?</sch:complemento>
+                  <!--Optional:-->
+                  <sch:estado>?</sch:estado>
+                  <!--Optional:-->
+                  <sch:logradouro>?</sch:logradouro>
+                  <!--Optional:-->
+                  <sch:numero>?</sch:numero>
+                  <!--Optional:-->
+                  <sch:pais>?</sch:pais>
+                  <!--Optional:-->
+                  <sch:tipoLogradouro>?</sch:tipoLogradouro>
+                  <!--Optional:-->
+                  <sch:uf>?</sch:uf>
+               </sch1:endereco>
+               <!--Optional:-->
+               <sch1:rg>?</sch1:rg>
+               <!--Optional:-->
+               <sch1:orgaoEmissor>?</sch1:orgaoEmissor>
+               <!--Optional:-->
+               <sch1:dataEmissaoCarteirinha>?</sch1:dataEmissaoCarteirinha>
+               <!--Optional:-->
+               <sch1:dataEntradaPlano>?</sch1:dataEntradaPlano>
+               <!--Optional:-->
+               <sch1:dataBaseCarencia>?</sch1:dataBaseCarencia>
+               <!--Optional:-->
+               <sch1:codigoInterno>?</sch1:codigoInterno>
+               <!--Optional:-->
+               <sch1:cobertura>?</sch1:cobertura>
+               <!--Optional:-->
+               <sch1:matricula>?</sch1:matricula>
+               <!--Optional:-->
+               <sch1:tipoContratacao>?</sch1:tipoContratacao>
+               <!--Optional:-->
+               <sch1:carenciaDescricao1>?</sch1:carenciaDescricao1>
+               <!--Optional:-->
+               <sch1:carenciaData1>?</sch1:carenciaData1>
+               <!--Optional:-->
+               <sch1:carenciaDescricao2>?</sch1:carenciaDescricao2>
+               <!--Optional:-->
+               <sch1:carenciaData2>?</sch1:carenciaData2>
+               <!--Optional:-->
+               <sch1:carenciaDescricao3>?</sch1:carenciaDescricao3>
+               <!--Optional:-->
+               <sch1:carenciaData3>?</sch1:carenciaData3>
+               <!--Optional:-->
+               <sch1:carenciaDescricao4>?</sch1:carenciaDescricao4>
+               <!--Optional:-->
+               <sch1:carenciaData4>?</sch1:carenciaData4>
+               <!--Zero or more repetitions:-->
+               <sch1:grupoFamiliar/>
+               <!--Optional:-->
+               <sch1:token>?</sch1:token>
+               <!--Optional:-->
+               <sch1:subestipulante>
+                  <!--Optional:-->
+                  <sch:codigo>?</sch:codigo>
+                  <!--Optional:-->
+                  <sch:nome>?</sch:nome>
+                  <!--Optional:-->
+                  <sch:cnpj>?</sch:cnpj>
+                  <!--Optional:-->
+                  <sch:sigla>?</sch:sigla>
+               </sch1:subestipulante>
+               <!--Optional:-->
+               <sch1:smart>?</sch1:smart>
+               <!--Optional:-->
+               <sch1:numeroDevice>?</sch1:numeroDevice>
+               <!--Optional:-->
+               <sch1:estabelecimento>
+                  <sch1:codigo>?</sch1:codigo>
+                  <sch1:descricao>?</sch1:descricao>
+               </sch1:estabelecimento>
+            </sch1:titular>
+            <!--Optional:-->
+            <sch1:matriculaFuncional>?</sch1:matriculaFuncional>
+            <!--Optional:-->
+            <sch1:unidadeFuncional>
+               <!--Optional:-->
+               <sch:codigo>?</sch:codigo>
+               <!--Optional:-->
+               <sch:descricao>?</sch:descricao>
+            </sch1:unidadeFuncional>
+            <!--Optional:-->
+            <sch1:rede>
+               <!--Optional:-->
+               <sch:codigo>?</sch:codigo>
+               <!--Optional:-->
+               <sch:nome>?</sch:nome>
+               <!--Optional:-->
+               <sch:titular>?</sch:titular>
+               <!--Optional:-->
+               <sch:vigencia>?</sch:vigencia>
+            </sch1:rede>
+            <!--Optional:-->
+            <sch1:validadeCarteirinha>?</sch1:validadeCarteirinha>
+            <!--Optional:-->
+            <sch1:dataRealizacaoAtendimento>?</sch1:dataRealizacaoAtendimento>
+            <!--Optional:-->
+            <sch1:estadoCivil>?</sch1:estadoCivil>
+            <!--Optional:-->
+            <sch1:nomeMae>?</sch1:nomeMae>
+            <!--Optional:-->
+            <sch1:empresa>
+               <!--Optional:-->
+               <sch:codigo>?</sch:codigo>
+               <!--Optional:-->
+               <sch:nome>?</sch:nome>
+               <!--Optional:-->
+               <sch:cnpj>?</sch:cnpj>
+               <!--Optional:-->
+               <sch:sigla>?</sch:sigla>
+            </sch1:empresa>
+            <!--Optional:-->
+            <sch1:endereco>
+               <!--Optional:-->
+               <sch:bairro>?</sch:bairro>
+               <!--Optional:-->
+               <sch:cep>?</sch:cep>
+               <!--Optional:-->
+               <sch:cidade>?</sch:cidade>
+               <!--Optional:-->
+               <sch:codigoIBGE>?</sch:codigoIBGE>
+               <!--Optional:-->
+               <sch:complemento>?</sch:complemento>
+               <!--Optional:-->
+               <sch:estado>?</sch:estado>
+               <!--Optional:-->
+               <sch:logradouro>?</sch:logradouro>
+               <!--Optional:-->
+               <sch:numero>?</sch:numero>
+               <!--Optional:-->
+               <sch:pais>?</sch:pais>
+               <!--Optional:-->
+               <sch:tipoLogradouro>?</sch:tipoLogradouro>
+               <!--Optional:-->
+               <sch:uf>?</sch:uf>
+            </sch1:endereco>
+            <!--Optional:-->
+            <sch1:rg>?</sch1:rg>
+            <!--Optional:-->
+            <sch1:orgaoEmissor>?</sch1:orgaoEmissor>
+            <!--Optional:-->
+            <sch1:dataEmissaoCarteirinha>?</sch1:dataEmissaoCarteirinha>
+            <!--Optional:-->
+            <sch1:dataEntradaPlano>?</sch1:dataEntradaPlano>
+            <!--Optional:-->
+            <sch1:dataBaseCarencia>?</sch1:dataBaseCarencia>
+            <!--Optional:-->
+            <sch1:codigoInterno>?</sch1:codigoInterno>
+            <!--Optional:-->
+            <sch1:cobertura>?</sch1:cobertura>
+            <!--Optional:-->
+            <sch1:matricula>?</sch1:matricula>
+            <!--Optional:-->
+            <sch1:tipoContratacao>?</sch1:tipoContratacao>
+            <!--Optional:-->
+            <sch1:carenciaDescricao1>?</sch1:carenciaDescricao1>
+            <!--Optional:-->
+            <sch1:carenciaData1>?</sch1:carenciaData1>
+            <!--Optional:-->
+            <sch1:carenciaDescricao2>?</sch1:carenciaDescricao2>
+            <!--Optional:-->
+            <sch1:carenciaData2>?</sch1:carenciaData2>
+            <!--Optional:-->
+            <sch1:carenciaDescricao3>?</sch1:carenciaDescricao3>
+            <!--Optional:-->
+            <sch1:carenciaData3>?</sch1:carenciaData3>
+            <!--Optional:-->
+            <sch1:carenciaDescricao4>?</sch1:carenciaDescricao4>
+            <!--Optional:-->
+            <sch1:carenciaData4>?</sch1:carenciaData4>
+            <!--Zero or more repetitions:-->
+            <sch1:grupoFamiliar>
+               <!--Optional:-->
+               <sch:email>?</sch:email>
+               <!--Optional:-->
+               <sch:departamento>?</sch:departamento>
+               <!--Optional:-->
+               <sch:codigoContato>?</sch:codigoContato>
+               <!--Optional:-->
+               <sch:nomeContato>?</sch:nomeContato>
+               <!--Optional:-->
+               <sch:telefoneContato>
+                  <!--Optional:-->
+                  <sch:ddd>?</sch:ddd>
+                  <!--Optional:-->
+                  <sch:numero>?</sch:numero>
+                  <!--Optional:-->
+                  <sch:ramal>?</sch:ramal>
+               </sch:telefoneContato>
+               <!--Optional:-->
+               <sch:telefoneFax>
+                  <!--Optional:-->
+                  <sch:ddd>?</sch:ddd>
+                  <!--Optional:-->
+                  <sch:numero>?</sch:numero>
+                  <!--Optional:-->
+                  <sch:ramal>?</sch:ramal>
+               </sch:telefoneFax>
+               <!--Optional:-->
+               <sch:telefonePrincipal>
+                  <!--Optional:-->
+                  <sch:ddd>?</sch:ddd>
+                  <!--Optional:-->
+                  <sch:numero>?</sch:numero>
+                  <!--Optional:-->
+                  <sch:ramal>?</sch:ramal>
+               </sch:telefonePrincipal>
+               <!--Optional:-->
+               <sch:tipoContato>?</sch:tipoContato>
+               <!--Optional:-->
+               <sch1:hierarquia>
+                  <!--Optional:-->
+                  <sch:codigoSistema>?</sch:codigoSistema>
+                  <!--Optional:-->
+                  <sch:estipulante>
+                     <!--Optional:-->
+                     <sch:cnpj>?</sch:cnpj>
+                     <!--Optional:-->
+                     <sch:codigo>?</sch:codigo>
+                     <!--Optional:-->
+                     <sch:codigoSistema>?</sch:codigoSistema>
+                     <!--Optional:-->
+                     <sch:descricao>?</sch:descricao>
+                     <!--Zero or more repetitions:-->
+                     <sch:areas>
+                        <!--Optional:-->
+                        <sch:codigo>?</sch:codigo>
+                        <!--Optional:-->
+                        <sch:descricao>?</sch:descricao>
+                     </sch:areas>
+                     <!--Optional:-->
+                     <sch:codigoConnectmed>?</sch:codigoConnectmed>
+                     <!--Optional:-->
+                     <sch:pathLogo>?</sch:pathLogo>
+                  </sch:estipulante>
+                  <!--Optional:-->
+                  <sch:operadora>
+                     <!--Optional:-->
+                     <sch:cnpj>?</sch:cnpj>
+                     <!--Optional:-->
+                     <sch:codigo>?</sch:codigo>
+                     <!--Optional:-->
+                     <sch:codigoSistema>?</sch:codigoSistema>
+                     <!--Optional:-->
+                     <sch:descricao>?</sch:descricao>
+                     <!--Zero or more repetitions:-->
+                     <sch:areas>
+                        <!--Optional:-->
+                        <sch:codigo>?</sch:codigo>
+                        <!--Optional:-->
+                        <sch:descricao>?</sch:descricao>
+                     </sch:areas>
+                     <!--Optional:-->
+                     <sch:codigoConnectmed>?</sch:codigoConnectmed>
+                     <!--Optional:-->
+                     <sch:pathLogo>?</sch:pathLogo>
+                  </sch:operadora>
+                  <!--Optional:-->
+                  <sch:subestipulante>
+                     <!--Optional:-->
+                     <sch:cnpj>?</sch:cnpj>
+                     <!--Optional:-->
+                     <sch:codigo>?</sch:codigo>
+                     <!--Optional:-->
+                     <sch:codigoSistema>?</sch:codigoSistema>
+                     <!--Optional:-->
+                     <sch:descricao>?</sch:descricao>
+                     <!--Zero or more repetitions:-->
+                     <sch:areas>
+                        <!--Optional:-->
+                        <sch:codigo>?</sch:codigo>
+                        <!--Optional:-->
+                        <sch:descricao>?</sch:descricao>
+                     </sch:areas>
+                     <!--Optional:-->
+                     <sch:codigoConnectmed>?</sch:codigoConnectmed>
+                     <!--Optional:-->
+                     <sch:pathLogo>?</sch:pathLogo>
+                  </sch:subestipulante>
+               </sch1:hierarquia>
+               <!--Optional:-->
+               <sch1:codigo>?</sch1:codigo>
+               <!--Optional:-->
+               <sch1:numeroCNS>?</sch1:numeroCNS>
+               <!--Optional:-->
+               <sch1:nome>?</sch1:nome>
+               <!--Optional:-->
+               <sch1:codigoCarteirinha>?</sch1:codigoCarteirinha>
+               <!--Optional:-->
+               <sch1:dataNascimento>?</sch1:dataNascimento>
+               <!--Optional:-->
+               <sch1:cpf>?</sch1:cpf>
+               <!--Optional:-->
+               <sch1:sexo>?</sch1:sexo>
+               <!--Optional:-->
+               <sch1:status>?</sch1:status>
+               <!--Optional:-->
+               <sch1:cidade>?</sch1:cidade>
+               <!--Optional:-->
+               <sch1:vinculo>?</sch1:vinculo>
+               <!--Optional:-->
+               <sch1:plano>
+                  <!--Optional:-->
+                  <sch:codigo>?</sch:codigo>
+                  <!--Optional:-->
+                  <sch:nome>?</sch:nome>
+                  <!--Optional:-->
+                  <sch:titular>?</sch:titular>
+                  <!--Optional:-->
+                  <sch:vigencia>?</sch:vigencia>
+                  <!--Optional:-->
+                  <sch:numeroAns>?</sch:numeroAns>
+               </sch1:plano>
+               <!--Optional:-->
+               <sch1:acomodacao>?</sch1:acomodacao>
+               <!--Optional:-->
+               <sch1:abrangencia>?</sch1:abrangencia>
+               <!--Optional:-->
+               <sch1:numeroAns>?</sch1:numeroAns>
+               <!--Optional:-->
+               <sch1:historicoMovimentacao>?</sch1:historicoMovimentacao>
+               <!--Optional:-->
+               <sch1:idade>?</sch1:idade>
+               <!--Optional:-->
+               <sch1:peso>?</sch1:peso>
+               <!--Optional:-->
+               <sch1:altura>?</sch1:altura>
+               <!--Optional:-->
+               <sch1:massaCorporal>?</sch1:massaCorporal>
+               <!--Optional:-->
+               <sch1:tipo>
+                  <!--Optional:-->
+                  <sch1:codigo>?</sch1:codigo>
+                  <!--Optional:-->
+                  <sch1:descricao>?</sch1:descricao>
+               </sch1:tipo>
+               <!--Optional:-->
+               <sch1:identidade>?</sch1:identidade>
+               <!--Optional:-->
+               <sch1:posto>?</sch1:posto>
+               <!--Optional:-->
+               <sch1:titular/>
+               <!--Optional:-->
+               <sch1:matriculaFuncional>?</sch1:matriculaFuncional>
+               <!--Optional:-->
+               <sch1:unidadeFuncional>
+                  <!--Optional:-->
+                  <sch:codigo>?</sch:codigo>
+                  <!--Optional:-->
+                  <sch:descricao>?</sch:descricao>
+               </sch1:unidadeFuncional>
+               <!--Optional:-->
+               <sch1:rede>
+                  <!--Optional:-->
+                  <sch:codigo>?</sch:codigo>
+                  <!--Optional:-->
+                  <sch:nome>?</sch:nome>
+                  <!--Optional:-->
+                  <sch:titular>?</sch:titular>
+                  <!--Optional:-->
+                  <sch:vigencia>?</sch:vigencia>
+               </sch1:rede>
+               <!--Optional:-->
+               <sch1:validadeCarteirinha>?</sch1:validadeCarteirinha>
+               <!--Optional:-->
+               <sch1:dataRealizacaoAtendimento>?</sch1:dataRealizacaoAtendimento>
+               <!--Optional:-->
+               <sch1:estadoCivil>?</sch1:estadoCivil>
+               <!--Optional:-->
+               <sch1:nomeMae>?</sch1:nomeMae>
+               <!--Optional:-->
+               <sch1:empresa>
+                  <!--Optional:-->
+                  <sch:codigo>?</sch:codigo>
+                  <!--Optional:-->
+                  <sch:nome>?</sch:nome>
+                  <!--Optional:-->
+                  <sch:cnpj>?</sch:cnpj>
+                  <!--Optional:-->
+                  <sch:sigla>?</sch:sigla>
+               </sch1:empresa>
+               <!--Optional:-->
+               <sch1:endereco>
+                  <!--Optional:-->
+                  <sch:bairro>?</sch:bairro>
+                  <!--Optional:-->
+                  <sch:cep>?</sch:cep>
+                  <!--Optional:-->
+                  <sch:cidade>?</sch:cidade>
+                  <!--Optional:-->
+                  <sch:codigoIBGE>?</sch:codigoIBGE>
+                  <!--Optional:-->
+                  <sch:complemento>?</sch:complemento>
+                  <!--Optional:-->
+                  <sch:estado>?</sch:estado>
+                  <!--Optional:-->
+                  <sch:logradouro>?</sch:logradouro>
+                  <!--Optional:-->
+                  <sch:numero>?</sch:numero>
+                  <!--Optional:-->
+                  <sch:pais>?</sch:pais>
+                  <!--Optional:-->
+                  <sch:tipoLogradouro>?</sch:tipoLogradouro>
+                  <!--Optional:-->
+                  <sch:uf>?</sch:uf>
+               </sch1:endereco>
+               <!--Optional:-->
+               <sch1:rg>?</sch1:rg>
+               <!--Optional:-->
+               <sch1:orgaoEmissor>?</sch1:orgaoEmissor>
+               <!--Optional:-->
+               <sch1:dataEmissaoCarteirinha>?</sch1:dataEmissaoCarteirinha>
+               <!--Optional:-->
+               <sch1:dataEntradaPlano>?</sch1:dataEntradaPlano>
+               <!--Optional:-->
+               <sch1:dataBaseCarencia>?</sch1:dataBaseCarencia>
+               <!--Optional:-->
+               <sch1:codigoInterno>?</sch1:codigoInterno>
+               <!--Optional:-->
+               <sch1:cobertura>?</sch1:cobertura>
+               <!--Optional:-->
+               <sch1:matricula>?</sch1:matricula>
+               <!--Optional:-->
+               <sch1:tipoContratacao>?</sch1:tipoContratacao>
+               <!--Optional:-->
+               <sch1:carenciaDescricao1>?</sch1:carenciaDescricao1>
+               <!--Optional:-->
+               <sch1:carenciaData1>?</sch1:carenciaData1>
+               <!--Optional:-->
+               <sch1:carenciaDescricao2>?</sch1:carenciaDescricao2>
+               <!--Optional:-->
+               <sch1:carenciaData2>?</sch1:carenciaData2>
+               <!--Optional:-->
+               <sch1:carenciaDescricao3>?</sch1:carenciaDescricao3>
+               <!--Optional:-->
+               <sch1:carenciaData3>?</sch1:carenciaData3>
+               <!--Optional:-->
+               <sch1:carenciaDescricao4>?</sch1:carenciaDescricao4>
+               <!--Optional:-->
+               <sch1:carenciaData4>?</sch1:carenciaData4>
+               <!--Zero or more repetitions:-->
+               <sch1:grupoFamiliar/>
+               <!--Optional:-->
+               <sch1:token>?</sch1:token>
+               <!--Optional:-->
+               <sch1:subestipulante>
+                  <!--Optional:-->
+                  <sch:codigo>?</sch:codigo>
+                  <!--Optional:-->
+                  <sch:nome>?</sch:nome>
+                  <!--Optional:-->
+                  <sch:cnpj>?</sch:cnpj>
+                  <!--Optional:-->
+                  <sch:sigla>?</sch:sigla>
+               </sch1:subestipulante>
+               <!--Optional:-->
+               <sch1:smart>?</sch1:smart>
+               <!--Optional:-->
+               <sch1:numeroDevice>?</sch1:numeroDevice>
+               <!--Optional:-->
+               <sch1:estabelecimento>
+                  <sch1:codigo>?</sch1:codigo>
+                  <sch1:descricao>?</sch1:descricao>
+               </sch1:estabelecimento>
+            </sch1:grupoFamiliar>
+            <!--Optional:-->
+            <sch1:token>?</sch1:token>
+            <!--Optional:-->
+            <sch1:subestipulante>
+               <!--Optional:-->
+               <sch:codigo>?</sch:codigo>
+               <!--Optional:-->
+               <sch:nome>?</sch:nome>
+               <!--Optional:-->
+               <sch:cnpj>?</sch:cnpj>
+               <!--Optional:-->
+               <sch:sigla>?</sch:sigla>
+            </sch1:subestipulante>
+            <!--Optional:-->
+            <sch1:smart>?</sch1:smart>
+            <!--Optional:-->
+            <sch1:numeroDevice>?</sch1:numeroDevice>
+            <!--Optional:-->
+            <sch1:estabelecimento>
+               <sch1:codigo>?</sch1:codigo>
+               <sch1:descricao>?</sch1:descricao>
+            </sch1:estabelecimento>
+            <!--Optional:-->
+            <sch1:usuario>?</sch1:usuario>
+            <!--Optional:-->
+            <sch1:senha>?</sch1:senha>
+            <!--Optional:-->
+            <sch1:senhaAnterior>?</sch1:senhaAnterior>
+            <!--Optional:-->
+            <sch1:confirmacaoSenha>?</sch1:confirmacaoSenha>
+            <!--Optional:-->
+            <sch1:confirmacaoEmail>?</sch1:confirmacaoEmail>
+         </ser:autenticacaoBeneficiario>
+      </ser:trocarSenha>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:trocarSenha"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>

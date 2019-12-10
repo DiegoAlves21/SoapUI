@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="f5e85f91-821e-4ca9-b8d1-4c61a04a0f73" activeEnvironment="Default" name="MUTUA- ws_declaracao_ir" soapui-version="5.5.0" abortOnError="false" runType="SEQUENTIAL" resourceRoot="" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="c0007b1f-19bb-4f5a-b24f-0b035ded84a1" wsaVersion="NONE" name="ws_declaracao_irSoap" type="wsdl" bindingName="{http://tempuri.org/}ws_declaracao_irSoap" soapVersion="1_1" anonymous="optional" definition="http://200.170.228.200:8091/ws_declaracao_ir.asmx?WSDL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>http://200.170.228.200:8091/ws_declaracao_ir.asmx</con:endpoint></con:endpoints><con:operation id="cacc1b28-72be-4c38-a222-4c8673dce0e7" isOneWay="false" action="http://tempuri.org/extrato_ir_pdf" name="extrato_ir_pdf" bindingOperationName="extrato_ir_pdf" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="243d5f18-4647-4887-80c3-e7c8ca815c49" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://200.170.228.200:8091/ws_declaracao_ir.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:extrato_ir_pdf>
+         <!--Optional:-->
+         <tem:chave_beneficiario>9041</tem:chave_beneficiario>
+         <!--Optional:-->
+         <tem:ano>2018</tem:ano>
+      </tem:extrato_ir_pdf>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/extrato_ir_pdf"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="8f1c6e0f-aa44-4bfd-ac92-7aa1a56080ab" wsaVersion="NONE" name="ws_declaracao_irSoap12" type="wsdl" bindingName="{http://tempuri.org/}ws_declaracao_irSoap12" soapVersion="1_2" anonymous="optional" definition="http://200.170.228.200:8091/ws_declaracao_ir.asmx?WSDL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://200.170.228.200:8091/ws_declaracao_ir.asmx?WSDL"><con:part><con:url>http://200.170.228.200:8091/ws_declaracao_ir.asmx?WSDL</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="extrato_ir_pdf">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="chave_beneficiario" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="ano" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="extrato_ir_pdfResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="extrato_ir_pdfResult" type="tns:DeclaracaoIR"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="DeclaracaoIR">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Status" type="s:boolean"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Motivo_Critica" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Extrato_Base64" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Extrato_Url" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="extrato_ir_pdfSoapIn">
+    <wsdl:part name="parameters" element="tns:extrato_ir_pdf"/>
+  </wsdl:message>
+  <wsdl:message name="extrato_ir_pdfSoapOut">
+    <wsdl:part name="parameters" element="tns:extrato_ir_pdfResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="ws_declaracao_irSoap">
+    <wsdl:operation name="extrato_ir_pdf">
+      <wsdl:input message="tns:extrato_ir_pdfSoapIn"/>
+      <wsdl:output message="tns:extrato_ir_pdfSoapOut"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ws_declaracao_irSoap" type="tns:ws_declaracao_irSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="extrato_ir_pdf">
+      <soap:operation soapAction="http://tempuri.org/extrato_ir_pdf" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ws_declaracao_irSoap12" type="tns:ws_declaracao_irSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="extrato_ir_pdf">
+      <soap12:operation soapAction="http://tempuri.org/extrato_ir_pdf" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ws_declaracao_ir">
+    <wsdl:port name="ws_declaracao_irSoap" binding="tns:ws_declaracao_irSoap">
+      <soap:address location="http://200.170.228.200:8091/ws_declaracao_ir.asmx"/>
+    </wsdl:port>
+    <wsdl:port name="ws_declaracao_irSoap12" binding="tns:ws_declaracao_irSoap12">
+      <soap12:address location="http://200.170.228.200:8091/ws_declaracao_ir.asmx"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://200.170.228.200:8091/ws_declaracao_ir.asmx</con:endpoint></con:endpoints><con:operation id="daa6cdbb-5ff6-4954-88fa-43a5f4d5c86e" isOneWay="false" action="http://tempuri.org/extrato_ir_pdf" name="extrato_ir_pdf" bindingOperationName="extrato_ir_pdf" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="3575b5ed-5e50-4cd2-9ba5-65bda4bb6c56" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://200.170.228.200:8091/ws_declaracao_ir.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tem="http://tempuri.org/">
+   <soap:Header/>
+   <soap:Body>
+      <tem:extrato_ir_pdf>
+         <!--Optional:-->
+         <tem:chave_beneficiario>9041</tem:chave_beneficiario>
+         <!--Optional:-->
+         <tem:ano>2018</tem:ano>
+      </tem:extrato_ir_pdf>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ws_declaracao_irSoap/extrato_ir_pdfRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="3bebfbb0-5e5a-4255-811a-5ff15824e29b" wsaVersion="NONE" name="ws_carta_quitacaoSoap12" type="wsdl" bindingName="{http://tempuri.org/}ws_carta_quitacaoSoap12" soapVersion="1_2" anonymous="optional" definition="http://200.170.228.200:8091/ws_carta_quitacao.asmx?WSDL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>http://200.170.228.200:8091/ws_carta_quitacao.asmx</con:endpoint></con:endpoints><con:operation id="1a5b6b33-0cfd-4c89-a913-d85c4f677a84" isOneWay="false" action="http://tempuri.org/extrato_pdf" name="extrato_pdf" bindingOperationName="extrato_pdf" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="b64cb9ce-7a8b-40ea-a866-7f5a63c7433c" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://200.170.228.200:8091/ws_carta_quitacao.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tem="http://tempuri.org/">
+   <soap:Header/>
+   <soap:Body>
+      <tem:extrato_pdf>
+         <!--Optional:-->
+         <tem:chave_beneficiario>9041</tem:chave_beneficiario>
+         <!--Optional:-->
+         <tem:chave_empresa>9041</tem:chave_empresa>
+         <!--Optional:-->
+         <tem:ano>2018</tem:ano>
+      </tem:extrato_pdf>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ws_carta_quitacaoSoap/extrato_pdfRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="52f24f7a-d784-4cb8-95dd-ed040d3f71e5" wsaVersion="NONE" name="ws_carta_quitacaoSoap" type="wsdl" bindingName="{http://tempuri.org/}ws_carta_quitacaoSoap" soapVersion="1_1" anonymous="optional" definition="http://200.170.228.200:8091/ws_carta_quitacao.asmx?WSDL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://200.170.228.200:8091/ws_carta_quitacao.asmx?WSDL"><con:part><con:url>http://200.170.228.200:8091/ws_carta_quitacao.asmx?WSDL</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="extrato_pdf">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="chave_beneficiario" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="chave_empresa" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="ano" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="extrato_pdfResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="extrato_pdfResult" type="tns:CartaQuitacao"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CartaQuitacao">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Status" type="s:boolean"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Motivo_Critica" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Extrato_Base64" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Extrato_Url" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="extrato_pdfSoapIn">
+    <wsdl:part name="parameters" element="tns:extrato_pdf"/>
+  </wsdl:message>
+  <wsdl:message name="extrato_pdfSoapOut">
+    <wsdl:part name="parameters" element="tns:extrato_pdfResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="ws_carta_quitacaoSoap">
+    <wsdl:operation name="extrato_pdf">
+      <wsdl:input message="tns:extrato_pdfSoapIn"/>
+      <wsdl:output message="tns:extrato_pdfSoapOut"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ws_carta_quitacaoSoap" type="tns:ws_carta_quitacaoSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="extrato_pdf">
+      <soap:operation soapAction="http://tempuri.org/extrato_pdf" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ws_carta_quitacaoSoap12" type="tns:ws_carta_quitacaoSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="extrato_pdf">
+      <soap12:operation soapAction="http://tempuri.org/extrato_pdf" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ws_carta_quitacao">
+    <wsdl:port name="ws_carta_quitacaoSoap" binding="tns:ws_carta_quitacaoSoap">
+      <soap:address location="http://200.170.228.200:8091/ws_carta_quitacao.asmx"/>
+    </wsdl:port>
+    <wsdl:port name="ws_carta_quitacaoSoap12" binding="tns:ws_carta_quitacaoSoap12">
+      <soap12:address location="http://200.170.228.200:8091/ws_carta_quitacao.asmx"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://200.170.228.200:8091/ws_carta_quitacao.asmx</con:endpoint></con:endpoints><con:operation id="42c69aee-e437-4c15-89ff-5c11601fbe3a" isOneWay="false" action="http://tempuri.org/extrato_pdf" name="extrato_pdf" bindingOperationName="extrato_pdf" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="9edcdbbd-521a-46c1-a8f2-c72cf93e1f36" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://200.170.228.200:8091/ws_carta_quitacao.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:extrato_pdf>
+         <!--Optional:-->
+         <tem:chave_beneficiario>9041</tem:chave_beneficiario>
+         <!--Optional:-->
+         <tem:chave_empresa>9041</tem:chave_empresa>
+         <!--Optional:-->
+         <tem:ano>2018</tem:ano>
+      </tem:extrato_pdf>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/extrato_pdf"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="d046bae6-e186-4017-bffa-2ca8da860906" wsaVersion="NONE" name="ws_login_serviceSoap" type="wsdl" bindingName="{http://tempuri.org/}ws_login_serviceSoap" soapVersion="1_1" anonymous="optional" definition="http://200.170.228.200:8091/ws_login_service.asmx?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>http://200.170.228.200:8091/ws_login_service.asmx</con:endpoint></con:endpoints><con:operation id="545cfe01-68ed-4dda-8e0c-fcb57da99300" isOneWay="false" action="http://tempuri.org/Autentica_Associado" name="Autentica_Associado" bindingOperationName="Autentica_Associado" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="94c0a8f2-78d0-4b39-8c82-540a5d05a4f4" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://200.170.228.200:8091/ws_login_service.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:Autentica_Associado>
+         <!--Optional:-->
+         <tem:usuario_login>?</tem:usuario_login>
+         <!--Optional:-->
+         <tem:usuario_psw>?</tem:usuario_psw>
+      </tem:Autentica_Associado>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/Autentica_Associado"/></con:call></con:operation><con:operation id="b022d90d-4aa8-4dff-a2bf-3d4441a12f05" isOneWay="false" action="http://tempuri.org/Lembrar_Senha" name="Lembrar_Senha" bindingOperationName="Lembrar_Senha" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="6b03823d-d7dc-4942-ad23-aba9c7cd3300" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://200.170.228.200:8091/ws_login_service.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:Lembrar_Senha>
+         <!--Optional:-->
+         <tem:usuario_login>?</tem:usuario_login>
+         <!--Optional:-->
+         <tem:usuario_cpf>?</tem:usuario_cpf>
+         <tem:usuario_nascimento>?</tem:usuario_nascimento>
+      </tem:Lembrar_Senha>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/Lembrar_Senha"/></con:call></con:operation><con:operation id="2de24e8b-fd02-429b-8138-adf0ccbaa20c" isOneWay="false" action="http://tempuri.org/Trocar_Senha" name="Trocar_Senha" bindingOperationName="Trocar_Senha" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="1ef60d51-f8bd-4886-8fe9-cd2f70ede1e6" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://200.170.228.200:8091/ws_login_service.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:Trocar_Senha>
+         <!--Optional:-->
+         <tem:usuario_login>?</tem:usuario_login>
+         <!--Optional:-->
+         <tem:senha_atual>?</tem:senha_atual>
+         <!--Optional:-->
+         <tem:senha_nova>?</tem:senha_nova>
+      </tem:Trocar_Senha>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/Trocar_Senha"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="793ca3e5-9afa-4156-8b23-600ac76cbee5" wsaVersion="NONE" name="ws_login_serviceSoap12" type="wsdl" bindingName="{http://tempuri.org/}ws_login_serviceSoap12" soapVersion="1_2" anonymous="optional" definition="http://200.170.228.200:8091/ws_login_service.asmx?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://200.170.228.200:8091/ws_login_service.asmx?wsdl"><con:part><con:url>http://200.170.228.200:8091/ws_login_service.asmx?wsdl</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="Autentica_Associado">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="usuario_login" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="usuario_psw" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Autentica_AssociadoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Autentica_AssociadoResult" type="tns:Login"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Login">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Status" type="s:boolean"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Motivo_Critica" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Usuario_Logado" type="tns:Usuario"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Familia" type="tns:ArrayOfUsuario"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Contratos" type="tns:ArrayOfContrato"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Permissoes" type="tns:Permissoes"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Alerta" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Usuario">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Chave_Beneficiario" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Matricula" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Matricula_Antiga" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Matricula_Funcionario" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Nome" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Sexo" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Nascimento" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CPF" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Celular" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Endereco" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Bairro" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CEP" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Cidade" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Estado" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Inclusao" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Tipo_Usuario" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Matricula_Titular" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Grau_Parentesco_ID" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Grau_Parentesco_Descricao" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Data_Contratacao" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Data_Inicio_Cobertura" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Convenio_ID" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Convenio_Descricao" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Convenio_Abrangencia" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Convenio_Acomodacao" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Convenio_Modalidade_Cobranca" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Convenio_Padrao_Conforto" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Convenio_Participativo" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Convenio_Segmentacao" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Convenio_Tipo_Pessoa" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Convenio_Tipo_Contrato" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Convenio_Regulamentacao" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Cartao_Imagem" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Cartao_Imagem_Verso" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Cartao_Validade" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Cartao_Via" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Chave_Empresa" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Empresa_Nome" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Contrato_Empresa" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Numero_CNS" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Convenio_ANS" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Data_Final_CPT" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Carencias" type="tns:ArrayOfCarencia"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Codigo_Contrato" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Identidade" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="RH" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Data_Emissao" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfCarencia">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Carencia" nillable="true" type="tns:Carencia"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Carencia"/>
+      <s:complexType name="ArrayOfUsuario">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Usuario" nillable="true" type="tns:Usuario"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfContrato">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Contrato" nillable="true" type="tns:Contrato"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Contrato">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="nome" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="codigo_contrato" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Permissoes">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="reembolso" type="s:boolean"/>
+          <s:element minOccurs="1" maxOccurs="1" name="agendamento" type="s:boolean"/>
+          <s:element minOccurs="1" maxOccurs="1" name="coparticipação_utilizacao" type="s:boolean"/>
+          <s:element minOccurs="1" maxOccurs="1" name="atualiza_cadastro" type="s:boolean"/>
+          <s:element minOccurs="1" maxOccurs="1" name="busca_medicamento" type="s:boolean"/>
+          <s:element minOccurs="1" maxOccurs="1" name="boletos" type="s:boolean"/>
+          <s:element minOccurs="1" maxOccurs="1" name="Informe_ir" type="s:boolean"/>
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Lembrar_Senha">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="usuario_login" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="usuario_cpf" type="s:string"/>
+            <s:element minOccurs="1" maxOccurs="1" name="usuario_nascimento" type="s:dateTime"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Lembrar_SenhaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Lembrar_SenhaResult" type="tns:LembrarSenha"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="LembrarSenha">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Status" type="s:boolean"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Motivo_Critica" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Login" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Senha" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Telefone" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="Enviado" type="s:boolean"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Alerta" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Trocar_Senha">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="usuario_login" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="senha_atual" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="senha_nova" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Trocar_SenhaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Trocar_SenhaResult" type="tns:TrocarSenha"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="TrocarSenha">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Status" type="s:boolean"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Motivo_Critica" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Alerta" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="Autentica_AssociadoSoapIn">
+    <wsdl:part name="parameters" element="tns:Autentica_Associado"/>
+  </wsdl:message>
+  <wsdl:message name="Autentica_AssociadoSoapOut">
+    <wsdl:part name="parameters" element="tns:Autentica_AssociadoResponse"/>
+  </wsdl:message>
+  <wsdl:message name="Lembrar_SenhaSoapIn">
+    <wsdl:part name="parameters" element="tns:Lembrar_Senha"/>
+  </wsdl:message>
+  <wsdl:message name="Lembrar_SenhaSoapOut">
+    <wsdl:part name="parameters" element="tns:Lembrar_SenhaResponse"/>
+  </wsdl:message>
+  <wsdl:message name="Trocar_SenhaSoapIn">
+    <wsdl:part name="parameters" element="tns:Trocar_Senha"/>
+  </wsdl:message>
+  <wsdl:message name="Trocar_SenhaSoapOut">
+    <wsdl:part name="parameters" element="tns:Trocar_SenhaResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="ws_login_serviceSoap">
+    <wsdl:operation name="Autentica_Associado">
+      <wsdl:input message="tns:Autentica_AssociadoSoapIn"/>
+      <wsdl:output message="tns:Autentica_AssociadoSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="Lembrar_Senha">
+      <wsdl:input message="tns:Lembrar_SenhaSoapIn"/>
+      <wsdl:output message="tns:Lembrar_SenhaSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="Trocar_Senha">
+      <wsdl:input message="tns:Trocar_SenhaSoapIn"/>
+      <wsdl:output message="tns:Trocar_SenhaSoapOut"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ws_login_serviceSoap" type="tns:ws_login_serviceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="Autentica_Associado">
+      <soap:operation soapAction="http://tempuri.org/Autentica_Associado" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Lembrar_Senha">
+      <soap:operation soapAction="http://tempuri.org/Lembrar_Senha" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Trocar_Senha">
+      <soap:operation soapAction="http://tempuri.org/Trocar_Senha" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ws_login_serviceSoap12" type="tns:ws_login_serviceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="Autentica_Associado">
+      <soap12:operation soapAction="http://tempuri.org/Autentica_Associado" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Lembrar_Senha">
+      <soap12:operation soapAction="http://tempuri.org/Lembrar_Senha" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Trocar_Senha">
+      <soap12:operation soapAction="http://tempuri.org/Trocar_Senha" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ws_login_service">
+    <wsdl:port name="ws_login_serviceSoap" binding="tns:ws_login_serviceSoap">
+      <soap:address location="http://200.170.228.200:8091/ws_login_service.asmx"/>
+    </wsdl:port>
+    <wsdl:port name="ws_login_serviceSoap12" binding="tns:ws_login_serviceSoap12">
+      <soap12:address location="http://200.170.228.200:8091/ws_login_service.asmx"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://200.170.228.200:8091/ws_login_service.asmx</con:endpoint></con:endpoints><con:operation id="3e83d16f-9a49-4d63-9eb7-0bb25dd7ecf4" isOneWay="false" action="http://tempuri.org/Autentica_Associado" name="Autentica_Associado" bindingOperationName="Autentica_Associado" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="8472ee00-ae50-45b0-a70b-cfaf182f07d9" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://200.170.228.200:8091/ws_login_service.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tem="http://tempuri.org/">
+   <soap:Header/>
+   <soap:Body>
+      <tem:Autentica_Associado>
+         <!--Optional:-->
+         <tem:usuario_login>991140000</tem:usuario_login>
+         <!--Optional:-->
+         <tem:usuario_psw>1234</tem:usuario_psw>
+      </tem:Autentica_Associado>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ws_login_serviceSoap/Autentica_AssociadoRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="e08e4c7a-40b1-4263-b7a2-0b9d9c63f819" isOneWay="false" action="http://tempuri.org/Lembrar_Senha" name="Lembrar_Senha" bindingOperationName="Lembrar_Senha" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="33f02003-a20d-4195-98ea-28670ac82016" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://200.170.228.200:8091/ws_login_service.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tem="http://tempuri.org/">
+   <soap:Header/>
+   <soap:Body>
+      <tem:Lembrar_Senha>
+         <!--Optional:-->
+         <tem:usuario_login>?</tem:usuario_login>
+         <!--Optional:-->
+         <tem:usuario_cpf>?</tem:usuario_cpf>
+         <tem:usuario_nascimento>?</tem:usuario_nascimento>
+      </tem:Lembrar_Senha>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ws_login_serviceSoap/Lembrar_SenhaRequest"/></con:call></con:operation><con:operation id="3f0b79d1-7738-4276-b965-64508fda8d80" isOneWay="false" action="http://tempuri.org/Trocar_Senha" name="Trocar_Senha" bindingOperationName="Trocar_Senha" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="bd93dd22-9610-4d40-a093-1604fe5beee1" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://200.170.228.200:8091/ws_login_service.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tem="http://tempuri.org/">
+   <soap:Header/>
+   <soap:Body>
+      <tem:Trocar_Senha>
+         <!--Optional:-->
+         <tem:usuario_login>?</tem:usuario_login>
+         <!--Optional:-->
+         <tem:senha_atual>?</tem:senha_atual>
+         <!--Optional:-->
+         <tem:senha_nova>?</tem:senha_nova>
+      </tem:Trocar_Senha>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ws_login_serviceSoap/Trocar_SenhaRequest"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>

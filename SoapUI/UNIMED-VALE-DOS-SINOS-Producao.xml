@@ -1,0 +1,692 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="b05c651b-4101-4ec5-949f-b3b08d36b556" activeEnvironment="Default" name="VALE-DOS-SINOS" soapui-version="5.5.0" abortOnError="false" runType="SEQUENTIAL" resourceRoot="" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="c8e9e0ea-2ae0-44e1-9765-3392451023d2" wsaVersion="NONE" name="WSMOBILESAUDESOAP" type="wsdl" bindingName="{http://integracao_protheus/mobile}WSMOBILESAUDESOAP" soapVersion="1_1" anonymous="optional" definition="https://app.vs.unimed.com.br/ws/WSMOBILESAUDE.apw?WSDL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="https://app.vs.unimed.com.br/ws/WSMOBILESAUDE.apw?WSDL"><con:part><con:url>https://app.vs.unimed.com.br/ws/WSMOBILESAUDE.apw?WSDL</con:url><con:content><![CDATA[<!--Generated 20191003 15:07:37 by ADVPL WSDL Server 1.110216 / Protheus 7.00.131227A-20180920 NG-->
+<definitions targetNamespace="http://integracao_protheus/mobile" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://integracao_protheus/mobile" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://integracao_protheus/mobile">
+      <s:element name="DETALHE_AUTORIZACAO">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CHAVE_AUTORIZACAO" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DETALHE_AUTORIZACAORESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DETALHE_AUTORIZACAORESULT" type="s0:ST_DETALHE_AUTORIZACAO"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EXTRATO_AUTORIZACAO">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CHAVE_BENEFICIARIO" type="s:string"/>
+            <s:element minOccurs="1" maxOccurs="1" name="DATA_INICIAL" type="s:date"/>
+            <s:element minOccurs="1" maxOccurs="1" name="DATA_FINAL" type="s:date"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EXTRATO_AUTORIZACAORESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EXTRATO_AUTORIZACAORESULT" type="s0:ST_EXTRATO_AUTORIZACAO"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EXTRATO_IRRPF">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CHAVE_BENEFICIARIO" type="s:string"/>
+            <s:element minOccurs="1" maxOccurs="1" name="CANO" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EXTRATO_IRRPFRESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EXTRATO_IRRPFRESULT" type="s0:ST_EXTRATO_IR"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EXTRATO_IRRPF_PDF">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CHAVE_BENEFICIARIO" type="s:string"/>
+            <s:element minOccurs="1" maxOccurs="1" name="CANO" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EXTRATO_IRRPF_PDFRESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EXTRATO_IRRPF_PDFRESULT" type="s0:ST_EXTRATO_IR_PDF"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GUIA_PDF">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CHAVE_AUTORIZACAO" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GUIA_PDFRESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GUIA_PDFRESULT" type="s0:ST_GUIA_PDF"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LEMBRAR_SENHA">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="USUARIO_LOGIN" type="s:string"/>
+            <s:element minOccurs="1" maxOccurs="1" name="USUARIO_CARTEIRA" type="s:string"/>
+            <s:element minOccurs="1" maxOccurs="1" name="USUARIO_NASCIMENTO" type="s:date"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LEMBRAR_SENHARESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LEMBRAR_SENHARESULT" type="s0:ST_LEMBRAR_SENHA"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LOGIN">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="USUARIO_LOGIN" type="s:string"/>
+            <s:element minOccurs="1" maxOccurs="1" name="USUARIO_PSW" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LOGINRESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LOGINRESULT" type="s0:ST_GRUPO_FAMILIAR"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NOVO_USUARIO">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="USUARIO_CPF" type="s:string"/>
+            <s:element minOccurs="1" maxOccurs="1" name="USUARIO_CARTEIRA" type="s:string"/>
+            <s:element minOccurs="1" maxOccurs="1" name="USUARIO_NASCIMENTO" type="s:date"/>
+            <s:element minOccurs="1" maxOccurs="1" name="USUARIO_EMAIL" type="s:string"/>
+            <s:element minOccurs="1" maxOccurs="1" name="USUARIO_SENHA" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NOVO_USUARIORESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="NOVO_USUARIORESULT" type="s0:ST_GRUPO_FAMILIAR"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="STATUS_AUTORIZACAO">
+        <s:complexType>
+          <s:sequence></s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="STATUS_AUTORIZACAORESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="STATUS_AUTORIZACAORESULT" type="s0:ST_STATUS_AUTORIZACAO"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TROCAR_SENHA">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="USUARIO_LOGIN" type="s:string"/>
+            <s:element minOccurs="1" maxOccurs="1" name="SENHA_ATUAL" type="s:string"/>
+            <s:element minOccurs="1" maxOccurs="1" name="NOVA_SENHA" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TROCAR_SENHARESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TROCAR_SENHARESULT" type="s0:ST_TROCAR_SENHA"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ST_DETALHE_AUTORIZACAO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ITENS" type="s0:ARRAYOFST_ITEM_GUIA"/>
+          <s:element minOccurs="0" maxOccurs="1" name="MOTIVO_CRITICA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="STATUS" type="s:boolean"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ST_EXTRATO_AUTORIZACAO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="AUTORIZACOES" type="s0:ARRAYOFST_AUTORIZACAO"/>
+          <s:element minOccurs="0" maxOccurs="1" name="MOTIVO_CRITICA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="STATUS" type="s:boolean"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ST_EXTRATO_IR">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="EXTRATO" type="s0:ARRAYOFST_EXTRATO_IR_COMP"/>
+          <s:element minOccurs="0" maxOccurs="1" name="INFORMACOES" type="s0:ST_INFORMACAO_IR"/>
+          <s:element minOccurs="0" maxOccurs="1" name="MOTIVO_CRITICA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="STATUS" type="s:boolean"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ST_EXTRATO_IR_PDF">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ARQUIVO" type="s:base64Binary"/>
+          <s:element minOccurs="0" maxOccurs="1" name="MOTIVO_CRITICA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="STATUS" type="s:boolean"/>
+          <s:element minOccurs="0" maxOccurs="1" name="URL" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ST_GRUPO_FAMILIAR">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ALERTA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="FAMILIA" type="s0:ARRAYOFST_USUARIO_PLS"/>
+          <s:element minOccurs="0" maxOccurs="1" name="MOTIVO_CRITICA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="PERMISSOES" type="s0:ST_PERMISSOES"/>
+          <s:element minOccurs="0" maxOccurs="1" name="STATUS" type="s:boolean"/>
+          <s:element minOccurs="0" maxOccurs="1" name="USUARIO_LOGADO" type="s0:ST_USUARIO_PLS"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ST_GUIA_PDF">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="BINARIO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="MOTIVO_CRITICA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="STATUS" type="s:boolean"/>
+          <s:element minOccurs="0" maxOccurs="1" name="URL" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ST_LEMBRAR_SENHA">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ALERTA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="EMAIL" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="ENVIADO" type="s:boolean"/>
+          <s:element minOccurs="0" maxOccurs="1" name="LOGIN" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="MOTIVO_CRITICA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="SENHA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="STATUS" type="s:boolean"/>
+          <s:element minOccurs="0" maxOccurs="1" name="TELEFONE" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ST_STATUS_AUTORIZACAO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ITENS" type="s0:ARRAYOFST_ITEM_STATUS"/>
+          <s:element minOccurs="0" maxOccurs="1" name="MOTIVO_CRITICA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="STATUS" type="s:boolean"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ST_TROCAR_SENHA">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ALERTA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="MOTIVO_CRITICA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="STATUS" type="s:boolean"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ST_ITEM_GUIA">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DATA_AUTORIZACAO" type="s:date"/>
+          <s:element minOccurs="0" maxOccurs="1" name="ID_ITEM" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="PROCEDIMENTO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="PROCEDIMENTO_DESCRICAO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="QUANTIDADE_AUTORIZADA" type="s:integer"/>
+          <s:element minOccurs="0" maxOccurs="1" name="QUANTIDADE_SOLICITADA" type="s:integer"/>
+          <s:element minOccurs="0" maxOccurs="1" name="STATUS_ID" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ST_AUTORIZACAO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="BENEFICIARIO_MATRICULA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="BENEFICIARIO_NOME" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CHAVE_AUTORIZACAO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DATA_AUTORIZACAO" type="s:date"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DATA_SOLICITACAO" type="s:date"/>
+          <s:element minOccurs="0" maxOccurs="1" name="ESPECIALIDADE" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="INFORMACOES" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="NOME_PRESTADOR" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="NUMERO_PEDIDO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="SENHA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="STATUS_ID" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="TIPO_TRATAMENTO" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ST_EXTRATO_IR_COMP">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ANO_COMPETENCIA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CPF_BENEFICIARIO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CPF_CNPJ_PRESTADOR" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DATA_PAGAMENTO" type="s:date"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DATA_VENCIMENTO" type="s:date"/>
+          <s:element minOccurs="0" maxOccurs="1" name="MATRICULA_BENEFICIARIO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="MES_COMPETENCIA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="NOME_BENEFICIARIO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="NOME_PRESTADO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="TIPO_DESPESA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="VALOR" type="s:float"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ST_INFORMACAO_IR">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CPF_TITULAR" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="NOME_TITULAR" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="RAZAO_SOCIAL_OPERADORA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="REGISTRO_ANS_OPERADORA" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ST_USUARIO_PLS">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="BAIRRO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CARENCIAS" type="s0:ARRAYOFST_CARENCIA"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CARTAO_IMAGEM" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CARTAO_IMAGEM_VERSO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CARTAO_VALIDADE" type="s:date"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CARTAO_VIA" type="s:integer"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CELULAR" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CEP" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CHAVE_BENEFICIARIO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CHAVE_EMPRESA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CIDADE" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CONTRATANTE" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CONTRATO_EMPRESA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CONVENIO_ABRANGENCIA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CONVENIO_ACOMODACAO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CONVENIO_ANS" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CONVENIO_DESCRICAO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CONVENIO_ID" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CONVENIO_MODALIDADE_COBRANCA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CONVENIO_PADRAO_CONFORTO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CONVENIO_PARTICIPATIVO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CONVENIO_REGULAMENTACAO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CONVENIO_SEGMENTACAO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CONVENIO_TIPO_CONTRATO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CONVENIO_TIPO_PESSOA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CPF" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DATA_FINAL_CPT" type="s:date"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DATA_INICIO_COBERTURA" type="s:date"/>
+          <s:element minOccurs="0" maxOccurs="1" name="EMAIL" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="EMPRESA_NOME" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="ENDERECO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="ESTADO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="GRAU_PARENTESCO_DESCRICAO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="GRAU_PARENTESCO_ID" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="INCLUSAO" type="s:date"/>
+          <s:element minOccurs="0" maxOccurs="1" name="IS_CONTRATANTE" type="s:boolean"/>
+          <s:element minOccurs="0" maxOccurs="1" name="MATRICULA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="MATRICULA_ANTIGA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="MATRICULA_FUNCIONARIO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="MATRICULA_TITULAR" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="MENSAGEM_VERSO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="NASCIMENTO" type="s:date"/>
+          <s:element minOccurs="0" maxOccurs="1" name="NOME" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="NUM_OPERADORA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="NUMERO_CNS" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="ODONTO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="PLANO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="PLANO_VERSO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="REDE_ATEND" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="SEXO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="TELEFONE" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="TIPO_USUARIO" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ST_PERMISSOES">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="AGENDAMENTO" type="s:boolean"/>
+          <s:element minOccurs="1" maxOccurs="1" name="ATUALIZA_CADASTRO" type="s:boolean"/>
+          <s:element minOccurs="1" maxOccurs="1" name="BOLETOS" type="s:boolean"/>
+          <s:element minOccurs="1" maxOccurs="1" name="BUSCA_MEDICAMENTO" type="s:boolean"/>
+          <s:element minOccurs="1" maxOccurs="1" name="COPARTICIPAO_UTILIZACAO" type="s:boolean"/>
+          <s:element minOccurs="1" maxOccurs="1" name="INFORME_IR" type="s:boolean"/>
+          <s:element minOccurs="1" maxOccurs="1" name="REEMBOLSO" type="s:boolean"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ST_ITEM_STATUS">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CHAVE_STATUS" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DESCRICAO" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ST_CARENCIA">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="CARENCIA" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="TIPO_SERVICO" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ARRAYOFST_ITEM_GUIA">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ST_ITEM_GUIA" type="s0:ST_ITEM_GUIA"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ARRAYOFST_AUTORIZACAO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ST_AUTORIZACAO" type="s0:ST_AUTORIZACAO"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ARRAYOFST_EXTRATO_IR_COMP">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ST_EXTRATO_IR_COMP" type="s0:ST_EXTRATO_IR_COMP"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ARRAYOFST_USUARIO_PLS">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ST_USUARIO_PLS" type="s0:ST_USUARIO_PLS"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ARRAYOFST_ITEM_STATUS">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ST_ITEM_STATUS" type="s0:ST_ITEM_STATUS"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ARRAYOFST_CARENCIA">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ST_CARENCIA" type="s0:ST_CARENCIA"/>
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </types>
+  <message name="DETALHE_AUTORIZACAOSOAPIN">
+    <part name="parameters" element="s0:DETALHE_AUTORIZACAO"/>
+  </message>
+  <message name="DETALHE_AUTORIZACAOSOAPOUT">
+    <part name="parameters" element="s0:DETALHE_AUTORIZACAORESPONSE"/>
+  </message>
+  <message name="EXTRATO_AUTORIZACAOSOAPIN">
+    <part name="parameters" element="s0:EXTRATO_AUTORIZACAO"/>
+  </message>
+  <message name="EXTRATO_AUTORIZACAOSOAPOUT">
+    <part name="parameters" element="s0:EXTRATO_AUTORIZACAORESPONSE"/>
+  </message>
+  <message name="EXTRATO_IRRPFSOAPIN">
+    <part name="parameters" element="s0:EXTRATO_IRRPF"/>
+  </message>
+  <message name="EXTRATO_IRRPFSOAPOUT">
+    <part name="parameters" element="s0:EXTRATO_IRRPFRESPONSE"/>
+  </message>
+  <message name="EXTRATO_IRRPF_PDFSOAPIN">
+    <part name="parameters" element="s0:EXTRATO_IRRPF_PDF"/>
+  </message>
+  <message name="EXTRATO_IRRPF_PDFSOAPOUT">
+    <part name="parameters" element="s0:EXTRATO_IRRPF_PDFRESPONSE"/>
+  </message>
+  <message name="GUIA_PDFSOAPIN">
+    <part name="parameters" element="s0:GUIA_PDF"/>
+  </message>
+  <message name="GUIA_PDFSOAPOUT">
+    <part name="parameters" element="s0:GUIA_PDFRESPONSE"/>
+  </message>
+  <message name="LEMBRAR_SENHASOAPIN">
+    <part name="parameters" element="s0:LEMBRAR_SENHA"/>
+  </message>
+  <message name="LEMBRAR_SENHASOAPOUT">
+    <part name="parameters" element="s0:LEMBRAR_SENHARESPONSE"/>
+  </message>
+  <message name="LOGINSOAPIN">
+    <part name="parameters" element="s0:LOGIN"/>
+  </message>
+  <message name="LOGINSOAPOUT">
+    <part name="parameters" element="s0:LOGINRESPONSE"/>
+  </message>
+  <message name="NOVO_USUARIOSOAPIN">
+    <part name="parameters" element="s0:NOVO_USUARIO"/>
+  </message>
+  <message name="NOVO_USUARIOSOAPOUT">
+    <part name="parameters" element="s0:NOVO_USUARIORESPONSE"/>
+  </message>
+  <message name="STATUS_AUTORIZACAOSOAPIN">
+    <part name="parameters" element="s0:STATUS_AUTORIZACAO"/>
+  </message>
+  <message name="STATUS_AUTORIZACAOSOAPOUT">
+    <part name="parameters" element="s0:STATUS_AUTORIZACAORESPONSE"/>
+  </message>
+  <message name="TROCAR_SENHASOAPIN">
+    <part name="parameters" element="s0:TROCAR_SENHA"/>
+  </message>
+  <message name="TROCAR_SENHASOAPOUT">
+    <part name="parameters" element="s0:TROCAR_SENHARESPONSE"/>
+  </message>
+  <portType name="WSMOBILESAUDESOAP">
+    <operation name="DETALHE_AUTORIZACAO">
+      <documentation>Itens de uma guia</documentation>
+      <input message="s0:DETALHE_AUTORIZACAOSOAPIN"/>
+      <output message="s0:DETALHE_AUTORIZACAOSOAPOUT"/>
+    </operation>
+    <operation name="EXTRATO_AUTORIZACAO">
+      <documentation>Relacao de autorizações do beneficiario ou grupo familiar</documentation>
+      <input message="s0:EXTRATO_AUTORIZACAOSOAPIN"/>
+      <output message="s0:EXTRATO_AUTORIZACAOSOAPOUT"/>
+    </operation>
+    <operation name="EXTRATO_IRRPF">
+      <documentation>Servico para demonstrativo de IR</documentation>
+      <input message="s0:EXTRATO_IRRPFSOAPIN"/>
+      <output message="s0:EXTRATO_IRRPFSOAPOUT"/>
+    </operation>
+    <operation name="EXTRATO_IRRPF_PDF">
+      <documentation>Servico para demonstrativo de IR em PDF</documentation>
+      <input message="s0:EXTRATO_IRRPF_PDFSOAPIN"/>
+      <output message="s0:EXTRATO_IRRPF_PDFSOAPOUT"/>
+    </operation>
+    <operation name="GUIA_PDF">
+      <documentation>Guia padrao</documentation>
+      <input message="s0:GUIA_PDFSOAPIN"/>
+      <output message="s0:GUIA_PDFSOAPOUT"/>
+    </operation>
+    <operation name="LEMBRAR_SENHA">
+      <documentation>Metodo para lembrar senha do cliente</documentation>
+      <input message="s0:LEMBRAR_SENHASOAPIN"/>
+      <output message="s0:LEMBRAR_SENHASOAPOUT"/>
+    </operation>
+    <operation name="LOGIN">
+      <documentation>Autentica cliente e retorna dados do plano</documentation>
+      <input message="s0:LOGINSOAPIN"/>
+      <output message="s0:LOGINSOAPOUT"/>
+    </operation>
+    <operation name="NOVO_USUARIO">
+      <documentation>Cria um novo usuário</documentation>
+      <input message="s0:NOVO_USUARIOSOAPIN"/>
+      <output message="s0:NOVO_USUARIOSOAPOUT"/>
+    </operation>
+    <operation name="STATUS_AUTORIZACAO">
+      <documentation>Status de guias e itens</documentation>
+      <input message="s0:STATUS_AUTORIZACAOSOAPIN"/>
+      <output message="s0:STATUS_AUTORIZACAOSOAPOUT"/>
+    </operation>
+    <operation name="TROCAR_SENHA">
+      <documentation>Metodo para trocar senha do cliente</documentation>
+      <input message="s0:TROCAR_SENHASOAPIN"/>
+      <output message="s0:TROCAR_SENHASOAPOUT"/>
+    </operation>
+  </portType>
+  <binding name="WSMOBILESAUDESOAP" type="s0:WSMOBILESAUDESOAP">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+    <operation name="DETALHE_AUTORIZACAO">
+      <soap:operation soapAction="http://integracao_protheus/mobile/DETALHE_AUTORIZACAO" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="EXTRATO_AUTORIZACAO">
+      <soap:operation soapAction="http://integracao_protheus/mobile/EXTRATO_AUTORIZACAO" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="EXTRATO_IRRPF">
+      <soap:operation soapAction="http://integracao_protheus/mobile/EXTRATO_IRRPF" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="EXTRATO_IRRPF_PDF">
+      <soap:operation soapAction="http://integracao_protheus/mobile/EXTRATO_IRRPF_PDF" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="GUIA_PDF">
+      <soap:operation soapAction="http://integracao_protheus/mobile/GUIA_PDF" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="LEMBRAR_SENHA">
+      <soap:operation soapAction="http://integracao_protheus/mobile/LEMBRAR_SENHA" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="LOGIN">
+      <soap:operation soapAction="http://integracao_protheus/mobile/LOGIN" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="NOVO_USUARIO">
+      <soap:operation soapAction="http://integracao_protheus/mobile/NOVO_USUARIO" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="STATUS_AUTORIZACAO">
+      <soap:operation soapAction="http://integracao_protheus/mobile/STATUS_AUTORIZACAO" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="TROCAR_SENHA">
+      <soap:operation soapAction="http://integracao_protheus/mobile/TROCAR_SENHA" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="WSMOBILESAUDE">
+    <documentation>Serviço com metodos para atendimento ao aplicativo</documentation>
+    <port name="WSMOBILESAUDESOAP" binding="s0:WSMOBILESAUDESOAP">
+      <soap:address location="https://app.vs.unimed.com.br/ws/WSMOBILESAUDE.apw"/>
+    </port>
+  </service>
+</definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>https://app.vs.unimed.com.br/ws/WSMOBILESAUDE.apw</con:endpoint></con:endpoints><con:operation id="d927b5ef-6b14-4917-9db6-a8d64984c1a6" isOneWay="false" action="http://integracao_protheus/mobile/DETALHE_AUTORIZACAO" name="DETALHE_AUTORIZACAO" bindingOperationName="DETALHE_AUTORIZACAO" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="ec91986e-11ca-4a8f-88df-4cfe647c8e35" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://app.vs.unimed.com.br/ws/WSMOBILESAUDE.apw</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:mob="http://integracao_protheus/mobile">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <mob:DETALHE_AUTORIZACAO>
+         <mob:CHAVE_AUTORIZACAO>?</mob:CHAVE_AUTORIZACAO>
+      </mob:DETALHE_AUTORIZACAO>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://integracao_protheus/mobile/DETALHE_AUTORIZACAO"/></con:call></con:operation><con:operation id="d8ae5e62-6655-4fae-b835-5da3326a7ebf" isOneWay="false" action="http://integracao_protheus/mobile/EXTRATO_AUTORIZACAO" name="EXTRATO_AUTORIZACAO" bindingOperationName="EXTRATO_AUTORIZACAO" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="d554f27c-6a3d-4e2b-ab6a-4718f7aef3c4" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://app.vs.unimed.com.br/ws/WSMOBILESAUDE.apw</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:mob="http://integracao_protheus/mobile">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <mob:EXTRATO_AUTORIZACAO>
+         <mob:CHAVE_BENEFICIARIO>?</mob:CHAVE_BENEFICIARIO>
+         <mob:DATA_INICIAL>?</mob:DATA_INICIAL>
+         <mob:DATA_FINAL>?</mob:DATA_FINAL>
+      </mob:EXTRATO_AUTORIZACAO>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://integracao_protheus/mobile/EXTRATO_AUTORIZACAO"/></con:call></con:operation><con:operation id="c9c10456-2002-4d17-97a3-448f8cfa1bfe" isOneWay="false" action="http://integracao_protheus/mobile/EXTRATO_IRRPF" name="EXTRATO_IRRPF" bindingOperationName="EXTRATO_IRRPF" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="fe24b32e-0bb9-4ea4-bf40-16ae5ab272b4" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://app.vs.unimed.com.br/ws/WSMOBILESAUDE.apw</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:mob="http://integracao_protheus/mobile">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <mob:EXTRATO_IRRPF>
+         <mob:CHAVE_BENEFICIARIO>00550200008332006</mob:CHAVE_BENEFICIARIO>
+         <mob:CANO>2018</mob:CANO>
+      </mob:EXTRATO_IRRPF>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://integracao_protheus/mobile/EXTRATO_IRRPF"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="1fd8bd65-696e-48ec-844d-aa1c403b5c85" isOneWay="false" action="http://integracao_protheus/mobile/EXTRATO_IRRPF_PDF" name="EXTRATO_IRRPF_PDF" bindingOperationName="EXTRATO_IRRPF_PDF" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="b0d72903-6cef-4213-8324-31d2656f96ea" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://app.vs.unimed.com.br/ws/WSMOBILESAUDE.apw</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:mob="http://integracao_protheus/mobile">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <mob:EXTRATO_IRRPF_PDF>
+         <mob:CHAVE_BENEFICIARIO>00550200008332006</mob:CHAVE_BENEFICIARIO>
+         <mob:CANO>2018</mob:CANO>
+      </mob:EXTRATO_IRRPF_PDF>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://integracao_protheus/mobile/EXTRATO_IRRPF_PDF"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="839102f3-edc1-4767-a183-9f498a738f74" isOneWay="false" action="http://integracao_protheus/mobile/GUIA_PDF" name="GUIA_PDF" bindingOperationName="GUIA_PDF" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="3fcd4585-efab-40a1-880d-8bc929005eb4" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://app.vs.unimed.com.br/ws/WSMOBILESAUDE.apw</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:mob="http://integracao_protheus/mobile">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <mob:GUIA_PDF>
+         <mob:CHAVE_AUTORIZACAO>?</mob:CHAVE_AUTORIZACAO>
+      </mob:GUIA_PDF>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://integracao_protheus/mobile/GUIA_PDF"/></con:call></con:operation><con:operation id="3108abaf-d20e-4557-9a60-35c73b1273e2" isOneWay="false" action="http://integracao_protheus/mobile/LEMBRAR_SENHA" name="LEMBRAR_SENHA" bindingOperationName="LEMBRAR_SENHA" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="9006036b-3680-40b9-aca0-e55b8db80fb3" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://app.vs.unimed.com.br/ws/WSMOBILESAUDE.apw</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:mob="http://integracao_protheus/mobile">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <mob:LEMBRAR_SENHA>
+         <mob:USUARIO_LOGIN>?</mob:USUARIO_LOGIN>
+         <mob:USUARIO_CARTEIRA>?</mob:USUARIO_CARTEIRA>
+         <mob:USUARIO_NASCIMENTO>?</mob:USUARIO_NASCIMENTO>
+      </mob:LEMBRAR_SENHA>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://integracao_protheus/mobile/LEMBRAR_SENHA"/></con:call></con:operation><con:operation id="2aa46c94-e68a-4d8b-a484-ddcc537bc2fc" isOneWay="false" action="http://integracao_protheus/mobile/LOGIN" name="LOGIN" bindingOperationName="LOGIN" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="30d97147-f70e-4383-ae4e-71995098d495" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://app.vs.unimed.com.br/ws/WSMOBILESAUDE.apw</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:mob="http://integracao_protheus/mobile">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <mob:LOGIN>
+         <mob:USUARIO_LOGIN>01271684004</mob:USUARIO_LOGIN>
+         <mob:USUARIO_PSW>ubiratan.dias.884066</mob:USUARIO_PSW>
+      </mob:LOGIN>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://integracao_protheus/mobile/LOGIN"/><con:wsrmConfig version="1.2"/></con:call><con:call id="84a5fd72-4f35-4694-b88c-45040a0ae3a2" name="Request 2"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://app.vs.unimed.com.br/ws/WSMOBILESAUDE.apw</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:mob="http://integracao_protheus/mobile">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <mob:LOGIN>
+         <mob:USUARIO_LOGIN>77676432049</mob:USUARIO_LOGIN>
+         <mob:USUARIO_PSW>ubiratan.dias.884066</mob:USUARIO_PSW>
+      </mob:LOGIN>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://integracao_protheus/mobile/LOGIN"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="f700ba74-c950-46f6-96d2-8a27ef5a4531" isOneWay="false" action="http://integracao_protheus/mobile/NOVO_USUARIO" name="NOVO_USUARIO" bindingOperationName="NOVO_USUARIO" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="7ab95ccf-9bf8-4905-b0ad-4407853021df" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://app.vs.unimed.com.br/ws/WSMOBILESAUDE.apw</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:mob="http://integracao_protheus/mobile">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <mob:NOVO_USUARIO>
+         <mob:USUARIO_CPF>?</mob:USUARIO_CPF>
+         <mob:USUARIO_CARTEIRA>?</mob:USUARIO_CARTEIRA>
+         <mob:USUARIO_NASCIMENTO>?</mob:USUARIO_NASCIMENTO>
+         <mob:USUARIO_EMAIL>?</mob:USUARIO_EMAIL>
+         <mob:USUARIO_SENHA>?</mob:USUARIO_SENHA>
+      </mob:NOVO_USUARIO>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://integracao_protheus/mobile/NOVO_USUARIO"/></con:call></con:operation><con:operation id="f336e165-0428-4992-9c9f-26a0228655ac" isOneWay="false" action="http://integracao_protheus/mobile/STATUS_AUTORIZACAO" name="STATUS_AUTORIZACAO" bindingOperationName="STATUS_AUTORIZACAO" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="5a7cf9ce-581a-46cf-97b0-a748ee4c1a44" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://app.vs.unimed.com.br/ws/WSMOBILESAUDE.apw</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:mob="http://integracao_protheus/mobile">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <mob:STATUS_AUTORIZACAO/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://integracao_protheus/mobile/STATUS_AUTORIZACAO"/></con:call></con:operation><con:operation id="e56eb7fd-89c3-4bbe-bc68-e237eb75911a" isOneWay="false" action="http://integracao_protheus/mobile/TROCAR_SENHA" name="TROCAR_SENHA" bindingOperationName="TROCAR_SENHA" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="72f9f3d2-099d-4542-9b3c-dca089148fe9" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://app.vs.unimed.com.br/ws/WSMOBILESAUDE.apw</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:mob="http://integracao_protheus/mobile">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <mob:TROCAR_SENHA>
+         <mob:USUARIO_LOGIN>?</mob:USUARIO_LOGIN>
+         <mob:SENHA_ATUAL>?</mob:SENHA_ATUAL>
+         <mob:NOVA_SENHA>?</mob:NOVA_SENHA>
+      </mob:TROCAR_SENHA>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://integracao_protheus/mobile/TROCAR_SENHA"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
