@@ -348,6 +348,19 @@
          </log:request>
       </log:login>
    </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.camarj.com.br/ws/LoginService/login"/><con:wsrmConfig version="1.2"/></con:call><con:call id="35b51f11-a9d0-424c-bbeb-226f8d699334" name="Request 3"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://camarj.topsaude.com.br/ws/Ws.Camarj.Service/ws_login_service.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:log="http://www.camarj.com.br/ws/LoginService">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <log:login>
+         <!--Optional:-->
+         <log:request>
+            <!--Optional:-->
+            <log:usuario_login>12420304764</log:usuario_login>
+            <!--Optional:-->
+            <log:usuario_psw>124203ab</log:usuario_psw>
+         </log:request>
+      </log:login>
+   </soapenv:Body>
 </soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.camarj.com.br/ws/LoginService/login"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="5538762d-ca47-4c7a-b953-b3e4b823fccc" isOneWay="false" action="http://www.camarj.com.br/ws/LoginService/novo_usuario" name="novo_usuario" bindingOperationName="novo_usuario" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="b8635e1b-1a8b-4593-b87f-8017a368d676" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://camarj.topsaude.com.br/ws/Ws.Camarj.Service/ws_login_service.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:log="http://www.camarj.com.br/ws/LoginService">
    <soapenv:Header/>
    <soapenv:Body>
