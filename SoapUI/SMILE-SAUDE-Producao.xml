@@ -842,8 +842,8 @@
    <soapenv:Header/>
    <soapenv:Body>
       <urn:autenticaAssociado soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
-         <login xsi:type="xsd:string">0681762.00</login>
-         <senha xsi:type="xsd:string">333945</senha>
+         <login xsi:type="xsd:string">0729870.01</login>
+         <senha xsi:type="xsd:string">4497</senha>
          <sistemaoperacional xsi:type="xsd:string">?</sistemaoperacional>
       </urn:autenticaAssociado>
    </soapenv:Body>
@@ -1072,9 +1072,9 @@
    <soapenv:Header/>
    <soapenv:Body>
       <urn:quitacaoPDF soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
-         <codAssociado xsi:type="xsd:string">3304044</codAssociado>
+         <codAssociado xsi:type="xsd:string">3433399</codAssociado>
          <codEmpresa xsi:type="xsd:string"></codEmpresa>
-         <ano xsi:type="xsd:string">2017</ano>
+         <ano xsi:type="xsd:string">2018</ano>
       </urn:quitacaoPDF>
    </soapenv:Body>
 </soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:wsmobile.quitacaoPDF#quitacaoPDF"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="f7765a28-3f26-4a14-82c0-9479b7b7875f" isOneWay="false" action="urn:wsmobile.recuperaCartao#recuperaCartao" name="recuperaCartao" bindingOperationName="recuperaCartao" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="38345ae9-c69c-4f76-9e27-db3d801b8e2e" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://sos.smilesaude.com.br/wsmobile/geral/servidor.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:wsmobile.recuperaCartao">

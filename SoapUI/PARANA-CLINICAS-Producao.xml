@@ -356,9 +356,9 @@
    <soapenv:Body>
       <mob:login>
          <!--Optional:-->
-         <mob:usuario_login>10352580992</mob:usuario_login>
+         <mob:usuario_login>01718747900</mob:usuario_login>
          <!--Optional:-->
-         <mob:usuario_psw>19960625</mob:usuario_psw>
+         <mob:usuario_psw>19760307</mob:usuario_psw>
       </mob:login>
    </soapenv:Body>
 </soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_login_service/login"/><con:wsrmConfig version="1.2"/></con:call><con:call id="0003c1e4-7f1c-4ddc-af36-4b84406298fe" name="Request 2"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://guianet.paranaclinicas.com.br/MobileSaudeWS/ws_login_service.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:mob="http://www.paranaclinicas.com.br/MobileSaudeWS">

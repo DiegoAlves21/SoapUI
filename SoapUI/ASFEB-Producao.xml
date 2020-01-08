@@ -264,6 +264,16 @@
          </loginInput>
       </ws:login>
    </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.asfeb.org.br/ws/ws_beneficiario_login.php/login"/><con:wsrmConfig version="1.2"/></con:call><con:call id="eb0e9ff4-ea84-4c23-8ea3-1def09f9e72c" name="Request3"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.asfeb.org.br/ws/ws_beneficiario_login.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://www.asfeb.org.br/ws/ws_beneficiario_login.php">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:login>
+         <loginInput>
+            <User_login>02437662545</User_login>
+            <User_psw>18051986</User_psw>
+         </loginInput>
+      </ws:login>
+   </soapenv:Body>
 </soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.asfeb.org.br/ws/ws_beneficiario_login.php/login"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="63c74268-2186-4637-842d-290fdf7899c0" isOneWay="false" action="http://www.asfeb.org.br/ws/ws_beneficiario_login.php/novo_usuario" name="novo_usuario" bindingOperationName="novo_usuario" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="e3ad9684-2f53-4227-8fbc-f129ce5751f9" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.asfeb.org.br/ws/ws_beneficiario_login.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://www.asfeb.org.br/ws/ws_beneficiario_login.php">
    <soapenv:Header/>
    <soapenv:Body>
