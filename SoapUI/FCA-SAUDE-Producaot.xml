@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project id="1876d5f8-49b5-498b-afec-885f1886f06e" activeEnvironment="Default" name="EVIDA-Producao" resourceRoot="" soapui-version="5.5.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="b0419095-4afe-4d3b-863a-719ad1baba5c" wsaVersion="NONE" name="WS_LOGIN_BENEFICIARIOSOAP" type="wsdl" bindingName="{http://portalbeneficiarios.e-vida.org.br:8091/}WS_LOGIN_BENEFICIARIOSOAP" soapVersion="1_1" anonymous="optional" definition="http://portalbeneficiarios.e-vida.org.br:8091/ws/WS_LOGIN_BENEFICIARIO.apw?WSDL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://portalbeneficiarios.e-vida.org.br:8091/ws/WS_LOGIN_BENEFICIARIO.apw?WSDL"><con:part><con:url>http://portalbeneficiarios.e-vida.org.br:8091/ws/WS_LOGIN_BENEFICIARIO.apw?WSDL</con:url><con:content><![CDATA[<!--Generated 20161205 11:54:29 by ADVPL WSDL Server 1.110216 / Protheus 7.00.131227A-20160510 NG-->
-<definitions targetNamespace="http://portalbeneficiarios.e-vida.org.br:8091/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://portalbeneficiarios.e-vida.org.br:8091/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+<con:soapui-project id="fa9cfa57-b04b-41c1-b57d-74ef43d0d063" activeEnvironment="Default" name="FCA SAUDE" resourceRoot="" soapui-version="5.5.0" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="60ca9358-c103-4f44-84e7-fc7ca678a766" wsaVersion="NONE" name="WS_LOGIN_BENEFICIARIOSOAP" type="wsdl" bindingName="{http://portal.fundacaofiat.com.br/}WS_LOGIN_BENEFICIARIOSOAP" soapVersion="1_1" anonymous="optional" definition="http://portal.fundacaofiat.com.br/ws/WS_LOGIN_BENEFICIARIO.apw?WSDL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://portal.fundacaofiat.com.br/ws/WS_LOGIN_BENEFICIARIO.apw?WSDL"><con:part><con:url>http://portal.fundacaofiat.com.br/ws/WS_LOGIN_BENEFICIARIO.apw?WSDL</con:url><con:content><![CDATA[<!--Generated 20200207 14:42:03 by ADVPL WSDL Server 1.110216 / Protheus 7.00.131227A-20180425 NG-->
+<definitions targetNamespace="http://portal.fundacaofiat.com.br/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://portal.fundacaofiat.com.br/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns="http://schemas.xmlsoap.org/wsdl/">
   <types>
-    <s:schema elementFormDefault="qualified" targetNamespace="http://portalbeneficiarios.e-vida.org.br:8091/">
+    <s:schema elementFormDefault="qualified" targetNamespace="http://portal.fundacaofiat.com.br/">
       <s:element name="RETCARVIRT">
         <s:complexType>
           <s:sequence>
             <s:element minOccurs="1" maxOccurs="1" name="USERCODE" type="s:string"/>
-            <s:element minOccurs="1" maxOccurs="1" name="LISTA_DE_CARTOES" type="s0:CART_USUARIOS"/>
+            <s:element minOccurs="1" maxOccurs="1" name="LISTA_DE_CARTOES" type="s0:MB_CART_USUARIOS"/>
           </s:sequence>
         </s:complexType>
       </s:element>
       <s:element name="RETCARVIRTRESPONSE">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="RETCARVIRTRESULT" type="s0:ST_CARTAO_VIRTUAL"/>
+            <s:element minOccurs="1" maxOccurs="1" name="RETCARVIRTRESULT" type="s0:ST_MB_CARTAO_VIRTUAL"/>
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -118,16 +118,16 @@
           </s:sequence>
         </s:complexType>
       </s:element>
-      <s:complexType name="CART_USUARIOS">
+      <s:complexType name="MB_CART_USUARIOS">
         <s:sequence>
-          <s:element minOccurs="0" maxOccurs="1" name="CART_USUARIOS" type="s0:ARRAYOFST_CART_USUARIO"/>
           <s:element minOccurs="0" maxOccurs="1" name="CLOGIN" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="MB_CART_USUARIOS" type="s0:ARRAYOFST_MB_CART_USUARIO"/>
         </s:sequence>
       </s:complexType>
-      <s:complexType name="ST_CARTAO_VIRTUAL">
+      <s:complexType name="ST_MB_CARTAO_VIRTUAL">
         <s:sequence>
           <s:element minOccurs="0" maxOccurs="1" name="MENSAGEM" type="s:string"/>
-          <s:element minOccurs="0" maxOccurs="1" name="RETORNO_DADOS" type="s0:ARRAYOFCARTAO_VIRTUAL"/>
+          <s:element minOccurs="0" maxOccurs="1" name="RETORNO_DADOS" type="s0:ARRAYOFMB_CARTAO_VIRTUAL"/>
           <s:element minOccurs="0" maxOccurs="1" name="RETORNO_STATUS" type="s:boolean"/>
         </s:sequence>
       </s:complexType>
@@ -138,6 +138,7 @@
           <s:element minOccurs="0" maxOccurs="1" name="RETORNO_CRITICAS" type="s0:ARRAYOFCRITICA"/>
           <s:element minOccurs="0" maxOccurs="1" name="RETORNO_DADOS" type="s0:ARRAYOFBENEFICIARIO"/>
           <s:element minOccurs="0" maxOccurs="1" name="RETORNO_STATUS" type="s:boolean"/>
+          <s:element minOccurs="0" maxOccurs="1" name="RETORNO_V2ACESSOS" type="s0:ARRAYOFACESSO_V2"/>
         </s:sequence>
       </s:complexType>
       <s:complexType name="ST_REDEFINE_SENHA">
@@ -150,19 +151,21 @@
       </s:complexType>
       <s:complexType name="ST_USUARIO_ACESSO">
         <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="RETORNO_ACESSOS" type="s0:ACESSO"/>
           <s:element minOccurs="0" maxOccurs="1" name="RETORNO_ALERTAS" type="s0:ARRAYOFALERTA"/>
           <s:element minOccurs="0" maxOccurs="1" name="RETORNO_CRITICAS" type="s0:ARRAYOFCRITICA"/>
           <s:element minOccurs="0" maxOccurs="1" name="RETORNO_DADOS" type="s0:ARRAYOFUSUARIO_ACESSO"/>
           <s:element minOccurs="0" maxOccurs="1" name="RETORNO_STATUS" type="s:boolean"/>
+          <s:element minOccurs="0" maxOccurs="1" name="RETORNO_V2ACESSOS" type="s0:ARRAYOFACESSO_V2"/>
         </s:sequence>
       </s:complexType>
-      <s:complexType name="ST_CART_USUARIO">
+      <s:complexType name="ST_MB_CART_USUARIO">
         <s:sequence>
           <s:element minOccurs="0" maxOccurs="1" name="MAT_USUARIO" type="s:string"/>
           <s:element minOccurs="0" maxOccurs="1" name="TIP_USUARIO" type="s:string"/>
         </s:sequence>
       </s:complexType>
-      <s:complexType name="CARTAO_VIRTUAL">
+      <s:complexType name="MB_CARTAO_VIRTUAL">
         <s:sequence>
           <s:element minOccurs="0" maxOccurs="1" name="BAIRRO" type="s:string"/>
           <s:element minOccurs="0" maxOccurs="1" name="BLOQUEADO" type="s:string"/>
@@ -205,6 +208,7 @@
           <s:element minOccurs="0" maxOccurs="1" name="EMPRESA_NOME" type="s:string"/>
           <s:element minOccurs="0" maxOccurs="1" name="EMPRESA_RESPONSAVEL" type="s:string"/>
           <s:element minOccurs="0" maxOccurs="1" name="ENDERECO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="EQUIPE_APS" type="s:string"/>
           <s:element minOccurs="0" maxOccurs="1" name="ESTADO" type="s:string"/>
           <s:element minOccurs="0" maxOccurs="1" name="GRAU_PARENTESCO_DESCRICAO" type="s:string"/>
           <s:element minOccurs="0" maxOccurs="1" name="GRAU_PARENTESCO_ID" type="s:string"/>
@@ -241,6 +245,7 @@
           <s:element minOccurs="0" maxOccurs="1" name="ACESSA_REEMBOLSO" type="s:boolean"/>
           <s:element minOccurs="0" maxOccurs="1" name="ACESSA_TROCA_SENHA" type="s:boolean"/>
           <s:element minOccurs="0" maxOccurs="1" name="ACESSA_UTILIZACAO" type="s:boolean"/>
+          <s:element minOccurs="0" maxOccurs="1" name="RELATORIO_COBRANCA" type="s:boolean"/>
         </s:sequence>
       </s:complexType>
       <s:complexType name="ALERTA">
@@ -302,6 +307,7 @@
           <s:element minOccurs="0" maxOccurs="1" name="EMPRESA_NOME" type="s:string"/>
           <s:element minOccurs="0" maxOccurs="1" name="EMPRESA_RESPONSAVEL" type="s:string"/>
           <s:element minOccurs="0" maxOccurs="1" name="ENDERECO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="EQUIPE_APS" type="s:string"/>
           <s:element minOccurs="0" maxOccurs="1" name="ESTADO" type="s:string"/>
           <s:element minOccurs="0" maxOccurs="1" name="EXPIROU_SENHA" type="s:string"/>
           <s:element minOccurs="0" maxOccurs="1" name="GRAU_PARENTESCO_DESCRICAO" type="s:string"/>
@@ -312,9 +318,11 @@
           <s:element minOccurs="0" maxOccurs="1" name="MATRICULA" type="s:string"/>
           <s:element minOccurs="0" maxOccurs="1" name="MATRICULA_FUNCIONARIO" type="s:string"/>
           <s:element minOccurs="0" maxOccurs="1" name="MATRICULA_SIS_ANTIGO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="MEDICO_REF" type="s:string"/>
           <s:element minOccurs="0" maxOccurs="1" name="MOTIVO_BLOQUEIO" type="s:string"/>
           <s:element minOccurs="0" maxOccurs="1" name="NASCIMENTO" type="s:date"/>
           <s:element minOccurs="0" maxOccurs="1" name="NOME" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="NUCLEO_REF" type="s:string"/>
           <s:element minOccurs="0" maxOccurs="1" name="NUMERO" type="s:string"/>
           <s:element minOccurs="0" maxOccurs="1" name="NUMERO_CNS" type="s:string"/>
           <s:element minOccurs="0" maxOccurs="1" name="NUMERO_CONTRATO" type="s:string"/>
@@ -327,6 +335,14 @@
           <s:element minOccurs="0" maxOccurs="1" name="TIPO_PESSOA_CONTRATANTE" type="s:string"/>
           <s:element minOccurs="0" maxOccurs="1" name="TITULAR" type="s:string"/>
           <s:element minOccurs="0" maxOccurs="1" name="TITULAR_MATRICULA" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ACESSO_V2">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ACESSO" type="s:boolean"/>
+          <s:element minOccurs="0" maxOccurs="1" name="FUNCIONALIDADE" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="MSG_BLOQUEIO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="OCULTAR" type="s:boolean"/>
         </s:sequence>
       </s:complexType>
       <s:complexType name="REDEFINE_SENHA">
@@ -356,14 +372,14 @@
           <s:element minOccurs="0" maxOccurs="1" name="LAYOUT_NICKNAME" type="s:string"/>
         </s:sequence>
       </s:complexType>
-      <s:complexType name="ARRAYOFST_CART_USUARIO">
+      <s:complexType name="ARRAYOFST_MB_CART_USUARIO">
         <s:sequence>
-          <s:element minOccurs="0" maxOccurs="unbounded" name="ST_CART_USUARIO" type="s0:ST_CART_USUARIO"/>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ST_MB_CART_USUARIO" type="s0:ST_MB_CART_USUARIO"/>
         </s:sequence>
       </s:complexType>
-      <s:complexType name="ARRAYOFCARTAO_VIRTUAL">
+      <s:complexType name="ARRAYOFMB_CARTAO_VIRTUAL">
         <s:sequence>
-          <s:element minOccurs="0" maxOccurs="unbounded" name="CARTAO_VIRTUAL" type="s0:CARTAO_VIRTUAL"/>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="MB_CARTAO_VIRTUAL" type="s0:MB_CARTAO_VIRTUAL"/>
         </s:sequence>
       </s:complexType>
       <s:complexType name="ARRAYOFALERTA">
@@ -379,6 +395,11 @@
       <s:complexType name="ARRAYOFBENEFICIARIO">
         <s:sequence>
           <s:element minOccurs="0" maxOccurs="unbounded" name="BENEFICIARIO" type="s0:BENEFICIARIO"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ARRAYOFACESSO_V2">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ACESSO_V2" type="s0:ACESSO_V2"/>
         </s:sequence>
       </s:complexType>
       <s:complexType name="ARRAYOFREDEFINE_SENHA">
@@ -485,7 +506,7 @@
   <binding name="WS_LOGIN_BENEFICIARIOSOAP" type="s0:WS_LOGIN_BENEFICIARIOSOAP">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
     <operation name="RETCARVIRT">
-      <soap:operation soapAction="http://portalbeneficiarios.e-vida.org.br:8091/RETCARVIRT" style="document"/>
+      <soap:operation soapAction="http://portal.fundacaofiat.com.br/RETCARVIRT" style="document"/>
       <input>
         <soap:body use="literal"/>
       </input>
@@ -494,7 +515,7 @@
       </output>
     </operation>
     <operation name="WS_BENEFICIARIO_ALTERACAO_CADASTRAL">
-      <soap:operation soapAction="http://portalbeneficiarios.e-vida.org.br:8091/WS_BENEFICIARIO_ALTERACAO_CADASTRAL" style="document"/>
+      <soap:operation soapAction="http://portal.fundacaofiat.com.br/WS_BENEFICIARIO_ALTERACAO_CADASTRAL" style="document"/>
       <input>
         <soap:body use="literal"/>
       </input>
@@ -503,7 +524,7 @@
       </output>
     </operation>
     <operation name="WS_BENEFICIARIO_CRIAR_ACESSO">
-      <soap:operation soapAction="http://portalbeneficiarios.e-vida.org.br:8091/WS_BENEFICIARIO_CRIAR_ACESSO" style="document"/>
+      <soap:operation soapAction="http://portal.fundacaofiat.com.br/WS_BENEFICIARIO_CRIAR_ACESSO" style="document"/>
       <input>
         <soap:body use="literal"/>
       </input>
@@ -512,7 +533,7 @@
       </output>
     </operation>
     <operation name="WS_BENEFICIARIO_LEMBRAR_USUARIO">
-      <soap:operation soapAction="http://portalbeneficiarios.e-vida.org.br:8091/WS_BENEFICIARIO_LEMBRAR_USUARIO" style="document"/>
+      <soap:operation soapAction="http://portal.fundacaofiat.com.br/WS_BENEFICIARIO_LEMBRAR_USUARIO" style="document"/>
       <input>
         <soap:body use="literal"/>
       </input>
@@ -521,7 +542,7 @@
       </output>
     </operation>
     <operation name="WS_BENEFICIARIO_LOGIN">
-      <soap:operation soapAction="http://portalbeneficiarios.e-vida.org.br:8091/WS_BENEFICIARIO_LOGIN" style="document"/>
+      <soap:operation soapAction="http://portal.fundacaofiat.com.br/WS_BENEFICIARIO_LOGIN" style="document"/>
       <input>
         <soap:body use="literal"/>
       </input>
@@ -530,7 +551,7 @@
       </output>
     </operation>
     <operation name="WS_BENEFICIARIO_REDEFINIR_SENHA">
-      <soap:operation soapAction="http://portalbeneficiarios.e-vida.org.br:8091/WS_BENEFICIARIO_REDEFINIR_SENHA" style="document"/>
+      <soap:operation soapAction="http://portal.fundacaofiat.com.br/WS_BENEFICIARIO_REDEFINIR_SENHA" style="document"/>
       <input>
         <soap:body use="literal"/>
       </input>
@@ -539,7 +560,7 @@
       </output>
     </operation>
     <operation name="WS_BENEFICIARIO_TROCAR_SENHA">
-      <soap:operation soapAction="http://portalbeneficiarios.e-vida.org.br:8091/WS_BENEFICIARIO_TROCAR_SENHA" style="document"/>
+      <soap:operation soapAction="http://portal.fundacaofiat.com.br/WS_BENEFICIARIO_TROCAR_SENHA" style="document"/>
       <input>
         <soap:body use="literal"/>
       </input>
@@ -551,31 +572,31 @@
   <service name="WS_LOGIN_BENEFICIARIO">
     <documentation>Serviço de autenticação de beneficiários para produtos Mobile Saúde</documentation>
     <port name="WS_LOGIN_BENEFICIARIOSOAP" binding="s0:WS_LOGIN_BENEFICIARIOSOAP">
-      <soap:address location="http://portalbeneficiarios.e-vida.org.br:8091/ws/WS_LOGIN_BENEFICIARIO.apw"/>
+      <soap:address location="http://portal.fundacaofiat.com.br/ws/WS_LOGIN_BENEFICIARIO.apw"/>
     </port>
   </service>
-</definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://portalbeneficiarios.e-vida.org.br:8091/ws/WS_LOGIN_BENEFICIARIO.apw</con:endpoint></con:endpoints><con:operation id="3478420f-6d1d-4209-8ee6-21b4d5a7d082" isOneWay="false" action="http://portalbeneficiarios.e-vida.org.br:8091/RETCARVIRT" name="RETCARVIRT" bindingOperationName="RETCARVIRT" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="08606eb8-480d-42ae-8300-217c1c5ac279" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://portalbeneficiarios.e-vida.org.br:8091/ws/WS_LOGIN_BENEFICIARIO.apw</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:por="http://portalbeneficiarios.e-vida.org.br:8091/">
+</definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://portal.fundacaofiat.com.br/ws/WS_LOGIN_BENEFICIARIO.apw</con:endpoint></con:endpoints><con:operation id="2371c913-9c11-41d2-bcf2-f34e913b5685" isOneWay="false" action="http://portal.fundacaofiat.com.br/RETCARVIRT" name="RETCARVIRT" bindingOperationName="RETCARVIRT" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="515d927a-a66f-481d-8192-482f940a6aee" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://portal.fundacaofiat.com.br/ws/WS_LOGIN_BENEFICIARIO.apw</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:por="http://portal.fundacaofiat.com.br/">
    <soapenv:Header/>
    <soapenv:Body>
       <por:RETCARVIRT>
          <por:USERCODE>?</por:USERCODE>
          <por:LISTA_DE_CARTOES>
             <!--Optional:-->
-            <por:CART_USUARIOS>
+            <por:CLOGIN>?</por:CLOGIN>
+            <!--Optional:-->
+            <por:MB_CART_USUARIOS>
                <!--Zero or more repetitions:-->
-               <por:ST_CART_USUARIO>
+               <por:ST_MB_CART_USUARIO>
                   <!--Optional:-->
                   <por:MAT_USUARIO>?</por:MAT_USUARIO>
                   <!--Optional:-->
                   <por:TIP_USUARIO>?</por:TIP_USUARIO>
-               </por:ST_CART_USUARIO>
-            </por:CART_USUARIOS>
-            <!--Optional:-->
-            <por:CLOGIN>?</por:CLOGIN>
+               </por:ST_MB_CART_USUARIO>
+            </por:MB_CART_USUARIOS>
          </por:LISTA_DE_CARTOES>
       </por:RETCARVIRT>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://portalbeneficiarios.e-vida.org.br:8091/RETCARVIRT"/></con:call></con:operation><con:operation id="086a26ec-d0b7-403c-892b-3ae33e2e4969" isOneWay="false" action="http://portalbeneficiarios.e-vida.org.br:8091/WS_BENEFICIARIO_ALTERACAO_CADASTRAL" name="WS_BENEFICIARIO_ALTERACAO_CADASTRAL" bindingOperationName="WS_BENEFICIARIO_ALTERACAO_CADASTRAL" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="c367f9d9-00e5-4518-b6f1-b07010a534ed" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://portalbeneficiarios.e-vida.org.br:8091/ws/WS_LOGIN_BENEFICIARIO.apw</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:por="http://portalbeneficiarios.e-vida.org.br:8091/">
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://portal.fundacaofiat.com.br/RETCARVIRT"/></con:call></con:operation><con:operation id="76dd68b7-213f-4d5b-aede-ca13eba47682" isOneWay="false" action="http://portal.fundacaofiat.com.br/WS_BENEFICIARIO_ALTERACAO_CADASTRAL" name="WS_BENEFICIARIO_ALTERACAO_CADASTRAL" bindingOperationName="WS_BENEFICIARIO_ALTERACAO_CADASTRAL" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="b15b70f4-a822-4083-9c9f-69883611872f" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://portal.fundacaofiat.com.br/ws/WS_LOGIN_BENEFICIARIO.apw</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:por="http://portal.fundacaofiat.com.br/">
    <soapenv:Header/>
    <soapenv:Body>
       <por:WS_BENEFICIARIO_ALTERACAO_CADASTRAL>
@@ -585,7 +606,7 @@
          <por:BENEFICIARIO_DATA_NASCIMENTO>?</por:BENEFICIARIO_DATA_NASCIMENTO>
       </por:WS_BENEFICIARIO_ALTERACAO_CADASTRAL>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://portalbeneficiarios.e-vida.org.br:8091/WS_BENEFICIARIO_ALTERACAO_CADASTRAL"/></con:call></con:operation><con:operation id="6e2be159-7baa-41b5-a146-531bf4bf895b" isOneWay="false" action="http://portalbeneficiarios.e-vida.org.br:8091/WS_BENEFICIARIO_CRIAR_ACESSO" name="WS_BENEFICIARIO_CRIAR_ACESSO" bindingOperationName="WS_BENEFICIARIO_CRIAR_ACESSO" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="6e8b08c7-4a2d-4fb8-91f4-7389d7ea4def" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://portalbeneficiarios.e-vida.org.br:8091/ws/WS_LOGIN_BENEFICIARIO.apw</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:por="http://portalbeneficiarios.e-vida.org.br:8091/">
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://portal.fundacaofiat.com.br/WS_BENEFICIARIO_ALTERACAO_CADASTRAL"/></con:call></con:operation><con:operation id="71c008b3-2e68-4ccf-86a5-243474c59716" isOneWay="false" action="http://portal.fundacaofiat.com.br/WS_BENEFICIARIO_CRIAR_ACESSO" name="WS_BENEFICIARIO_CRIAR_ACESSO" bindingOperationName="WS_BENEFICIARIO_CRIAR_ACESSO" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="287c62dd-d60a-443e-8c75-15c3c205a766" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://portal.fundacaofiat.com.br/ws/WS_LOGIN_BENEFICIARIO.apw</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:por="http://portal.fundacaofiat.com.br/">
    <soapenv:Header/>
    <soapenv:Body>
       <por:WS_BENEFICIARIO_CRIAR_ACESSO>
@@ -601,57 +622,43 @@
          <por:USER_MOBILE_SENHA>?</por:USER_MOBILE_SENHA>
       </por:WS_BENEFICIARIO_CRIAR_ACESSO>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://portalbeneficiarios.e-vida.org.br:8091/WS_BENEFICIARIO_CRIAR_ACESSO"/></con:call></con:operation><con:operation id="7544e726-c405-4104-aa63-b5b2e995fe6d" isOneWay="false" action="http://portalbeneficiarios.e-vida.org.br:8091/WS_BENEFICIARIO_LEMBRAR_USUARIO" name="WS_BENEFICIARIO_LEMBRAR_USUARIO" bindingOperationName="WS_BENEFICIARIO_LEMBRAR_USUARIO" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="96fa3a4d-915e-40f2-961b-8765e9486f3d" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://portalbeneficiarios.e-vida.org.br:8091/ws/WS_LOGIN_BENEFICIARIO.apw</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:por="http://portalbeneficiarios.e-vida.org.br:8091/">
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://portal.fundacaofiat.com.br/WS_BENEFICIARIO_CRIAR_ACESSO"/></con:call></con:operation><con:operation id="f22ac211-405c-4f09-bfb8-217f77c0c70a" isOneWay="false" action="http://portal.fundacaofiat.com.br/WS_BENEFICIARIO_LEMBRAR_USUARIO" name="WS_BENEFICIARIO_LEMBRAR_USUARIO" bindingOperationName="WS_BENEFICIARIO_LEMBRAR_USUARIO" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="9bf7f941-2aa7-44b0-a9c1-16822cc8988d" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://portal.fundacaofiat.com.br/ws/WS_LOGIN_BENEFICIARIO.apw</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:por="http://portal.fundacaofiat.com.br/">
    <soapenv:Header/>
    <soapenv:Body>
       <por:WS_BENEFICIARIO_LEMBRAR_USUARIO>
          <!--Optional:-->
-         <por:BENEFICIARIO_CPF>72403837172</por:BENEFICIARIO_CPF>
+         <por:BENEFICIARIO_CPF>09083595609</por:BENEFICIARIO_CPF>
          <!--Optional:-->
-         <por:BENEFICIARIO_DATA_NASCIMENTO>1984-01-08</por:BENEFICIARIO_DATA_NASCIMENTO>
+         <por:BENEFICIARIO_DATA_NASCIMENTO>1988-02-12</por:BENEFICIARIO_DATA_NASCIMENTO>
       </por:WS_BENEFICIARIO_LEMBRAR_USUARIO>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://portalbeneficiarios.e-vida.org.br:8091/WS_BENEFICIARIO_LEMBRAR_USUARIO"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="1b7d28dc-f014-45ab-8d69-70042dc4196d" isOneWay="false" action="http://portalbeneficiarios.e-vida.org.br:8091/WS_BENEFICIARIO_LOGIN" name="WS_BENEFICIARIO_LOGIN" bindingOperationName="WS_BENEFICIARIO_LOGIN" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="0896da09-abb5-4d12-9f88-3abd9a0f5823" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://portalbeneficiarios.e-vida.org.br:8091/ws/WS_LOGIN_BENEFICIARIO.apw</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:por="http://portalbeneficiarios.e-vida.org.br:8091/">
+</soapenv:Envelope>	]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://portal.fundacaofiat.com.br/WS_BENEFICIARIO_LEMBRAR_USUARIO"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="8ca740b1-62eb-4804-96a5-9060c0988363" isOneWay="false" action="http://portal.fundacaofiat.com.br/WS_BENEFICIARIO_LOGIN" name="WS_BENEFICIARIO_LOGIN" bindingOperationName="WS_BENEFICIARIO_LOGIN" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="54dd4c69-94d4-481b-b763-a43add07b97f" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://portal.fundacaofiat.com.br/ws/WS_LOGIN_BENEFICIARIO.apw</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:por="http://portal.fundacaofiat.com.br/">
    <soapenv:Header/>
    <soapenv:Body>
       <por:WS_BENEFICIARIO_LOGIN>
          <!--Optional:-->
-         <por:USER_MOBILE_LOGIN_TIPO>?</por:USER_MOBILE_LOGIN_TIPO>
+         <por:USER_MOBILE_LOGIN_TIPO></por:USER_MOBILE_LOGIN_TIPO>
          <!--Optional:-->
-         <por:USER_MOBILE_LOGIN>72566345104</por:USER_MOBILE_LOGIN>
+         <por:USER_MOBILE_LOGIN>00010001062222000</por:USER_MOBILE_LOGIN>
          <!--Optional:-->
-         <por:USER_MOBILE_SENHA>556704</por:USER_MOBILE_SENHA>
+         <por:USER_MOBILE_SENHA>Fiat2019</por:USER_MOBILE_SENHA>
          <!--Optional:-->
-         <por:USER_MOBILE_LOGIN_ORIGEM>?</por:USER_MOBILE_LOGIN_ORIGEM>
+         <por:USER_MOBILE_LOGIN_ORIGEM></por:USER_MOBILE_LOGIN_ORIGEM>
       </por:WS_BENEFICIARIO_LOGIN>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://portalbeneficiarios.e-vida.org.br:8091/WS_BENEFICIARIO_LOGIN"/><con:wsrmConfig version="1.2"/></con:call><con:call id="b6691605-c6bd-4095-a936-d93cf564fa24" name="Request 2"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://portalbeneficiarios.e-vida.org.br:8091/ws/WS_LOGIN_BENEFICIARIO.apw</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:por="http://portalbeneficiarios.e-vida.org.br:8091/">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <por:WS_BENEFICIARIO_LOGIN>
-         <!--Optional:-->
-         <por:USER_MOBILE_LOGIN_TIPO>?</por:USER_MOBILE_LOGIN_TIPO>
-         <!--Optional:-->
-         <por:USER_MOBILE_LOGIN>01708174150</por:USER_MOBILE_LOGIN>
-         <!--Optional:-->
-         <por:USER_MOBILE_SENHA>12345678</por:USER_MOBILE_SENHA>
-         <!--Optional:-->
-         <por:USER_MOBILE_LOGIN_ORIGEM>?</por:USER_MOBILE_LOGIN_ORIGEM>
-      </por:WS_BENEFICIARIO_LOGIN>
-   </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://portalbeneficiarios.e-vida.org.br:8091/WS_BENEFICIARIO_LOGIN"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="7836682f-687b-49a6-aac2-ac0406848c30" isOneWay="false" action="http://portalbeneficiarios.e-vida.org.br:8091/WS_BENEFICIARIO_REDEFINIR_SENHA" name="WS_BENEFICIARIO_REDEFINIR_SENHA" bindingOperationName="WS_BENEFICIARIO_REDEFINIR_SENHA" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="ac62c023-2f53-4cba-9a64-e47b34225aec" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://portalbeneficiarios.e-vida.org.br:8091/ws/WS_LOGIN_BENEFICIARIO.apw</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:por="http://portalbeneficiarios.e-vida.org.br:8091/">
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://portal.fundacaofiat.com.br/WS_BENEFICIARIO_LOGIN"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="8e4597d0-7aa6-48e2-a404-e9a616afa44d" isOneWay="false" action="http://portal.fundacaofiat.com.br/WS_BENEFICIARIO_REDEFINIR_SENHA" name="WS_BENEFICIARIO_REDEFINIR_SENHA" bindingOperationName="WS_BENEFICIARIO_REDEFINIR_SENHA" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="7819a7ee-13e5-4ddd-a0d6-7f57ce7d0fef" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://portal.fundacaofiat.com.br/ws/WS_LOGIN_BENEFICIARIO.apw</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:por="http://portal.fundacaofiat.com.br/">
    <soapenv:Header/>
    <soapenv:Body>
       <por:WS_BENEFICIARIO_REDEFINIR_SENHA>
          <!--Optional:-->
-         <por:BENEFICIARIO_MATRICULA>08600206650</por:BENEFICIARIO_MATRICULA>
+         <por:BENEFICIARIO_MATRICULA>00010001076771000</por:BENEFICIARIO_MATRICULA>
          <!--Optional:-->
-         <por:BENEFICIARIO_CPF>08600206650</por:BENEFICIARIO_CPF>
+         <por:BENEFICIARIO_CPF>09083595609</por:BENEFICIARIO_CPF>
          <!--Optional:-->
-         <por:BENEFICIARIO_DATA_NASCIMENTO>1990-09-06</por:BENEFICIARIO_DATA_NASCIMENTO>
+         <por:BENEFICIARIO_DATA_NASCIMENTO>1989-02-12</por:BENEFICIARIO_DATA_NASCIMENTO>
       </por:WS_BENEFICIARIO_REDEFINIR_SENHA>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://portalbeneficiarios.e-vida.org.br:8091/WS_BENEFICIARIO_REDEFINIR_SENHA"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="dfcf6e04-1548-4c5c-98f4-055dbd8d53e0" isOneWay="false" action="http://portalbeneficiarios.e-vida.org.br:8091/WS_BENEFICIARIO_TROCAR_SENHA" name="WS_BENEFICIARIO_TROCAR_SENHA" bindingOperationName="WS_BENEFICIARIO_TROCAR_SENHA" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="d4dc9f86-3c22-45f4-b36f-b61a18586fa9" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://portalbeneficiarios.e-vida.org.br:8091/ws/WS_LOGIN_BENEFICIARIO.apw</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:por="http://portalbeneficiarios.e-vida.org.br:8091/">
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://portal.fundacaofiat.com.br/WS_BENEFICIARIO_REDEFINIR_SENHA"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="42f55cd2-4294-4be6-a705-088751f5e82e" isOneWay="false" action="http://portal.fundacaofiat.com.br/WS_BENEFICIARIO_TROCAR_SENHA" name="WS_BENEFICIARIO_TROCAR_SENHA" bindingOperationName="WS_BENEFICIARIO_TROCAR_SENHA" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="d764ee97-3465-4d0e-ad06-242d4debb312" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://portal.fundacaofiat.com.br/ws/WS_LOGIN_BENEFICIARIO.apw</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:por="http://portal.fundacaofiat.com.br/">
    <soapenv:Header/>
    <soapenv:Body>
       <por:WS_BENEFICIARIO_TROCAR_SENHA>
@@ -669,4 +676,4 @@
          <por:HASH_TROCA_SENHA>?</por:HASH_TROCA_SENHA>
       </por:WS_BENEFICIARIO_TROCAR_SENHA>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://portalbeneficiarios.e-vida.org.br:8091/WS_BENEFICIARIO_TROCAR_SENHA"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://portal.fundacaofiat.com.br/WS_BENEFICIARIO_TROCAR_SENHA"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>

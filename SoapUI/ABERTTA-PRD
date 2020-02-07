@@ -1,0 +1,727 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="0fc304e1-4e71-48e9-9bcc-e7ade05d78cf" activeEnvironment="Default" name="ABERTTA" soapui-version="5.5.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="6b51b16c-dced-4ab4-a8bb-7042fd67f089" wsaVersion="NONE" name="BasicHttpBinding_IUsuarioPortalService" type="wsdl" bindingName="{http://tempuri.org/}BasicHttpBinding_IUsuarioPortalService" soapVersion="1_1" anonymous="optional" definition="https://portalservicoabebservice.arcelormittal.com.br/NonAuthenticatedServiceHost/UsuarioPortalService.svc?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="https://portalservicoabebservice.arcelormittal.com.br/NonAuthenticatedServiceHost/UsuarioPortalService.svc?wsdl"><con:part><con:url>https://portalservicoabebservice.arcelormittal.com.br/NonAuthenticatedServiceHost/UsuarioPortalService.svc?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="UsuarioPortalService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="http://tempuri.org/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata">
+  <wsp:Policy wsu:Id="BasicHttpBinding_IUsuarioPortalService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsoma:OptimizedMimeSerialization xmlns:wsoma="http://schemas.xmlsoap.org/ws/2004/09/policy/optimizedmimeserialization"/>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="https://portalservicoabebservice.arcelormittal.com.br/NonAuthenticatedServiceHost/UsuarioPortalService.svc?xsd=xsd0" namespace="http://tempuri.org/"/>
+      <xsd:import schemaLocation="https://portalservicoabebservice.arcelormittal.com.br/NonAuthenticatedServiceHost/UsuarioPortalService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+      <xsd:import schemaLocation="https://portalservicoabebservice.arcelormittal.com.br/NonAuthenticatedServiceHost/UsuarioPortalService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Benner.Saude.DataContracts.UsuarioPortal"/>
+      <xsd:import schemaLocation="https://portalservicoabebservice.arcelormittal.com.br/NonAuthenticatedServiceHost/UsuarioPortalService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Benner.Tecnologia.Common.EnterpriseServiceLibrary"/>
+      <xsd:import schemaLocation="https://portalservicoabebservice.arcelormittal.com.br/NonAuthenticatedServiceHost/UsuarioPortalService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Benner.Saude.DataContracts.UsuarioPortal.AutenticacaoUsuario"/>
+      <xsd:import schemaLocation="https://portalservicoabebservice.arcelormittal.com.br/NonAuthenticatedServiceHost/UsuarioPortalService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Benner.Tecnologia.EnterpriseServiceLibrary"/>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IUsuarioPortalService_AutenticarUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:AutenticarUsuario"/>
+  </wsdl:message>
+  <wsdl:message name="IUsuarioPortalService_AutenticarUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AutenticarUsuarioResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IUsuarioPortalService_AlterarSenhaUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:AlterarSenhaUsuario"/>
+  </wsdl:message>
+  <wsdl:message name="IUsuarioPortalService_AlterarSenhaUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AlterarSenhaUsuarioResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IUsuarioPortalService_RecuperarSenhaUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:RecuperarSenhaUsuario"/>
+  </wsdl:message>
+  <wsdl:message name="IUsuarioPortalService_RecuperarSenhaUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RecuperarSenhaUsuarioResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IUsuarioPortalService_IncluirUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:IncluirUsuario"/>
+  </wsdl:message>
+  <wsdl:message name="IUsuarioPortalService_IncluirUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IncluirUsuarioResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IUsuarioPortalService_ConfirmarCadastro_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConfirmarCadastro"/>
+  </wsdl:message>
+  <wsdl:message name="IUsuarioPortalService_ConfirmarCadastro_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConfirmarCadastroResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IUsuarioPortalService_Login_InputMessage">
+    <wsdl:part name="parameters" element="tns:Login"/>
+  </wsdl:message>
+  <wsdl:message name="IUsuarioPortalService_Login_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IUsuarioPortalService_Logout_InputMessage">
+    <wsdl:part name="parameters" element="tns:Logout"/>
+  </wsdl:message>
+  <wsdl:message name="IUsuarioPortalService_Logout_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LogoutResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="IUsuarioPortalService">
+    <wsdl:operation name="AutenticarUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUsuarioPortalService/AutenticarUsuario" message="tns:IUsuarioPortalService_AutenticarUsuario_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IUsuarioPortalService/AutenticarUsuarioResponse" message="tns:IUsuarioPortalService_AutenticarUsuario_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="AlterarSenhaUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUsuarioPortalService/AlterarSenhaUsuario" message="tns:IUsuarioPortalService_AlterarSenhaUsuario_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IUsuarioPortalService/AlterarSenhaUsuarioResponse" message="tns:IUsuarioPortalService_AlterarSenhaUsuario_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarSenhaUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUsuarioPortalService/RecuperarSenhaUsuario" message="tns:IUsuarioPortalService_RecuperarSenhaUsuario_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IUsuarioPortalService/RecuperarSenhaUsuarioResponse" message="tns:IUsuarioPortalService_RecuperarSenhaUsuario_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="IncluirUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUsuarioPortalService/IncluirUsuario" message="tns:IUsuarioPortalService_IncluirUsuario_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IUsuarioPortalService/IncluirUsuarioResponse" message="tns:IUsuarioPortalService_IncluirUsuario_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmarCadastro">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUsuarioPortalService/ConfirmarCadastro" message="tns:IUsuarioPortalService_ConfirmarCadastro_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IUsuarioPortalService/ConfirmarCadastroResponse" message="tns:IUsuarioPortalService_ConfirmarCadastro_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUsuarioPortalService/Login" message="tns:IUsuarioPortalService_Login_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IUsuarioPortalService/LoginResponse" message="tns:IUsuarioPortalService_Login_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="Logout">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUsuarioPortalService/Logout" message="tns:IUsuarioPortalService_Logout_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IUsuarioPortalService/LogoutResponse" message="tns:IUsuarioPortalService_Logout_OutputMessage"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IUsuarioPortalService" type="tns:IUsuarioPortalService">
+    <wsp:PolicyReference URI="#BasicHttpBinding_IUsuarioPortalService_policy"/>
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="AutenticarUsuario">
+      <soap:operation soapAction="http://tempuri.org/IUsuarioPortalService/AutenticarUsuario" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AlterarSenhaUsuario">
+      <soap:operation soapAction="http://tempuri.org/IUsuarioPortalService/AlterarSenhaUsuario" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarSenhaUsuario">
+      <soap:operation soapAction="http://tempuri.org/IUsuarioPortalService/RecuperarSenhaUsuario" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IncluirUsuario">
+      <soap:operation soapAction="http://tempuri.org/IUsuarioPortalService/IncluirUsuario" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmarCadastro">
+      <soap:operation soapAction="http://tempuri.org/IUsuarioPortalService/ConfirmarCadastro" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap:operation soapAction="http://tempuri.org/IUsuarioPortalService/Login" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Logout">
+      <soap:operation soapAction="http://tempuri.org/IUsuarioPortalService/Logout" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="UsuarioPortalService">
+    <wsdl:port name="BasicHttpBinding_IUsuarioPortalService" binding="tns:BasicHttpBinding_IUsuarioPortalService">
+      <soap:address location="https://portalservicoabebservice.arcelormittal.com.br/NonAuthenticatedServiceHost/UsuarioPortalService.svc"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>https://portalservicoabebservice.arcelormittal.com.br/NonAuthenticatedServiceHost/UsuarioPortalService.svc?xsd=xsd0</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://tempuri.org/">
+  <xs:import schemaLocation="https://portalservicoabebservice.arcelormittal.com.br/NonAuthenticatedServiceHost/UsuarioPortalService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Benner.Saude.DataContracts.UsuarioPortal"/>
+  <xs:import schemaLocation="https://portalservicoabebservice.arcelormittal.com.br/NonAuthenticatedServiceHost/UsuarioPortalService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Benner.Saude.DataContracts.UsuarioPortal.AutenticacaoUsuario"/>
+  <xs:import schemaLocation="https://portalservicoabebservice.arcelormittal.com.br/NonAuthenticatedServiceHost/UsuarioPortalService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Benner.Tecnologia.EnterpriseServiceLibrary"/>
+  <xs:element name="AutenticarUsuario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="autenticacaoUsuarioRequest" nillable="true" type="q1:AutenticacaoUsuarioRequest" xmlns:q1="http://schemas.datacontract.org/2004/07/Benner.Saude.DataContracts.UsuarioPortal"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AutenticarUsuarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AutenticarUsuarioResult" nillable="true" type="q2:AutenticacaoUsuarioResponse" xmlns:q2="http://schemas.datacontract.org/2004/07/Benner.Saude.DataContracts.UsuarioPortal"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AlterarSenhaUsuario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="alteracaoSenhaRequest" nillable="true" type="q3:AlteracaoSenhaUsuarioRequest" xmlns:q3="http://schemas.datacontract.org/2004/07/Benner.Saude.DataContracts.UsuarioPortal"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AlterarSenhaUsuarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AlterarSenhaUsuarioResult" nillable="true" type="q4:AlteracaoSenhaUsuarioResponse" xmlns:q4="http://schemas.datacontract.org/2004/07/Benner.Saude.DataContracts.UsuarioPortal"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RecuperarSenhaUsuario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="recuperacaoSenhaRequest" nillable="true" type="q5:RecuperacaoSenhaUsuarioRequest" xmlns:q5="http://schemas.datacontract.org/2004/07/Benner.Saude.DataContracts.UsuarioPortal"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RecuperarSenhaUsuarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RecuperarSenhaUsuarioResult" nillable="true" type="q6:RecuperacaoSenhaUsuarioResponse" xmlns:q6="http://schemas.datacontract.org/2004/07/Benner.Saude.DataContracts.UsuarioPortal"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IncluirUsuario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="inclusaoUsuarioRequest" nillable="true" type="q7:InclusaoUsuarioRequest" xmlns:q7="http://schemas.datacontract.org/2004/07/Benner.Saude.DataContracts.UsuarioPortal"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IncluirUsuarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IncluirUsuarioResult" nillable="true" type="q8:InclusaoUsuarioResponse" xmlns:q8="http://schemas.datacontract.org/2004/07/Benner.Saude.DataContracts.UsuarioPortal"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConfirmarCadastro">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="confirmacaoIdentificacaoCadastralRequest" nillable="true" type="q9:ConfirmacaoIdentificacaoCadastralRequest" xmlns:q9="http://schemas.datacontract.org/2004/07/Benner.Saude.DataContracts.UsuarioPortal.AutenticacaoUsuario"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConfirmarCadastroResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ConfirmarCadastroResult" nillable="true" type="q10:ConfirmacaoIdentificacaoCadastralResponse" xmlns:q10="http://schemas.datacontract.org/2004/07/Benner.Saude.DataContracts.UsuarioPortal.AutenticacaoUsuario"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Login">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="loginRequest" nillable="true" type="q11:LoginRequest" xmlns:q11="http://schemas.datacontract.org/2004/07/Benner.Tecnologia.EnterpriseServiceLibrary"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoginResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LoginResult" nillable="true" type="q12:LoginResponse" xmlns:q12="http://schemas.datacontract.org/2004/07/Benner.Tecnologia.EnterpriseServiceLibrary"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Logout">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="logoutRequest" nillable="true" type="q13:LogoutRequest" xmlns:q13="http://schemas.datacontract.org/2004/07/Benner.Tecnologia.EnterpriseServiceLibrary"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LogoutResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LogoutResult" nillable="true" type="q14:LogoutResponse" xmlns:q14="http://schemas.datacontract.org/2004/07/Benner.Tecnologia.EnterpriseServiceLibrary"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>https://portalservicoabebservice.arcelormittal.com.br/NonAuthenticatedServiceHost/UsuarioPortalService.svc?xsd=xsd2</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Benner.Saude.DataContracts.UsuarioPortal" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/Benner.Saude.DataContracts.UsuarioPortal">
+  <xs:import schemaLocation="https://portalservicoabebservice.arcelormittal.com.br/NonAuthenticatedServiceHost/UsuarioPortalService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Benner.Tecnologia.Common.EnterpriseServiceLibrary"/>
+  <xs:import schemaLocation="https://portalservicoabebservice.arcelormittal.com.br/NonAuthenticatedServiceHost/UsuarioPortalService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Benner.Saude.DataContracts.UsuarioPortal.AutenticacaoUsuario"/>
+  <xs:complexType name="AutenticacaoUsuarioRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:UsuarioRequest">
+        <xs:sequence>
+          <xs:element name="Senha" nillable="true" type="xs:string"/>
+          <xs:element name="Perfil" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AutenticacaoUsuarioRequest" nillable="true" type="tns:AutenticacaoUsuarioRequest"/>
+  <xs:complexType name="UsuarioRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="q1:Request" xmlns:q1="http://schemas.datacontract.org/2004/07/Benner.Tecnologia.Common.EnterpriseServiceLibrary">
+        <xs:sequence>
+          <xs:element name="Login" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UsuarioRequest" nillable="true" type="tns:UsuarioRequest"/>
+  <xs:complexType name="AutenticacaoUsuarioResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="q2:Response" xmlns:q2="http://schemas.datacontract.org/2004/07/Benner.Tecnologia.Common.EnterpriseServiceLibrary">
+        <xs:sequence>
+          <xs:element name="Autenticado" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="MotivoNaoAutenticacao" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Beneficiarios" nillable="true" type="tns:ArrayOfBeneficiario"/>
+          <xs:element minOccurs="0" name="ParametrosGerais" nillable="true" type="tns:ParametroGeral"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AutenticacaoUsuarioResponse" nillable="true" type="tns:AutenticacaoUsuarioResponse"/>
+  <xs:complexType name="ArrayOfBeneficiario">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Beneficiario" nillable="true" type="tns:Beneficiario"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBeneficiario" nillable="true" type="tns:ArrayOfBeneficiario"/>
+  <xs:complexType name="Beneficiario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AtendimentoAte" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="CNS" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="CPF" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Carencias" nillable="true" type="q3:ArrayOfCarencia" xmlns:q3="http://schemas.datacontract.org/2004/07/Benner.Saude.DataContracts.UsuarioPortal.AutenticacaoUsuario"/>
+      <xs:element minOccurs="0" name="CoberturaParcialTemp" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="CodigoTipoCartao" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Contratante" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="DadosCartao" nillable="true" type="tns:Cartao"/>
+      <xs:element minOccurs="0" name="DadosComplementaresGenericos" nillable="true" type="tns:ArrayOfCampo"/>
+      <xs:element minOccurs="0" name="DataAdesao" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="DataBloqueio" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="DataCancelamento" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="DataInicioModulo" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="DataNascimento" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="DataPrimeiraAdesao" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="DescricaoTipoCartao" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="GrauParentesco" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="IdBeneficiario" type="xs:long"/>
+      <xs:element minOccurs="0" name="InicioVigencia" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="MatriculaFuncional" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="MotivoBloqueio" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Nome" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="NomeEmpresa" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="NomeFantasiaAdministradora" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="NomeFantasiaOperadora" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="NomeProduto" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="NumeroContrato" type="xs:long"/>
+      <xs:element minOccurs="0" name="Planos" nillable="true" type="q4:ArrayOfPlano" xmlns:q4="http://schemas.datacontract.org/2004/07/Benner.Saude.DataContracts.UsuarioPortal.AutenticacaoUsuario"/>
+      <xs:element minOccurs="0" name="RazaoSocial" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="RegistroOperadora" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Sexo" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="TipoContrato" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="TipoDependente" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="TipoFaturamento" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Titular" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Beneficiario" nillable="true" type="tns:Beneficiario"/>
+  <xs:complexType name="Cartao">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CartaoDV" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="CartaoDataGeracao" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="CartaoValidade" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="CartaoVia" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="NomeCartao" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="NumeroCartao" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Cartao" nillable="true" type="tns:Cartao"/>
+  <xs:complexType name="ArrayOfCampo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Campo" nillable="true" type="tns:Campo"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCampo" nillable="true" type="tns:ArrayOfCampo"/>
+  <xs:complexType name="Campo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Nome" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Valor" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Campo" nillable="true" type="tns:Campo"/>
+  <xs:complexType name="ParametroGeral">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ApelidoPerfilBeneficiario" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="BloqAlteracaoSenha" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="BloquearUsuarioTentativaAcesso" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="InformacaoContato" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="MostrarLogadoPor" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="PrazoSenha" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ParametroGeral" nillable="true" type="tns:ParametroGeral"/>
+  <xs:complexType name="AlteracaoSenhaUsuarioRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:UsuarioRequest">
+        <xs:sequence>
+          <xs:element name="Senha" nillable="true" type="xs:string"/>
+          <xs:element name="NovaSenha" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AlteracaoSenhaUsuarioRequest" nillable="true" type="tns:AlteracaoSenhaUsuarioRequest"/>
+  <xs:complexType name="AlteracaoSenhaUsuarioResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="q5:Response" xmlns:q5="http://schemas.datacontract.org/2004/07/Benner.Tecnologia.Common.EnterpriseServiceLibrary">
+        <xs:sequence>
+          <xs:element name="SenhaAlterada" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="MotivoNaoAlteracao" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AlteracaoSenhaUsuarioResponse" nillable="true" type="tns:AlteracaoSenhaUsuarioResponse"/>
+  <xs:complexType name="RecuperacaoSenhaUsuarioRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:UsuarioRequest">
+        <xs:sequence>
+          <xs:element name="Email" nillable="true" type="xs:string"/>
+          <xs:element name="EnviarEmail" type="xs:boolean"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RecuperacaoSenhaUsuarioRequest" nillable="true" type="tns:RecuperacaoSenhaUsuarioRequest"/>
+  <xs:complexType name="RecuperacaoSenhaUsuarioResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="q6:Response" xmlns:q6="http://schemas.datacontract.org/2004/07/Benner.Tecnologia.Common.EnterpriseServiceLibrary">
+        <xs:sequence>
+          <xs:element name="SenhaRecuperada" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="MotivoNaoRecuperacao" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Nome" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Senha" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RecuperacaoSenhaUsuarioResponse" nillable="true" type="tns:RecuperacaoSenhaUsuarioResponse"/>
+  <xs:complexType name="InclusaoUsuarioRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:UsuarioRequest">
+        <xs:sequence>
+          <xs:element name="Senha" nillable="true" type="xs:string"/>
+          <xs:element name="DataNascimento" type="xs:dateTime"/>
+          <xs:element name="Email" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InclusaoUsuarioRequest" nillable="true" type="tns:InclusaoUsuarioRequest"/>
+  <xs:complexType name="InclusaoUsuarioResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="q7:Response" xmlns:q7="http://schemas.datacontract.org/2004/07/Benner.Tecnologia.Common.EnterpriseServiceLibrary">
+        <xs:sequence>
+          <xs:element name="UsuarioIncluido" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="MotivoNaoInclusao" nillable="true" type="xs:string"/>
+          <xs:element name="Nome" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InclusaoUsuarioResponse" nillable="true" type="tns:InclusaoUsuarioResponse"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>https://portalservicoabebservice.arcelormittal.com.br/NonAuthenticatedServiceHost/UsuarioPortalService.svc?xsd=xsd3</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Benner.Tecnologia.Common.EnterpriseServiceLibrary" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/Benner.Tecnologia.Common.EnterpriseServiceLibrary">
+  <xs:complexType name="Request">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AuthenticationTokenId" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Request" nillable="true" type="tns:Request"/>
+  <xs:complexType name="Response">
+    <xs:sequence/>
+  </xs:complexType>
+  <xs:element name="Response" nillable="true" type="tns:Response"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>https://portalservicoabebservice.arcelormittal.com.br/NonAuthenticatedServiceHost/UsuarioPortalService.svc?xsd=xsd4</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Benner.Saude.DataContracts.UsuarioPortal.AutenticacaoUsuario" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/Benner.Saude.DataContracts.UsuarioPortal.AutenticacaoUsuario">
+  <xs:import schemaLocation="https://portalservicoabebservice.arcelormittal.com.br/NonAuthenticatedServiceHost/UsuarioPortalService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Benner.Tecnologia.Common.EnterpriseServiceLibrary"/>
+  <xs:complexType name="ArrayOfCarencia">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Carencia" nillable="true" type="tns:Carencia"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCarencia" nillable="true" type="tns:ArrayOfCarencia"/>
+  <xs:complexType name="Carencia">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="classificacao" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="diasCarencia" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="diasRestantes" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Carencia" nillable="true" type="tns:Carencia"/>
+  <xs:complexType name="ArrayOfPlano">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Plano" nillable="true" type="tns:Plano"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPlano" nillable="true" type="tns:ArrayOfPlano"/>
+  <xs:complexType name="Plano">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Abrangencia" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Acomodacao" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="DataInicioCobertura" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="DescricaoModulo" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="InfoRegulamentacaoPlano" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="PlanoCodigo" nillable="true" type="xs:long"/>
+      <xs:element minOccurs="0" name="PlanoDescricao" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Principal" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="RegistroPlano" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Segmentacao" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="TipoCobertura" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="TipoContratacao" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Plano" nillable="true" type="tns:Plano"/>
+  <xs:complexType name="ConfirmacaoIdentificacaoCadastralRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="q1:Request" xmlns:q1="http://schemas.datacontract.org/2004/07/Benner.Tecnologia.Common.EnterpriseServiceLibrary">
+        <xs:sequence>
+          <xs:element name="PerfilUsuario" type="xs:int"/>
+          <xs:element name="CPFCNPJ" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="InscricaoManual" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="DataNascimento" type="xs:dateTime"/>
+          <xs:element minOccurs="0" name="ValidaDataNascimento" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="CodigoBeneficiario" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="ValidaCodigoBeneficiario" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="NomeCompleto" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="ValidaNomeCompleto" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="NomeMae" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="ValidaNomeMae" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="Agencia" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="ContaCorrente" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="DvContaCorrente" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ConfirmacaoIdentificacaoCadastralRequest" nillable="true" type="tns:ConfirmacaoIdentificacaoCadastralRequest"/>
+  <xs:complexType name="ConfirmacaoIdentificacaoCadastralResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="q2:Response" xmlns:q2="http://schemas.datacontract.org/2004/07/Benner.Tecnologia.Common.EnterpriseServiceLibrary">
+        <xs:sequence>
+          <xs:element name="IdentificacaoConfirmada" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="MotivoNaoConfirmacao" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ConfirmacaoIdentificacaoCadastralResponse" nillable="true" type="tns:ConfirmacaoIdentificacaoCadastralResponse"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>https://portalservicoabebservice.arcelormittal.com.br/NonAuthenticatedServiceHost/UsuarioPortalService.svc?xsd=xsd5</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Benner.Tecnologia.EnterpriseServiceLibrary" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/Benner.Tecnologia.EnterpriseServiceLibrary">
+  <xs:complexType name="LoginRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="CompanyHandle" type="xs:long"/>
+      <xs:element minOccurs="0" name="BranchHandle" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LoginRequest" nillable="true" type="tns:LoginRequest"/>
+  <xs:complexType name="LoginResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AuthenticationTokenId" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LoginResponse" nillable="true" type="tns:LoginResponse"/>
+  <xs:complexType name="LogoutRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AuthenticationTokenId" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LogoutRequest" nillable="true" type="tns:LogoutRequest"/>
+  <xs:complexType name="LogoutResponse">
+    <xs:sequence/>
+  </xs:complexType>
+  <xs:element name="LogoutResponse" nillable="true" type="tns:LogoutResponse"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>https://portalservicoabebservice.arcelormittal.com.br/NonAuthenticatedServiceHost/UsuarioPortalService.svc?xsd=xsd1</con:url><con:content><![CDATA[<xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/">
+  <xs:element name="anyType" nillable="true" type="xs:anyType"/>
+  <xs:element name="anyURI" nillable="true" type="xs:anyURI"/>
+  <xs:element name="base64Binary" nillable="true" type="xs:base64Binary"/>
+  <xs:element name="boolean" nillable="true" type="xs:boolean"/>
+  <xs:element name="byte" nillable="true" type="xs:byte"/>
+  <xs:element name="dateTime" nillable="true" type="xs:dateTime"/>
+  <xs:element name="decimal" nillable="true" type="xs:decimal"/>
+  <xs:element name="double" nillable="true" type="xs:double"/>
+  <xs:element name="float" nillable="true" type="xs:float"/>
+  <xs:element name="int" nillable="true" type="xs:int"/>
+  <xs:element name="long" nillable="true" type="xs:long"/>
+  <xs:element name="QName" nillable="true" type="xs:QName"/>
+  <xs:element name="short" nillable="true" type="xs:short"/>
+  <xs:element name="string" nillable="true" type="xs:string"/>
+  <xs:element name="unsignedByte" nillable="true" type="xs:unsignedByte"/>
+  <xs:element name="unsignedInt" nillable="true" type="xs:unsignedInt"/>
+  <xs:element name="unsignedLong" nillable="true" type="xs:unsignedLong"/>
+  <xs:element name="unsignedShort" nillable="true" type="xs:unsignedShort"/>
+  <xs:element name="char" nillable="true" type="tns:char"/>
+  <xs:simpleType name="char">
+    <xs:restriction base="xs:int"/>
+  </xs:simpleType>
+  <xs:element name="duration" nillable="true" type="tns:duration"/>
+  <xs:simpleType name="duration">
+    <xs:restriction base="xs:duration">
+      <xs:pattern value="\-?P(\d*D)?(T(\d*H)?(\d*M)?(\d*(\.\d*)?S)?)?"/>
+      <xs:minInclusive value="-P10675199DT2H48M5.4775808S"/>
+      <xs:maxInclusive value="P10675199DT2H48M5.4775807S"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="guid" nillable="true" type="tns:guid"/>
+  <xs:simpleType name="guid">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:attribute name="FactoryType" type="xs:QName"/>
+  <xs:attribute name="Id" type="xs:ID"/>
+  <xs:attribute name="Ref" type="xs:IDREF"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>https://portalservicoabebservice.arcelormittal.com.br/NonAuthenticatedServiceHost/UsuarioPortalService.svc</con:endpoint></con:endpoints><con:operation id="7c6ff66f-a36f-4d8a-a686-83b301b1402e" isOneWay="false" action="http://tempuri.org/IUsuarioPortalService/AlterarSenhaUsuario" name="AlterarSenhaUsuario" bindingOperationName="AlterarSenhaUsuario" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="7f32ab3a-bb78-4ce8-a7b8-fb85ea59517e" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://portalservicoabebservice.arcelormittal.com.br/NonAuthenticatedServiceHost/UsuarioPortalService.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:ben="http://schemas.datacontract.org/2004/07/Benner.Tecnologia.Common.EnterpriseServiceLibrary" xmlns:ben1="http://schemas.datacontract.org/2004/07/Benner.Saude.DataContracts.UsuarioPortal">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:AlterarSenhaUsuario>
+         <!--Optional:-->
+         <tem:alteracaoSenhaRequest>
+            <!--Optional:-->
+            <ben:AuthenticationTokenId>?</ben:AuthenticationTokenId>
+            <ben1:Login>?</ben1:Login>
+            <ben1:Senha>?</ben1:Senha>
+            <ben1:NovaSenha>?</ben1:NovaSenha>
+         </tem:alteracaoSenhaRequest>
+      </tem:AlterarSenhaUsuario>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IUsuarioPortalService/AlterarSenhaUsuario"/></con:call></con:operation><con:operation id="79e3987c-ac48-4cfe-9f7e-ac6db5eaad6a" isOneWay="false" action="http://tempuri.org/IUsuarioPortalService/AutenticarUsuario" name="AutenticarUsuario" bindingOperationName="AutenticarUsuario" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="ef2c72e6-c918-436d-82ee-3214071a7834" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://portalservicoabebservice.arcelormittal.com.br/NonAuthenticatedServiceHost/UsuarioPortalService.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:ben="http://schemas.datacontract.org/2004/07/Benner.Tecnologia.Common.EnterpriseServiceLibrary" xmlns:ben1="http://schemas.datacontract.org/2004/07/Benner.Saude.DataContracts.UsuarioPortal">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:AutenticarUsuario>
+         <!--Optional:-->
+         <tem:autenticacaoUsuarioRequest>
+            <!--Optional:-->
+            <ben:AuthenticationTokenId>?</ben:AuthenticationTokenId>
+            <ben1:Login>105650044989000134</ben1:Login>
+            <ben1:Senha>123456</ben1:Senha>
+            <ben1:Perfil>?</ben1:Perfil>
+         </tem:autenticacaoUsuarioRequest>
+      </tem:AutenticarUsuario>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IUsuarioPortalService/AutenticarUsuario"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="e94d1607-5613-40e8-b541-ded0a85e4e77" isOneWay="false" action="http://tempuri.org/IUsuarioPortalService/ConfirmarCadastro" name="ConfirmarCadastro" bindingOperationName="ConfirmarCadastro" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="c2f22ac1-9ccf-4fad-850d-9823ceabac9d" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://portalservicoabebservice.arcelormittal.com.br/NonAuthenticatedServiceHost/UsuarioPortalService.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:ben="http://schemas.datacontract.org/2004/07/Benner.Tecnologia.Common.EnterpriseServiceLibrary" xmlns:ben1="http://schemas.datacontract.org/2004/07/Benner.Saude.DataContracts.UsuarioPortal.AutenticacaoUsuario">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:ConfirmarCadastro>
+         <!--Optional:-->
+         <tem:confirmacaoIdentificacaoCadastralRequest>
+            <!--Optional:-->
+            <ben:AuthenticationTokenId>?</ben:AuthenticationTokenId>
+            <ben1:PerfilUsuario>?</ben1:PerfilUsuario>
+            <ben1:CPFCNPJ>?</ben1:CPFCNPJ>
+            <!--Optional:-->
+            <ben1:InscricaoManual>?</ben1:InscricaoManual>
+            <!--Optional:-->
+            <ben1:DataNascimento>?</ben1:DataNascimento>
+            <!--Optional:-->
+            <ben1:ValidaDataNascimento>?</ben1:ValidaDataNascimento>
+            <!--Optional:-->
+            <ben1:CodigoBeneficiario>?</ben1:CodigoBeneficiario>
+            <!--Optional:-->
+            <ben1:ValidaCodigoBeneficiario>?</ben1:ValidaCodigoBeneficiario>
+            <!--Optional:-->
+            <ben1:NomeCompleto>?</ben1:NomeCompleto>
+            <!--Optional:-->
+            <ben1:ValidaNomeCompleto>?</ben1:ValidaNomeCompleto>
+            <!--Optional:-->
+            <ben1:NomeMae>?</ben1:NomeMae>
+            <!--Optional:-->
+            <ben1:ValidaNomeMae>?</ben1:ValidaNomeMae>
+            <!--Optional:-->
+            <ben1:Agencia>?</ben1:Agencia>
+            <!--Optional:-->
+            <ben1:ContaCorrente>?</ben1:ContaCorrente>
+            <!--Optional:-->
+            <ben1:DvContaCorrente>?</ben1:DvContaCorrente>
+         </tem:confirmacaoIdentificacaoCadastralRequest>
+      </tem:ConfirmarCadastro>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IUsuarioPortalService/ConfirmarCadastro"/></con:call></con:operation><con:operation id="b940f086-b37b-44ca-aab1-c31a804827b4" isOneWay="false" action="http://tempuri.org/IUsuarioPortalService/IncluirUsuario" name="IncluirUsuario" bindingOperationName="IncluirUsuario" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="89c36007-8fcc-4824-973c-ff0ca5daed26" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://portalservicoabebservice.arcelormittal.com.br/NonAuthenticatedServiceHost/UsuarioPortalService.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:ben="http://schemas.datacontract.org/2004/07/Benner.Tecnologia.Common.EnterpriseServiceLibrary" xmlns:ben1="http://schemas.datacontract.org/2004/07/Benner.Saude.DataContracts.UsuarioPortal">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:IncluirUsuario>
+         <!--Optional:-->
+         <tem:inclusaoUsuarioRequest>
+            <!--Optional:-->
+            <ben:AuthenticationTokenId>?</ben:AuthenticationTokenId>
+            <ben1:Login>?</ben1:Login>
+            <ben1:Senha>?</ben1:Senha>
+            <ben1:DataNascimento>?</ben1:DataNascimento>
+            <ben1:Email>?</ben1:Email>
+         </tem:inclusaoUsuarioRequest>
+      </tem:IncluirUsuario>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IUsuarioPortalService/IncluirUsuario"/></con:call></con:operation><con:operation id="4fd97248-dbc0-458e-8282-e7c4606fc0ef" isOneWay="false" action="http://tempuri.org/IUsuarioPortalService/Login" name="Login" bindingOperationName="Login" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="fa9cbaaf-17f7-49c6-8d07-477731383886" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://portalservicoabebservice.arcelormittal.com.br/NonAuthenticatedServiceHost/UsuarioPortalService.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:ben="http://schemas.datacontract.org/2004/07/Benner.Tecnologia.EnterpriseServiceLibrary">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:Login>
+         <!--Optional:-->
+         <tem:loginRequest>
+            <!--Optional:-->
+            <ben:UserName>?</ben:UserName>
+            <!--Optional:-->
+            <ben:Password>?</ben:Password>
+            <!--Optional:-->
+            <ben:CompanyHandle>?</ben:CompanyHandle>
+            <!--Optional:-->
+            <ben:BranchHandle>?</ben:BranchHandle>
+         </tem:loginRequest>
+      </tem:Login>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IUsuarioPortalService/Login"/></con:call></con:operation><con:operation id="ded0128b-0285-4e66-a04d-6227f7361f4c" isOneWay="false" action="http://tempuri.org/IUsuarioPortalService/Logout" name="Logout" bindingOperationName="Logout" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="65996309-6899-417a-bb22-578b9d2bff29" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://portalservicoabebservice.arcelormittal.com.br/NonAuthenticatedServiceHost/UsuarioPortalService.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:ben="http://schemas.datacontract.org/2004/07/Benner.Tecnologia.EnterpriseServiceLibrary">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:Logout>
+         <!--Optional:-->
+         <tem:logoutRequest>
+            <!--Optional:-->
+            <ben:AuthenticationTokenId>?</ben:AuthenticationTokenId>
+         </tem:logoutRequest>
+      </tem:Logout>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IUsuarioPortalService/Logout"/></con:call></con:operation><con:operation id="f5f85145-9505-4978-af6d-ee86e6ec6db9" isOneWay="false" action="http://tempuri.org/IUsuarioPortalService/RecuperarSenhaUsuario" name="RecuperarSenhaUsuario" bindingOperationName="RecuperarSenhaUsuario" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="209d2f8b-569e-4e6b-bc5d-63a0cbf89e8e" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://portalservicoabebservice.arcelormittal.com.br/NonAuthenticatedServiceHost/UsuarioPortalService.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:ben="http://schemas.datacontract.org/2004/07/Benner.Tecnologia.Common.EnterpriseServiceLibrary" xmlns:ben1="http://schemas.datacontract.org/2004/07/Benner.Saude.DataContracts.UsuarioPortal">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:RecuperarSenhaUsuario>
+         <!--Optional:-->
+         <tem:recuperacaoSenhaRequest>
+            <!--Optional:-->
+            <ben:AuthenticationTokenId>?</ben:AuthenticationTokenId>
+            <ben1:Login>?</ben1:Login>
+            <ben1:Email>?</ben1:Email>
+            <ben1:EnviarEmail>?</ben1:EnviarEmail>
+         </tem:recuperacaoSenhaRequest>
+      </tem:RecuperarSenhaUsuario>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IUsuarioPortalService/RecuperarSenhaUsuario"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>
