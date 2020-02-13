@@ -1,0 +1,644 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="c7f48257-2efe-4ab2-82e7-daeab354b5e1" activeEnvironment="Default" name="ASSEFAZ" soapui-version="5.5.0" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="38972c5d-46ed-4fc8-b624-2544275bfda2" wsaVersion="NONE" name="beneficiario_wsBinding" type="wsdl" bindingName="{http://www.assefaz.org.br/webservicesteste/services/beneficiario/}beneficiario_wsBinding" soapVersion="1_1" anonymous="optional" definition="http://www.assefaz.org.br/webservicesteste/services/beneficiario/BeneficiarioWS.php?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://www.assefaz.org.br/webservicesteste/services/beneficiario/BeneficiarioWS.php?wsdl"><con:part><con:url>http://www.assefaz.org.br/webservicesteste/services/beneficiario/BeneficiarioWS.php?wsdl</con:url><con:content><![CDATA[<definitions targetNamespace="http://www.assefaz.org.br/webservicesteste/services/beneficiario/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://www.assefaz.org.br/webservicesteste/services/beneficiario/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema elementFormDefault="qualified" targetNamespace="http://www.assefaz.org.br/webservicesteste/services/beneficiario/">
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+      <xsd:import namespace="http://schemas.xmlsoap.org/wsdl/"/>
+      <xsd:complexType name="toGetResetSenha">
+        <xsd:all>
+          <xsd:element name="verificaRegis" type="xsd:boolean"/>
+          <xsd:element name="msg" type="xsd:string"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="getResetSenhaArray">
+        <xsd:complexContent>
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute ref="SOAP-ENC:arrayType" wsdl:arrayType="tns:toGetResetSenha[]" xmlns:wsdl1="http://schemas.xmlsoap.org/wsdl/"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="toGetBeneficiario">
+        <xsd:all>
+          <xsd:element name="nome" type="xsd:string"/>
+          <xsd:element name="cpf" type="xsd:string"/>
+          <xsd:element name="dataNascimento" type="xsd:string"/>
+          <xsd:element name="dataValidade" type="xsd:string"/>
+          <xsd:element name="cartao" type="xsd:string"/>
+          <xsd:element name="cartaoAntigo" type="xsd:string"/>
+          <xsd:element name="plano" type="xsd:string"/>
+          <xsd:element name="gerencia" type="xsd:string"/>
+          <xsd:element name="gerenciaCod" type="xsd:string"/>
+          <xsd:element name="tipoUsuario" type="xsd:string"/>
+          <xsd:element name="tipoUsuarioDesc" type="xsd:string"/>
+          <xsd:element name="grauParentesco" type="xsd:string"/>
+          <xsd:element name="grupoEmpresa" type="xsd:string"/>
+          <xsd:element name="codCliente" type="xsd:string"/>
+          <xsd:element name="motivoBloqueio" type="xsd:string"/>
+          <xsd:element name="dataBloqueio" type="xsd:string"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="getBeneficiarioArray">
+        <xsd:complexContent>
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute ref="SOAP-ENC:arrayType" wsdl:arrayType="tns:toGetBeneficiario[]" xmlns:wsdl1="http://schemas.xmlsoap.org/wsdl/"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="toGetCarteiraMobile">
+        <xsd:all>
+          <xsd:element name="carteira" type="xsd:string"/>
+          <xsd:element name="nome" type="xsd:string"/>
+          <xsd:element name="dataNascimento" type="xsd:string"/>
+          <xsd:element name="cartaoNacionalSaude" type="xsd:string"/>
+          <xsd:element name="dataInicioVigencia" type="xsd:string"/>
+          <xsd:element name="abrangencia" type="xsd:string"/>
+          <xsd:element name="plano" type="xsd:string"/>
+          <xsd:element name="segmentacao" type="xsd:string"/>
+          <xsd:element name="acomodacao" type="xsd:string"/>
+          <xsd:element name="naturezaContratacao" type="xsd:string"/>
+          <xsd:element name="convenio" type="xsd:string"/>
+          <xsd:element name="validadeCartao" type="xsd:string"/>
+          <xsd:element name="tipo" type="xsd:string"/>
+          <xsd:element name="idade" type="xsd:string"/>
+          <xsd:element name="valor" type="xsd:string"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="getCarteiraMobileArray">
+        <xsd:complexContent>
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute ref="SOAP-ENC:arrayType" wsdl:arrayType="tns:toGetCarteiraMobile[]" xmlns:wsdl1="http://schemas.xmlsoap.org/wsdl/"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="toGetCarteiraMobileVerso">
+        <xsd:all>
+          <xsd:element name="DATACAR" type="xsd:string"/>
+          <xsd:element name="NOMECAR" type="xsd:string"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="getCarteiraMobileVersoArray">
+        <xsd:complexContent>
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute ref="SOAP-ENC:arrayType" wsdl:arrayType="tns:toGetCarteiraMobileVerso[]" xmlns:wsdl1="http://schemas.xmlsoap.org/wsdl/"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="toGetCarteiraSocialGrid">
+        <xsd:all>
+          <xsd:element name="sequencia" type="xsd:string"/>
+          <xsd:element name="nome" type="xsd:string"/>
+          <xsd:element name="plano" type="xsd:string"/>
+          <xsd:element name="tipo" type="xsd:string"/>
+          <xsd:element name="idade" type="xsd:string"/>
+          <xsd:element name="cpf" type="xsd:string"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="getCarteiraSocialGridArray">
+        <xsd:complexContent>
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute ref="SOAP-ENC:arrayType" wsdl:arrayType="tns:toGetCarteiraSocialGrid[]" xmlns:wsdl1="http://schemas.xmlsoap.org/wsdl/"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="toGetCarteiraSocialDados">
+        <xsd:all>
+          <xsd:element name="nome" type="xsd:string"/>
+          <xsd:element name="inscricao" type="xsd:string"/>
+          <xsd:element name="tipoUsuario" type="xsd:string"/>
+          <xsd:element name="dataNascimento" type="xsd:string"/>
+          <xsd:element name="dataInclusao" type="xsd:string"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="getCarteiraSocialDadosArray">
+        <xsd:complexContent>
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute ref="SOAP-ENC:arrayType" wsdl:arrayType="tns:toGetCarteiraSocialDados[]" xmlns:wsdl1="http://schemas.xmlsoap.org/wsdl/"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="toGetDetalheMensalidadePagas">
+        <xsd:all>
+          <xsd:element name="nome" type="xsd:string"/>
+          <xsd:element name="natureza" type="xsd:string"/>
+          <xsd:element name="idade" type="xsd:string"/>
+          <xsd:element name="titulo" type="xsd:string"/>
+          <xsd:element name="dataVencimento" type="xsd:string"/>
+          <xsd:element name="dataBaixa" type="xsd:string"/>
+          <xsd:element name="mes" type="xsd:string"/>
+          <xsd:element name="ano" type="xsd:string"/>
+          <xsd:element name="valor" type="xsd:string"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="getDetalheMensalidadePagasArray">
+        <xsd:complexContent>
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute ref="SOAP-ENC:arrayType" wsdl:arrayType="tns:toGetDetalheMensalidadePagas[]" xmlns:wsdl1="http://schemas.xmlsoap.org/wsdl/"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="toGetDadosDeclaracaoAtivo">
+        <xsd:all>
+          <xsd:element name="nome" type="xsd:string"/>
+          <xsd:element name="plano" type="xsd:string"/>
+          <xsd:element name="tipo" type="xsd:string"/>
+          <xsd:element name="idade" type="xsd:string"/>
+          <xsd:element name="carteiraprotheus" type="xsd:string"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="getDadosDeclaracaoAtivoArray">
+        <xsd:complexContent>
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute ref="SOAP-ENC:arrayType" wsdl:arrayType="tns:toGetDadosDeclaracaoAtivo[]" xmlns:wsdl1="http://schemas.xmlsoap.org/wsdl/"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="toGetDeclaracaoAtivo">
+        <xsd:all>
+          <xsd:element name="nomeTitular" type="xsd:string"/>
+          <xsd:element name="nomeDependente" type="xsd:string"/>
+          <xsd:element name="cpfUsuario" type="xsd:string"/>
+          <xsd:element name="dataNascimento" type="xsd:string"/>
+          <xsd:element name="situacao" type="xsd:string"/>
+          <xsd:element name="plano" type="xsd:string"/>
+          <xsd:element name="registroAns" type="xsd:string"/>
+          <xsd:element name="dataAdesao" type="xsd:string"/>
+          <xsd:element name="abrangencia" type="xsd:string"/>
+          <xsd:element name="acomodacao" type="xsd:string"/>
+          <xsd:element name="tipoContratacao" type="xsd:string"/>
+          <xsd:element name="segmentacao" type="xsd:string"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="getDeclaracaoAtivoArray">
+        <xsd:complexContent>
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute ref="SOAP-ENC:arrayType" wsdl:arrayType="tns:toGetDeclaracaoAtivo[]" xmlns:wsdl1="http://schemas.xmlsoap.org/wsdl/"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="toGetDadosDeclaracaoInativo">
+        <xsd:all>
+          <xsd:element name="nome" type="xsd:string"/>
+          <xsd:element name="plano" type="xsd:string"/>
+          <xsd:element name="dataCancelamento" type="xsd:string"/>
+          <xsd:element name="tipo" type="xsd:string"/>
+          <xsd:element name="idade" type="xsd:string"/>
+          <xsd:element name="carteiraprotheus" type="xsd:string"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="getDadosDeclaracaoInativoArray">
+        <xsd:complexContent>
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute ref="SOAP-ENC:arrayType" wsdl:arrayType="tns:toGetDadosDeclaracaoInativo[]" xmlns:wsdl1="http://schemas.xmlsoap.org/wsdl/"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="toGetDeclaracaoInativo">
+        <xsd:all>
+          <xsd:element name="nomeTitular" type="xsd:string"/>
+          <xsd:element name="nomeDependente" type="xsd:string"/>
+          <xsd:element name="cpfUsuario" type="xsd:string"/>
+          <xsd:element name="dataNascimento" type="xsd:string"/>
+          <xsd:element name="situacao" type="xsd:string"/>
+          <xsd:element name="plano" type="xsd:string"/>
+          <xsd:element name="registroAns" type="xsd:string"/>
+          <xsd:element name="dataAdesao" type="xsd:string"/>
+          <xsd:element name="dataCancelamento" type="xsd:string"/>
+          <xsd:element name="motivoCancelamento" type="xsd:string"/>
+          <xsd:element name="abrangencia" type="xsd:string"/>
+          <xsd:element name="acomodacao" type="xsd:string"/>
+          <xsd:element name="tipoContratacao" type="xsd:string"/>
+          <xsd:element name="segmentacao" type="xsd:string"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="getDeclaracaoInativoArray">
+        <xsd:complexContent>
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute ref="SOAP-ENC:arrayType" wsdl:arrayType="tns:toGetDeclaracaoInativo[]" xmlns:wsdl1="http://schemas.xmlsoap.org/wsdl/"/>
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+    </xsd:schema>
+  </types>
+  <message name="beneficiarioExisteRequest">
+    <part name="cpf" type="xsd:string"/>
+  </message>
+  <message name="beneficiarioExisteResponse">
+    <part name="return" type="xsd:boolean"/>
+  </message>
+  <message name="setLoginRequest">
+    <part name="cpf_cnpj" type="xsd:string"/>
+    <part name="nome" type="xsd:string"/>
+    <part name="senha" type="xsd:string"/>
+    <part name="email" type="xsd:string"/>
+  </message>
+  <message name="setLoginResponse">
+    <part name="return" type="xsd:boolean"/>
+  </message>
+  <message name="getLoginRequest">
+    <part name="cpf" type="xsd:string"/>
+    <part name="senha" type="xsd:string"/>
+  </message>
+  <message name="getLoginResponse">
+    <part name="return" type="xsd:boolean"/>
+  </message>
+  <message name="confirmaRecuperaSenhaRequest">
+    <part name="cpf" type="xsd:string"/>
+    <part name="dataNascimento" type="xsd:string"/>
+  </message>
+  <message name="confirmaRecuperaSenhaResponse">
+    <part name="return " type="xsd:boolean"/>
+  </message>
+  <message name="getResetSenhaRequest">
+    <part name="cpf_cnpj" type="xsd:string"/>
+    <part name="senhaNova" type="xsd:string"/>
+  </message>
+  <message name="getResetSenhaResponse">
+    <part name="return" type="tns:getResetSenhaArray"/>
+  </message>
+  <message name="getBeneficiarioRequest">
+    <part name="cpfCart" type="xsd:string"/>
+  </message>
+  <message name="getBeneficiarioResponse">
+    <part name="return" type="tns:getBeneficiarioArray"/>
+  </message>
+  <message name="getCarteiraMobileRequest">
+    <part name="cpf" type="xsd:string"/>
+  </message>
+  <message name="getCarteiraMobileResponse">
+    <part name="return" type="tns:getCarteiraMobileArray"/>
+  </message>
+  <message name="getCarteiraMobileVersoRequest">
+    <part name="carteira" type="xsd:string"/>
+  </message>
+  <message name="getCarteiraMobileVersoResponse">
+    <part name="return" type="tns:getCarteiraMobileVersoArray"/>
+  </message>
+  <message name="getCarteiraSocialGridRequest">
+    <part name="cpf" type="xsd:string"/>
+  </message>
+  <message name="getCarteiraSocialGridResponse">
+    <part name="return" type="tns:getCarteiraSocialGridArray"/>
+  </message>
+  <message name="getCarteiraSocialDadosRequest">
+    <part name="cpf" type="xsd:string"/>
+    <part name="sequencia" type="xsd:string"/>
+  </message>
+  <message name="getCarteiraSocialDadosResponse">
+    <part name="return" type="tns:getCarteiraSocialDadosArray"/>
+  </message>
+  <message name="getDetalheMensalidadePagasRequest">
+    <part name="cliente" type="xsd:string"/>
+    <part name="mes" type="xsd:string"/>
+    <part name="ano" type="xsd:string"/>
+  </message>
+  <message name="getDetalheMensalidadePagasResponse">
+    <part name="return" type="tns:getDetalheMensalidadePagasArray"/>
+  </message>
+  <message name="getDadosDeclaracaoAtivoRequest">
+    <part name="cpf" type="xsd:string"/>
+  </message>
+  <message name="getDadosDeclaracaoAtivoResponse">
+    <part name="return" type="tns:getDadosDeclaracaoAtivoArray"/>
+  </message>
+  <message name="getDeclaracaoAtivoRequest">
+    <part name="cpf" type="xsd:string"/>
+    <part name="carteira" type="xsd:string"/>
+  </message>
+  <message name="getDeclaracaoAtivoResponse">
+    <part name="return" type="tns:getDeclaracaoAtivoArray"/>
+  </message>
+  <message name="getDadosDeclaracaoInativoRequest">
+    <part name="cpf" type="xsd:string"/>
+  </message>
+  <message name="getDadosDeclaracaoInativoResponse">
+    <part name="return" type="tns:getDadosDeclaracaoInativoArray"/>
+  </message>
+  <message name="getDeclaracaoInativoRequest">
+    <part name="cpf" type="xsd:string"/>
+    <part name="carteira" type="xsd:string"/>
+  </message>
+  <message name="getDeclaracaoInativoResponse">
+    <part name="return" type="tns:getDeclaracaoInativoArray"/>
+  </message>
+  <portType name="beneficiario_wsPortType">
+    <operation name="beneficiarioExiste">
+      <input message="tns:beneficiarioExisteRequest"/>
+      <output message="tns:beneficiarioExisteResponse"/>
+    </operation>
+    <operation name="setLogin">
+      <input message="tns:setLoginRequest"/>
+      <output message="tns:setLoginResponse"/>
+    </operation>
+    <operation name="getLogin">
+      <input message="tns:getLoginRequest"/>
+      <output message="tns:getLoginResponse"/>
+    </operation>
+    <operation name="confirmaRecuperaSenha">
+      <input message="tns:confirmaRecuperaSenhaRequest"/>
+      <output message="tns:confirmaRecuperaSenhaResponse"/>
+    </operation>
+    <operation name="getResetSenha">
+      <input message="tns:getResetSenhaRequest"/>
+      <output message="tns:getResetSenhaResponse"/>
+    </operation>
+    <operation name="getBeneficiario">
+      <input message="tns:getBeneficiarioRequest"/>
+      <output message="tns:getBeneficiarioResponse"/>
+    </operation>
+    <operation name="getCarteiraMobile">
+      <input message="tns:getCarteiraMobileRequest"/>
+      <output message="tns:getCarteiraMobileResponse"/>
+    </operation>
+    <operation name="getCarteiraMobileVerso">
+      <input message="tns:getCarteiraMobileVersoRequest"/>
+      <output message="tns:getCarteiraMobileVersoResponse"/>
+    </operation>
+    <operation name="getCarteiraSocialGrid">
+      <input message="tns:getCarteiraSocialGridRequest"/>
+      <output message="tns:getCarteiraSocialGridResponse"/>
+    </operation>
+    <operation name="getCarteiraSocialDados">
+      <input message="tns:getCarteiraSocialDadosRequest"/>
+      <output message="tns:getCarteiraSocialDadosResponse"/>
+    </operation>
+    <operation name="getDetalheMensalidadePagas">
+      <input message="tns:getDetalheMensalidadePagasRequest"/>
+      <output message="tns:getDetalheMensalidadePagasResponse"/>
+    </operation>
+    <operation name="getDadosDeclaracaoAtivo">
+      <input message="tns:getDadosDeclaracaoAtivoRequest"/>
+      <output message="tns:getDadosDeclaracaoAtivoResponse"/>
+    </operation>
+    <operation name="getDeclaracaoAtivo">
+      <input message="tns:getDeclaracaoAtivoRequest"/>
+      <output message="tns:getDeclaracaoAtivoResponse"/>
+    </operation>
+    <operation name="getDadosDeclaracaoInativo">
+      <input message="tns:getDadosDeclaracaoInativoRequest"/>
+      <output message="tns:getDadosDeclaracaoInativoResponse"/>
+    </operation>
+    <operation name="getDeclaracaoInativo">
+      <input message="tns:getDeclaracaoInativoRequest"/>
+      <output message="tns:getDeclaracaoInativoResponse"/>
+    </operation>
+  </portType>
+  <binding name="beneficiario_wsBinding" type="tns:beneficiario_wsPortType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="beneficiarioExiste">
+      <soap:operation soapAction="http://www.assefaz.org.br/webservicesteste/services/beneficiario/BeneficiarioWS.php/beneficiarioExiste" style="rpc"/>
+      <input>
+        <soap:body use="encoded" namespace="http://www.assefaz.org.br/webservicesteste/services/beneficiario/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="http://www.assefaz.org.br/webservicesteste/services/beneficiario/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="setLogin">
+      <soap:operation soapAction="http://www.assefaz.org.br/webservicesteste/services/beneficiario/BeneficiarioWS.php/setLogin" style="rpc"/>
+      <input>
+        <soap:body use="encoded" namespace="http://www.assefaz.org.br/webservicesteste/services/beneficiario/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="http://www.assefaz.org.br/webservicesteste/services/beneficiario/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="getLogin">
+      <soap:operation soapAction="http://www.assefaz.org.br/webservicesteste/services/beneficiario/BeneficiarioWS.php/getLogin" style="rpc"/>
+      <input>
+        <soap:body use="encoded" namespace="http://www.assefaz.org.br/webservicesteste/services/beneficiario/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="http://www.assefaz.org.br/webservicesteste/services/beneficiario/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="confirmaRecuperaSenha">
+      <soap:operation soapAction="http://www.assefaz.org.br/webservicesteste/services/beneficiario/BeneficiarioWS.php/confirmaRecuperaSenha" style="rpc"/>
+      <input>
+        <soap:body use="encoded" namespace="http://www.assefaz.org.br/webservicesteste/services/beneficiario/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="http://www.assefaz.org.br/webservicesteste/services/beneficiario/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="getResetSenha">
+      <soap:operation soapAction="http://www.assefaz.org.br/webservicesteste/services/beneficiario/BeneficiarioWS.php/getResetSenha" style="rpc"/>
+      <input>
+        <soap:body use="encoded" namespace="http://www.assefaz.org.br/webservicesteste/services/beneficiario/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="http://www.assefaz.org.br/webservicesteste/services/beneficiario/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="getBeneficiario">
+      <soap:operation soapAction="http://www.assefaz.org.br/webservicesteste/services/beneficiario/BeneficiarioWS.php/getBeneficiario" style="rpc"/>
+      <input>
+        <soap:body use="encoded" namespace="http://www.assefaz.org.br/webservicesteste/services/beneficiario/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="http://www.assefaz.org.br/webservicesteste/services/beneficiario/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="getCarteiraMobile">
+      <soap:operation soapAction="http://www.assefaz.org.br/webservicesteste/services/beneficiario/BeneficiarioWS.php/getCarteiraMobile" style="rpc"/>
+      <input>
+        <soap:body use="encoded" namespace="http://www.assefaz.org.br/webservicesteste/services/beneficiario/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="http://www.assefaz.org.br/webservicesteste/services/beneficiario/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="getCarteiraMobileVerso">
+      <soap:operation soapAction="http://www.assefaz.org.br/webservicesteste/services/beneficiario/BeneficiarioWS.php/getCarteiraMobileVerso" style="rpc"/>
+      <input>
+        <soap:body use="encoded" namespace="http://www.assefaz.org.br/webservicesteste/services/beneficiario/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="http://www.assefaz.org.br/webservicesteste/services/beneficiario/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="getCarteiraSocialGrid">
+      <soap:operation soapAction="http://www.assefaz.org.br/webservicesteste/services/beneficiario/BeneficiarioWS.php/getCarteiraSocialGrid" style="rpc"/>
+      <input>
+        <soap:body use="encoded" namespace="http://www.assefaz.org.br/webservicesteste/services/beneficiario/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="http://www.assefaz.org.br/webservicesteste/services/beneficiario/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="getCarteiraSocialDados">
+      <soap:operation soapAction="http://www.assefaz.org.br/webservicesteste/services/beneficiario/BeneficiarioWS.php/getCarteiraSocialDados" style="rpc"/>
+      <input>
+        <soap:body use="encoded" namespace="http://www.assefaz.org.br/webservicesteste/services/beneficiario/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="http://www.assefaz.org.br/webservicesteste/services/beneficiario/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="getDetalheMensalidadePagas">
+      <soap:operation soapAction="http://www.assefaz.org.br/webservicesteste/services/beneficiario/BeneficiarioWS.php/getDetalheMensalidadePagas" style="rpc"/>
+      <input>
+        <soap:body use="encoded" namespace="http://www.assefaz.org.br/webservicesteste/services/beneficiario/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="http://www.assefaz.org.br/webservicesteste/services/beneficiario/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="getDadosDeclaracaoAtivo">
+      <soap:operation soapAction="http://www.assefaz.org.br/webservicesteste/services/beneficiario/BeneficiarioWS.php/getDadosDeclaracaoAtivo" style="rpc"/>
+      <input>
+        <soap:body use="encoded" namespace="http://www.assefaz.org.br/webservicesteste/services/beneficiario/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="http://www.assefaz.org.br/webservicesteste/services/beneficiario/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="getDeclaracaoAtivo">
+      <soap:operation soapAction="http://www.assefaz.org.br/webservicesteste/services/beneficiario/BeneficiarioWS.php/getDeclaracaoAtivo" style="rpc"/>
+      <input>
+        <soap:body use="encoded" namespace="http://www.assefaz.org.br/webservicesteste/services/beneficiario/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="http://www.assefaz.org.br/webservicesteste/services/beneficiario/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="getDadosDeclaracaoInativo">
+      <soap:operation soapAction="http://www.assefaz.org.br/webservicesteste/services/beneficiario/BeneficiarioWS.php/getDadosDeclaracaoInativo" style="rpc"/>
+      <input>
+        <soap:body use="encoded" namespace="http://www.assefaz.org.br/webservicesteste/services/beneficiario/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="http://www.assefaz.org.br/webservicesteste/services/beneficiario/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="getDeclaracaoInativo">
+      <soap:operation soapAction="http://www.assefaz.org.br/webservicesteste/services/beneficiario/BeneficiarioWS.php/getDeclaracaoInativo" style="rpc"/>
+      <input>
+        <soap:body use="encoded" namespace="http://www.assefaz.org.br/webservicesteste/services/beneficiario/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="http://www.assefaz.org.br/webservicesteste/services/beneficiario/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="beneficiario_ws">
+    <port name="beneficiario_wsPort" binding="tns:beneficiario_wsBinding">
+      <soap:address location="http://www.assefaz.org.br/webservicesteste/services/beneficiario/BeneficiarioWS.php"/>
+    </port>
+  </service>
+</definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://www.assefaz.org.br/webservicesteste/services/beneficiario/BeneficiarioWS.php</con:endpoint></con:endpoints><con:operation id="d0293650-3c9b-442a-a691-978e5663843e" isOneWay="false" action="http://www.assefaz.org.br/webservicesteste/services/beneficiario/BeneficiarioWS.php/beneficiarioExiste" name="beneficiarioExiste" bindingOperationName="beneficiarioExiste" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="7a5a84ff-d8a5-482c-a05e-8989395f97f5" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.assefaz.org.br/webservicesteste/services/beneficiario/BeneficiarioWS.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ben="http://www.assefaz.org.br/webservicesteste/services/beneficiario/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ben:beneficiarioExiste soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <cpf xsi:type="xsd:string">?</cpf>
+      </ben:beneficiarioExiste>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.assefaz.org.br/webservicesteste/services/beneficiario/BeneficiarioWS.php/beneficiarioExiste"/></con:call></con:operation><con:operation id="68d16d3e-262a-4736-82d0-f0a94ff904ef" isOneWay="false" action="http://www.assefaz.org.br/webservicesteste/services/beneficiario/BeneficiarioWS.php/confirmaRecuperaSenha" name="confirmaRecuperaSenha" bindingOperationName="confirmaRecuperaSenha" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="a581d287-c922-45a5-b54a-3708c0400b99" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.assefaz.org.br/webservicesteste/services/beneficiario/BeneficiarioWS.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ben="http://www.assefaz.org.br/webservicesteste/services/beneficiario/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ben:confirmaRecuperaSenha soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <cpf xsi:type="xsd:string">?</cpf>
+         <dataNascimento xsi:type="xsd:string">?</dataNascimento>
+      </ben:confirmaRecuperaSenha>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.assefaz.org.br/webservicesteste/services/beneficiario/BeneficiarioWS.php/confirmaRecuperaSenha"/></con:call></con:operation><con:operation id="ab682253-c39e-46d0-ab99-f016d2cd1318" isOneWay="false" action="http://www.assefaz.org.br/webservicesteste/services/beneficiario/BeneficiarioWS.php/getBeneficiario" name="getBeneficiario" bindingOperationName="getBeneficiario" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="513826f3-be61-4f12-a335-0cfad19fb1b4" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.assefaz.org.br/webservicesteste/services/beneficiario/BeneficiarioWS.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ben="http://www.assefaz.org.br/webservicesteste/services/beneficiario/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ben:getBeneficiario soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <cpfCart xsi:type="xsd:string">53922093191</cpfCart>
+      </ben:getBeneficiario>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:username>mobilesaude</con:username><con:password>m0b1l3&amp;@sse@az</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:preemptive>true</con:preemptive><con:authType>Preemptive</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.assefaz.org.br/webservicesteste/services/beneficiario/BeneficiarioWS.php/getBeneficiario"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="3478146f-05d1-43ac-b18e-56f9de1f98ac" isOneWay="false" action="http://www.assefaz.org.br/webservicesteste/services/beneficiario/BeneficiarioWS.php/getCarteiraMobile" name="getCarteiraMobile" bindingOperationName="getCarteiraMobile" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="9c41556f-f2ab-4c4f-a47a-a88d68c2805c" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.assefaz.org.br/webservicesteste/services/beneficiario/BeneficiarioWS.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ben="http://www.assefaz.org.br/webservicesteste/services/beneficiario/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ben:getCarteiraMobile soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <cpf xsi:type="xsd:string">?</cpf>
+      </ben:getCarteiraMobile>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.assefaz.org.br/webservicesteste/services/beneficiario/BeneficiarioWS.php/getCarteiraMobile"/></con:call></con:operation><con:operation id="29303c6f-5896-4e33-bd06-23cefc1df41f" isOneWay="false" action="http://www.assefaz.org.br/webservicesteste/services/beneficiario/BeneficiarioWS.php/getCarteiraMobileVerso" name="getCarteiraMobileVerso" bindingOperationName="getCarteiraMobileVerso" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="bed833ec-fa93-44d1-862c-74a9cc2e922a" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.assefaz.org.br/webservicesteste/services/beneficiario/BeneficiarioWS.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ben="http://www.assefaz.org.br/webservicesteste/services/beneficiario/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ben:getCarteiraMobileVerso soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <carteira xsi:type="xsd:string">?</carteira>
+      </ben:getCarteiraMobileVerso>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.assefaz.org.br/webservicesteste/services/beneficiario/BeneficiarioWS.php/getCarteiraMobileVerso"/></con:call></con:operation><con:operation id="7b62fded-3386-4467-a941-da8d92b774e6" isOneWay="false" action="http://www.assefaz.org.br/webservicesteste/services/beneficiario/BeneficiarioWS.php/getCarteiraSocialDados" name="getCarteiraSocialDados" bindingOperationName="getCarteiraSocialDados" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="ed160663-b718-4c06-84b1-bbdd5eceb9b8" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.assefaz.org.br/webservicesteste/services/beneficiario/BeneficiarioWS.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ben="http://www.assefaz.org.br/webservicesteste/services/beneficiario/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ben:getCarteiraSocialDados soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <cpf xsi:type="xsd:string">?</cpf>
+         <sequencia xsi:type="xsd:string">?</sequencia>
+      </ben:getCarteiraSocialDados>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.assefaz.org.br/webservicesteste/services/beneficiario/BeneficiarioWS.php/getCarteiraSocialDados"/></con:call></con:operation><con:operation id="e98f84d3-b4a8-4c09-8f82-f7b426c9eea4" isOneWay="false" action="http://www.assefaz.org.br/webservicesteste/services/beneficiario/BeneficiarioWS.php/getCarteiraSocialGrid" name="getCarteiraSocialGrid" bindingOperationName="getCarteiraSocialGrid" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="bf550775-b712-4559-acb2-3140e4e79db4" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.assefaz.org.br/webservicesteste/services/beneficiario/BeneficiarioWS.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ben="http://www.assefaz.org.br/webservicesteste/services/beneficiario/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ben:getCarteiraSocialGrid soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <cpf xsi:type="xsd:string">?</cpf>
+      </ben:getCarteiraSocialGrid>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.assefaz.org.br/webservicesteste/services/beneficiario/BeneficiarioWS.php/getCarteiraSocialGrid"/></con:call></con:operation><con:operation id="6ad6ad66-19ba-45b4-a9a9-e10f3c7bedc6" isOneWay="false" action="http://www.assefaz.org.br/webservicesteste/services/beneficiario/BeneficiarioWS.php/getDadosDeclaracaoAtivo" name="getDadosDeclaracaoAtivo" bindingOperationName="getDadosDeclaracaoAtivo" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="a93fc8a2-96d0-4ab8-9514-09db36aa9fc6" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.assefaz.org.br/webservicesteste/services/beneficiario/BeneficiarioWS.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ben="http://www.assefaz.org.br/webservicesteste/services/beneficiario/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ben:getDadosDeclaracaoAtivo soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <cpf xsi:type="xsd:string">?</cpf>
+      </ben:getDadosDeclaracaoAtivo>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.assefaz.org.br/webservicesteste/services/beneficiario/BeneficiarioWS.php/getDadosDeclaracaoAtivo"/></con:call></con:operation><con:operation id="b6439eb7-6ead-4300-8e3e-e6d970c318df" isOneWay="false" action="http://www.assefaz.org.br/webservicesteste/services/beneficiario/BeneficiarioWS.php/getDadosDeclaracaoInativo" name="getDadosDeclaracaoInativo" bindingOperationName="getDadosDeclaracaoInativo" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="7af708a1-63e8-497a-9879-6bc883805cdd" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.assefaz.org.br/webservicesteste/services/beneficiario/BeneficiarioWS.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ben="http://www.assefaz.org.br/webservicesteste/services/beneficiario/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ben:getDadosDeclaracaoInativo soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <cpf xsi:type="xsd:string">?</cpf>
+      </ben:getDadosDeclaracaoInativo>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.assefaz.org.br/webservicesteste/services/beneficiario/BeneficiarioWS.php/getDadosDeclaracaoInativo"/></con:call></con:operation><con:operation id="ef2e4a95-f733-4815-8f22-6bbcc7501961" isOneWay="false" action="http://www.assefaz.org.br/webservicesteste/services/beneficiario/BeneficiarioWS.php/getDeclaracaoAtivo" name="getDeclaracaoAtivo" bindingOperationName="getDeclaracaoAtivo" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="ad6f6cce-5991-4e09-a489-bca52245f432" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.assefaz.org.br/webservicesteste/services/beneficiario/BeneficiarioWS.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ben="http://www.assefaz.org.br/webservicesteste/services/beneficiario/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ben:getDeclaracaoAtivo soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <cpf xsi:type="xsd:string">?</cpf>
+         <carteira xsi:type="xsd:string">?</carteira>
+      </ben:getDeclaracaoAtivo>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.assefaz.org.br/webservicesteste/services/beneficiario/BeneficiarioWS.php/getDeclaracaoAtivo"/></con:call></con:operation><con:operation id="6e321dcc-24f7-4353-b676-8ff3c439f8ed" isOneWay="false" action="http://www.assefaz.org.br/webservicesteste/services/beneficiario/BeneficiarioWS.php/getDeclaracaoInativo" name="getDeclaracaoInativo" bindingOperationName="getDeclaracaoInativo" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="88645dc9-f35e-47cc-a7fd-741996d7fa48" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.assefaz.org.br/webservicesteste/services/beneficiario/BeneficiarioWS.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ben="http://www.assefaz.org.br/webservicesteste/services/beneficiario/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ben:getDeclaracaoInativo soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <cpf xsi:type="xsd:string">?</cpf>
+         <carteira xsi:type="xsd:string">?</carteira>
+      </ben:getDeclaracaoInativo>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.assefaz.org.br/webservicesteste/services/beneficiario/BeneficiarioWS.php/getDeclaracaoInativo"/></con:call></con:operation><con:operation id="32bce866-89f1-4e21-aa2a-2e330b2fa7ec" isOneWay="false" action="http://www.assefaz.org.br/webservicesteste/services/beneficiario/BeneficiarioWS.php/getDetalheMensalidadePagas" name="getDetalheMensalidadePagas" bindingOperationName="getDetalheMensalidadePagas" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="7cc7f96e-33f1-447b-9a12-1670e24b0993" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.assefaz.org.br/webservicesteste/services/beneficiario/BeneficiarioWS.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ben="http://www.assefaz.org.br/webservicesteste/services/beneficiario/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ben:getDetalheMensalidadePagas soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <cliente xsi:type="xsd:string">?</cliente>
+         <mes xsi:type="xsd:string">?</mes>
+         <ano xsi:type="xsd:string">?</ano>
+      </ben:getDetalheMensalidadePagas>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.assefaz.org.br/webservicesteste/services/beneficiario/BeneficiarioWS.php/getDetalheMensalidadePagas"/></con:call></con:operation><con:operation id="cb3cf689-efb3-4833-afdb-be918e2ea099" isOneWay="false" action="http://www.assefaz.org.br/webservicesteste/services/beneficiario/BeneficiarioWS.php/getLogin" name="getLogin" bindingOperationName="getLogin" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="8e3dbfce-be32-4b11-ba46-03234e94251d" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.assefaz.org.br/webservicesteste/services/beneficiario/BeneficiarioWS.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ben="http://www.assefaz.org.br/webservicesteste/services/beneficiario/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ben:getLogin soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <cpf xsi:type="xsd:string">53922093191</cpf>
+         <senha xsi:type="xsd:string">dm2BR20@@</senha>
+      </ben:getLogin>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:username>mobilesaude</con:username><con:password>m0b1l3&amp;@sse@az</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:preemptive>true</con:preemptive><con:authType>Preemptive</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.assefaz.org.br/webservicesteste/services/beneficiario/BeneficiarioWS.php/getLogin"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="ac2599a4-ac81-4076-84a4-1f5e20531627" isOneWay="false" action="http://www.assefaz.org.br/webservicesteste/services/beneficiario/BeneficiarioWS.php/getResetSenha" name="getResetSenha" bindingOperationName="getResetSenha" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="b21d4b00-2f7d-4bd0-9323-11f133086a1b" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.assefaz.org.br/webservicesteste/services/beneficiario/BeneficiarioWS.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ben="http://www.assefaz.org.br/webservicesteste/services/beneficiario/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ben:getResetSenha soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <cpf_cnpj xsi:type="xsd:string">?</cpf_cnpj>
+         <senhaNova xsi:type="xsd:string">?</senhaNova>
+      </ben:getResetSenha>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.assefaz.org.br/webservicesteste/services/beneficiario/BeneficiarioWS.php/getResetSenha"/></con:call></con:operation><con:operation id="7f9ccd42-0bea-42d6-8b38-87a2e6d26e0f" isOneWay="false" action="http://www.assefaz.org.br/webservicesteste/services/beneficiario/BeneficiarioWS.php/setLogin" name="setLogin" bindingOperationName="setLogin" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="cb942227-4b5c-4d1f-b329-c7f5b7588d3a" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.assefaz.org.br/webservicesteste/services/beneficiario/BeneficiarioWS.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ben="http://www.assefaz.org.br/webservicesteste/services/beneficiario/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ben:setLogin soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <cpf_cnpj xsi:type="xsd:string">?</cpf_cnpj>
+         <nome xsi:type="xsd:string">?</nome>
+         <senha xsi:type="xsd:string">?</senha>
+         <email xsi:type="xsd:string">?</email>
+      </ben:setLogin>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.assefaz.org.br/webservicesteste/services/beneficiario/BeneficiarioWS.php/setLogin"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>

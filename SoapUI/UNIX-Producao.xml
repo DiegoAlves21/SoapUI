@@ -767,7 +767,7 @@
    <soapenv:Body>
       <ns:WS_BOLETO_DETALHES>
          <!--Optional:-->
-         <ns:BOLETO_CHAVE>11 000700395  NF</ns:BOLETO_CHAVE>
+         <ns:BOLETO_CHAVE>11 000932690  NF</ns:BOLETO_CHAVE>
       </ns:WS_BOLETO_DETALHES>
    </soapenv:Body>
 </soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://201.73.162.9:6998/WS_BOLETO_DETALHES"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="faca7e45-c5b4-4ce0-bddc-b3678ef88fae" isOneWay="false" action="http://201.73.162.9:6998/WS_BOLETO_EXTRATO" name="WS_BOLETO_EXTRATO" bindingOperationName="WS_BOLETO_EXTRATO" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="99cef2ff-be82-4b26-b6ea-84af1978ab46" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://201.73.162.9:6998/BOLETOSERVICE.apw</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://201.73.162.9:6998/">
@@ -783,7 +783,7 @@
    <soapenv:Body>
       <ns:WS_BOLETO_FATURA>
          <!--Optional:-->
-         <ns:BOLETO_CHAVE>11 000700395  NF</ns:BOLETO_CHAVE>
+         <ns:BOLETO_CHAVE>11 000932690  NF</ns:BOLETO_CHAVE>
       </ns:WS_BOLETO_FATURA>
    </soapenv:Body>
 </soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://201.73.162.9:6998/WS_BOLETO_FATURA"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="84254a55-27db-43b0-9e55-590fc3314dab" isOneWay="false" action="http://201.73.162.9:6998/WS_BOLETO_LISTA" name="WS_BOLETO_LISTA" bindingOperationName="WS_BOLETO_LISTA" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="c31b81ee-2855-472a-b112-7e01f1b3b200" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://201.73.162.9:6998/BOLETOSERVICE.apw</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://201.73.162.9:6998/">
@@ -791,7 +791,7 @@
    <soapenv:Body>
       <ns:WS_BOLETO_LISTA>
          <!--Optional:-->
-         <ns:BENEFICIARIO_MATRICULA>00010001010520000</ns:BENEFICIARIO_MATRICULA>
+         <ns:BENEFICIARIO_MATRICULA>00010001038096008</ns:BENEFICIARIO_MATRICULA>
       </ns:WS_BOLETO_LISTA>
    </soapenv:Body>
 </soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://201.73.162.9:6998/WS_BOLETO_LISTA"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
