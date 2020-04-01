@@ -639,9 +639,9 @@
          <!--Optional:-->
          <por:USER_MOBILE_LOGIN_TIPO></por:USER_MOBILE_LOGIN_TIPO>
          <!--Optional:-->
-         <por:USER_MOBILE_LOGIN>00010001062222000</por:USER_MOBILE_LOGIN>
+         <por:USER_MOBILE_LOGIN>00010001078618005</por:USER_MOBILE_LOGIN>
          <!--Optional:-->
-         <por:USER_MOBILE_SENHA>Fiat2019</por:USER_MOBILE_SENHA>
+         <por:USER_MOBILE_SENHA>Fiat@2020</por:USER_MOBILE_SENHA>
          <!--Optional:-->
          <por:USER_MOBILE_LOGIN_ORIGEM></por:USER_MOBILE_LOGIN_ORIGEM>
       </por:WS_BENEFICIARIO_LOGIN>
@@ -676,4 +676,132 @@
          <por:HASH_TROCA_SENHA>?</por:HASH_TROCA_SENHA>
       </por:WS_BENEFICIARIO_TROCAR_SENHA>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://portal.fundacaofiat.com.br/WS_BENEFICIARIO_TROCAR_SENHA"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://portal.fundacaofiat.com.br/WS_BENEFICIARIO_TROCAR_SENHA"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="94ba0d79-370c-46df-917c-f745b309110a" wsaVersion="NONE" name="UTILIZACAOSERVICESOAP" type="wsdl" bindingName="{http://portal.fundacaofiat.com.br/}UTILIZACAOSERVICESOAP" soapVersion="1_1" anonymous="optional" definition="http://portal.fundacaofiat.com.br/ws/UTILIZACAOSERVICE.apw?WSDL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://portal.fundacaofiat.com.br/ws/UTILIZACAOSERVICE.apw?WSDL"><con:part><con:url>http://portal.fundacaofiat.com.br/ws/UTILIZACAOSERVICE.apw?WSDL</con:url><con:content><![CDATA[<!--Generated 20200330 10:21:00 by ADVPL WSDL Server 1.110216 / Protheus 7.00.131227A-20180425 NG-->
+<definitions targetNamespace="http://portal.fundacaofiat.com.br/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://portal.fundacaofiat.com.br/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://portal.fundacaofiat.com.br/">
+      <s:element name="SB_EXTRATO_UTILIZACAO">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="COMPETENCIA_ANO" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="COMPETENCIA_MES" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="BENEFICIARIO_MATRICULA" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SB_EXTRATO_UTILIZACAORESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SB_EXTRATO_UTILIZACAORESULT" type="s0:US_SB_EXTRATO_UTILIZACAO"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="US_SB_EXTRATO_UTILIZACAO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="RETORNO_ALERTAS" type="s0:ARRAYOFALERTA"/>
+          <s:element minOccurs="0" maxOccurs="1" name="RETORNO_CRITICAS" type="s0:ARRAYOFCRITICA"/>
+          <s:element minOccurs="0" maxOccurs="1" name="RETORNO_DADOS" type="s0:ARRAYOFEXTRATO_UTILIZACAO"/>
+          <s:element minOccurs="0" maxOccurs="1" name="RETORNO_STATUS" type="s:boolean"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ALERTA">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ALERTA_CODIGO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="ALERTA_DESCRICAO" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CRITICA">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CRITICA_AUTORIZA_CONTATO" type="s:boolean"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CRITICA_CODIGO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CRITICA_DESCRICAO_PROBLEMA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CRITICA_REAL_MOTIVO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CRITICA_SOLUCAO_PROBLEMA" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="EXTRATO_UTILIZACAO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CODIGO_TIPO_SERVICO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="COPARTICIPACAO_PERCENTUAL" type="s:float"/>
+          <s:element minOccurs="0" maxOccurs="1" name="COPARTICIPACAO_VALOR" type="s:float"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DESCRI_TIPO_SERVICO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="FATURA_NUMERO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="GUIA_NUMERO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="GUIA_SENHA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="GUIA_TIPO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="MATRICULA_BENEFICIARIO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="NOME_BENEFICIARIO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="PRESTADOR_CODIGO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="PRESTADOR_CPFCGC" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="PRESTADOR_NOME" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="PROCEDIMENTO_AUTORIZADO" type="s:boolean"/>
+          <s:element minOccurs="0" maxOccurs="1" name="PROCEDIMENTO_CODIGO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="PROCEDIMENTO_DATA" type="s:date"/>
+          <s:element minOccurs="0" maxOccurs="1" name="PROCEDIMENTO_DESCRICAO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="PROCEDIMENTO_GUIA_ITEM" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="PROCEDIMENTO_QUANTIDADE" type="s:float"/>
+          <s:element minOccurs="0" maxOccurs="1" name="PROCEDIMENTO_TABELA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="PROCEDIMENTO_VALOR_PAGAMENTO" type="s:float"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ARRAYOFALERTA">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ALERTA" type="s0:ALERTA"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ARRAYOFCRITICA">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CRITICA" type="s0:CRITICA"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ARRAYOFEXTRATO_UTILIZACAO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="EXTRATO_UTILIZACAO" type="s0:EXTRATO_UTILIZACAO"/>
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </types>
+  <message name="SB_EXTRATO_UTILIZACAOSOAPIN">
+    <part name="parameters" element="s0:SB_EXTRATO_UTILIZACAO"/>
+  </message>
+  <message name="SB_EXTRATO_UTILIZACAOSOAPOUT">
+    <part name="parameters" element="s0:SB_EXTRATO_UTILIZACAORESPONSE"/>
+  </message>
+  <portType name="UTILIZACAOSERVICESOAP">
+    <operation name="SB_EXTRATO_UTILIZACAO">
+      <documentation>Consulta extrato de utilização e coparticipação</documentation>
+      <input message="s0:SB_EXTRATO_UTILIZACAOSOAPIN"/>
+      <output message="s0:SB_EXTRATO_UTILIZACAOSOAPOUT"/>
+    </operation>
+  </portType>
+  <binding name="UTILIZACAOSERVICESOAP" type="s0:UTILIZACAOSERVICESOAP">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+    <operation name="SB_EXTRATO_UTILIZACAO">
+      <soap:operation soapAction="http://portal.fundacaofiat.com.br/SB_EXTRATO_UTILIZACAO" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="UTILIZACAOSERVICE">
+    <documentation>Webservice de extrato de utilização e coparticipaçãO</documentation>
+    <port name="UTILIZACAOSERVICESOAP" binding="s0:UTILIZACAOSERVICESOAP">
+      <soap:address location="http://portal.fundacaofiat.com.br/ws/UTILIZACAOSERVICE.apw"/>
+    </port>
+  </service>
+</definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://portal.fundacaofiat.com.br/ws/UTILIZACAOSERVICE.apw</con:endpoint></con:endpoints><con:operation id="d1d934c9-e116-4adb-9665-a8deb9282b6f" isOneWay="false" action="http://portal.fundacaofiat.com.br/SB_EXTRATO_UTILIZACAO" name="SB_EXTRATO_UTILIZACAO" bindingOperationName="SB_EXTRATO_UTILIZACAO" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="6d4fdde6-58c9-4d91-8e3a-ad94956faf75" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://portal.fundacaofiat.com.br/ws/UTILIZACAOSERVICE.apw</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:por="http://portal.fundacaofiat.com.br/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <por:SB_EXTRATO_UTILIZACAO>
+         <!--Optional:-->
+         <por:COMPETENCIA_ANO>2019</por:COMPETENCIA_ANO>
+         <!--Optional:-->
+         <por:COMPETENCIA_MES>06</por:COMPETENCIA_MES>
+         <!--Optional:-->
+         <por:BENEFICIARIO_MATRICULA>00010001078618005</por:BENEFICIARIO_MATRICULA>
+      </por:SB_EXTRATO_UTILIZACAO>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://portal.fundacaofiat.com.br/SB_EXTRATO_UTILIZACAO"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>

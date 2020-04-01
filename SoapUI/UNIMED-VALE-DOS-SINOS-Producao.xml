@@ -689,4 +689,119 @@
          <mob:NOVA_SENHA>?</mob:NOVA_SENHA>
       </mob:TROCAR_SENHA>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://integracao_protheus/mobile/TROCAR_SENHA"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://integracao_protheus/mobile/TROCAR_SENHA"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="8a06a9fe-a007-4147-8570-b7be933b84d3" wsaVersion="NONE" name="WSMOBILESAUDE_EXTRATOSOAP" type="wsdl" bindingName="{http://integracao_protheus/mobile}WSMOBILESAUDE_EXTRATOSOAP" soapVersion="1_1" anonymous="optional" definition="https://app.vs.unimed.com.br/ws/WSMOBILESAUDE_EXTRATO.apw?WSDL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="https://app.vs.unimed.com.br/ws/WSMOBILESAUDE_EXTRATO.apw?WSDL"><con:part><con:url>https://app.vs.unimed.com.br/ws/WSMOBILESAUDE_EXTRATO.apw?WSDL</con:url><con:content><![CDATA[<!--Generated 20200401 15:49:05 by ADVPL WSDL Server 1.110216 / Protheus 7.00.170117A-20190628-->
+<definitions targetNamespace="http://integracao_protheus/mobile" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://integracao_protheus/mobile" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://integracao_protheus/mobile">
+      <s:element name="SB_EXTRATO_UTILIZACAO">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CHAVE_BENEFICIARIO" type="s:string"/>
+            <s:element minOccurs="1" maxOccurs="1" name="ANO" type="s:string"/>
+            <s:element minOccurs="1" maxOccurs="1" name="MES" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SB_EXTRATO_UTILIZACAORESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SB_EXTRATO_UTILIZACAORESULT" type="s0:SB_EXTRATO_UTILIZACAO"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="SB_EXTRATO_UTILIZACAO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="FAMILIAS" type="s0:ARRAYOFFAMILIA"/>
+          <s:element minOccurs="0" maxOccurs="1" name="MOTIVO_CRITICA" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="STATUS" type="s:boolean"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="FAMILIA">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="BENEFICIARIOS" type="s0:ARRAYOFBENEFICIARIO"/>
+          <s:element minOccurs="1" maxOccurs="1" name="MATRICULA_TITULAR" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="NOME_TITULAR" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="BENEFICIARIO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="EXTRATO" type="s0:ARRAYOFEXTRATO"/>
+          <s:element minOccurs="1" maxOccurs="1" name="MATRICULA" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="NOME" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="VALOR_TOTAL_COPART" type="s:float"/>
+          <s:element minOccurs="1" maxOccurs="1" name="VALOR_TOTAL_UTILIZ" type="s:float"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="EXTRATO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="CODIGO_PRESTADOR" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="CODIGO_PROCEDIMENTO" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="CODIGO_TIPO_SERVICO" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="CPF_CNPJ_PRESTADOR" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="DATA_ATENDIMENTO" type="s:date"/>
+          <s:element minOccurs="1" maxOccurs="1" name="DESCRI_PROCEDIMENTO" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="DESCRI_TIPO_SERVICO" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="NOME_PRESTADOR" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="QUANTIDADE" type="s:float"/>
+          <s:element minOccurs="0" maxOccurs="1" name="VALOR_COPARTICIPACAO" type="s:float"/>
+          <s:element minOccurs="0" maxOccurs="1" name="VALOR_SERVICO" type="s:float"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ARRAYOFFAMILIA">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="FAMILIA" type="s0:FAMILIA"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ARRAYOFBENEFICIARIO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="BENEFICIARIO" type="s0:BENEFICIARIO"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ARRAYOFEXTRATO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="EXTRATO" type="s0:EXTRATO"/>
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </types>
+  <message name="SB_EXTRATO_UTILIZACAOSOAPIN">
+    <part name="parameters" element="s0:SB_EXTRATO_UTILIZACAO"/>
+  </message>
+  <message name="SB_EXTRATO_UTILIZACAOSOAPOUT">
+    <part name="parameters" element="s0:SB_EXTRATO_UTILIZACAORESPONSE"/>
+  </message>
+  <portType name="WSMOBILESAUDE_EXTRATOSOAP">
+    <operation name="SB_EXTRATO_UTILIZACAO">
+      <documentation>Servico para demonstrativo de utilizacao do plano - com participacao ou nao</documentation>
+      <input message="s0:SB_EXTRATO_UTILIZACAOSOAPIN"/>
+      <output message="s0:SB_EXTRATO_UTILIZACAOSOAPOUT"/>
+    </operation>
+  </portType>
+  <binding name="WSMOBILESAUDE_EXTRATOSOAP" type="s0:WSMOBILESAUDE_EXTRATOSOAP">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+    <operation name="SB_EXTRATO_UTILIZACAO">
+      <soap:operation soapAction="http://integracao_protheus/mobile/SB_EXTRATO_UTILIZACAO" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="WSMOBILESAUDE_EXTRATO">
+    <documentation>Webservice de retorno do extrato dos beneficiarios</documentation>
+    <port name="WSMOBILESAUDE_EXTRATOSOAP" binding="s0:WSMOBILESAUDE_EXTRATOSOAP">
+      <soap:address location="https://app.vs.unimed.com.br/ws/WSMOBILESAUDE_EXTRATO.apw"/>
+    </port>
+  </service>
+</definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>https://app.vs.unimed.com.br/ws/WSMOBILESAUDE_EXTRATO.apw</con:endpoint></con:endpoints><con:operation id="e7f45825-deb4-4507-bfe8-74e8a9827da8" isOneWay="false" action="http://integracao_protheus/mobile/SB_EXTRATO_UTILIZACAO" name="SB_EXTRATO_UTILIZACAO" bindingOperationName="SB_EXTRATO_UTILIZACAO" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="53b1137e-d4bf-4016-bcdb-9de75cc53103" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://app.vs.unimed.com.br/ws/WSMOBILESAUDE_EXTRATO.apw</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:mob="http://integracao_protheus/mobile">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <mob:SB_EXTRATO_UTILIZACAO>
+         <mob:CHAVE_BENEFICIARIO>00555656001800002</mob:CHAVE_BENEFICIARIO>
+         <mob:ANO>2020</mob:ANO>
+         <mob:MES>01</mob:MES>
+      </mob:SB_EXTRATO_UTILIZACAO>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://integracao_protheus/mobile/SB_EXTRATO_UTILIZACAO"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
