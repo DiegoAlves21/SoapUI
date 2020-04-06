@@ -842,8 +842,8 @@
    <soapenv:Header/>
    <soapenv:Body>
       <urn:autenticaAssociado soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
-         <login xsi:type="xsd:string">0729870.01</login>
-         <senha xsi:type="xsd:string">4497</senha>
+         <login xsi:type="xsd:string">0341798.03</login>
+         <senha xsi:type="xsd:string">330979</senha>
          <sistemaoperacional xsi:type="xsd:string">?</sistemaoperacional>
       </urn:autenticaAssociado>
    </soapenv:Body>
@@ -972,30 +972,30 @@
          <codContrato xsi:type="xsd:string">?</codContrato>
       </urn:getExtratoFatura>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:wsmobile.getExtratoFatura#getExtratoFatura"/></con:call></con:operation><con:operation id="95c36ca1-4dba-4eca-9ddd-9ab28638077e" isOneWay="false" action="urn:wsmobile.getExtratoReembolso#getExtratoReembolso" name="getExtratoReembolso" bindingOperationName="getExtratoReembolso" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="eab6020a-a787-45f4-9c05-6b18cabcc0b2" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://sos.smilesaude.com.br/wsmobile/geral/servidor.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:wsmobile.getExtratoReembolso">
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:wsmobile.getExtratoFatura#getExtratoFatura"/></con:call></con:operation><con:operation id="95c36ca1-4dba-4eca-9ddd-9ab28638077e" isOneWay="false" action="urn:wsmobile.getExtratoReembolso#getExtratoReembolso" name="getExtratoReembolso" bindingOperationName="getExtratoReembolso" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="eab6020a-a787-45f4-9c05-6b18cabcc0b2" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://sos.smilesaude.com.br/wsmobile/geral/servidor.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:wsmobile.getExtratoReembolso">
    <soapenv:Header/>
    <soapenv:Body>
       <urn:getExtratoReembolso soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
-         <codUsuario xsi:type="xsd:string">?</codUsuario>
-         <dataInicial xsi:type="xsd:date">?</dataInicial>
-         <dataFinal xsi:type="xsd:date">?</dataFinal>
+         <codUsuario xsi:type="xsd:string">3309793</codUsuario>
+         <dataInicial xsi:type="xsd:date">01/11/2018</dataInicial>
+         <dataFinal xsi:type="xsd:date">30/11/2018</dataFinal>
       </urn:getExtratoReembolso>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:wsmobile.getExtratoReembolso#getExtratoReembolso"/></con:call></con:operation><con:operation id="417e116c-d102-43e5-b7f2-651a51481fbe" isOneWay="false" action="urn:wsmobile.getHistoricoReembolso#getHistoricoReembolso" name="getHistoricoReembolso" bindingOperationName="getHistoricoReembolso" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="d6898909-dda6-4363-9ef3-41a967537343" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://sos.smilesaude.com.br/wsmobile/geral/servidor.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:wsmobile.getHistoricoReembolso">
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:wsmobile.getExtratoReembolso#getExtratoReembolso"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="417e116c-d102-43e5-b7f2-651a51481fbe" isOneWay="false" action="urn:wsmobile.getHistoricoReembolso#getHistoricoReembolso" name="getHistoricoReembolso" bindingOperationName="getHistoricoReembolso" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="d6898909-dda6-4363-9ef3-41a967537343" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://sos.smilesaude.com.br/wsmobile/geral/servidor.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:wsmobile.getHistoricoReembolso">
    <soapenv:Header/>
    <soapenv:Body>
       <urn:getHistoricoReembolso soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
-         <codReembolso xsi:type="xsd:string">?</codReembolso>
+         <codReembolso xsi:type="xsd:string">2467</codReembolso>
       </urn:getHistoricoReembolso>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:wsmobile.getHistoricoReembolso#getHistoricoReembolso"/></con:call></con:operation><con:operation id="d8b4f560-2410-49bd-bccc-f08d17f912e1" isOneWay="false" action="urn:wsmobile.getObservacaoReembolso#getObservacaoReembolso" name="getObservacaoReembolso" bindingOperationName="getObservacaoReembolso" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="65707e35-b7e9-41f9-80a8-ac14daa7b51b" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://sos.smilesaude.com.br/wsmobile/geral/servidor.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:wsmobile.getObservacaoReembolso">
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:wsmobile.getHistoricoReembolso#getHistoricoReembolso"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="d8b4f560-2410-49bd-bccc-f08d17f912e1" isOneWay="false" action="urn:wsmobile.getObservacaoReembolso#getObservacaoReembolso" name="getObservacaoReembolso" bindingOperationName="getObservacaoReembolso" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="65707e35-b7e9-41f9-80a8-ac14daa7b51b" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://sos.smilesaude.com.br/wsmobile/geral/servidor.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:wsmobile.getObservacaoReembolso">
    <soapenv:Header/>
    <soapenv:Body>
       <urn:getObservacaoReembolso soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
-         <codReembolso xsi:type="xsd:string">?</codReembolso>
+         <codReembolso xsi:type="xsd:string">2467</codReembolso>
       </urn:getObservacaoReembolso>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:wsmobile.getObservacaoReembolso#getObservacaoReembolso"/></con:call></con:operation><con:operation id="e93d64ef-f0ea-4470-933b-8b3faaebf199" isOneWay="false" action="urn:wsmobile.getRedeNaoReferenciada#getRedeNaoReferenciada" name="getRedeNaoReferenciada" bindingOperationName="getRedeNaoReferenciada" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="1fe7d6a0-2546-430e-a402-515f244f39d1" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://sos.smilesaude.com.br/wsmobile/geral/servidor.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:wsmobile.getRedeNaoReferenciada">
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:wsmobile.getObservacaoReembolso#getObservacaoReembolso"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="e93d64ef-f0ea-4470-933b-8b3faaebf199" isOneWay="false" action="urn:wsmobile.getRedeNaoReferenciada#getRedeNaoReferenciada" name="getRedeNaoReferenciada" bindingOperationName="getRedeNaoReferenciada" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="1fe7d6a0-2546-430e-a402-515f244f39d1" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://sos.smilesaude.com.br/wsmobile/geral/servidor.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:wsmobile.getRedeNaoReferenciada">
    <soapenv:Header/>
    <soapenv:Body>
       <urn:getRedeNaoReferenciada soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
@@ -1040,7 +1040,7 @@
    <soapenv:Header/>
    <soapenv:Body>
       <urn:irPDF soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
-         <codAssociado xsi:type="xsd:string">3363099</codAssociado>
+         <codAssociado xsi:type="xsd:string">3379657</codAssociado>
          <ano xsi:type="xsd:string">2018</ano>
       </urn:irPDF>
    </soapenv:Body>

@@ -1711,7 +1711,7 @@
          <!--Optional:-->
          <mob:chave_beneficiario>586076</mob:chave_beneficiario>
          <!--Optional:-->
-         <mob:data_referencia>2020-01-31</mob:data_referencia>
+         <mob:data_referencia>2020-03-16</mob:data_referencia>
       </mob:especialidade_disponivel>
    </soapenv:Body>
 </soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online/especialidade_disponivel"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="1904f7e2-9241-4adb-b629-cb602a94180c" isOneWay="false" action="http://www.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online/grade_horarios_agenda" name="grade_horarios_agenda" bindingOperationName="grade_horarios_agenda" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="37333f3e-2ef3-4c58-bb6c-0b99943a8938" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://guianet.paranaclinicas.com.br/MobileSaudeWS/ws_agendamento_online.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:mob="http://www.paranaclinicas.com.br/MobileSaudeWS">
@@ -1801,7 +1801,7 @@
          <!--Optional:-->
          <mob:chave_beneficiario>847493</mob:chave_beneficiario>
          <!--Optional:-->
-         <mob:data_referencia>2020-01-31</mob:data_referencia>
+         <mob:data_referencia>2020-03-16</mob:data_referencia>
          <!--Optional:-->
          <mob:especialidade_id>39</mob:especialidade_id>
       </mob:servico_disponivel>
