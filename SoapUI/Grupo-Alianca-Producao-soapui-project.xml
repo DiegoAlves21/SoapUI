@@ -1,0 +1,3449 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="0518d23f-bb2d-41b2-a477-9f59f108746a" activeEnvironment="Default" name="Grupo Alianca" soapui-version="5.5.0" abortOnError="false" runType="SEQUENTIAL" resourceRoot="" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="edb738f8-dabb-4bf2-bc32-486f694546d2" wsaVersion="NONE" name="WSPORTALCLIENTESOAP" type="wsdl" bindingName="{http://www.aliancaadm.com.br}WSPORTALCLIENTESOAP" soapVersion="1_1" anonymous="optional" definition="http://187.94.63.116:10801/ws/WSPORTALCLIENTE.apw?WSDL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://187.94.63.116:10801/ws/WSPORTALCLIENTE.apw?WSDL"><con:part><con:url>http://187.94.63.116:10801/ws/WSPORTALCLIENTE.apw?WSDL</con:url><con:content><![CDATA[<!--Generated 20200513 16:24:32 by ADVPL WSDL Server 1.110216 / Protheus 7.00.131227A-20191008 NG-->
+<definitions targetNamespace="http://www.aliancaadm.com.br" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://www.aliancaadm.com.br" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.aliancaadm.com.br">
+      <s:element name="ALTERASENHA">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PARAMALTERASENHA" type="s0:STRUALTERASENHA"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ALTERASENHARESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ALTERASENHARESULT" type="s0:STRURETPADRAO"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BUSCACEP">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CEP" type="s0:STRUCEP"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BUSCACEPRESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BUSCACEPRESULT" type="s0:STRURETDADOSCEP"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BUSCACHAVEBA1">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CHAVEBA3" type="s0:STRUCHAVEBA3"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BUSCACHAVEBA1RESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BUSCACHAVEBA1RESULT" type="s0:ARRAYOFSTRURETCHAVEBA1"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BUSCACHAVEBA3">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CHAVECPF" type="s0:STRUCHAVECPF"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BUSCACHAVEBA3RESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BUSCACHAVEBA3RESULT" type="s0:ARRAYOFSTRURETCHAVEBA3"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BUSCADADOS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PARAMBUSCADADOS" type="s0:STRUPARAMBUSCADADOS"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BUSCADADOSRESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BUSCADADOSRESULT" type="s0:STRURETBUSCADADOS"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CARTAQUITACAO">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PARAMCARTAQUITACAO" type="s0:STRUPARAMCARTAQUITACAO"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CARTAQUITACAORESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CARTAQUITACAORESULT" type="s0:ARRAYOFSTRURETCARTAQUITACAO"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="COMPCOBRANCA">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PARAMCOMPCOBRANCA" type="s0:STRUPARAMCOMPCOBRANCA"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="COMPCOBRANCARESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="COMPCOBRANCARESULT" type="s0:STRURETCOMPCOBRANCA"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="COMPCOOPARTICIPACAO">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PARAMCOMPCOOPARTICIPACAO" type="s0:STRUPARAMCOMPCOOPARTICIPACAO"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="COMPCOOPARTICIPACAORESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="COMPCOOPARTICIPACAORESULT" type="s0:ARRAYOFSTRURETCOMPCOOPARTICIPACAO"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CRIPTOGRAFIA">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CRIPTDECRIPT" type="s0:STRUCRIPTDECRIPT"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CRIPTOGRAFIARESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CRIPTOGRAFIARESULT" type="s0:STRURETCRIPT"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CRIPTOWEB">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CRIPTDECRIPT" type="s0:STRUCRIPTDECRIPT"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CRIPTOWEBRESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CRIPTOWEBRESULT" type="s0:STRURETCRIPT"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DADOSBOLETO">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PARAMBOLETO" type="s0:STRUPARAMBOLETO"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DADOSBOLETORESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DADOSBOLETORESULT" type="s0:STRURETBOLETO"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DADOSIR">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PARAMDADOSIR" type="s0:STRUPARAMDADOSIR"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DADOSIRRESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DADOSIRRESULT" type="s0:STRURETDADOSIR"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DECLARACAO_IRRPF">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PARAMDADOSIR" type="s0:STRUPARAMDADOSIR"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DECLARACAO_IRRPFRESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DECLARACAO_IRRPFRESULT" type="s0:STRUIRRPF"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DECLARAPERMAN">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PARAMDECLARAPERMAN" type="s0:STRUPARAMDECLARAPERMAN"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DECLARAPERMANRESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DECLARAPERMANRESULT" type="s0:STRURETDECLARAPERMAN"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ESQUECEUSENHA">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LOGIN" type="s0:STRULOGIN"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ESQUECEUSENHARESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ESQUECEUSENHARESULT" type="s0:STRURETPADRAO"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GRAVAATENDIMENTO">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DADOSATENDIMENTO" type="s0:STRUDADOSATENDIMENTO"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GRAVAATENDIMENTORESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GRAVAATENDIMENTORESULT" type="s0:STRURETGRAVAATENDIMENTO"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GRAVADADOSCLIENTE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DADOSCLIENTE" type="s0:STRUDADOSCLIENTE"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GRAVADADOSCLIENTERESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GRAVADADOSCLIENTERESULT" type="s0:STRURETPADRAO"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GRAVADADOSCOBRANCA">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DADOSCOBRANCA" type="s0:STRUDADOSCOBRANCA"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GRAVADADOSCOBRANCARESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GRAVADADOSCOBRANCARESULT" type="s0:STRURETPADRAO"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GRAVADADOSVIDA">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DADOSVIDA" type="s0:STRUDADOSVIDA"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GRAVADADOSVIDARESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GRAVADADOSVIDARESULT" type="s0:STRURETPADRAO"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LIBERAPRIMEIROACESSO">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LIBERAACESSO" type="s0:STRULIBERAACESSO"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LIBERAPRIMEIROACESSORESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LIBERAPRIMEIROACESSORESULT" type="s0:STRURETLOGIN"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LISTAACOES">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PARAMACAO" type="s0:STRUPARAMACAO"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LISTAACOESRESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LISTAACOESRESULT" type="s0:ARRAYOFSTRURETRETACOES"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LISTAASSUNTOS">
+        <s:complexType>
+          <s:sequence></s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LISTAASSUNTOSRESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LISTAASSUNTOSRESULT" type="s0:ARRAYOFSTRURETASSUNTOS"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LISTAATENDIMENTO">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BUSCAATENDIMENTO" type="s0:STRUBUSCAATENDIMENTO"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LISTAATENDIMENTORESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LISTAATENDIMENTORESULT" type="s0:ARRAYOFSTRURETATENDIMENTO"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LISTABANCO">
+        <s:complexType>
+          <s:sequence></s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LISTABANCORESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LISTABANCORESULT" type="s0:ARRAYOFSTRURETBANCO"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LISTADADOSCLIENTE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CHAVESA1" type="s0:STRUCHAVESA1"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LISTADADOSCLIENTERESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LISTADADOSCLIENTERESULT" type="s0:STRURETDADOSCLIENTE"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LISTADADOSCOBRANCA">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CHAVEBA3" type="s0:STRUCHAVEBA3"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LISTADADOSCOBRANCARESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LISTADADOSCOBRANCARESULT" type="s0:STRURETDADOSCOBRANCA"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LISTADADOSCONTATO">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PARAMDADOSCONTATO" type="s0:STRUPARAMDADOSCONTATO"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LISTADADOSCONTATORESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LISTADADOSCONTATORESULT" type="s0:STRURETDADOSCONTATO"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LISTADADOSVIDA">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CHAVEBA1" type="s0:STRUCHAVEBA1"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LISTADADOSVIDARESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LISTADADOSVIDARESULT" type="s0:STRURETDADOSVIDA"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LISTAESTADOCIVIL">
+        <s:complexType>
+          <s:sequence></s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LISTAESTADOCIVILRESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LISTAESTADOCIVILRESULT" type="s0:ARRAYOFSTRURETESTADOCIVIL"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LISTAFORMAPAGTO">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CHAVEBA3" type="s0:STRUCHAVEBA3"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LISTAFORMAPAGTORESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LISTAFORMAPAGTORESULT" type="s0:ARRAYOFSTRURETFORMAPAGTO"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LISTAGRAUPARENTESCO">
+        <s:complexType>
+          <s:sequence></s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LISTAGRAUPARENTESCORESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LISTAGRAUPARENTESCORESULT" type="s0:ARRAYOFSTRURETGRAUPARENTESCO"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LISTAITEMATENDIMENTO">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ITEMATENDIMENTO" type="s0:STRUITEMATENDIMENTO"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LISTAITEMATENDIMENTORESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LISTAITEMATENDIMENTORESULT" type="s0:ARRAYOFSTRURETITEMATENDIMENTO"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LISTAMATRICULAS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CHAVECPF" type="s0:STRUCHAVECPF"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LISTAMATRICULASRESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LISTAMATRICULASRESULT" type="s0:ARRAYOFSTRULISTAMATRICULAS"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LISTAOCORRENCIAS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="OCORRENCIA" type="s0:STRUOCORRENCIA"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LISTAOCORRENCIASRESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LISTAOCORRENCIASRESULT" type="s0:ARRAYOFSTRURETOCORRENCIAS"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LISTAOCUPACAO">
+        <s:complexType>
+          <s:sequence></s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LISTAOCUPACAORESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LISTAOCUPACAORESULT" type="s0:ARRAYOFSTRURETOCUPACAO"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LISTATIPOUSUARIO">
+        <s:complexType>
+          <s:sequence></s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LISTATIPOUSUARIORESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LISTATIPOUSUARIORESULT" type="s0:ARRAYOFSTRURETTIPOUSUARIO"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LISTAUF">
+        <s:complexType>
+          <s:sequence></s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LISTAUFRESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LISTAUFRESULT" type="s0:ARRAYOFSTRURETUF"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LOGACESSOPORTAL">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LOGACESSO" type="s0:STRULOGACESSO"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LOGACESSOPORTALRESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LOGACESSOPORTALRESULT" type="s0:STRURETPADRAO"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LOGINAPP">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LOGIN" type="s0:STRULOGIN"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LOGINAPPRESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LOGINAPPRESULT" type="s0:STRUFAMAPP"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MOVIMENTABENEF">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PARAMMOVIMENTABENEF" type="s0:STRUPARAMMOVIMENTABENEF"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MOVIMENTABENEFRESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MOVIMENTABENEFRESULT" type="s0:STRURETMOVIMENTABENEF"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PRIMEIROACESSO">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PRIMEIROACESSO" type="s0:STRUPRIMEIROACESSO"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PRIMEIROACESSORESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PRIMEIROACESSORESULT" type="s0:STRURETLOGIN"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SMSBOLETO">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PARAMSMSBOLETO" type="s0:STRUPARAMSMSBOLETO"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SMSBOLETORESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SMSBOLETORESULT" type="s0:STRURETPADRAO"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TITULOSRECEBER">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TITULORECEBER" type="s0:STRUTITULORECEBER"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TITULOSRECEBERRESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TITULOSRECEBERRESULT" type="s0:ARRAYOFSTRURETTITULOSREC"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VALIDAACESSONAOLOGADO">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PARAMNAOLOGADO" type="s0:STRUNAOLOGADO"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VALIDAACESSONAOLOGADORESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="VALIDAACESSONAOLOGADORESULT" type="s0:STRUACESSONAOLOGADO"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VALIDACONTA">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DADOSCONTA" type="s0:STRUDADOSCONTA"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VALIDACONTARESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="VALIDACONTARESULT" type="s0:STRURETPADRAO"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VALIDALOGIN">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LOGIN" type="s0:STRULOGIN"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VALIDALOGINRESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="VALIDALOGINRESULT" type="s0:STRURETLOGIN"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VERIFICAQUITACAO">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PARAMCARTAQUITACAO" type="s0:STRUPARAMCARTAQUITACAO"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VERIFICAQUITACAORESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="VERIFICAQUITACAORESULT" type="s0:STRURETPADRAO"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="STRUALFANDEGA">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CCHAVEBA1_TITULAR" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="DADOSVIDA" type="s0:ARRAYOFSTRUDADOSVIDA"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="STRUBUSCAATENDIMENTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="CPF" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="DATAATE" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DATADE" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="STRUCEP">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="CEP" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="STRUCHAVEBA1">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="CHAVEBA1" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="STRUCHAVEBA3">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="CHAVEBA3" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="STRUCHAVECPF">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="CPF" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="STRUCHAVESA1">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="CHAVESA1" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="STRUCRIPTDECRIPT">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="TIPOCRIPT" type="s:boolean"/>
+          <s:element minOccurs="1" maxOccurs="1" name="VARCRIPT" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="STRUDADOSATEND">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ACAO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="ASSUNTO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CHAMADOOUV" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CHAVE" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CIDADE" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CPF" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DATANASTO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DDD" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="EMAIL" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="ENTIDADE" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="NOME" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="OBSERVACAO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="OCORRENCIA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="OUVIDORIA" type="s:boolean"/>
+          <s:element minOccurs="0" maxOccurs="1" name="TELEFONE" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="TIPREG" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="UF" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="STRUDADOSATENDIMENTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ACAO" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="AREALOGADA" type="s:boolean"/>
+          <s:element minOccurs="0" maxOccurs="1" name="ASSUNTO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CEP" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CHAMADOOUV" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CHAVEBA3" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CIDADE" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="COMUNICACAO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CPF" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DATANASTO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DDD" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DDDCL" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="EMAIL" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="ENDERECO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="LIGACAO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="MATRICULA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="NOME" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="OBSERVACAO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="OCORRENCIA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="OPERACAO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="OUVIDORIA" type="s:boolean"/>
+          <s:element minOccurs="0" maxOccurs="1" name="SEXO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="STATUSOCOR" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="TEL_CEL" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="TELEFONE" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="TIPREG" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="UF" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="STRUDADOSCLIENTE">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="BAIRRO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CEP" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="CHAVEBA3" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="CHAVESA1" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CODIGOMUNICIPIO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="COMPLEMENTO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DDDRESIDENCIAL" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="EMAIL" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="ENDERECO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="ESTADO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="MUNICIPIO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="NUMEROENDERECO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="TELEFONERESIDENCIAL" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="STRUDADOSCOBRANCA">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="AGENCIA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="BANCO" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="CHAVEBA3" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CONTA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DIGAGENCIA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DIGCONTA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="FORMAPAGTO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="OPERACAO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="TIPOCONTA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="VENCIMENTO" type="s:integer"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="STRUDADOSCONTA">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="AGENCIA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="BANCO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CONTA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DIGAGENCIA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DIGCONTA" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="STRUDADOSVIDA">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="AGENCIA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="BAIRRO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="BANCO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CEP" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="CHAVEBA1" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CNS" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CODIGOMUNICIPIO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="COMPLEMENTO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CONTA_CORRENTE" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DDDCELULAR" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DDDCOMERCIAL" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DDDRESIDENCIAL" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DIGITO_AGENCIA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DIGITO_CONTA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="EMAIL" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="ENDERECO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="ESTADO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="ESTADOCIVIL" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="FORMA_PAGEMENTO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="MUNICIPIO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="NUMEROENDERECO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="OCUPACAO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="OPERACAO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="PISPASEP" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="RAMAL" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="TELEFONECELULAR" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="TELEFONECOMERCIAL" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="TELEFONERESIDENCIAL" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="STRUITEMATENDIMENTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="CODIGO" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="STRULIBERAACESSO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CODLOGIN" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CPF" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="STRULOGACESSO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CODLOGIN" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="IP" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="STRULOGIN">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ATEND" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CPF" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DTNASC" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="EMAIL" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="ISMOBILE" type="s:boolean"/>
+          <s:element minOccurs="0" maxOccurs="1" name="LOGIN" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="ORIGEM" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="SENHA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="TPENV" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="STRUOCORRENCIA">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ASSUNTO" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="STRUPARAMACAO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="OCORRENCIA" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="STRUALTERASENHA">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CODLOGIN" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="ISMOBILE" type="s:boolean"/>
+          <s:element minOccurs="0" maxOccurs="1" name="SENHAATUAL" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="SENHANOVA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="VALIDASENHA" type="s:boolean"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="STRUPARAMBOLETO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="CHAVESE1" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="CRIPTOGRAFADO" type="s:boolean"/>
+          <s:element minOccurs="0" maxOccurs="1" name="RECNO_SE1" type="s:integer"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="STRUPARAMBUSCADADOS">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="CPF" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="NASC" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="NOME" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="PROTOCOLO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="SEXO" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="STRUPARAMCARTAQUITACAO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ANOBASE" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="CPF" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="STRUPARAMCOMPCOBRANCA">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="CHAVESE1" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="STRUPARAMCOMPCOOPARTICIPACAO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="CHAVESE1" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="STRUPARAMDADOSCONTATO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="CPF" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="STRUPARAMDADOSIR">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ANOPAG" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="BASE64" type="s:boolean"/>
+          <s:element minOccurs="1" maxOccurs="1" name="CPF" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="LIMG" type="s:boolean"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="STRUPARAMDECLARAPERMAN">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="CHAVEBA3" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="STRUPARAMMOVIMENTABENEF">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ACAO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="AGTIT" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="BCOTIT" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CCTIT" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="CHAVEBA1" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="COMPROV" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CPFTIT" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DAGTIT" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DATBLO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DCCFTIT" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="MOTBLO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="NMTIT" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="OBSERV" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="OPERTIT" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="TPCCTIT" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="STRUNAOLOGADO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CPF" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DATANASTO" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="STRUPARAMSMSBOLETO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="CELULAR" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="CHAVESE1" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="CRIPTOGRAFADO" type="s:boolean"/>
+          <s:element minOccurs="1" maxOccurs="1" name="DDD" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="STRUPRIMEIROACESSO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CPF" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DTNASCTO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="EMAIL" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="LOGIN" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="SENHA" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="STRUACESSONAOLOGADO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="CLIENTE" type="s:boolean"/>
+          <s:element minOccurs="0" maxOccurs="1" name="MSG" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="OK" type="s:boolean"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="STRURETRETACOES">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CODIGO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DESCRICAO" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="STRURETASSUNTOS">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CODIGO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DESCRICAO" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="STRURETATENDIMENTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CODIGO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DTENCERRA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="EMISSAO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="OBSERVACAO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="STATUSATE" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="STRURETBANCO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CODIGO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DESCRICAO" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="STRURETBOLETO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ACEITE" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="AGECLI" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="AGENCIA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="AVALISTA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="BAIRRO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="BANCO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="BCOCLI" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CARTEIRA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CEDENTE" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CEP" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CHAVESE1" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CLIENTE" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CNPJ" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CNPJCED" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CODBARRAS" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CODCEDENTE" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="COMPLEMENTO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CONTA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CTACLI" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DATPROC" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DEDUCOES" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DESCFORMAREC" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DIGCTACLI" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DIGITOCB" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="EMISSAO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="EMITE_BOL" type="s:boolean"/>
+          <s:element minOccurs="0" maxOccurs="1" name="ENDERECO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="ERRO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="ESPECIE" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="ESPECIEDOC" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="ESTADO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="IDFORMAREC" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="INSTRUCAO1" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="INSTRUCAO2" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="INSTRUCAO3" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="INSTRUCAO4" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="INSTRUCAO5" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="INSTRUCAO6" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="INSTRUCAO7" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="INSTRUCAO8" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="LINHADIG" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="LOGOBCO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="LOJA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="MSGJUROS" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="MSGLOCPAG1" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="MSGLOCPAG2" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="MUNICIPIO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="NOME" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="NOMEBCO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="NOSSONUMERO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="NUMDOC" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="NUMERO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="NUMEROBCO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="OK" type="s:boolean"/>
+          <s:element minOccurs="0" maxOccurs="1" name="OK_MOBILE" type="s:boolean"/>
+          <s:element minOccurs="0" maxOccurs="1" name="OPCPRINT" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="PESSOA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="STATUS_DESC" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="STATUS_ID" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="USUBANCO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="VALOR" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="VENCIMENTO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="VENCORI" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="STRURETBUSCADADOS">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ATENDIMENTO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CEP" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CIDADE" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DATNAS" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DDD" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DDDCL" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="EMAIL" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="ENDERECO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="MSG" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="MSG_PRE" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="MSG_PROSPECT" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="NOME" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="OK" type="s:boolean"/>
+          <s:element minOccurs="0" maxOccurs="1" name="OK_PROSPECT" type="s:boolean"/>
+          <s:element minOccurs="0" maxOccurs="1" name="RETDADOSOP" type="s0:ARRAYOFSTRURETDADOSOP"/>
+          <s:element minOccurs="0" maxOccurs="1" name="RETPREVENDA" type="s0:ARRAYOFSTRURETPREVENDA"/>
+          <s:element minOccurs="0" maxOccurs="1" name="RETPROSPECT" type="s0:ARRAYOFSTRURETPROSPECT"/>
+          <s:element minOccurs="0" maxOccurs="1" name="SEXO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="TEL" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="TEL_CEL" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="UF" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="STRUIRRPF">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="INDIVIDUAIS" type="s0:ARRAYOFSTRUINDIRRPF"/>
+          <s:element minOccurs="0" maxOccurs="1" name="STATUS" type="s:boolean"/>
+          <s:element minOccurs="0" maxOccurs="1" name="TOTAIS" type="s0:ARRAYOFSTRUCABIRRPF"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="STRURETCARTAQUITACAO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CPF" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CPFRESPONSAVEL" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="DADOSFINANCEIRO" type="s0:ARRAYOFSTRUDADOSFINANCEIRO"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DTNASC" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="OPERADORA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="RESPONSAVELFIN" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="SUBESTIPULANTE" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="TITULAR" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="STRURETCHAVEBA1">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ATIVO" type="s:boolean"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CARTAO_VALIDADE" type="s:date"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CARTAO_VIA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CELULAR" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CEP" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CHAVEBA1" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CIDADE" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CODGRUPOPLA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CODMUN" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CODPLA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CPF" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DATA_BLOQUEIO" type="s:date"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DATA_CPT" type="s:date"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DATAINCLUSAO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DATANASCIMENTO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DDD" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DDDCL" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DDDCM" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DESCGRUPOPLA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DESCPLA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="EMAIL" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="ESTADO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="FONE" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="FONECL" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="FONECM" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="GRAU_PARENTESCO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="GRAUPARENTESCO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="IDADE" type="s:integer"/>
+          <s:element minOccurs="0" maxOccurs="1" name="LOGIN" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="MATRICULA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="MATVID" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="NASCIMENTO" type="s:date"/>
+          <s:element minOccurs="0" maxOccurs="1" name="NOME" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="NUMERO_CNS" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="NUMERO_CONTRATO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="RAMAL" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="SEXO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="TELEFONE" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="TIPO_PESSOA_CONTRATANTE" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="TIPOREGISTRO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="TIPOUSUARIO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="TITULAR" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="TITULAR_MATRICULA" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="STRURETCHAVEBA3">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="AGENCIA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="ATIVO" type="s:boolean"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CHAVEBA3" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CHAVESA1" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CODBANCO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CODGRUPOPLANO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CODIGO_LOGIN" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CONTA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CONTRATO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CONVENIO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CONVENIO_ABRANGENCIA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CONVENIO_ACOMODACAO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CONVENIO_ANS" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CONVENIO_MODALIDADE_COBRANCA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CONVENIO_OPCIONAL" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CONVENIO_PADRAO_CONFORTO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CONVENIO_PARTICIPATIVO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CONVENIO_PERMITE_REEMBOLSO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CONVENIO_REGULAMENTACAO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CONVENIO_SEGMENTACAO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CONVENIO_TIPO_CONTRATO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CONVENIO_TIPO_REDE_DESCRICAO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CONVENIO_TIPO_REDE_ID" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CPFRESP" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DATA_BLOQUEIO" type="s:date"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DATAINCLUSAO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DESCGRUPOPLANO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DESCRICAO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DIGAGENCIA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DIGCONTA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="EMPRESA_ID" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="EMPRESA_NOME" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="MATRICULA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="NOME" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="NOMEPLANO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="NOMERESP" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="NREDUZOPE" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="NREDUZPLANO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="OPERACAO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="OPERADORA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="PLANO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="SUBCONTRATO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="TIPCONTA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="TIPOPAG" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="USUARIOS" type="s0:ARRAYOFSTRURETCHAVEBA1"/>
+          <s:element minOccurs="0" maxOccurs="1" name="VERSAOCONTRATO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="VERSAOPLANO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="VERSAOSUB" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="STRURETCOMPCOBRANCA">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="BAIRRO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="BENEFICIARIOS" type="s0:ARRAYOFSTRUDADOSBENEFICIARIOS"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CEP" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CNPJ" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="COMPLEMENTO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CPF" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="ENDERECO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="ERRO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="ESTADO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="MATRICULA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="MUNICIPIO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="NOME" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="NUMERO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="NUMERO_DOCUMENTO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="OK" type="s:boolean"/>
+          <s:element minOccurs="0" maxOccurs="1" name="SACADO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="TIPO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="TITNEGOCIADO" type="s0:ARRAYOFSTRUDADOSTITNEGOCIADO"/>
+          <s:element minOccurs="0" maxOccurs="1" name="VALOR_TOTAL" type="s:float"/>
+          <s:element minOccurs="0" maxOccurs="1" name="VENCIMENTO" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="STRURETCOMPCOOPARTICIPACAO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CODCONV" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CODOPE" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CODSERV" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CODUSU" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CONVENIO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DATASERV" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="OPERADORA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="PRESTADORA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="SERVICO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="USUARIO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="VALOR" type="s:float"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="STRURETCRIPT">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="RETORNOCRIPT" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="STRURETDADOSCEP">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="BAIRRO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CODIGOMUN" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="ENDERECO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="ESTADO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="LOGRADOURO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="MUNICIPIO" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="STRURETDADOSCLIENTE">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="BAIRRO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CEP" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CODIGOMUNICIPIO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="COMPLEMENTO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CPF" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DDDRESIDENCIAL" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="EMAIL" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="ENDERECO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="ESTADO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="MSG" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="MUNICIPIO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="NOME" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="NUMEROENDERECO" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="OK" type="s:boolean"/>
+          <s:element minOccurs="0" maxOccurs="1" name="TELEFONERESIDENCIAL" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="STRURETDADOSCOBRANCA">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="AGENCIA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="BANCO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CONTA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DESCFORPAGTO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DIGAGENCIA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DIGCONTA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="FORMAPAGTO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="MSG" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="OK" type="s:boolean"/>
+          <s:element minOccurs="0" maxOccurs="1" name="OPERACAO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="TIPOCONTA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="VENCIMENTO" type="s:integer"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="STRURETDADOSCONTATO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CIDADE" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CPF" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DATANASTO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DDD" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="EMAIL" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="MSG" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="NOME" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="OK" type="s:boolean"/>
+          <s:element minOccurs="0" maxOccurs="1" name="TELEFONE" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="UF" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="STRURETDADOSIR">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CHTML" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="STRURETDADOSOP">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CHAVEBA3" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CONTRATO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CONVENIO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CPF" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="MATBENEF" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="OPERADORA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="PLANO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="PROPOSTA_BA3" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="STATUS" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="TIPREG" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="VIGENCIA" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="STRURETDADOSVIDA">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="BAIRRO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CARTAOANS" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CEP" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CODIGOMUNICIPIO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="COMPLEMENTO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CPF" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DATAINCLUSAO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DATANASCIMENTO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DDDCELULAR" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DDDCOMERCIAL" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DDDRESIDENCIAL" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DECNASCIDOVIVO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="EMAIL" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="ENDERECO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="ESTADO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="ESTADOCIVIL" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="GRAUPARENTESCO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="MATRICULAFUNCIONAL" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="MATRICULAOPERADORA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="MSG" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="MUNICIPIO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="NOME" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="NOMEMAE" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="NUMEROENDERECO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="OCUPACAO" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="OK" type="s:boolean"/>
+          <s:element minOccurs="0" maxOccurs="1" name="ORIGEMRG" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="PISPAS" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="RG" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="SEXO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="TELEFONECELULAR" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="TELEFONECOMERCIAL" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="TELEFONERESIDENCIAL" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="TIPOUSUARIO" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="STRURETDECLARAPERMAN">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="MSGRET" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="OK" type="s:boolean"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="STRURETESTADOCIVIL">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CODIGO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DESCRICAO" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="STRUFAMAPP">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="FAMILIAS" type="s0:ARRAYOFSTRURETCHAVEBA3"/>
+          <s:element minOccurs="0" maxOccurs="1" name="MSG" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="OK" type="s:boolean"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="STRURETFORMAPAGTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CODIGO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DESCRICAO" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="STRURETGRAUPARENTESCO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CODIGO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DESCRICAO" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="STRURETGRAVAATENDIMENTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ATENDIMENTO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="MSG" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="OK" type="s:boolean"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="STRURETITEMATENDIMENTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ASSUNTO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="ITEM" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="OBSERVACAO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="OCORRENCIA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="STATUSITEM" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="STRULISTAMATRICULAS">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CONVENIO_CODIGO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CONVENIO_NOME" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="MATRICULAS" type="s0:ARRAYOFSTRUMATRICULAS"/>
+          <s:element minOccurs="0" maxOccurs="1" name="OPERADORA_CODIGO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="OPERADORA_NOME" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="STRURETLOGIN">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CODIGOLOGIN" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CPFLOGIN" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DTNASC" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="MSG" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="NOMELOGIN" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="OK" type="s:boolean"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="STRURETMOVIMENTABENEF">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="MSGRET" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="OK" type="s:boolean"/>
+          <s:element minOccurs="0" maxOccurs="1" name="PROTOCOLO" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="STRURETOCORRENCIAS">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CODIGO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DESCRICAO" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="STRURETOCUPACAO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CODIGO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DESCRICAO" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="STRURETPADRAO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="MSG" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="OK" type="s:boolean"/>
+          <s:element minOccurs="0" maxOccurs="1" name="ORIGEM" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="STRURETTIPOUSUARIO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CODIGO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DESCRICAO" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="STRURETTITULOSREC">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ACRESCIMO" type="s:float"/>
+          <s:element minOccurs="0" maxOccurs="1" name="ANOBASE" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="BAIXA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CHAVESE1" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CLIENTE" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="COOPARTICIPACAO" type="s:boolean"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DECRESCIMO" type="s:float"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DESCFORMAREC" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DESCRICAONATUREZA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="EMISSAO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="FILIAL" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="FORMAREC" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="IDFORMAREC" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="LOJA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="MESBASE" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="MSG" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="NOMECLIENTE" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="NOMECONVENIO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="NOMEOPERADORA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="NUMERO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="OK" type="s:boolean"/>
+          <s:element minOccurs="0" maxOccurs="1" name="ORIGEM" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="PARCELA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="PREFIXO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="RECNO_SE1" type="s:integer"/>
+          <s:element minOccurs="0" maxOccurs="1" name="SALDO" type="s:float"/>
+          <s:element minOccurs="0" maxOccurs="1" name="STATUS_DESC" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="STATUS_FAM" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="STATUS_ID" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="TIPO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="VALOR" type="s:float"/>
+          <s:element minOccurs="0" maxOccurs="1" name="VENCIMENTO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="VENCIMENTOORIGINAL" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="VENCIMENTOREAL" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="STRURETUF">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CODIGO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DESCRICAO" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="STRUTITULORECEBER">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="CPF" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="ORDEM" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="STATUSTIT" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="STRURETPREVENDA">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CEP" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CIDADE" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CONTRATO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CONVENIO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CPF" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DATNAS" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DDD" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DDDCL" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DESC_STATUS" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="EMAIL" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="ENDERECO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="NOME" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="OPERADORA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="PLANO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="PROPOSTA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="SEXO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="STATUS" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="STATUS_MED" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="TEL" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="TEL_CEL" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="TIPUSU" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="UF" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="VIGENCIA" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="STRURETPROSPECT">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CEP" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CIDADE" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="COD_PROSPECT" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CPF" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DATNAS" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DDD" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DDDCL" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="EMAIL" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="ENDERECO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="NOME" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="SEXO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="TEL" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="TEL_CEL" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="UF" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="STRUINDIRRPF">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="MATRICULA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="NOME" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="VALOR" type="s:float"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="STRUCABIRRPF">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CNPJ_RECEBEDORA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="COD_OPERADORA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="COD_SUBESTIPULANTE" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CPF_RESP_FIN" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CPF_TITULAR" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="FONTE_RECEBEDORA" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="ITENS_IRRPF" type="s0:ARRAYOFSTRUITENSIRRPF"/>
+          <s:element minOccurs="0" maxOccurs="1" name="NOME_RESP_FIN" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="NOME_TITULAR" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="OPERADORA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="SUB_ESTIPULANTE" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="STRUDADOSFINANCEIRO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DATAPAGTO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DESCONTOS" type="s:float"/>
+          <s:element minOccurs="0" maxOccurs="1" name="ENCARGOS" type="s:float"/>
+          <s:element minOccurs="0" maxOccurs="1" name="MENSALIDADE" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="PARCELA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="TOTALPAGO" type="s:float"/>
+          <s:element minOccurs="0" maxOccurs="1" name="VALOR" type="s:float"/>
+          <s:element minOccurs="0" maxOccurs="1" name="VENCTOREAL" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="STRUDADOSBENEFICIARIOS">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="NOME" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="PRODUTOS" type="s0:ARRAYOFSTRUDADOSPRODUTOS"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="STRUDADOSTITNEGOCIADO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ANOBASE" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CHAVE" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="FATURA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="MESBASE" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="NUMCON" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="NUMERO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="PREFIXO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="PREFIXOFAT" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="TIPOTIT" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="VALOR" type="s:float"/>
+          <s:element minOccurs="0" maxOccurs="1" name="VENCORIGINAL" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="STRUMATRICULAS">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="BENEF_MATRICULA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="BENEF_NOME" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="BENEF_TIPO_USUARIO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="BENEF_VIGENCIA" type="s:date"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="STRUITENSIRRPF">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ANOBASE" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DESCONTOS" type="s:float"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DTBAIXA" type="s:date"/>
+          <s:element minOccurs="0" maxOccurs="1" name="ENCARGOS" type="s:float"/>
+          <s:element minOccurs="0" maxOccurs="1" name="MATRICULA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="MESBASE" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="PARCELA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="TITULO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="TOTALPAGO" type="s:float"/>
+          <s:element minOccurs="0" maxOccurs="1" name="VALOR" type="s:float"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="STRUDADOSPRODUTOS">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ANOBASE" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CODANS" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CODCONVENIO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CODOPERADORA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CODPLANO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="EVENTO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="MATRICULA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="MESBASE" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="MSGOBS01" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="MSGOBS02" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="MSGOBS03" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="NOMECONVENIO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="NOMEOPERADORA" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="NOMEPLANO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="NUMCON" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="PATRO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="TIPOPLANO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="TIPOREG" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="VALOR" type="s:float"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ARRAYOFSTRURETRETACOES">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="STRURETRETACOES" type="s0:STRURETRETACOES"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ARRAYOFSTRURETASSUNTOS">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="STRURETASSUNTOS" type="s0:STRURETASSUNTOS"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ARRAYOFSTRURETATENDIMENTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="STRURETATENDIMENTO" type="s0:STRURETATENDIMENTO"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ARRAYOFSTRURETBANCO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="STRURETBANCO" type="s0:STRURETBANCO"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ARRAYOFSTRURETCARTAQUITACAO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="STRURETCARTAQUITACAO" type="s0:STRURETCARTAQUITACAO"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ARRAYOFSTRURETCHAVEBA1">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="STRURETCHAVEBA1" type="s0:STRURETCHAVEBA1"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ARRAYOFSTRURETCHAVEBA3">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="STRURETCHAVEBA3" type="s0:STRURETCHAVEBA3"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ARRAYOFSTRURETCOMPCOOPARTICIPACAO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="STRURETCOMPCOOPARTICIPACAO" type="s0:STRURETCOMPCOOPARTICIPACAO"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ARRAYOFSTRURETDADOSOP">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="STRURETDADOSOP" type="s0:STRURETDADOSOP"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ARRAYOFSTRURETESTADOCIVIL">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="STRURETESTADOCIVIL" type="s0:STRURETESTADOCIVIL"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ARRAYOFSTRURETFORMAPAGTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="STRURETFORMAPAGTO" type="s0:STRURETFORMAPAGTO"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ARRAYOFSTRURETGRAUPARENTESCO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="STRURETGRAUPARENTESCO" type="s0:STRURETGRAUPARENTESCO"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ARRAYOFSTRURETITEMATENDIMENTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="STRURETITEMATENDIMENTO" type="s0:STRURETITEMATENDIMENTO"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ARRAYOFSTRULISTAMATRICULAS">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="STRULISTAMATRICULAS" type="s0:STRULISTAMATRICULAS"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ARRAYOFSTRURETOCORRENCIAS">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="STRURETOCORRENCIAS" type="s0:STRURETOCORRENCIAS"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ARRAYOFSTRURETOCUPACAO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="STRURETOCUPACAO" type="s0:STRURETOCUPACAO"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ARRAYOFSTRURETTIPOUSUARIO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="STRURETTIPOUSUARIO" type="s0:STRURETTIPOUSUARIO"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ARRAYOFSTRURETTITULOSREC">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="STRURETTITULOSREC" type="s0:STRURETTITULOSREC"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ARRAYOFSTRURETUF">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="STRURETUF" type="s0:STRURETUF"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ARRAYOFSTRUDADOSVIDA">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="STRUDADOSVIDA" type="s0:STRUDADOSVIDA"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ARRAYOFSTRURETPREVENDA">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="STRURETPREVENDA" type="s0:STRURETPREVENDA"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ARRAYOFSTRURETPROSPECT">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="STRURETPROSPECT" type="s0:STRURETPROSPECT"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ARRAYOFSTRUINDIRRPF">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="STRUINDIRRPF" type="s0:STRUINDIRRPF"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ARRAYOFSTRUCABIRRPF">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="STRUCABIRRPF" type="s0:STRUCABIRRPF"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ARRAYOFSTRUDADOSFINANCEIRO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="STRUDADOSFINANCEIRO" type="s0:STRUDADOSFINANCEIRO"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ARRAYOFSTRUDADOSBENEFICIARIOS">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="STRUDADOSBENEFICIARIOS" type="s0:STRUDADOSBENEFICIARIOS"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ARRAYOFSTRUDADOSTITNEGOCIADO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="STRUDADOSTITNEGOCIADO" type="s0:STRUDADOSTITNEGOCIADO"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ARRAYOFSTRUMATRICULAS">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="STRUMATRICULAS" type="s0:STRUMATRICULAS"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ARRAYOFSTRUITENSIRRPF">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="STRUITENSIRRPF" type="s0:STRUITENSIRRPF"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ARRAYOFSTRUDADOSPRODUTOS">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="STRUDADOSPRODUTOS" type="s0:STRUDADOSPRODUTOS"/>
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </types>
+  <message name="ALTERASENHASOAPIN">
+    <part name="parameters" element="s0:ALTERASENHA"/>
+  </message>
+  <message name="ALTERASENHASOAPOUT">
+    <part name="parameters" element="s0:ALTERASENHARESPONSE"/>
+  </message>
+  <message name="BUSCACEPSOAPIN">
+    <part name="parameters" element="s0:BUSCACEP"/>
+  </message>
+  <message name="BUSCACEPSOAPOUT">
+    <part name="parameters" element="s0:BUSCACEPRESPONSE"/>
+  </message>
+  <message name="BUSCACHAVEBA1SOAPIN">
+    <part name="parameters" element="s0:BUSCACHAVEBA1"/>
+  </message>
+  <message name="BUSCACHAVEBA1SOAPOUT">
+    <part name="parameters" element="s0:BUSCACHAVEBA1RESPONSE"/>
+  </message>
+  <message name="BUSCACHAVEBA3SOAPIN">
+    <part name="parameters" element="s0:BUSCACHAVEBA3"/>
+  </message>
+  <message name="BUSCACHAVEBA3SOAPOUT">
+    <part name="parameters" element="s0:BUSCACHAVEBA3RESPONSE"/>
+  </message>
+  <message name="BUSCADADOSSOAPIN">
+    <part name="parameters" element="s0:BUSCADADOS"/>
+  </message>
+  <message name="BUSCADADOSSOAPOUT">
+    <part name="parameters" element="s0:BUSCADADOSRESPONSE"/>
+  </message>
+  <message name="CARTAQUITACAOSOAPIN">
+    <part name="parameters" element="s0:CARTAQUITACAO"/>
+  </message>
+  <message name="CARTAQUITACAOSOAPOUT">
+    <part name="parameters" element="s0:CARTAQUITACAORESPONSE"/>
+  </message>
+  <message name="COMPCOBRANCASOAPIN">
+    <part name="parameters" element="s0:COMPCOBRANCA"/>
+  </message>
+  <message name="COMPCOBRANCASOAPOUT">
+    <part name="parameters" element="s0:COMPCOBRANCARESPONSE"/>
+  </message>
+  <message name="COMPCOOPARTICIPACAOSOAPIN">
+    <part name="parameters" element="s0:COMPCOOPARTICIPACAO"/>
+  </message>
+  <message name="COMPCOOPARTICIPACAOSOAPOUT">
+    <part name="parameters" element="s0:COMPCOOPARTICIPACAORESPONSE"/>
+  </message>
+  <message name="CRIPTOGRAFIASOAPIN">
+    <part name="parameters" element="s0:CRIPTOGRAFIA"/>
+  </message>
+  <message name="CRIPTOGRAFIASOAPOUT">
+    <part name="parameters" element="s0:CRIPTOGRAFIARESPONSE"/>
+  </message>
+  <message name="CRIPTOWEBSOAPIN">
+    <part name="parameters" element="s0:CRIPTOWEB"/>
+  </message>
+  <message name="CRIPTOWEBSOAPOUT">
+    <part name="parameters" element="s0:CRIPTOWEBRESPONSE"/>
+  </message>
+  <message name="DADOSBOLETOSOAPIN">
+    <part name="parameters" element="s0:DADOSBOLETO"/>
+  </message>
+  <message name="DADOSBOLETOSOAPOUT">
+    <part name="parameters" element="s0:DADOSBOLETORESPONSE"/>
+  </message>
+  <message name="DADOSIRSOAPIN">
+    <part name="parameters" element="s0:DADOSIR"/>
+  </message>
+  <message name="DADOSIRSOAPOUT">
+    <part name="parameters" element="s0:DADOSIRRESPONSE"/>
+  </message>
+  <message name="DECLARACAO_IRRPFSOAPIN">
+    <part name="parameters" element="s0:DECLARACAO_IRRPF"/>
+  </message>
+  <message name="DECLARACAO_IRRPFSOAPOUT">
+    <part name="parameters" element="s0:DECLARACAO_IRRPFRESPONSE"/>
+  </message>
+  <message name="DECLARAPERMANSOAPIN">
+    <part name="parameters" element="s0:DECLARAPERMAN"/>
+  </message>
+  <message name="DECLARAPERMANSOAPOUT">
+    <part name="parameters" element="s0:DECLARAPERMANRESPONSE"/>
+  </message>
+  <message name="ESQUECEUSENHASOAPIN">
+    <part name="parameters" element="s0:ESQUECEUSENHA"/>
+  </message>
+  <message name="ESQUECEUSENHASOAPOUT">
+    <part name="parameters" element="s0:ESQUECEUSENHARESPONSE"/>
+  </message>
+  <message name="GRAVAATENDIMENTOSOAPIN">
+    <part name="parameters" element="s0:GRAVAATENDIMENTO"/>
+  </message>
+  <message name="GRAVAATENDIMENTOSOAPOUT">
+    <part name="parameters" element="s0:GRAVAATENDIMENTORESPONSE"/>
+  </message>
+  <message name="GRAVADADOSCLIENTESOAPIN">
+    <part name="parameters" element="s0:GRAVADADOSCLIENTE"/>
+  </message>
+  <message name="GRAVADADOSCLIENTESOAPOUT">
+    <part name="parameters" element="s0:GRAVADADOSCLIENTERESPONSE"/>
+  </message>
+  <message name="GRAVADADOSCOBRANCASOAPIN">
+    <part name="parameters" element="s0:GRAVADADOSCOBRANCA"/>
+  </message>
+  <message name="GRAVADADOSCOBRANCASOAPOUT">
+    <part name="parameters" element="s0:GRAVADADOSCOBRANCARESPONSE"/>
+  </message>
+  <message name="GRAVADADOSVIDASOAPIN">
+    <part name="parameters" element="s0:GRAVADADOSVIDA"/>
+  </message>
+  <message name="GRAVADADOSVIDASOAPOUT">
+    <part name="parameters" element="s0:GRAVADADOSVIDARESPONSE"/>
+  </message>
+  <message name="LIBERAPRIMEIROACESSOSOAPIN">
+    <part name="parameters" element="s0:LIBERAPRIMEIROACESSO"/>
+  </message>
+  <message name="LIBERAPRIMEIROACESSOSOAPOUT">
+    <part name="parameters" element="s0:LIBERAPRIMEIROACESSORESPONSE"/>
+  </message>
+  <message name="LISTAACOESSOAPIN">
+    <part name="parameters" element="s0:LISTAACOES"/>
+  </message>
+  <message name="LISTAACOESSOAPOUT">
+    <part name="parameters" element="s0:LISTAACOESRESPONSE"/>
+  </message>
+  <message name="LISTAASSUNTOSSOAPIN">
+    <part name="parameters" element="s0:LISTAASSUNTOS"/>
+  </message>
+  <message name="LISTAASSUNTOSSOAPOUT">
+    <part name="parameters" element="s0:LISTAASSUNTOSRESPONSE"/>
+  </message>
+  <message name="LISTAATENDIMENTOSOAPIN">
+    <part name="parameters" element="s0:LISTAATENDIMENTO"/>
+  </message>
+  <message name="LISTAATENDIMENTOSOAPOUT">
+    <part name="parameters" element="s0:LISTAATENDIMENTORESPONSE"/>
+  </message>
+  <message name="LISTABANCOSOAPIN">
+    <part name="parameters" element="s0:LISTABANCO"/>
+  </message>
+  <message name="LISTABANCOSOAPOUT">
+    <part name="parameters" element="s0:LISTABANCORESPONSE"/>
+  </message>
+  <message name="LISTADADOSCLIENTESOAPIN">
+    <part name="parameters" element="s0:LISTADADOSCLIENTE"/>
+  </message>
+  <message name="LISTADADOSCLIENTESOAPOUT">
+    <part name="parameters" element="s0:LISTADADOSCLIENTERESPONSE"/>
+  </message>
+  <message name="LISTADADOSCOBRANCASOAPIN">
+    <part name="parameters" element="s0:LISTADADOSCOBRANCA"/>
+  </message>
+  <message name="LISTADADOSCOBRANCASOAPOUT">
+    <part name="parameters" element="s0:LISTADADOSCOBRANCARESPONSE"/>
+  </message>
+  <message name="LISTADADOSCONTATOSOAPIN">
+    <part name="parameters" element="s0:LISTADADOSCONTATO"/>
+  </message>
+  <message name="LISTADADOSCONTATOSOAPOUT">
+    <part name="parameters" element="s0:LISTADADOSCONTATORESPONSE"/>
+  </message>
+  <message name="LISTADADOSVIDASOAPIN">
+    <part name="parameters" element="s0:LISTADADOSVIDA"/>
+  </message>
+  <message name="LISTADADOSVIDASOAPOUT">
+    <part name="parameters" element="s0:LISTADADOSVIDARESPONSE"/>
+  </message>
+  <message name="LISTAESTADOCIVILSOAPIN">
+    <part name="parameters" element="s0:LISTAESTADOCIVIL"/>
+  </message>
+  <message name="LISTAESTADOCIVILSOAPOUT">
+    <part name="parameters" element="s0:LISTAESTADOCIVILRESPONSE"/>
+  </message>
+  <message name="LISTAFORMAPAGTOSOAPIN">
+    <part name="parameters" element="s0:LISTAFORMAPAGTO"/>
+  </message>
+  <message name="LISTAFORMAPAGTOSOAPOUT">
+    <part name="parameters" element="s0:LISTAFORMAPAGTORESPONSE"/>
+  </message>
+  <message name="LISTAGRAUPARENTESCOSOAPIN">
+    <part name="parameters" element="s0:LISTAGRAUPARENTESCO"/>
+  </message>
+  <message name="LISTAGRAUPARENTESCOSOAPOUT">
+    <part name="parameters" element="s0:LISTAGRAUPARENTESCORESPONSE"/>
+  </message>
+  <message name="LISTAITEMATENDIMENTOSOAPIN">
+    <part name="parameters" element="s0:LISTAITEMATENDIMENTO"/>
+  </message>
+  <message name="LISTAITEMATENDIMENTOSOAPOUT">
+    <part name="parameters" element="s0:LISTAITEMATENDIMENTORESPONSE"/>
+  </message>
+  <message name="LISTAMATRICULASSOAPIN">
+    <part name="parameters" element="s0:LISTAMATRICULAS"/>
+  </message>
+  <message name="LISTAMATRICULASSOAPOUT">
+    <part name="parameters" element="s0:LISTAMATRICULASRESPONSE"/>
+  </message>
+  <message name="LISTAOCORRENCIASSOAPIN">
+    <part name="parameters" element="s0:LISTAOCORRENCIAS"/>
+  </message>
+  <message name="LISTAOCORRENCIASSOAPOUT">
+    <part name="parameters" element="s0:LISTAOCORRENCIASRESPONSE"/>
+  </message>
+  <message name="LISTAOCUPACAOSOAPIN">
+    <part name="parameters" element="s0:LISTAOCUPACAO"/>
+  </message>
+  <message name="LISTAOCUPACAOSOAPOUT">
+    <part name="parameters" element="s0:LISTAOCUPACAORESPONSE"/>
+  </message>
+  <message name="LISTATIPOUSUARIOSOAPIN">
+    <part name="parameters" element="s0:LISTATIPOUSUARIO"/>
+  </message>
+  <message name="LISTATIPOUSUARIOSOAPOUT">
+    <part name="parameters" element="s0:LISTATIPOUSUARIORESPONSE"/>
+  </message>
+  <message name="LISTAUFSOAPIN">
+    <part name="parameters" element="s0:LISTAUF"/>
+  </message>
+  <message name="LISTAUFSOAPOUT">
+    <part name="parameters" element="s0:LISTAUFRESPONSE"/>
+  </message>
+  <message name="LOGACESSOPORTALSOAPIN">
+    <part name="parameters" element="s0:LOGACESSOPORTAL"/>
+  </message>
+  <message name="LOGACESSOPORTALSOAPOUT">
+    <part name="parameters" element="s0:LOGACESSOPORTALRESPONSE"/>
+  </message>
+  <message name="LOGINAPPSOAPIN">
+    <part name="parameters" element="s0:LOGINAPP"/>
+  </message>
+  <message name="LOGINAPPSOAPOUT">
+    <part name="parameters" element="s0:LOGINAPPRESPONSE"/>
+  </message>
+  <message name="MOVIMENTABENEFSOAPIN">
+    <part name="parameters" element="s0:MOVIMENTABENEF"/>
+  </message>
+  <message name="MOVIMENTABENEFSOAPOUT">
+    <part name="parameters" element="s0:MOVIMENTABENEFRESPONSE"/>
+  </message>
+  <message name="PRIMEIROACESSOSOAPIN">
+    <part name="parameters" element="s0:PRIMEIROACESSO"/>
+  </message>
+  <message name="PRIMEIROACESSOSOAPOUT">
+    <part name="parameters" element="s0:PRIMEIROACESSORESPONSE"/>
+  </message>
+  <message name="SMSBOLETOSOAPIN">
+    <part name="parameters" element="s0:SMSBOLETO"/>
+  </message>
+  <message name="SMSBOLETOSOAPOUT">
+    <part name="parameters" element="s0:SMSBOLETORESPONSE"/>
+  </message>
+  <message name="TITULOSRECEBERSOAPIN">
+    <part name="parameters" element="s0:TITULOSRECEBER"/>
+  </message>
+  <message name="TITULOSRECEBERSOAPOUT">
+    <part name="parameters" element="s0:TITULOSRECEBERRESPONSE"/>
+  </message>
+  <message name="VALIDAACESSONAOLOGADOSOAPIN">
+    <part name="parameters" element="s0:VALIDAACESSONAOLOGADO"/>
+  </message>
+  <message name="VALIDAACESSONAOLOGADOSOAPOUT">
+    <part name="parameters" element="s0:VALIDAACESSONAOLOGADORESPONSE"/>
+  </message>
+  <message name="VALIDACONTASOAPIN">
+    <part name="parameters" element="s0:VALIDACONTA"/>
+  </message>
+  <message name="VALIDACONTASOAPOUT">
+    <part name="parameters" element="s0:VALIDACONTARESPONSE"/>
+  </message>
+  <message name="VALIDALOGINSOAPIN">
+    <part name="parameters" element="s0:VALIDALOGIN"/>
+  </message>
+  <message name="VALIDALOGINSOAPOUT">
+    <part name="parameters" element="s0:VALIDALOGINRESPONSE"/>
+  </message>
+  <message name="VERIFICAQUITACAOSOAPIN">
+    <part name="parameters" element="s0:VERIFICAQUITACAO"/>
+  </message>
+  <message name="VERIFICAQUITACAOSOAPOUT">
+    <part name="parameters" element="s0:VERIFICAQUITACAORESPONSE"/>
+  </message>
+  <portType name="WSPORTALCLIENTESOAP">
+    <operation name="ALTERASENHA">
+      <documentation>Altera a senha.</documentation>
+      <input message="s0:ALTERASENHASOAPIN"/>
+      <output message="s0:ALTERASENHASOAPOUT"/>
+    </operation>
+    <operation name="BUSCACEP">
+      <documentation>Pesquisa Cep e retorna endereço.</documentation>
+      <input message="s0:BUSCACEPSOAPIN"/>
+      <output message="s0:BUSCACEPSOAPOUT"/>
+    </operation>
+    <operation name="BUSCACHAVEBA1">
+      <documentation>Lista as vidas vinculadas a determinada familia.</documentation>
+      <input message="s0:BUSCACHAVEBA1SOAPIN"/>
+      <output message="s0:BUSCACHAVEBA1SOAPOUT"/>
+    </operation>
+    <operation name="BUSCACHAVEBA3">
+      <documentation>Lista as familias vinculadas a determinado CPF.</documentation>
+      <input message="s0:BUSCACHAVEBA3SOAPIN"/>
+      <output message="s0:BUSCACHAVEBA3SOAPOUT"/>
+    </operation>
+    <operation name="BUSCADADOS">
+      <documentation>CONSULTA base de dados e retorna informações conforme CPF informado.</documentation>
+      <input message="s0:BUSCADADOSSOAPIN"/>
+      <output message="s0:BUSCADADOSSOAPOUT"/>
+    </operation>
+    <operation name="CARTAQUITACAO">
+      <documentation>Lista Dados da Carta de Quitação.</documentation>
+      <input message="s0:CARTAQUITACAOSOAPIN"/>
+      <output message="s0:CARTAQUITACAOSOAPOUT"/>
+    </operation>
+    <operation name="COMPCOBRANCA">
+      <documentation>Lista Dados da Composicao do Boleto.</documentation>
+      <input message="s0:COMPCOBRANCASOAPIN"/>
+      <output message="s0:COMPCOBRANCASOAPOUT"/>
+    </operation>
+    <operation name="COMPCOOPARTICIPACAO">
+      <documentation>Lista Composicao de Cooparticipacao.</documentation>
+      <input message="s0:COMPCOOPARTICIPACAOSOAPIN"/>
+      <output message="s0:COMPCOOPARTICIPACAOSOAPOUT"/>
+    </operation>
+    <operation name="CRIPTOGRAFIA">
+      <documentation>Metodo para chamar a função para Criptografar/Decriptografar.</documentation>
+      <input message="s0:CRIPTOGRAFIASOAPIN"/>
+      <output message="s0:CRIPTOGRAFIASOAPOUT"/>
+    </operation>
+    <operation name="CRIPTOWEB">
+      <documentation>Metodo para chamar a função para Criptografar/Decriptografar.</documentation>
+      <input message="s0:CRIPTOWEBSOAPIN"/>
+      <output message="s0:CRIPTOWEBSOAPOUT"/>
+    </operation>
+    <operation name="DADOSBOLETO">
+      <documentation>Lista informações a serem impressas no Boleto.</documentation>
+      <input message="s0:DADOSBOLETOSOAPIN"/>
+      <output message="s0:DADOSBOLETOSOAPOUT"/>
+    </operation>
+    <operation name="DADOSIR">
+      <documentation>Lista dados para composição de Demonstrativo para declaração de IR.</documentation>
+      <input message="s0:DADOSIRSOAPIN"/>
+      <output message="s0:DADOSIRSOAPOUT"/>
+    </operation>
+    <operation name="DECLARACAO_IRRPF">
+      <documentation>Retorna dados para confecção da declaração de IRRPF</documentation>
+      <input message="s0:DECLARACAO_IRRPFSOAPIN"/>
+      <output message="s0:DECLARACAO_IRRPFSOAPOUT"/>
+    </operation>
+    <operation name="DECLARAPERMAN">
+      <documentation>Gera o HTML contendo a declaracao de permanencia</documentation>
+      <input message="s0:DECLARAPERMANSOAPIN"/>
+      <output message="s0:DECLARAPERMANSOAPOUT"/>
+    </operation>
+    <operation name="ESQUECEUSENHA">
+      <documentation>Envia a senha para o e-mail cadastrado.</documentation>
+      <input message="s0:ESQUECEUSENHASOAPIN"/>
+      <output message="s0:ESQUECEUSENHASOAPOUT"/>
+    </operation>
+    <operation name="GRAVAATENDIMENTO">
+      <documentation>Grava Atendimento Telemarketing.</documentation>
+      <input message="s0:GRAVAATENDIMENTOSOAPIN"/>
+      <output message="s0:GRAVAATENDIMENTOSOAPOUT"/>
+    </operation>
+    <operation name="GRAVADADOSCLIENTE">
+      <documentation>Grava dados do Cliente</documentation>
+      <input message="s0:GRAVADADOSCLIENTESOAPIN"/>
+      <output message="s0:GRAVADADOSCLIENTESOAPOUT"/>
+    </operation>
+    <operation name="GRAVADADOSCOBRANCA">
+      <documentation>Grava dados de Cobrança</documentation>
+      <input message="s0:GRAVADADOSCOBRANCASOAPIN"/>
+      <output message="s0:GRAVADADOSCOBRANCASOAPOUT"/>
+    </operation>
+    <operation name="GRAVADADOSVIDA">
+      <documentation>Grava dados da Vida.</documentation>
+      <input message="s0:GRAVADADOSVIDASOAPIN"/>
+      <output message="s0:GRAVADADOSVIDASOAPOUT"/>
+    </operation>
+    <operation name="LIBERAPRIMEIROACESSO">
+      <documentation>Libera o cadastro do usuário para acessar o Portal.</documentation>
+      <input message="s0:LIBERAPRIMEIROACESSOSOAPIN"/>
+      <output message="s0:LIBERAPRIMEIROACESSOSOAPOUT"/>
+    </operation>
+    <operation name="LISTAACOES">
+      <documentation>Lista de Acoes vinculadas a determinada ocorrencia.</documentation>
+      <input message="s0:LISTAACOESSOAPIN"/>
+      <output message="s0:LISTAACOESSOAPOUT"/>
+    </operation>
+    <operation name="LISTAASSUNTOS">
+      <documentation>Lista de Assuntos do Telemarketing.</documentation>
+      <input message="s0:LISTAASSUNTOSSOAPIN"/>
+      <output message="s0:LISTAASSUNTOSSOAPOUT"/>
+    </operation>
+    <operation name="LISTAATENDIMENTO">
+      <documentation>Lista de Atendimento Telemarketing.</documentation>
+      <input message="s0:LISTAATENDIMENTOSOAPIN"/>
+      <output message="s0:LISTAATENDIMENTOSOAPOUT"/>
+    </operation>
+    <operation name="LISTABANCO">
+      <documentation>Lista cadastro de bancos.</documentation>
+      <input message="s0:LISTABANCOSOAPIN"/>
+      <output message="s0:LISTABANCOSOAPOUT"/>
+    </operation>
+    <operation name="LISTADADOSCLIENTE">
+      <documentation>Lista dados do Cliente</documentation>
+      <input message="s0:LISTADADOSCLIENTESOAPIN"/>
+      <output message="s0:LISTADADOSCLIENTESOAPOUT"/>
+    </operation>
+    <operation name="LISTADADOSCOBRANCA">
+      <documentation>Lista dados de Cobrança.</documentation>
+      <input message="s0:LISTADADOSCOBRANCASOAPIN"/>
+      <output message="s0:LISTADADOSCOBRANCASOAPOUT"/>
+    </operation>
+    <operation name="LISTADADOSCONTATO">
+      <documentation>Lista dados do Contato.</documentation>
+      <input message="s0:LISTADADOSCONTATOSOAPIN"/>
+      <output message="s0:LISTADADOSCONTATOSOAPOUT"/>
+    </operation>
+    <operation name="LISTADADOSVIDA">
+      <documentation>Lista dados da Vida.</documentation>
+      <input message="s0:LISTADADOSVIDASOAPIN"/>
+      <output message="s0:LISTADADOSVIDASOAPOUT"/>
+    </operation>
+    <operation name="LISTAESTADOCIVIL">
+      <documentation>Lista cadastro de estado civil.</documentation>
+      <input message="s0:LISTAESTADOCIVILSOAPIN"/>
+      <output message="s0:LISTAESTADOCIVILSOAPOUT"/>
+    </operation>
+    <operation name="LISTAFORMAPAGTO">
+      <documentation>Lista cadastro de formas de pagamento.</documentation>
+      <input message="s0:LISTAFORMAPAGTOSOAPIN"/>
+      <output message="s0:LISTAFORMAPAGTOSOAPOUT"/>
+    </operation>
+    <operation name="LISTAGRAUPARENTESCO">
+      <documentation>Lista cadastro de Grau de Parentesco.</documentation>
+      <input message="s0:LISTAGRAUPARENTESCOSOAPIN"/>
+      <output message="s0:LISTAGRAUPARENTESCOSOAPOUT"/>
+    </operation>
+    <operation name="LISTAITEMATENDIMENTO">
+      <documentation>Lista Itens de determinado atendimento Telemarketing.</documentation>
+      <input message="s0:LISTAITEMATENDIMENTOSOAPIN"/>
+      <output message="s0:LISTAITEMATENDIMENTOSOAPOUT"/>
+    </operation>
+    <operation name="LISTAMATRICULAS">
+      <documentation>Retorna lista de matrículas vinculadas a um CPF</documentation>
+      <input message="s0:LISTAMATRICULASSOAPIN"/>
+      <output message="s0:LISTAMATRICULASSOAPOUT"/>
+    </operation>
+    <operation name="LISTAOCORRENCIAS">
+      <documentation>Lista de Ocorrencias vinculadas a determinado assunto.</documentation>
+      <input message="s0:LISTAOCORRENCIASSOAPIN"/>
+      <output message="s0:LISTAOCORRENCIASSOAPOUT"/>
+    </operation>
+    <operation name="LISTAOCUPACAO">
+      <documentation>Lista cadastro de ocupações.</documentation>
+      <input message="s0:LISTAOCUPACAOSOAPIN"/>
+      <output message="s0:LISTAOCUPACAOSOAPOUT"/>
+    </operation>
+    <operation name="LISTATIPOUSUARIO">
+      <documentation>Lista cadastro de Tipo de Usuario.</documentation>
+      <input message="s0:LISTATIPOUSUARIOSOAPIN"/>
+      <output message="s0:LISTATIPOUSUARIOSOAPOUT"/>
+    </operation>
+    <operation name="LISTAUF">
+      <documentation>Lista cadastro de estados.</documentation>
+      <input message="s0:LISTAUFSOAPIN"/>
+      <output message="s0:LISTAUFSOAPOUT"/>
+    </operation>
+    <operation name="LOGACESSOPORTAL">
+      <documentation>Registro de Log de acesso ao Portal.</documentation>
+      <input message="s0:LOGACESSOPORTALSOAPIN"/>
+      <output message="s0:LOGACESSOPORTALSOAPOUT"/>
+    </operation>
+    <operation name="LOGINAPP">
+      <documentation>Método de login especifico para o app mobile</documentation>
+      <input message="s0:LOGINAPPSOAPIN"/>
+      <output message="s0:LOGINAPPSOAPOUT"/>
+    </operation>
+    <operation name="MOVIMENTABENEF">
+      <documentation>Efetua o cancelamento do beneficiário ou família</documentation>
+      <input message="s0:MOVIMENTABENEFSOAPIN"/>
+      <output message="s0:MOVIMENTABENEFSOAPOUT"/>
+    </operation>
+    <operation name="PRIMEIROACESSO">
+      <documentation>Efetua o cadastro do usuário do portal no ERP.</documentation>
+      <input message="s0:PRIMEIROACESSOSOAPIN"/>
+      <output message="s0:PRIMEIROACESSOSOAPOUT"/>
+    </operation>
+    <operation name="SMSBOLETO">
+      <documentation>Envia Boleto por SMS.</documentation>
+      <input message="s0:SMSBOLETOSOAPIN"/>
+      <output message="s0:SMSBOLETOSOAPOUT"/>
+    </operation>
+    <operation name="TITULOSRECEBER">
+      <documentation>Lista Titulos a Receber do Cliente.</documentation>
+      <input message="s0:TITULOSRECEBERSOAPIN"/>
+      <output message="s0:TITULOSRECEBERSOAPOUT"/>
+    </operation>
+    <operation name="VALIDAACESSONAOLOGADO">
+      <documentation>Valida acesso pela area não logada.</documentation>
+      <input message="s0:VALIDAACESSONAOLOGADOSOAPIN"/>
+      <output message="s0:VALIDAACESSONAOLOGADOSOAPOUT"/>
+    </operation>
+    <operation name="VALIDACONTA">
+      <documentation>Valida dados da conta para débito automático.</documentation>
+      <input message="s0:VALIDACONTASOAPIN"/>
+      <output message="s0:VALIDACONTASOAPOUT"/>
+    </operation>
+    <operation name="VALIDALOGIN">
+      <documentation>Valida o login do usuário no Portal.</documentation>
+      <input message="s0:VALIDALOGINSOAPIN"/>
+      <output message="s0:VALIDALOGINSOAPOUT"/>
+    </operation>
+    <operation name="VERIFICAQUITACAO">
+      <documentation>Verifica existencia de carta de quitação.</documentation>
+      <input message="s0:VERIFICAQUITACAOSOAPIN"/>
+      <output message="s0:VERIFICAQUITACAOSOAPOUT"/>
+    </operation>
+  </portType>
+  <binding name="WSPORTALCLIENTESOAP" type="s0:WSPORTALCLIENTESOAP">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+    <operation name="ALTERASENHA">
+      <soap:operation soapAction="http://www.aliancaadm.com.br/ALTERASENHA" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="BUSCACEP">
+      <soap:operation soapAction="http://www.aliancaadm.com.br/BUSCACEP" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="BUSCACHAVEBA1">
+      <soap:operation soapAction="http://www.aliancaadm.com.br/BUSCACHAVEBA1" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="BUSCACHAVEBA3">
+      <soap:operation soapAction="http://www.aliancaadm.com.br/BUSCACHAVEBA3" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="BUSCADADOS">
+      <soap:operation soapAction="http://www.aliancaadm.com.br/BUSCADADOS" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="CARTAQUITACAO">
+      <soap:operation soapAction="http://www.aliancaadm.com.br/CARTAQUITACAO" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="COMPCOBRANCA">
+      <soap:operation soapAction="http://www.aliancaadm.com.br/COMPCOBRANCA" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="COMPCOOPARTICIPACAO">
+      <soap:operation soapAction="http://www.aliancaadm.com.br/COMPCOOPARTICIPACAO" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="CRIPTOGRAFIA">
+      <soap:operation soapAction="http://www.aliancaadm.com.br/CRIPTOGRAFIA" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="CRIPTOWEB">
+      <soap:operation soapAction="http://www.aliancaadm.com.br/CRIPTOWEB" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="DADOSBOLETO">
+      <soap:operation soapAction="http://www.aliancaadm.com.br/DADOSBOLETO" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="DADOSIR">
+      <soap:operation soapAction="http://www.aliancaadm.com.br/DADOSIR" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="DECLARACAO_IRRPF">
+      <soap:operation soapAction="http://www.aliancaadm.com.br/DECLARACAO_IRRPF" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="DECLARAPERMAN">
+      <soap:operation soapAction="http://www.aliancaadm.com.br/DECLARAPERMAN" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="ESQUECEUSENHA">
+      <soap:operation soapAction="http://www.aliancaadm.com.br/ESQUECEUSENHA" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="GRAVAATENDIMENTO">
+      <soap:operation soapAction="http://www.aliancaadm.com.br/GRAVAATENDIMENTO" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="GRAVADADOSCLIENTE">
+      <soap:operation soapAction="http://www.aliancaadm.com.br/GRAVADADOSCLIENTE" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="GRAVADADOSCOBRANCA">
+      <soap:operation soapAction="http://www.aliancaadm.com.br/GRAVADADOSCOBRANCA" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="GRAVADADOSVIDA">
+      <soap:operation soapAction="http://www.aliancaadm.com.br/GRAVADADOSVIDA" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="LIBERAPRIMEIROACESSO">
+      <soap:operation soapAction="http://www.aliancaadm.com.br/LIBERAPRIMEIROACESSO" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="LISTAACOES">
+      <soap:operation soapAction="http://www.aliancaadm.com.br/LISTAACOES" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="LISTAASSUNTOS">
+      <soap:operation soapAction="http://www.aliancaadm.com.br/LISTAASSUNTOS" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="LISTAATENDIMENTO">
+      <soap:operation soapAction="http://www.aliancaadm.com.br/LISTAATENDIMENTO" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="LISTABANCO">
+      <soap:operation soapAction="http://www.aliancaadm.com.br/LISTABANCO" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="LISTADADOSCLIENTE">
+      <soap:operation soapAction="http://www.aliancaadm.com.br/LISTADADOSCLIENTE" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="LISTADADOSCOBRANCA">
+      <soap:operation soapAction="http://www.aliancaadm.com.br/LISTADADOSCOBRANCA" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="LISTADADOSCONTATO">
+      <soap:operation soapAction="http://www.aliancaadm.com.br/LISTADADOSCONTATO" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="LISTADADOSVIDA">
+      <soap:operation soapAction="http://www.aliancaadm.com.br/LISTADADOSVIDA" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="LISTAESTADOCIVIL">
+      <soap:operation soapAction="http://www.aliancaadm.com.br/LISTAESTADOCIVIL" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="LISTAFORMAPAGTO">
+      <soap:operation soapAction="http://www.aliancaadm.com.br/LISTAFORMAPAGTO" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="LISTAGRAUPARENTESCO">
+      <soap:operation soapAction="http://www.aliancaadm.com.br/LISTAGRAUPARENTESCO" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="LISTAITEMATENDIMENTO">
+      <soap:operation soapAction="http://www.aliancaadm.com.br/LISTAITEMATENDIMENTO" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="LISTAMATRICULAS">
+      <soap:operation soapAction="http://www.aliancaadm.com.br/LISTAMATRICULAS" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="LISTAOCORRENCIAS">
+      <soap:operation soapAction="http://www.aliancaadm.com.br/LISTAOCORRENCIAS" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="LISTAOCUPACAO">
+      <soap:operation soapAction="http://www.aliancaadm.com.br/LISTAOCUPACAO" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="LISTATIPOUSUARIO">
+      <soap:operation soapAction="http://www.aliancaadm.com.br/LISTATIPOUSUARIO" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="LISTAUF">
+      <soap:operation soapAction="http://www.aliancaadm.com.br/LISTAUF" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="LOGACESSOPORTAL">
+      <soap:operation soapAction="http://www.aliancaadm.com.br/LOGACESSOPORTAL" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="LOGINAPP">
+      <soap:operation soapAction="http://www.aliancaadm.com.br/LOGINAPP" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="MOVIMENTABENEF">
+      <soap:operation soapAction="http://www.aliancaadm.com.br/MOVIMENTABENEF" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="PRIMEIROACESSO">
+      <soap:operation soapAction="http://www.aliancaadm.com.br/PRIMEIROACESSO" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="SMSBOLETO">
+      <soap:operation soapAction="http://www.aliancaadm.com.br/SMSBOLETO" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="TITULOSRECEBER">
+      <soap:operation soapAction="http://www.aliancaadm.com.br/TITULOSRECEBER" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="VALIDAACESSONAOLOGADO">
+      <soap:operation soapAction="http://www.aliancaadm.com.br/VALIDAACESSONAOLOGADO" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="VALIDACONTA">
+      <soap:operation soapAction="http://www.aliancaadm.com.br/VALIDACONTA" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="VALIDALOGIN">
+      <soap:operation soapAction="http://www.aliancaadm.com.br/VALIDALOGIN" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="VERIFICAQUITACAO">
+      <soap:operation soapAction="http://www.aliancaadm.com.br/VERIFICAQUITACAO" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="WSPORTALCLIENTE">
+    <documentation>Portal do Cliente do Grupo Aliança.</documentation>
+    <port name="WSPORTALCLIENTESOAP" binding="s0:WSPORTALCLIENTESOAP">
+      <soap:address location="http://187.94.63.116:10801/ws/WSPORTALCLIENTE.apw"/>
+    </port>
+  </service>
+</definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://187.94.63.116:10801/ws/WSPORTALCLIENTE.apw</con:endpoint></con:endpoints><con:operation id="26291aff-168d-4af1-b730-7c0f480c88ba" isOneWay="false" action="http://www.aliancaadm.com.br/ALTERASENHA" name="ALTERASENHA" bindingOperationName="ALTERASENHA" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="a25c3a28-0d08-4d1d-88b2-0f5b59a7157b" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://187.94.63.116:10801/ws/WSPORTALCLIENTE.apw</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ali="http://www.aliancaadm.com.br">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ali:ALTERASENHA>
+         <ali:PARAMALTERASENHA>
+            <!--Optional:-->
+            <ali:CODLOGIN>?</ali:CODLOGIN>
+            <!--Optional:-->
+            <ali:ISMOBILE>?</ali:ISMOBILE>
+            <!--Optional:-->
+            <ali:SENHAATUAL>?</ali:SENHAATUAL>
+            <!--Optional:-->
+            <ali:SENHANOVA>?</ali:SENHANOVA>
+            <!--Optional:-->
+            <ali:VALIDASENHA>?</ali:VALIDASENHA>
+         </ali:PARAMALTERASENHA>
+      </ali:ALTERASENHA>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.aliancaadm.com.br/ALTERASENHA"/></con:call></con:operation><con:operation id="07893150-cdd4-49c8-9ae6-df5f3a7d23c6" isOneWay="false" action="http://www.aliancaadm.com.br/BUSCACEP" name="BUSCACEP" bindingOperationName="BUSCACEP" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="cc048d9c-a94b-4bf7-8487-65a8116fa0b9" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://187.94.63.116:10801/ws/WSPORTALCLIENTE.apw</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ali="http://www.aliancaadm.com.br">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ali:BUSCACEP>
+         <ali:CEP>
+            <ali:CEP>?</ali:CEP>
+         </ali:CEP>
+      </ali:BUSCACEP>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.aliancaadm.com.br/BUSCACEP"/></con:call></con:operation><con:operation id="d896bcba-5551-4e5d-b939-ece452e8c505" isOneWay="false" action="http://www.aliancaadm.com.br/BUSCACHAVEBA1" name="BUSCACHAVEBA1" bindingOperationName="BUSCACHAVEBA1" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="2a6363bb-9bdc-4c89-a5ea-7be3ac6e7bd8" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://187.94.63.116:10801/ws/WSPORTALCLIENTE.apw</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ali="http://www.aliancaadm.com.br">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ali:BUSCACHAVEBA1>
+         <ali:CHAVEBA3>
+            <ali:CHAVEBA3>?</ali:CHAVEBA3>
+         </ali:CHAVEBA3>
+      </ali:BUSCACHAVEBA1>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.aliancaadm.com.br/BUSCACHAVEBA1"/></con:call></con:operation><con:operation id="0a2173bf-d13e-4c4c-8f70-2d60c18077f9" isOneWay="false" action="http://www.aliancaadm.com.br/BUSCACHAVEBA3" name="BUSCACHAVEBA3" bindingOperationName="BUSCACHAVEBA3" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="95cb65e6-b7a0-4576-86c7-3a6915245e40" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://187.94.63.116:10801/ws/WSPORTALCLIENTE.apw</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ali="http://www.aliancaadm.com.br">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ali:BUSCACHAVEBA3>
+         <ali:CHAVECPF>
+            <ali:CPF>?</ali:CPF>
+         </ali:CHAVECPF>
+      </ali:BUSCACHAVEBA3>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.aliancaadm.com.br/BUSCACHAVEBA3"/></con:call></con:operation><con:operation id="62434cdd-05a5-41be-a486-209b5de01364" isOneWay="false" action="http://www.aliancaadm.com.br/BUSCADADOS" name="BUSCADADOS" bindingOperationName="BUSCADADOS" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="904cb60e-f50c-4ba2-957b-0365411618e5" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://187.94.63.116:10801/ws/WSPORTALCLIENTE.apw</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ali="http://www.aliancaadm.com.br">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ali:BUSCADADOS>
+         <ali:PARAMBUSCADADOS>
+            <ali:CPF>?</ali:CPF>
+            <ali:NASC>?</ali:NASC>
+            <ali:NOME>?</ali:NOME>
+            <!--Optional:-->
+            <ali:PROTOCOLO>?</ali:PROTOCOLO>
+            <!--Optional:-->
+            <ali:SEXO>?</ali:SEXO>
+         </ali:PARAMBUSCADADOS>
+      </ali:BUSCADADOS>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.aliancaadm.com.br/BUSCADADOS"/></con:call></con:operation><con:operation id="05bb3fe5-9388-4b6d-a80d-1978aa4c3f35" isOneWay="false" action="http://www.aliancaadm.com.br/CARTAQUITACAO" name="CARTAQUITACAO" bindingOperationName="CARTAQUITACAO" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="dd503819-64dd-4312-b201-29631c6838a2" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://187.94.63.116:10801/ws/WSPORTALCLIENTE.apw</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ali="http://www.aliancaadm.com.br">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ali:CARTAQUITACAO>
+         <ali:PARAMCARTAQUITACAO>
+            <ali:ANOBASE>?</ali:ANOBASE>
+            <ali:CPF>?</ali:CPF>
+         </ali:PARAMCARTAQUITACAO>
+      </ali:CARTAQUITACAO>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.aliancaadm.com.br/CARTAQUITACAO"/></con:call></con:operation><con:operation id="962461bb-e31e-4b33-aec9-8c1f9399cf0d" isOneWay="false" action="http://www.aliancaadm.com.br/COMPCOBRANCA" name="COMPCOBRANCA" bindingOperationName="COMPCOBRANCA" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="42895de5-0a70-4397-88ac-ffc9aad95664" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://187.94.63.116:10801/ws/WSPORTALCLIENTE.apw</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ali="http://www.aliancaadm.com.br">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ali:COMPCOBRANCA>
+         <ali:PARAMCOMPCOBRANCA>
+            <ali:CHAVESE1>?</ali:CHAVESE1>
+         </ali:PARAMCOMPCOBRANCA>
+      </ali:COMPCOBRANCA>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.aliancaadm.com.br/COMPCOBRANCA"/></con:call></con:operation><con:operation id="e95ed560-e51a-4d07-b8ca-57532bdaff78" isOneWay="false" action="http://www.aliancaadm.com.br/COMPCOOPARTICIPACAO" name="COMPCOOPARTICIPACAO" bindingOperationName="COMPCOOPARTICIPACAO" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="67dba907-7a28-49c0-9bad-6ea848150e22" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://187.94.63.116:10801/ws/WSPORTALCLIENTE.apw</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ali="http://www.aliancaadm.com.br">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ali:COMPCOOPARTICIPACAO>
+         <ali:PARAMCOMPCOOPARTICIPACAO>
+            <ali:CHAVESE1>?</ali:CHAVESE1>
+         </ali:PARAMCOMPCOOPARTICIPACAO>
+      </ali:COMPCOOPARTICIPACAO>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.aliancaadm.com.br/COMPCOOPARTICIPACAO"/></con:call></con:operation><con:operation id="2e3bd6f4-b5e5-4c6d-a8ea-34278203a10a" isOneWay="false" action="http://www.aliancaadm.com.br/CRIPTOGRAFIA" name="CRIPTOGRAFIA" bindingOperationName="CRIPTOGRAFIA" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="182a5e46-cbc5-49d0-b519-a37dff67b0d4" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://187.94.63.116:10801/ws/WSPORTALCLIENTE.apw</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ali="http://www.aliancaadm.com.br">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ali:CRIPTOGRAFIA>
+         <ali:CRIPTDECRIPT>
+            <ali:TIPOCRIPT>?</ali:TIPOCRIPT>
+            <ali:VARCRIPT>?</ali:VARCRIPT>
+         </ali:CRIPTDECRIPT>
+      </ali:CRIPTOGRAFIA>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.aliancaadm.com.br/CRIPTOGRAFIA"/></con:call></con:operation><con:operation id="a96ea7c7-d9ad-48f7-ba9b-915e48885a7b" isOneWay="false" action="http://www.aliancaadm.com.br/CRIPTOWEB" name="CRIPTOWEB" bindingOperationName="CRIPTOWEB" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="6f41777b-f1fe-4b95-b9f2-9a03d7343143" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://187.94.63.116:10801/ws/WSPORTALCLIENTE.apw</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ali="http://www.aliancaadm.com.br">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ali:CRIPTOWEB>
+         <ali:CRIPTDECRIPT>
+            <ali:TIPOCRIPT>?</ali:TIPOCRIPT>
+            <ali:VARCRIPT>?</ali:VARCRIPT>
+         </ali:CRIPTDECRIPT>
+      </ali:CRIPTOWEB>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.aliancaadm.com.br/CRIPTOWEB"/></con:call></con:operation><con:operation id="e5bf8eac-f021-4062-98f0-02fb478c3f68" isOneWay="false" action="http://www.aliancaadm.com.br/DADOSBOLETO" name="DADOSBOLETO" bindingOperationName="DADOSBOLETO" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="73625d62-32ee-437f-970c-8098c67ee77b" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://187.94.63.116:10801/ws/WSPORTALCLIENTE.apw</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ali="http://www.aliancaadm.com.br">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ali:DADOSBOLETO>
+         <ali:PARAMBOLETO>
+            <ali:CHAVESE1>?</ali:CHAVESE1>
+            <ali:CRIPTOGRAFADO>?</ali:CRIPTOGRAFADO>
+            <!--Optional:-->
+            <ali:RECNO_SE1>?</ali:RECNO_SE1>
+         </ali:PARAMBOLETO>
+      </ali:DADOSBOLETO>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.aliancaadm.com.br/DADOSBOLETO"/></con:call></con:operation><con:operation id="0d247673-4aaf-4cea-ab94-079bcd22aece" isOneWay="false" action="http://www.aliancaadm.com.br/DADOSIR" name="DADOSIR" bindingOperationName="DADOSIR" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="ec2766df-7917-4d0a-972c-4565650f3629" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://187.94.63.116:10801/ws/WSPORTALCLIENTE.apw</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ali="http://www.aliancaadm.com.br">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ali:DADOSIR>
+         <ali:PARAMDADOSIR>
+            <ali:ANOPAG>?</ali:ANOPAG>
+            <!--Optional:-->
+            <ali:BASE64>?</ali:BASE64>
+            <ali:CPF>?</ali:CPF>
+            <!--Optional:-->
+            <ali:LIMG>?</ali:LIMG>
+         </ali:PARAMDADOSIR>
+      </ali:DADOSIR>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.aliancaadm.com.br/DADOSIR"/></con:call></con:operation><con:operation id="8943413c-5474-43fa-b7ff-8ec4586619b3" isOneWay="false" action="http://www.aliancaadm.com.br/DECLARACAO_IRRPF" name="DECLARACAO_IRRPF" bindingOperationName="DECLARACAO_IRRPF" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="0c988f41-71d0-40d2-a556-a418772b535d" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://187.94.63.116:10801/ws/WSPORTALCLIENTE.apw</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ali="http://www.aliancaadm.com.br">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ali:DECLARACAO_IRRPF>
+         <ali:PARAMDADOSIR>
+            <ali:ANOPAG>?</ali:ANOPAG>
+            <!--Optional:-->
+            <ali:BASE64>?</ali:BASE64>
+            <ali:CPF>?</ali:CPF>
+            <!--Optional:-->
+            <ali:LIMG>?</ali:LIMG>
+         </ali:PARAMDADOSIR>
+      </ali:DECLARACAO_IRRPF>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.aliancaadm.com.br/DECLARACAO_IRRPF"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="f2375206-e777-4dfe-8f9e-a0d74e92049f" isOneWay="false" action="http://www.aliancaadm.com.br/DECLARAPERMAN" name="DECLARAPERMAN" bindingOperationName="DECLARAPERMAN" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="db0bc828-e968-43a2-a1a7-5f5f07737a3d" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://187.94.63.116:10801/ws/WSPORTALCLIENTE.apw</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ali="http://www.aliancaadm.com.br">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ali:DECLARAPERMAN>
+         <ali:PARAMDECLARAPERMAN>
+            <ali:CHAVEBA3>?</ali:CHAVEBA3>
+         </ali:PARAMDECLARAPERMAN>
+      </ali:DECLARAPERMAN>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.aliancaadm.com.br/DECLARAPERMAN"/></con:call></con:operation><con:operation id="8a32cf6b-6930-4d93-a314-0638390a77c9" isOneWay="false" action="http://www.aliancaadm.com.br/ESQUECEUSENHA" name="ESQUECEUSENHA" bindingOperationName="ESQUECEUSENHA" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="dcc51b14-3c22-4bd4-83b6-b9c9f2105f90" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://187.94.63.116:10801/ws/WSPORTALCLIENTE.apw</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ali="http://www.aliancaadm.com.br">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ali:ESQUECEUSENHA>
+         <ali:LOGIN>
+            <!--Optional:-->
+            <ali:ATEND>?</ali:ATEND>
+            <!--Optional:-->
+            <ali:CPF>?</ali:CPF>
+            <!--Optional:-->
+            <ali:DTNASC>?</ali:DTNASC>
+            <!--Optional:-->
+            <ali:EMAIL>?</ali:EMAIL>
+            <!--Optional:-->
+            <ali:ISMOBILE>?</ali:ISMOBILE>
+            <!--Optional:-->
+            <ali:LOGIN>?</ali:LOGIN>
+            <!--Optional:-->
+            <ali:ORIGEM>?</ali:ORIGEM>
+            <!--Optional:-->
+            <ali:SENHA>?</ali:SENHA>
+            <!--Optional:-->
+            <ali:TPENV>?</ali:TPENV>
+         </ali:LOGIN>
+      </ali:ESQUECEUSENHA>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.aliancaadm.com.br/ESQUECEUSENHA"/></con:call></con:operation><con:operation id="3c63a3ad-4d9c-4a37-a833-655da399d816" isOneWay="false" action="http://www.aliancaadm.com.br/GRAVAATENDIMENTO" name="GRAVAATENDIMENTO" bindingOperationName="GRAVAATENDIMENTO" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="94339741-d9fb-406d-ae0d-a8d0a97b779c" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://187.94.63.116:10801/ws/WSPORTALCLIENTE.apw</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ali="http://www.aliancaadm.com.br">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ali:GRAVAATENDIMENTO>
+         <ali:DADOSATENDIMENTO>
+            <!--Optional:-->
+            <ali:ACAO>?</ali:ACAO>
+            <ali:AREALOGADA>?</ali:AREALOGADA>
+            <!--Optional:-->
+            <ali:ASSUNTO>?</ali:ASSUNTO>
+            <!--Optional:-->
+            <ali:CEP>?</ali:CEP>
+            <!--Optional:-->
+            <ali:CHAMADOOUV>?</ali:CHAMADOOUV>
+            <!--Optional:-->
+            <ali:CHAVEBA3>?</ali:CHAVEBA3>
+            <!--Optional:-->
+            <ali:CIDADE>?</ali:CIDADE>
+            <!--Optional:-->
+            <ali:COMUNICACAO>?</ali:COMUNICACAO>
+            <!--Optional:-->
+            <ali:CPF>?</ali:CPF>
+            <!--Optional:-->
+            <ali:DATANASTO>?</ali:DATANASTO>
+            <!--Optional:-->
+            <ali:DDD>?</ali:DDD>
+            <!--Optional:-->
+            <ali:DDDCL>?</ali:DDDCL>
+            <!--Optional:-->
+            <ali:EMAIL>?</ali:EMAIL>
+            <!--Optional:-->
+            <ali:ENDERECO>?</ali:ENDERECO>
+            <!--Optional:-->
+            <ali:LIGACAO>?</ali:LIGACAO>
+            <!--Optional:-->
+            <ali:MATRICULA>?</ali:MATRICULA>
+            <!--Optional:-->
+            <ali:NOME>?</ali:NOME>
+            <!--Optional:-->
+            <ali:OBSERVACAO>?</ali:OBSERVACAO>
+            <!--Optional:-->
+            <ali:OCORRENCIA>?</ali:OCORRENCIA>
+            <!--Optional:-->
+            <ali:OPERACAO>?</ali:OPERACAO>
+            <!--Optional:-->
+            <ali:OUVIDORIA>?</ali:OUVIDORIA>
+            <!--Optional:-->
+            <ali:SEXO>?</ali:SEXO>
+            <!--Optional:-->
+            <ali:STATUSOCOR>?</ali:STATUSOCOR>
+            <!--Optional:-->
+            <ali:TEL_CEL>?</ali:TEL_CEL>
+            <!--Optional:-->
+            <ali:TELEFONE>?</ali:TELEFONE>
+            <!--Optional:-->
+            <ali:TIPREG>?</ali:TIPREG>
+            <!--Optional:-->
+            <ali:UF>?</ali:UF>
+         </ali:DADOSATENDIMENTO>
+      </ali:GRAVAATENDIMENTO>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.aliancaadm.com.br/GRAVAATENDIMENTO"/></con:call></con:operation><con:operation id="34a78012-d6dd-410f-8955-28d0dd33a9e4" isOneWay="false" action="http://www.aliancaadm.com.br/GRAVADADOSCLIENTE" name="GRAVADADOSCLIENTE" bindingOperationName="GRAVADADOSCLIENTE" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="f80eae7f-8a55-40d1-8241-ed72188d16ba" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://187.94.63.116:10801/ws/WSPORTALCLIENTE.apw</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ali="http://www.aliancaadm.com.br">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ali:GRAVADADOSCLIENTE>
+         <ali:DADOSCLIENTE>
+            <!--Optional:-->
+            <ali:BAIRRO>?</ali:BAIRRO>
+            <!--Optional:-->
+            <ali:CEP>?</ali:CEP>
+            <ali:CHAVEBA3>?</ali:CHAVEBA3>
+            <ali:CHAVESA1>?</ali:CHAVESA1>
+            <!--Optional:-->
+            <ali:CODIGOMUNICIPIO>?</ali:CODIGOMUNICIPIO>
+            <!--Optional:-->
+            <ali:COMPLEMENTO>?</ali:COMPLEMENTO>
+            <!--Optional:-->
+            <ali:DDDRESIDENCIAL>?</ali:DDDRESIDENCIAL>
+            <!--Optional:-->
+            <ali:EMAIL>?</ali:EMAIL>
+            <!--Optional:-->
+            <ali:ENDERECO>?</ali:ENDERECO>
+            <!--Optional:-->
+            <ali:ESTADO>?</ali:ESTADO>
+            <!--Optional:-->
+            <ali:MUNICIPIO>?</ali:MUNICIPIO>
+            <!--Optional:-->
+            <ali:NUMEROENDERECO>?</ali:NUMEROENDERECO>
+            <!--Optional:-->
+            <ali:TELEFONERESIDENCIAL>?</ali:TELEFONERESIDENCIAL>
+         </ali:DADOSCLIENTE>
+      </ali:GRAVADADOSCLIENTE>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.aliancaadm.com.br/GRAVADADOSCLIENTE"/></con:call></con:operation><con:operation id="67d0ddb8-120d-4446-ac5c-eb899ffe3831" isOneWay="false" action="http://www.aliancaadm.com.br/GRAVADADOSCOBRANCA" name="GRAVADADOSCOBRANCA" bindingOperationName="GRAVADADOSCOBRANCA" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="48533519-c108-4eda-ad86-2b2e1c2a664c" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://187.94.63.116:10801/ws/WSPORTALCLIENTE.apw</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ali="http://www.aliancaadm.com.br">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ali:GRAVADADOSCOBRANCA>
+         <ali:DADOSCOBRANCA>
+            <!--Optional:-->
+            <ali:AGENCIA>?</ali:AGENCIA>
+            <!--Optional:-->
+            <ali:BANCO>?</ali:BANCO>
+            <ali:CHAVEBA3>?</ali:CHAVEBA3>
+            <!--Optional:-->
+            <ali:CONTA>?</ali:CONTA>
+            <!--Optional:-->
+            <ali:DIGAGENCIA>?</ali:DIGAGENCIA>
+            <!--Optional:-->
+            <ali:DIGCONTA>?</ali:DIGCONTA>
+            <!--Optional:-->
+            <ali:FORMAPAGTO>?</ali:FORMAPAGTO>
+            <!--Optional:-->
+            <ali:OPERACAO>?</ali:OPERACAO>
+            <!--Optional:-->
+            <ali:TIPOCONTA>?</ali:TIPOCONTA>
+            <!--Optional:-->
+            <ali:VENCIMENTO>?</ali:VENCIMENTO>
+         </ali:DADOSCOBRANCA>
+      </ali:GRAVADADOSCOBRANCA>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.aliancaadm.com.br/GRAVADADOSCOBRANCA"/></con:call></con:operation><con:operation id="10f1aceb-ec09-43ee-a0e1-efde4e4dd81f" isOneWay="false" action="http://www.aliancaadm.com.br/GRAVADADOSVIDA" name="GRAVADADOSVIDA" bindingOperationName="GRAVADADOSVIDA" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="e075819d-89ee-4431-ac7f-618629eaa9e4" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://187.94.63.116:10801/ws/WSPORTALCLIENTE.apw</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ali="http://www.aliancaadm.com.br">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ali:GRAVADADOSVIDA>
+         <ali:DADOSVIDA>
+            <!--Optional:-->
+            <ali:AGENCIA>?</ali:AGENCIA>
+            <!--Optional:-->
+            <ali:BAIRRO>?</ali:BAIRRO>
+            <!--Optional:-->
+            <ali:BANCO>?</ali:BANCO>
+            <!--Optional:-->
+            <ali:CEP>?</ali:CEP>
+            <ali:CHAVEBA1>?</ali:CHAVEBA1>
+            <!--Optional:-->
+            <ali:CNS>?</ali:CNS>
+            <!--Optional:-->
+            <ali:CODIGOMUNICIPIO>?</ali:CODIGOMUNICIPIO>
+            <!--Optional:-->
+            <ali:COMPLEMENTO>?</ali:COMPLEMENTO>
+            <!--Optional:-->
+            <ali:CONTA_CORRENTE>?</ali:CONTA_CORRENTE>
+            <!--Optional:-->
+            <ali:DDDCELULAR>?</ali:DDDCELULAR>
+            <!--Optional:-->
+            <ali:DDDCOMERCIAL>?</ali:DDDCOMERCIAL>
+            <!--Optional:-->
+            <ali:DDDRESIDENCIAL>?</ali:DDDRESIDENCIAL>
+            <!--Optional:-->
+            <ali:DIGITO_AGENCIA>?</ali:DIGITO_AGENCIA>
+            <!--Optional:-->
+            <ali:DIGITO_CONTA>?</ali:DIGITO_CONTA>
+            <!--Optional:-->
+            <ali:EMAIL>?</ali:EMAIL>
+            <!--Optional:-->
+            <ali:ENDERECO>?</ali:ENDERECO>
+            <!--Optional:-->
+            <ali:ESTADO>?</ali:ESTADO>
+            <!--Optional:-->
+            <ali:ESTADOCIVIL>?</ali:ESTADOCIVIL>
+            <!--Optional:-->
+            <ali:FORMA_PAGEMENTO>?</ali:FORMA_PAGEMENTO>
+            <!--Optional:-->
+            <ali:MUNICIPIO>?</ali:MUNICIPIO>
+            <!--Optional:-->
+            <ali:NUMEROENDERECO>?</ali:NUMEROENDERECO>
+            <!--Optional:-->
+            <ali:OCUPACAO>?</ali:OCUPACAO>
+            <!--Optional:-->
+            <ali:OPERACAO>?</ali:OPERACAO>
+            <!--Optional:-->
+            <ali:PISPASEP>?</ali:PISPASEP>
+            <!--Optional:-->
+            <ali:RAMAL>?</ali:RAMAL>
+            <!--Optional:-->
+            <ali:TELEFONECELULAR>?</ali:TELEFONECELULAR>
+            <!--Optional:-->
+            <ali:TELEFONECOMERCIAL>?</ali:TELEFONECOMERCIAL>
+            <!--Optional:-->
+            <ali:TELEFONERESIDENCIAL>?</ali:TELEFONERESIDENCIAL>
+         </ali:DADOSVIDA>
+      </ali:GRAVADADOSVIDA>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.aliancaadm.com.br/GRAVADADOSVIDA"/></con:call></con:operation><con:operation id="a39299f5-829c-4d1f-9c7e-c01744ca7be8" isOneWay="false" action="http://www.aliancaadm.com.br/LIBERAPRIMEIROACESSO" name="LIBERAPRIMEIROACESSO" bindingOperationName="LIBERAPRIMEIROACESSO" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="6f8ca90e-bf0d-4088-8d38-6ff313c6ca08" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://187.94.63.116:10801/ws/WSPORTALCLIENTE.apw</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ali="http://www.aliancaadm.com.br">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ali:LIBERAPRIMEIROACESSO>
+         <ali:LIBERAACESSO>
+            <!--Optional:-->
+            <ali:CODLOGIN>?</ali:CODLOGIN>
+            <!--Optional:-->
+            <ali:CPF>?</ali:CPF>
+         </ali:LIBERAACESSO>
+      </ali:LIBERAPRIMEIROACESSO>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.aliancaadm.com.br/LIBERAPRIMEIROACESSO"/></con:call></con:operation><con:operation id="a64b49fc-7d88-41d4-89b0-221972a929a3" isOneWay="false" action="http://www.aliancaadm.com.br/LISTAACOES" name="LISTAACOES" bindingOperationName="LISTAACOES" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="37dc85b7-b2fc-46c6-90fa-26c3c16f3c6e" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://187.94.63.116:10801/ws/WSPORTALCLIENTE.apw</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ali="http://www.aliancaadm.com.br">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ali:LISTAACOES>
+         <ali:PARAMACAO>
+            <ali:OCORRENCIA>?</ali:OCORRENCIA>
+         </ali:PARAMACAO>
+      </ali:LISTAACOES>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.aliancaadm.com.br/LISTAACOES"/></con:call></con:operation><con:operation id="b8fa56f6-d8af-42f0-bf6c-63fde8f91cb1" isOneWay="false" action="http://www.aliancaadm.com.br/LISTAASSUNTOS" name="LISTAASSUNTOS" bindingOperationName="LISTAASSUNTOS" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="d9b32bfc-5a67-4cdd-9017-e0bbb8af88ea" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://187.94.63.116:10801/ws/WSPORTALCLIENTE.apw</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ali="http://www.aliancaadm.com.br">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ali:LISTAASSUNTOS/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.aliancaadm.com.br/LISTAASSUNTOS"/></con:call></con:operation><con:operation id="2bf424b7-a3b9-4685-b844-5572c5650343" isOneWay="false" action="http://www.aliancaadm.com.br/LISTAATENDIMENTO" name="LISTAATENDIMENTO" bindingOperationName="LISTAATENDIMENTO" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="e13ac0c9-694c-4668-8336-36be81dc0c4c" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://187.94.63.116:10801/ws/WSPORTALCLIENTE.apw</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ali="http://www.aliancaadm.com.br">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ali:LISTAATENDIMENTO>
+         <ali:BUSCAATENDIMENTO>
+            <ali:CPF>?</ali:CPF>
+            <ali:DATAATE>?</ali:DATAATE>
+            <!--Optional:-->
+            <ali:DATADE>?</ali:DATADE>
+         </ali:BUSCAATENDIMENTO>
+      </ali:LISTAATENDIMENTO>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.aliancaadm.com.br/LISTAATENDIMENTO"/></con:call></con:operation><con:operation id="cd64b698-6fa1-47a9-8d88-a1bbbc38832b" isOneWay="false" action="http://www.aliancaadm.com.br/LISTABANCO" name="LISTABANCO" bindingOperationName="LISTABANCO" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="bba918e7-ac22-456d-bb3a-d3e2338c6769" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://187.94.63.116:10801/ws/WSPORTALCLIENTE.apw</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ali="http://www.aliancaadm.com.br">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ali:LISTABANCO/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.aliancaadm.com.br/LISTABANCO"/></con:call></con:operation><con:operation id="2421cd05-f404-4b7e-839a-e767ad3c812c" isOneWay="false" action="http://www.aliancaadm.com.br/LISTADADOSCLIENTE" name="LISTADADOSCLIENTE" bindingOperationName="LISTADADOSCLIENTE" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="4240e5c0-35b7-4b54-8d59-ffff63ffe0f4" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://187.94.63.116:10801/ws/WSPORTALCLIENTE.apw</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ali="http://www.aliancaadm.com.br">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ali:LISTADADOSCLIENTE>
+         <ali:CHAVESA1>
+            <ali:CHAVESA1>?</ali:CHAVESA1>
+         </ali:CHAVESA1>
+      </ali:LISTADADOSCLIENTE>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.aliancaadm.com.br/LISTADADOSCLIENTE"/></con:call></con:operation><con:operation id="0e18302b-2156-44d8-8c95-6b19fd340d78" isOneWay="false" action="http://www.aliancaadm.com.br/LISTADADOSCOBRANCA" name="LISTADADOSCOBRANCA" bindingOperationName="LISTADADOSCOBRANCA" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="58cc1e21-40d6-4b42-b6ee-343667f44ac4" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://187.94.63.116:10801/ws/WSPORTALCLIENTE.apw</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ali="http://www.aliancaadm.com.br">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ali:LISTADADOSCOBRANCA>
+         <ali:CHAVEBA3>
+            <ali:CHAVEBA3>?</ali:CHAVEBA3>
+         </ali:CHAVEBA3>
+      </ali:LISTADADOSCOBRANCA>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.aliancaadm.com.br/LISTADADOSCOBRANCA"/></con:call></con:operation><con:operation id="758621ff-a5fc-49f1-b20a-d0820c527a46" isOneWay="false" action="http://www.aliancaadm.com.br/LISTADADOSCONTATO" name="LISTADADOSCONTATO" bindingOperationName="LISTADADOSCONTATO" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="510324ab-f88a-4211-8f5b-13bc04ac34ef" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://187.94.63.116:10801/ws/WSPORTALCLIENTE.apw</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ali="http://www.aliancaadm.com.br">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ali:LISTADADOSCONTATO>
+         <ali:PARAMDADOSCONTATO>
+            <ali:CPF>?</ali:CPF>
+         </ali:PARAMDADOSCONTATO>
+      </ali:LISTADADOSCONTATO>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.aliancaadm.com.br/LISTADADOSCONTATO"/></con:call></con:operation><con:operation id="593c708a-a869-4a9a-b9cc-38ab0524f0ca" isOneWay="false" action="http://www.aliancaadm.com.br/LISTADADOSVIDA" name="LISTADADOSVIDA" bindingOperationName="LISTADADOSVIDA" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="16d6df2b-f23b-4d1d-a74f-643d845c8499" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://187.94.63.116:10801/ws/WSPORTALCLIENTE.apw</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ali="http://www.aliancaadm.com.br">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ali:LISTADADOSVIDA>
+         <ali:CHAVEBA1>
+            <ali:CHAVEBA1>?</ali:CHAVEBA1>
+         </ali:CHAVEBA1>
+      </ali:LISTADADOSVIDA>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.aliancaadm.com.br/LISTADADOSVIDA"/></con:call></con:operation><con:operation id="9c902f31-de81-4f80-8ee0-58529486eb5e" isOneWay="false" action="http://www.aliancaadm.com.br/LISTAESTADOCIVIL" name="LISTAESTADOCIVIL" bindingOperationName="LISTAESTADOCIVIL" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="1de38cf8-a4b8-492e-b574-905942d430c5" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://187.94.63.116:10801/ws/WSPORTALCLIENTE.apw</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ali="http://www.aliancaadm.com.br">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ali:LISTAESTADOCIVIL/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.aliancaadm.com.br/LISTAESTADOCIVIL"/></con:call></con:operation><con:operation id="615ae20e-9a37-446b-aaf1-23d6c746aedd" isOneWay="false" action="http://www.aliancaadm.com.br/LISTAFORMAPAGTO" name="LISTAFORMAPAGTO" bindingOperationName="LISTAFORMAPAGTO" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="a7369ccf-e09a-4ca5-bd65-f61a4b5633fd" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://187.94.63.116:10801/ws/WSPORTALCLIENTE.apw</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ali="http://www.aliancaadm.com.br">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ali:LISTAFORMAPAGTO>
+         <ali:CHAVEBA3>
+            <ali:CHAVEBA3>?</ali:CHAVEBA3>
+         </ali:CHAVEBA3>
+      </ali:LISTAFORMAPAGTO>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.aliancaadm.com.br/LISTAFORMAPAGTO"/></con:call></con:operation><con:operation id="ebf03499-7fdc-4562-a06c-0a75915ac260" isOneWay="false" action="http://www.aliancaadm.com.br/LISTAGRAUPARENTESCO" name="LISTAGRAUPARENTESCO" bindingOperationName="LISTAGRAUPARENTESCO" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="ad86b879-c00d-4eaa-9994-1bd54279e970" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://187.94.63.116:10801/ws/WSPORTALCLIENTE.apw</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ali="http://www.aliancaadm.com.br">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ali:LISTAGRAUPARENTESCO/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.aliancaadm.com.br/LISTAGRAUPARENTESCO"/></con:call></con:operation><con:operation id="6dcc711c-d76a-48ad-a070-64a977d86607" isOneWay="false" action="http://www.aliancaadm.com.br/LISTAITEMATENDIMENTO" name="LISTAITEMATENDIMENTO" bindingOperationName="LISTAITEMATENDIMENTO" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="27aee58f-be6b-4019-82b6-2d33e1cd3a21" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://187.94.63.116:10801/ws/WSPORTALCLIENTE.apw</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ali="http://www.aliancaadm.com.br">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ali:LISTAITEMATENDIMENTO>
+         <ali:ITEMATENDIMENTO>
+            <ali:CODIGO>?</ali:CODIGO>
+         </ali:ITEMATENDIMENTO>
+      </ali:LISTAITEMATENDIMENTO>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.aliancaadm.com.br/LISTAITEMATENDIMENTO"/></con:call></con:operation><con:operation id="28d13659-05bd-4f75-ad0e-11848c6b1da2" isOneWay="false" action="http://www.aliancaadm.com.br/LISTAMATRICULAS" name="LISTAMATRICULAS" bindingOperationName="LISTAMATRICULAS" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="068e55a5-8be0-4e94-9974-c8d15e9c10fb" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://187.94.63.116:10801/ws/WSPORTALCLIENTE.apw</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ali="http://www.aliancaadm.com.br">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ali:LISTAMATRICULAS>
+         <ali:CHAVECPF>
+            <ali:CPF>?</ali:CPF>
+         </ali:CHAVECPF>
+      </ali:LISTAMATRICULAS>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.aliancaadm.com.br/LISTAMATRICULAS"/></con:call></con:operation><con:operation id="523cc551-2d88-45b0-aaa9-9703f89feef6" isOneWay="false" action="http://www.aliancaadm.com.br/LISTAOCORRENCIAS" name="LISTAOCORRENCIAS" bindingOperationName="LISTAOCORRENCIAS" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="b8e06a61-3f5c-4bb1-9149-f53261ad125a" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://187.94.63.116:10801/ws/WSPORTALCLIENTE.apw</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ali="http://www.aliancaadm.com.br">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ali:LISTAOCORRENCIAS>
+         <ali:OCORRENCIA>
+            <ali:ASSUNTO>?</ali:ASSUNTO>
+         </ali:OCORRENCIA>
+      </ali:LISTAOCORRENCIAS>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.aliancaadm.com.br/LISTAOCORRENCIAS"/></con:call></con:operation><con:operation id="f3fcc283-deb2-4b5c-a2f3-f6e5ec3c1224" isOneWay="false" action="http://www.aliancaadm.com.br/LISTAOCUPACAO" name="LISTAOCUPACAO" bindingOperationName="LISTAOCUPACAO" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="2a9c491d-4fef-4193-80bd-9f507cb73c7b" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://187.94.63.116:10801/ws/WSPORTALCLIENTE.apw</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ali="http://www.aliancaadm.com.br">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ali:LISTAOCUPACAO/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.aliancaadm.com.br/LISTAOCUPACAO"/></con:call></con:operation><con:operation id="d8b13f59-2bca-4dfe-b4e9-ee74169f66f7" isOneWay="false" action="http://www.aliancaadm.com.br/LISTATIPOUSUARIO" name="LISTATIPOUSUARIO" bindingOperationName="LISTATIPOUSUARIO" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="ed8846c7-d103-4b24-9c83-9e7788963d0c" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://187.94.63.116:10801/ws/WSPORTALCLIENTE.apw</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ali="http://www.aliancaadm.com.br">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ali:LISTATIPOUSUARIO/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.aliancaadm.com.br/LISTATIPOUSUARIO"/></con:call></con:operation><con:operation id="7344714d-468c-4f65-a60c-388dd41b6808" isOneWay="false" action="http://www.aliancaadm.com.br/LISTAUF" name="LISTAUF" bindingOperationName="LISTAUF" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="0be29e66-0296-44a0-a812-65d26d7ce450" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://187.94.63.116:10801/ws/WSPORTALCLIENTE.apw</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ali="http://www.aliancaadm.com.br">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ali:LISTAUF/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.aliancaadm.com.br/LISTAUF"/></con:call></con:operation><con:operation id="b8ae7d4f-1ab4-4173-8048-78146725067c" isOneWay="false" action="http://www.aliancaadm.com.br/LOGACESSOPORTAL" name="LOGACESSOPORTAL" bindingOperationName="LOGACESSOPORTAL" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="f7249a1e-bb63-49c8-bf5a-2b9d8ec4d5ed" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://187.94.63.116:10801/ws/WSPORTALCLIENTE.apw</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ali="http://www.aliancaadm.com.br">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ali:LOGACESSOPORTAL>
+         <ali:LOGACESSO>
+            <!--Optional:-->
+            <ali:CODLOGIN>?</ali:CODLOGIN>
+            <!--Optional:-->
+            <ali:IP>?</ali:IP>
+         </ali:LOGACESSO>
+      </ali:LOGACESSOPORTAL>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.aliancaadm.com.br/LOGACESSOPORTAL"/></con:call></con:operation><con:operation id="3db0542a-0a9c-4ea4-bc26-44ae8a01f05b" isOneWay="false" action="http://www.aliancaadm.com.br/LOGINAPP" name="LOGINAPP" bindingOperationName="LOGINAPP" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="6bb8c721-55bf-4ecc-9a42-1f42b37777db" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://187.94.63.116:10801/ws/WSPORTALCLIENTE.apw</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ali="http://www.aliancaadm.com.br">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ali:LOGINAPP>
+         <ali:LOGIN>
+            <!--Optional:-->
+            <ali:ATEND>?</ali:ATEND>
+            <!--Optional:-->
+            <ali:CPF>?</ali:CPF>
+            <!--Optional:-->
+            <ali:DTNASC>?</ali:DTNASC>
+            <!--Optional:-->
+            <ali:EMAIL>?</ali:EMAIL>
+            <!--Optional:-->
+            <ali:ISMOBILE>?</ali:ISMOBILE>
+            <!--Optional:-->
+            <ali:LOGIN>?</ali:LOGIN>
+            <!--Optional:-->
+            <ali:ORIGEM>?</ali:ORIGEM>
+            <!--Optional:-->
+            <ali:SENHA>?</ali:SENHA>
+            <!--Optional:-->
+            <ali:TPENV>?</ali:TPENV>
+         </ali:LOGIN>
+      </ali:LOGINAPP>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.aliancaadm.com.br/LOGINAPP"/></con:call></con:operation><con:operation id="b6f82a73-5a08-4703-85a3-37d257d29247" isOneWay="false" action="http://www.aliancaadm.com.br/MOVIMENTABENEF" name="MOVIMENTABENEF" bindingOperationName="MOVIMENTABENEF" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="cd02b682-7828-421f-ba09-4bf61b1e8dd2" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://187.94.63.116:10801/ws/WSPORTALCLIENTE.apw</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ali="http://www.aliancaadm.com.br">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ali:MOVIMENTABENEF>
+         <ali:PARAMMOVIMENTABENEF>
+            <!--Optional:-->
+            <ali:ACAO>?</ali:ACAO>
+            <!--Optional:-->
+            <ali:AGTIT>?</ali:AGTIT>
+            <!--Optional:-->
+            <ali:BCOTIT>?</ali:BCOTIT>
+            <!--Optional:-->
+            <ali:CCTIT>?</ali:CCTIT>
+            <ali:CHAVEBA1>?</ali:CHAVEBA1>
+            <!--Optional:-->
+            <ali:COMPROV>?</ali:COMPROV>
+            <!--Optional:-->
+            <ali:CPFTIT>?</ali:CPFTIT>
+            <!--Optional:-->
+            <ali:DAGTIT>?</ali:DAGTIT>
+            <!--Optional:-->
+            <ali:DATBLO>?</ali:DATBLO>
+            <!--Optional:-->
+            <ali:DCCFTIT>?</ali:DCCFTIT>
+            <!--Optional:-->
+            <ali:MOTBLO>?</ali:MOTBLO>
+            <!--Optional:-->
+            <ali:NMTIT>?</ali:NMTIT>
+            <!--Optional:-->
+            <ali:OBSERV>?</ali:OBSERV>
+            <!--Optional:-->
+            <ali:OPERTIT>?</ali:OPERTIT>
+            <!--Optional:-->
+            <ali:TPCCTIT>?</ali:TPCCTIT>
+         </ali:PARAMMOVIMENTABENEF>
+      </ali:MOVIMENTABENEF>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.aliancaadm.com.br/MOVIMENTABENEF"/></con:call></con:operation><con:operation id="9e4346c6-6819-4129-80a6-cf02f165baf1" isOneWay="false" action="http://www.aliancaadm.com.br/PRIMEIROACESSO" name="PRIMEIROACESSO" bindingOperationName="PRIMEIROACESSO" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="cc870481-e637-4676-85d8-1bf24fb84edc" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://187.94.63.116:10801/ws/WSPORTALCLIENTE.apw</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ali="http://www.aliancaadm.com.br">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ali:PRIMEIROACESSO>
+         <ali:PRIMEIROACESSO>
+            <!--Optional:-->
+            <ali:CPF>?</ali:CPF>
+            <!--Optional:-->
+            <ali:DTNASCTO>?</ali:DTNASCTO>
+            <!--Optional:-->
+            <ali:EMAIL>?</ali:EMAIL>
+            <!--Optional:-->
+            <ali:LOGIN>?</ali:LOGIN>
+            <ali:SENHA>?</ali:SENHA>
+         </ali:PRIMEIROACESSO>
+      </ali:PRIMEIROACESSO>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.aliancaadm.com.br/PRIMEIROACESSO"/></con:call></con:operation><con:operation id="ed76eb07-c96a-47a7-96d8-8e795d551b61" isOneWay="false" action="http://www.aliancaadm.com.br/SMSBOLETO" name="SMSBOLETO" bindingOperationName="SMSBOLETO" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="bd4e468a-4274-4a42-863b-33bbff5daf0c" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://187.94.63.116:10801/ws/WSPORTALCLIENTE.apw</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ali="http://www.aliancaadm.com.br">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ali:SMSBOLETO>
+         <ali:PARAMSMSBOLETO>
+            <ali:CELULAR>?</ali:CELULAR>
+            <ali:CHAVESE1>?</ali:CHAVESE1>
+            <ali:CRIPTOGRAFADO>?</ali:CRIPTOGRAFADO>
+            <ali:DDD>?</ali:DDD>
+         </ali:PARAMSMSBOLETO>
+      </ali:SMSBOLETO>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.aliancaadm.com.br/SMSBOLETO"/></con:call></con:operation><con:operation id="d51b362b-bf7f-42a5-a1f0-4d4c074ea6e4" isOneWay="false" action="http://www.aliancaadm.com.br/TITULOSRECEBER" name="TITULOSRECEBER" bindingOperationName="TITULOSRECEBER" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="c668dc71-f549-454e-b8b3-7db27dcba192" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://187.94.63.116:10801/ws/WSPORTALCLIENTE.apw</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ali="http://www.aliancaadm.com.br">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ali:TITULOSRECEBER>
+         <ali:TITULORECEBER>
+            <ali:CPF>?</ali:CPF>
+            <!--Optional:-->
+            <ali:ORDEM>?</ali:ORDEM>
+            <ali:STATUSTIT>?</ali:STATUSTIT>
+         </ali:TITULORECEBER>
+      </ali:TITULOSRECEBER>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.aliancaadm.com.br/TITULOSRECEBER"/></con:call></con:operation><con:operation id="e56c4f41-a9bc-4ef1-a5fa-1c48685896d5" isOneWay="false" action="http://www.aliancaadm.com.br/VALIDAACESSONAOLOGADO" name="VALIDAACESSONAOLOGADO" bindingOperationName="VALIDAACESSONAOLOGADO" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="41710920-a044-44bb-9d59-cefc3be53695" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://187.94.63.116:10801/ws/WSPORTALCLIENTE.apw</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ali="http://www.aliancaadm.com.br">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ali:VALIDAACESSONAOLOGADO>
+         <ali:PARAMNAOLOGADO>
+            <!--Optional:-->
+            <ali:CPF>?</ali:CPF>
+            <!--Optional:-->
+            <ali:DATANASTO>?</ali:DATANASTO>
+         </ali:PARAMNAOLOGADO>
+      </ali:VALIDAACESSONAOLOGADO>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.aliancaadm.com.br/VALIDAACESSONAOLOGADO"/></con:call></con:operation><con:operation id="e01fde15-6baf-43da-8e3e-e73207c9d8df" isOneWay="false" action="http://www.aliancaadm.com.br/VALIDACONTA" name="VALIDACONTA" bindingOperationName="VALIDACONTA" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="69d70e7d-4244-4611-a6bb-48658e62d960" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://187.94.63.116:10801/ws/WSPORTALCLIENTE.apw</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ali="http://www.aliancaadm.com.br">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ali:VALIDACONTA>
+         <ali:DADOSCONTA>
+            <!--Optional:-->
+            <ali:AGENCIA>?</ali:AGENCIA>
+            <!--Optional:-->
+            <ali:BANCO>?</ali:BANCO>
+            <!--Optional:-->
+            <ali:CONTA>?</ali:CONTA>
+            <!--Optional:-->
+            <ali:DIGAGENCIA>?</ali:DIGAGENCIA>
+            <!--Optional:-->
+            <ali:DIGCONTA>?</ali:DIGCONTA>
+         </ali:DADOSCONTA>
+      </ali:VALIDACONTA>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.aliancaadm.com.br/VALIDACONTA"/></con:call></con:operation><con:operation id="8249b726-257c-4fdc-9122-58e5604ab602" isOneWay="false" action="http://www.aliancaadm.com.br/VALIDALOGIN" name="VALIDALOGIN" bindingOperationName="VALIDALOGIN" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="4a609130-4095-4be1-9426-280e7dae0e72" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://187.94.63.116:10801/ws/WSPORTALCLIENTE.apw</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ali="http://www.aliancaadm.com.br">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ali:VALIDALOGIN>
+         <ali:LOGIN>
+            <!--Optional:-->
+            <ali:ATEND>?</ali:ATEND>
+            <!--Optional:-->
+            <ali:CPF>?</ali:CPF>
+            <!--Optional:-->
+            <ali:DTNASC>?</ali:DTNASC>
+            <!--Optional:-->
+            <ali:EMAIL>?</ali:EMAIL>
+            <!--Optional:-->
+            <ali:ISMOBILE>?</ali:ISMOBILE>
+            <!--Optional:-->
+            <ali:LOGIN>?</ali:LOGIN>
+            <!--Optional:-->
+            <ali:ORIGEM>?</ali:ORIGEM>
+            <!--Optional:-->
+            <ali:SENHA>?</ali:SENHA>
+            <!--Optional:-->
+            <ali:TPENV>?</ali:TPENV>
+         </ali:LOGIN>
+      </ali:VALIDALOGIN>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.aliancaadm.com.br/VALIDALOGIN"/></con:call></con:operation><con:operation id="f6747a4a-da5a-4bec-8d2b-99b6ebc478fe" isOneWay="false" action="http://www.aliancaadm.com.br/VERIFICAQUITACAO" name="VERIFICAQUITACAO" bindingOperationName="VERIFICAQUITACAO" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="2eb0bfd3-9b37-41d0-a17a-0d99b3a43bcd" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://187.94.63.116:10801/ws/WSPORTALCLIENTE.apw</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ali="http://www.aliancaadm.com.br">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ali:VERIFICAQUITACAO>
+         <ali:PARAMCARTAQUITACAO>
+            <ali:ANOBASE>?</ali:ANOBASE>
+            <ali:CPF>?</ali:CPF>
+         </ali:PARAMCARTAQUITACAO>
+      </ali:VERIFICAQUITACAO>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.aliancaadm.com.br/VERIFICAQUITACAO"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>
