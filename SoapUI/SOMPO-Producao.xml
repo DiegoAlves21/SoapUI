@@ -291,8 +291,8 @@
       <som:login>
          <!--Optional:-->
          <entrada>
-            <usuario_login>000200010007418005</usuario_login>
-            <usuario_psw>Sompo0519</usuario_psw>
+            <usuario_login></usuario_login>
+            <usuario_psw></usuario_psw>
          </entrada>
       </som:login>
    </soapenv:Body>
